@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Academic Reading: MCQ Masterclass & Interactive Simulator</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-light: #eff6ff;
+      --success: #16a34a;
+      --success-light: #dcfce7;
+      --danger: #dc2626;
+      --danger-light: #fee2e2;
+      --warning: #d97706;
+      --warning-light: #fef3c7;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --highlight: #fef08a;
+      --highlight-active: #fde047;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --primary: #3b82f6;
+      --primary-hover: #60a5fa;
+      --primary-light: #1e293b;
+      --success: #22c55e;
+      --success-light: #064e3b;
+      --danger: #ef4444;
+      --danger-light: #450a0a;
+      --warning: #f59e0b;
+      --warning-light: #451a03;
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --highlight: #854d0e;
+      --highlight-active: #ca8a04;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Navigation */
+    header {
+      background-color: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-badge {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 9999px;
+      letter-spacing: 0.05em;
+    }
+
+    .brand h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.9rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border-color: var(--border);
+      color: var(--text);
+    }
+    .btn-outline:hover {
+      background-color: var(--primary-light);
+      border-color: var(--primary);
+    }
+
+    .btn-danger {
+      background-color: var(--danger);
+      color: white;
+    }
+    .btn-danger:hover {
+      opacity: 0.9;
+    }
+
+    .btn-sm {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+    }
+
+    /* Timer Widget */
+    .timer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.8rem;
+      border-radius: 0.5rem;
+      font-family: monospace;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .timer-badge.warning {
+      background-color: var(--warning-light);
+      color: var(--warning);
+      animation: pulse 1s infinite alternate;
+    }
+
+    .timer-badge.danger {
+      background-color: var(--danger-light);
+      color: var(--danger);
+      animation: pulse 0.5s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+
+    /* Tab Navigation */
+    .tabs-container {
+      background-color: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .tab-btn {
+      padding: 0.85rem 0.25rem;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.15s ease;
+    }
+
+    .tab-btn.active {
+      color: var(--primary);
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: var(--primary);
+      border-radius: 2px;
+    }
+
+    /* Main Container */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1.25rem;
+      max-width: 1600px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .view-panel {
+      display: none;
+    }
+
+    .view-panel.active {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex: 1;
+    }
+
+    /* Strategy Guide View */
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-header h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .trap-item {
+      background-color: var(--bg);
+      border-left: 4px solid var(--danger);
+      padding: 0.75rem 1rem;
+      border-radius: 0.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .trap-item h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--danger);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .trap-item p {
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .step-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    /* Split-Pane Simulator View */
+    .simulator-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 1.25rem;
+      height: calc(100vh - 170px);
+      min-height: 600px;
+    }
+
+    @media (max-width: 1024px) {
+      .simulator-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+    }
+
+    .pane {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .pane-header {
+      background-color: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .pane-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pane-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.25rem;
+      scroll-behavior: smooth;
+    }
+
+    /* Passage Styling */
+    .passage-body {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--text);
+    }
+
+    .passage-body h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+      text-align: center;
+    }
+
+    .paragraph-block {
+      margin-bottom: 1.25rem;
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .paragraph-label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--primary);
+      background-color: var(--primary-light);
+      border-radius: 0.25rem;
+      padding: 0.1rem 0.35rem;
+    }
+
+    .evidence-highlight {
+      background-color: var(--highlight);
+      padding: 0.1rem 0.2rem;
+      border-radius: 0.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .evidence-highlight.flash {
+      background-color: var(--highlight-active);
+      box-shadow: 0 0 0 3px var(--primary);
+    }
+
+    /* Question Controller & Cards */
+    .question-navigator {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      padding: 0.75rem 1rem;
+      background-color: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .q-nav-btn {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.375rem;
+      border: 1px solid var(--border);
+      background-color: var(--surface);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .q-nav-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .q-nav-btn.active {
+      border-color: var(--primary);
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .q-nav-btn.answered {
+      background-color: var(--primary-light);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .q-nav-btn.flagged {
+      border-color: var(--warning);
+      color: var(--warning);
+      position: relative;
+    }
+
+    .q-nav-btn.flagged::after {
+      content: '★';
+      font-size: 0.6rem;
+      position: absolute;
+      top: -2px;
+      right: 1px;
+    }
+
+    .q-nav-btn.correct {
+      background-color: var(--success);
+      color: white;
+      border-color: var(--success);
+    }
+
+    .q-nav-btn.incorrect {
+      background-color: var(--danger);
+      color: white;
+      border-color: var(--danger);
+    }
+
+    /* Question Card */
+    .question-card {
+      display: none;
+    }
+
+    .question-card.active {
+      display: block;
+      animation: fadeIn 0.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .q-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .q-number-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.25rem;
+    }
+
+    .q-stem {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .stem-focus {
+      color: var(--primary);
+      border-bottom: 2px dashed var(--primary);
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .option-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      background-color: var(--surface);
+      position: relative;
+    }
+
+    .option-item:hover {
+      border-color: var(--primary);
+      background-color: var(--primary-light);
+    }
+
+    .option-item.selected {
+      border-color: var(--primary);
+      background-color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    .option-item.eliminated {
+      opacity: 0.45;
+      text-decoration: line-through;
+      background-color: var(--bg);
+    }
+
+    .option-item.correct-choice {
+      border-color: var(--success);
+      background-color: var(--success-light);
+    }
+
+    .option-item.wrong-choice {
+      border-color: var(--danger);
+      background-color: var(--danger-light);
+    }
+
+    .option-letter {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .option-item.selected .option-letter {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    .option-text {
+      flex: 1;
+      font-size: 0.925rem;
+    }
+
+    .option-actions {
+      display: flex;
+      gap: 0.25rem;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+
+    .option-item:hover .option-actions {
+      opacity: 1;
+    }
+
+    .strike-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding: 0.1rem 0.3rem;
+      border-radius: 0.2rem;
+    }
+
+    .strike-btn:hover {
+      background-color: var(--border);
+      color: var(--danger);
+    }
+
+    /* Explanation & Rationale Card */
+    .rationale-container {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+      background-color: var(--bg);
+    }
+
+    .evidence-box {
+      background-color: var(--warning-light);
+      border-left: 4px solid var(--warning);
+      padding: 0.75rem;
+      border-radius: 0.25rem;
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .evidence-box strong {
+      display: block;
+      color: var(--warning);
+      margin-bottom: 0.25rem;
+    }
+
+    .distractor-breakdown {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .distractor-card {
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.35rem;
+      font-size: 0.8rem;
+      border: 1px solid var(--border);
+    }
+
+    .distractor-card.fail {
+      background-color: var(--danger-light);
+      border-color: var(--danger);
+    }
+
+    .distractor-card.pass {
+      background-color: var(--success-light);
+      border-color: var(--success);
+    }
+
+    .trap-tag {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.7rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 0.25rem;
+      margin-right: 0.4rem;
+      text-transform: uppercase;
+    }
+
+    .trap-tag.trap {
+      background-color: var(--danger);
+      color: white;
+    }
+
+    .trap-tag.correct {
+      background-color: var(--success);
+      color: white;
+    }
+
+    /* Modal Dialog */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      width: 90%;
+      max-width: 520px;
+      padding: 1.5rem;
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3);
+      text-align: center;
+    }
+
+    .score-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: conic-gradient(var(--primary) calc(var(--percent, 0) * 1%), var(--border) 0);
+      margin: 1rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .score-circle-inner {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: var(--surface);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--text);
+    }
+
+    .band-badge {
+      display: inline-block;
+      background-color: var(--success);
+      color: white;
+      font-weight: 700;
+      padding: 0.3rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      margin: 0.5rem 0 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header>
+    <div class="brand">
+      <span class="brand-badge">IELTS ACADEMIC</span>
+      <h1>Reading MCQ Masterclass & Interactive Simulator</h1>
+    </div>
+
+    <div class="nav-actions">
+      <div class="timer-badge" id="timerBadge">
+        <span>⏱️</span>
+        <span id="timerDisplay">20:00</span>
+      </div>
+      <button class="btn btn-outline btn-sm" id="timerToggleBtn" title="Start / Pause Timer">Pause</button>
+      <button class="btn btn-outline btn-sm" id="themeToggleBtn" title="Toggle Dark/Light Mode">🌙 Theme</button>
+      <button class="btn btn-primary" id="submitExamBtn">Submit Test</button>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <div class="tabs-container">
+    <button class="tab-btn active" data-tab="simulator">📝 Interactive Reading Test</button>
+    <button class="tab-btn" data-tab="strategy">💡 Strategy & Distractor Guide</button>
+    <button class="tab-btn" data-tab="answers" id="answerKeyTabBtn" style="display: none;">🔑 Answer Key & Diagnostics</button>
+  </div>
+
+  <main>
+    <!-- TAB 1: Simulator View -->
+    <section class="view-panel active" id="simulatorView">
+      <div class="simulator-layout">
+        
+        <!-- Left Pane: Academic Reading Passage -->
+        <div class="pane">
+          <div class="pane-header">
+            <div class="pane-title">
+              <span>📖</span>
+              <span>Passage: Spatial Navigation & Cognitive Architecture</span>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">
+              832 words • Paragraphs [A]–[H]
+            </div>
+          </div>
+          
+          <div class="pane-content passage-body" id="passageContainer">
+            <h2>The Architecture of Memory: The Cognitive Implications of Spatial Navigation</h2>
+
+            <div class="paragraph-block" id="para-A">
+              <span class="paragraph-label">[A]</span>
+              For millennia, human survival hinged upon our neurological capacity to construct sophisticated mental representations of physical space. Hunter-gatherers relied on internal cognitive cartography to <span class="evidence-target" data-evidence="q1">track nomadic herds across undulating savannahs, locate ephemeral water holes, and navigate dense, trackless forests</span> without artificial aids. Neurobiologists have long recognized that this ancient survival mechanism is anchored in the hippocampus—a seahorse-shaped structure tucked deep inside the medial temporal lobe—and its adjacent entorhinal cortex. Within these neural substrates, specialized place cells and grid cells fire in precise geometric coordination, generating a dynamic internal coordinate system that maps our trajectory through three-dimensional space.
+            </div>
+
+            <div class="paragraph-block" id="para-B">
+              <span class="paragraph-label">[B]</span>
+              However, in the contemporary era, the widespread adoption of Global Positioning System (GPS) turn-by-turn navigation has precipitated a radical shift in how human beings traverse their physical environments. Rather than observing environmental landmarks, inferring cardinal directions from the sun’s azimuth, or synthesizing multi-sensory topological cues into an integrated cognitive map, modern travelers increasingly surrender their spatial agency to automated digital guidance. Users are guided by disembodied vocal prompts and algorithmic blue lines on handheld screens, <span class="evidence-target" data-evidence="q2">transforming active navigational problem-solving into passive cue-following</span>.
+            </div>
+
+            <div class="paragraph-block" id="para-C">
+              <span class="paragraph-label">[C]</span>
+              A landmark neuroimaging study conducted by Dr. Eleanor Maguire and her colleagues at University College London provided the foundational baseline for understanding spatial neuroplasticity. By examining licensed London taxi drivers—who must memorize "The Knowledge," an exhaustive mental blueprint of 25,000 streets and thousands of landmarks—Maguire demonstrated that these drivers possessed significantly greater grey matter volume in the posterior hippocampus compared to matched control subjects. Crucially, <span class="evidence-target" data-evidence="q3">this volumetric increase was directly proportional to the number of years spent navigating</span> the labyrinthine capital. Subsequent research revealed that <span class="evidence-target" data-evidence="q11">when these drivers retired and ceased active mental mapping, their posterior hippocampal volume experienced measurable atrophy</span>, demonstrating that spatial neural architecture is dynamically use-dependent.
+            </div>
+
+            <div class="paragraph-block" id="para-D">
+              <span class="paragraph-label">[D]</span>
+              Building on Maguire’s paradigm, contemporary neuroscientist Dr. Stefan Bohbot conducted fMRI experiments comparing habitual GPS users with individuals who navigate using <span class="evidence-target" data-evidence="q10">allocentric strategies (relying on mental spatial maps independent of current viewpoint)</span>. Bohbot’s findings revealed that habitual GPS reliance correlates with decreased functional connectivity between the hippocampus and the prefrontal cortex, alongside reduced resting-state activity in hippocampal place-cell networks. When navigating via turn-by-turn automation, <span class="evidence-target" data-evidence="q4">participants predominantly engaged the caudate nucleus—a subcortical structure associated with automated habit formation and stimulus-response conditioning—effectively bypassing the computational demands of the hippocampus entirely</span>.
+            </div>
+
+            <div class="paragraph-block" id="para-E">
+              <span class="paragraph-label">[E]</span>
+              The cognitive ramifications of this hippocampal disengagement extend far beyond mere geographic disorientation. The hippocampus does not operate in anatomical isolation; it constitutes the master switchboard for episodic memory—the ability to encode, consolidate, and vividly recall autobiographical experiences situated in time and place. Neuroscientists hypothesize that <span class="evidence-target" data-evidence="q5">spatial mapping and episodic memory share an identical evolutionary scaffold: we remember what happened by anchoring it to where and when it transpired</span>. Consequently, chronic underutilization of hippocampal spatial circuits may accelerate the degradation of broader episodic memory retrieval mechanisms, particularly in aging populations susceptible to neurodegenerative decline.
+            </div>
+
+            <div class="paragraph-block" id="para-F">
+              <span class="paragraph-label">[F]</span>
+              Furthermore, psychological investigations into human environmental perception suggest that passive navigation induces an effect known as "spatial amnesia." In controlled field trials, pedestrians navigating an unfamiliar urban district with handheld GPS devices exhibited markedly inferior recall of architectural landmarks, storefront facades, and topographical gradients compared to counterparts who navigated using printed cartographic maps or spontaneous exploration. <span class="evidence-target" data-evidence="q6">Eye-tracking data demonstrated that GPS users suffered from severe tunnel vision, fixating up to 70 percent of their visual attention on the digital interface rather than encoding environmental cues</span>. This attentional capture detaches the individual from their immediate physical reality, impoverishing the richness of lived experience.
+            </div>
+
+            <div class="paragraph-block" id="para-G">
+              <span class="paragraph-label">[G]</span>
+              Critics of the digital-atrophy hypothesis argue that <span class="evidence-target" data-evidence="q7">technological offloading is simply an evolutionary progression, liberating cognitive bandwidth for higher-order abstract reasoning, creative synthesis</span>, and digital literacy. Proponents of this view suggest that just as the invention of the printing press eliminated the necessity for oral mnemonic traditions without degrading human intellect, digital navigation tools merely reallocate neural resources toward novel technological proficiencies.
+            </div>
+
+            <div class="paragraph-block" id="para-H">
+              <span class="paragraph-label">[H]</span>
+              Nevertheless, most cognitive neurobiologists maintain that the analogy with the printing press is fundamentally flawed. <span class="evidence-target" data-evidence="q8">While literacy supplements and enhances cognitive capacity by externalizing conceptual knowledge, automated navigation replaces an active, structural biological computation with passive behavioral conformity</span>. To safeguard neurocognitive resilience across the lifespan, <span class="evidence-target" data-evidence="q12">researchers advocate for "navigational cross-training": intentionally disengaging digital navigational aids during routine commutes, engaging in orienteering, and cultivating active spatial mindfulness in our daily journeys</span>.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Pane: Questions & Simulator Controls -->
+        <div class="pane">
+          <!-- Question Palette Navigator -->
+          <div class="question-navigator" id="questionNav">
+            <!-- Rendered dynamically 1 to 12 -->
+          </div>
+
+          <div class="pane-content" id="questionsContainer">
+            <!-- Questions 1-12 rendered by JavaScript -->
+          </div>
+
+          <div class="pane-header" style="border-top: 1px solid var(--border); border-bottom: none;">
+            <button class="btn btn-outline" id="prevQBtn">← Previous</button>
+            <button class="btn btn-outline" id="flagQBtn">🚩 Flag for Review</button>
+            <button class="btn btn-primary" id="nextQBtn">Next →</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 2: Strategy Guide View -->
+    <section class="view-panel" id="strategyView">
+      <div class="strategy-grid">
+        
+        <!-- Strategy 1 -->
+        <div class="card">
+          <div class="card-header">
+            <span class="step-pill">1</span>
+            <h3>Question-Stem Analysis</h3>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+            Always deconstruct the question stem before evaluating options to avoid bias.
+          </p>
+          <ul style="font-size: 0.85rem; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.4rem;">
+            <li><strong>Locating Keywords</strong> (nouns, dates, proper names): Guide you to the exact paragraph.</li>
+            <li><strong>Qualifying Words</strong> (<em>primarily, initially, solely, tends to</em>): Define scope and boundaries.</li>
+            <li><strong>Stem Types</strong>: Cause/Reason, Paraphrase Completion, Authorial Purpose, Exclusion (NOT/EXCEPT).</li>
+          </ul>
+        </div>
+
+        <!-- Strategy 2 -->
+        <div class="card">
+          <div class="card-header">
+            <span class="step-pill">2</span>
+            <h3>Option Comparison Matrix</h3>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+            Compare options against each other before looking back at the passage:
+          </p>
+          <ul style="font-size: 0.85rem; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.4rem;">
+            <li><strong>Pair Splitting</strong>: Identify opposing or polarized pairs; the answer is often between them.</li>
+            <li><strong>Degree & Scope</strong>: Watch for absolute words (<em>always, all, completely</em>) vs. cautious academic hedging (<em>suggests, can, largely</em>).</li>
+            <li><strong>Pre-phrasing</strong>: Formulate the answer in your own words before reading options A–D.</li>
+          </ul>
+        </div>
+
+        <!-- Strategy 3 -->
+        <div class="card">
+          <div class="card-header">
+            <span class="step-pill">3</span>
+            <h3>The 4-Step S.L.P.E. Elimination</h3>
+          </div>
+          <ol style="font-size: 0.85rem; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.4rem;">
+            <li><strong>Scan</strong>: Locate anchor keywords in the passage.</li>
+            <li><strong>Locate Window</strong>: Read the "Golden Window" (2 sentences before & after).</li>
+            <li><strong>Pre-phrase</strong>: Synthesize the meaning in your mind without looking at options.</li>
+            <li><strong>Eliminate</strong>: Strike out flawed distractors using the 5 trap categories.</li>
+          </ol>
+        </div>
+
+      </div>
+
+      <!-- The 5 Deadly IELTS Traps -->
+      <div class="card" style="margin-top: 1rem;">
+        <div class="card-header">
+          <span style="font-size: 1.25rem;">🚨</span>
+          <h3>The 5 Deadly IELTS Distractor Traps</h3>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem; margin-top: 0.5rem;">
+          
+          <div class="trap-item">
+            <h4>1. Verbatim Echo Trap <span>🪤</span></h4>
+            <p>Uses exact vocabulary copied from the text, but warps the grammatical relationship, agent, or cause.</p>
+          </div>
+
+          <div class="trap-item">
+            <h4>2. Opposite / Contradiction <span>⛔</span></h4>
+            <p>Directly contradicts the passage using subtle negative prefixes, inverted qualifiers, or swapped actors.</p>
+          </div>
+
+          <div class="trap-item">
+            <h4>3. Not Given / Extrapolation <span>❓</span></h4>
+            <p>Sounds logically plausible in everyday reality, but is completely absent or unsubstantiated in the passage.</p>
+          </div>
+
+          <div class="trap-item">
+            <h4>4. Extreme Generalization <span>⚠️</span></h4>
+            <p>Inserts absolute words like <em>exclusively, impossible, entirely</em> when the passage used cautious hedging.</p>
+          </div>
+
+          <div class="trap-item">
+            <h4>5. Partial Truth Trap <span>🌗</span></h4>
+            <p>The first clause is 100% accurate, but the trailing clause introduces an unverified or flawed premise.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: Diagnostic Answer Key & Review View -->
+    <section class="view-panel" id="answersView">
+      <div class="card" style="margin-bottom: 1rem; text-align: center;">
+        <h2>Diagnostic Summary & Explanations</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          Review your answers, inspect exact text evidence, and explore why each distractor fails.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.75rem;">
+          <button class="btn btn-primary" id="retryAllBtn">🔄 Timed Retry (All 12 Qs)</button>
+          <button class="btn btn-outline" id="retryIncorrectBtn">🎯 Timed Retry (Incorrect Only)</button>
+        </div>
+      </div>
+
+      <div id="diagnosticsList" style="display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Filled dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Score Submission Modal -->
+  <div class="modal-overlay" id="scoreModal">
+    <div class="modal-content">
+      <h2>Test Completed! 🎉</h2>
+      <div class="score-circle" id="scoreCircle">
+        <div class="score-circle-inner" id="scoreValue">0/12</div>
+      </div>
+      <div class="band-badge" id="bandValue">Band 0.0</div>
+      <p id="feedbackMessage" style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+        Score summary and diagnostic feedback.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 0.75rem;">
+        <button class="btn btn-primary" id="viewDetailedAnalysisBtn">View Full Analysis</button>
+        <button class="btn btn-outline" id="modalRetryBtn">Timed Retry</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // --- Data Model: 12 IELTS Multiple Choice Questions with Evidence & Distractor Rationales ---
+    const questionsData = [
+      {
+        id: 1,
+        para: "A",
+        evidenceId: "q1",
+        stem: "According to Paragraph A, why was spatial navigation vital for early humans?",
+        options: [
+          { letter: "A", text: "It enabled them to engineer sophisticated geographical maps." },
+          { letter: "B", text: "It was essential for securing basic resources and moving across untracked territories." },
+          { letter: "C", text: "It accelerated the evolutionary enlargement of the medial temporal lobe." },
+          { letter: "D", text: "It allowed them to track celestial movements across the savannah." }
+        ],
+        correct: "B",
+        evidenceQuote: "Hunter-gatherers relied on internal cognitive cartography to track nomadic herds across undulating savannahs, locate ephemeral water holes, and navigate dense, trackless forests without artificial aids.",
+        distractors: [
+          { letter: "A", trap: "Verbatim Echo", reason: "Paragraph A mentions 'internal cognitive cartography' (mental maps), not physical engineered geographical maps." },
+          { letter: "B", trap: "Correct Answer", reason: "Paraphrases tracking herds, locating water holes (securing resources), and traversing trackless forests." },
+          { letter: "C", trap: "Not Given / Extrapolation", reason: "The temporal lobe is mentioned as the anatomical site, but navigation is not claimed to have accelerated its enlargement." },
+          { letter: "D", trap: "Partial Truth / Distortion", reason: "Savannahs are mentioned, but tracking celestial movements is not given as the primary survival driver." }
+        ]
+      },
+      {
+        id: 2,
+        para: "B",
+        evidenceId: "q2",
+        stem: "In Paragraph B, the author argues that modern GPS technology has...",
+        options: [
+          { letter: "A", text: "improved the speed at which users synthesize sensory topological cues." },
+          { letter: "B", text: "caused travelers to reject traditional cardinal directions deliberately." },
+          { letter: "C", text: "reduced navigation from an active mental process to passive obedience." },
+          { letter: "D", text: "eliminated the human need to travel across unfamiliar environments." }
+        ],
+        correct: "C",
+        evidenceQuote: "...transforming active navigational problem-solving into passive cue-following.",
+        distractors: [
+          { letter: "A", trap: "Opposite / Contradiction", reason: "The text says users surrender spatial agency *rather than* synthesizing cues." },
+          { letter: "B", trap: "Not Given / Speculative", reason: "Travelers do not deliberately rebel against cardinal directions; they simply follow automated prompts." },
+          { letter: "C", trap: "Correct Answer", reason: "Direct semantic paraphrase of 'transforming active navigational problem-solving into passive cue-following'." },
+          { letter: "D", trap: "Extreme Generalization", reason: "GPS changes how we navigate unfamiliar environments; it does not eliminate the need to travel." }
+        ]
+      },
+      {
+        id: 3,
+        para: "C",
+        evidenceId: "q3",
+        stem: "What was a key finding of Eleanor Maguire's study of London taxi drivers (Paragraph C)?",
+        options: [
+          { letter: "A", text: "The drivers' hippocampal enlargement was irreversible even after retirement." },
+          { letter: "B", text: "The drivers' grey matter density in the posterior hippocampus expanded with driving experience." },
+          { letter: "C", text: "Memorizing 'The Knowledge' required higher overall intelligence than control subjects possessed." },
+          { letter: "D", text: "London taxi drivers had superior navigation skills in unfamiliar foreign cities." }
+        ],
+        correct: "B",
+        evidenceQuote: "Crucially, this volumetric increase was directly proportional to the number of years spent navigating the labyrinthine capital.",
+        distractors: [
+          { letter: "A", trap: "Opposite / Contradiction", reason: "The text explicitly states that upon retirement, their hippocampus suffered 'measurable atrophy'." },
+          { letter: "B", trap: "Correct Answer", reason: "'Expanded with driving experience' matches 'volumetric increase was directly proportional to the number of years spent navigating'." },
+          { letter: "C", trap: "Not Given", reason: "The study matched control subjects for comparison; it made no claim about innate overall general intelligence." },
+          { letter: "D", trap: "Out of Scope", reason: "The research only investigated London navigation, not foreign cities." }
+        ]
+      },
+      {
+        id: 4,
+        para: "D",
+        evidenceId: "q4",
+        stem: "The research by Dr. Stefan Bohbot mentioned in Paragraph D demonstrates that habitual GPS usage...",
+        options: [
+          { letter: "A", text: "activates the caudate nucleus at the expense of hippocampal engagement." },
+          { letter: "B", text: "permanently damages the neural pathways of the prefrontal cortex." },
+          { letter: "C", text: "forces the hippocampus to process automated habit formation." },
+          { letter: "D", text: "increases functional connectivity between place-cell networks and subcortical structures." }
+        ],
+        correct: "A",
+        evidenceQuote: "participants predominantly engaged the caudate nucleus... effectively bypassing the computational demands of the hippocampus entirely.",
+        distractors: [
+          { letter: "A", trap: "Correct Answer", reason: "Directly matches the shift from hippocampal computation to caudate nucleus automated habit formation." },
+          { letter: "B", trap: "Extreme Language", reason: "The text notes 'decreased functional connectivity', not irreversible permanent structural destruction." },
+          { letter: "C", trap: "Verbatim Echo / Swap", reason: "The caudate nucleus processes habit formation, while the hippocampus is bypassed." },
+          { letter: "D", trap: "Opposite / Contradiction", reason: "Functional connectivity was reduced, not increased." }
+        ]
+      },
+      {
+        id: 5,
+        para: "E",
+        evidenceId: "q5",
+        stem: "Why is hippocampal disengagement considered dangerous to broader cognition (Paragraph E)?",
+        options: [
+          { letter: "A", text: "It destroys the human ability to calculate temporal intervals." },
+          { letter: "B", text: "It causes the brain to confuse spatial coordinates with sensory data." },
+          { letter: "C", text: "It may weaken episodic memory since memory recall shares neural architecture with spatial mapping." },
+          { letter: "D", text: "It directly triggers the immediate onset of acute neurodegenerative diseases." }
+        ],
+        correct: "C",
+        evidenceQuote: "spatial mapping and episodic memory share an identical evolutionary scaffold: we remember what happened by anchoring it to where and when it transpired.",
+        distractors: [
+          { letter: "A", trap: "Extreme Distortion", reason: "It impairs autobiographical episodic recall, not raw calculation of temporal intervals." },
+          { letter: "B", trap: "Not Given", reason: "The text never claims the brain confuses coordinates with sensory data." },
+          { letter: "C", trap: "Correct Answer", reason: "Accurately represents the shared evolutionary scaffold between spatial mapping and episodic autobiographical memory." },
+          { letter: "D", trap: "Extreme / Causality Error", reason: "It may accelerate vulnerability in aging populations, but is not an immediate direct trigger of acute diseases." }
+        ]
+      },
+      {
+        id: 6,
+        para: "F",
+        evidenceId: "q6",
+        stem: "The phenomenon of 'spatial amnesia' described in Paragraph F is primarily caused by...",
+        options: [
+          { letter: "A", text: "defective cartographic representation in modern mobile applications." },
+          { letter: "B", text: "excessive visual fixation on electronic screens at the expense of environmental encoding." },
+          { letter: "C", text: "physical exhaustion resulting from walking in unfamiliar urban districts." },
+          { letter: "D", text: "an innate human inability to recall storefront facades and landmarks." }
+        ],
+        correct: "B",
+        evidenceQuote: "Eye-tracking data demonstrated that GPS users suffered from severe tunnel vision, fixating up to 70 percent of their visual attention on the digital interface rather than encoding environmental cues.",
+        distractors: [
+          { letter: "A", trap: "Not Given / Blame Shift", reason: "The cartographic accuracy of apps is never criticized; the user's attentional fixation is the issue." },
+          { letter: "B", trap: "Correct Answer", reason: "Matches the eye-tracking data showing 70% fixation on the digital screen preventing environmental encoding." },
+          { letter: "C", trap: "Not Given", reason: "Physical exhaustion is never mentioned in the passage." },
+          { letter: "D", trap: "Opposite / Contradiction", reason: "Participants using paper maps had good landmark recall, proving the defect is not innate." }
+        ]
+      },
+      {
+        id: 7,
+        para: "G",
+        evidenceId: "q7",
+        stem: "What do defenders of digital navigation argue in Paragraph G?",
+        options: [
+          { letter: "A", text: "GPS navigation enhances human capacity for spatial computation." },
+          { letter: "B", text: "Digital offloading frees mental capacity for complex and creative cognitive tasks." },
+          { letter: "C", text: "The printing press caused more significant intellectual degradation than GPS." },
+          { letter: "D", text: "Modern users possess greater memory retention than oral storytellers." }
+        ],
+        correct: "B",
+        evidenceQuote: "technological offloading is simply an evolutionary progression, liberating cognitive bandwidth for higher-order abstract reasoning, creative synthesis...",
+        distractors: [
+          { letter: "A", trap: "Opposite / Contradiction", reason: "Proponents argue spatial computation is offloaded, not enhanced." },
+          { letter: "B", trap: "Correct Answer", reason: "'Frees mental capacity' directly translates 'liberating cognitive bandwidth for higher-order reasoning'." },
+          { letter: "C", trap: "Opposite / Misrepresentation", reason: "Paragraph G states the printing press did *not* degrade human intellect." },
+          { letter: "D", trap: "Not Given", reason: "The passage notes oral mnemonic traditions were replaced, but doesn't claim modern memory is superior." }
+        ]
+      },
+      {
+        id: 8,
+        para: "H",
+        evidenceId: "q8",
+        stem: "Why does the author reject the comparison with the printing press in Paragraph H?",
+        options: [
+          { letter: "A", text: "The printing press was invented much earlier than digital navigation systems." },
+          { letter: "B", text: "The printing press degraded oral memory, whereas GPS improves visual literacy." },
+          { letter: "C", text: "The printing press augmented cognitive functions, whereas GPS displaces active neural computations." },
+          { letter: "D", text: "Printed media requires conscious memorization, while GPS requires no literacy." }
+        ],
+        correct: "C",
+        evidenceQuote: "While literacy supplements and enhances cognitive capacity by externalizing conceptual knowledge, automated navigation replaces an active, structural biological computation with passive behavioral conformity.",
+        distractors: [
+          { letter: "A", trap: "Irrelevant / Trivial", reason: "Historical timing is not the substantive philosophical or cognitive objection." },
+          { letter: "B", trap: "Opposite / Distortion", reason: "The text says literacy enhances cognitive capacity." },
+          { letter: "C", trap: "Correct Answer", reason: "Directly contrasts augmenting cognitive capacity vs. replacing biological active computation." },
+          { letter: "D", trap: "Not Given / Unsupported", reason: "The passage makes no comparison regarding literacy requirements." }
+        ]
+      },
+      {
+        id: 9,
+        para: "Global",
+        evidenceId: "q9",
+        stem: "What is the writer's primary purpose in writing this article?",
+        options: [
+          { letter: "A", text: "To advocate for a complete ban on GPS technology in automobiles." },
+          { letter: "B", text: "To examine how digital navigation affects brain architecture and argue for preserving spatial cognitive faculties." },
+          { letter: "C", text: "To critique Eleanor Maguire’s methodology regarding London cab drivers." },
+          { letter: "D", text: "To compare urban pedestrian orientation with ancient nomadic migrations." }
+        ],
+        correct: "B",
+        evidenceQuote: "Overall passage synthesis: exploring neuroscience evidence (A-F), evaluating counterarguments (G), and proposing mindfulness/cross-training (H).",
+        distractors: [
+          { letter: "A", trap: "Extreme Generalization", reason: "The author advocates mindfulness and 'cross-training', not a legal ban on GPS." },
+          { letter: "B", trap: "Correct Answer", reason: "Accurately synthesizes the scientific explanation with the normative conclusion." },
+          { letter: "C", trap: "Opposite / Stance Error", reason: "The author praises Maguire's work as a foundational landmark." },
+          { letter: "D", trap: "Partial Scope", reason: "Nomadic migrations are only mentioned in Paragraph A as introductory context." }
+        ]
+      },
+      {
+        id: 10,
+        para: "D",
+        evidenceId: "q10",
+        stem: "Which of the following would be an example of 'allocentric navigation' as implied in Paragraph D?",
+        options: [
+          { letter: "A", text: "Following audio prompts telling you to turn right at the next intersection." },
+          { letter: "B", text: "Memorizing a sequence of left and right turns relative to your body's movement." },
+          { letter: "C", text: "Maintaining an internal mental map of the city grid relative to fixed landmarks." },
+          { letter: "D", text: "Glancing at an algorithmic blue line on a smartphone screen while walking." }
+        ],
+        correct: "C",
+        evidenceQuote: "allocentric strategies (relying on mental spatial maps independent of current viewpoint)",
+        distractors: [
+          { letter: "A", trap: "Passive Cue Example", reason: "Audio prompts are automated external directions." },
+          { letter: "B", trap: "Egocentric Strategy", reason: "Relative to one's own body movement is egocentric, not allocentric." },
+          { letter: "C", trap: "Correct Answer", reason: "A viewpoint-independent mental map based on fixed environmental landmarks is allocentric navigation." },
+          { letter: "D", trap: "GPS Example", reason: "Following a screen line is the passive digital guidance critiqued." }
+        ]
+      },
+      {
+        id: 11,
+        para: "C",
+        evidenceId: "q11",
+        stem: "According to Paragraph C, what happened to London taxi drivers when they retired?",
+        options: [
+          { letter: "A", text: "Their posterior hippocampal volume showed measurable reduction." },
+          { letter: "B", text: "Their ability to recall general episodic memories deteriorated immediately." },
+          { letter: "C", text: "They retained identical hippocampal grey matter density throughout their lives." },
+          { letter: "D", text: "Their caudate nucleus shrank due to lack of motor stimulation." }
+        ],
+        correct: "A",
+        evidenceQuote: "when these drivers retired and ceased active mental mapping, their posterior hippocampal volume experienced measurable atrophy...",
+        distractors: [
+          { letter: "A", trap: "Correct Answer", reason: "'Measurable reduction' is an exact synonym for 'measurable atrophy'." },
+          { letter: "B", trap: "Extreme / Not Given", reason: "The text discusses hippocampal shrinkage, not immediate episodic amnesia." },
+          { letter: "C", trap: "Opposite / Contradiction", reason: "Hippocampal volume did not stay constant; it decreased." },
+          { letter: "D", trap: "Verbatim Echo / Misattribution", reason: "The caudate nucleus was not measured in the retired taxi driver follow-up." }
+        ]
+      },
+      {
+        id: 12,
+        para: "H",
+        evidenceId: "q12",
+        stem: "What practical solution does the author recommend in Paragraph H to maintain cognitive health?",
+        options: [
+          { letter: "A", text: "Studying historical cartography and ancient navigation techniques." },
+          { letter: "B", text: "Regularly navigating without digital assistance and practicing spatial awareness." },
+          { letter: "C", text: "Commuting exclusively through unfamiliar and challenging geographical terrain." },
+          { letter: "D", text: "Undergoing periodic fMRI brain scans to monitor hippocampal volume." }
+        ],
+        correct: "B",
+        evidenceQuote: "researchers advocate for 'navigational cross-training': intentionally disengaging digital navigational aids during routine commutes, engaging in orienteering, and cultivating active spatial mindfulness in our daily journeys.",
+        distractors: [
+          { letter: "A", trap: "Not Given / Distortion", reason: "The text recommends active spatial practice, not theoretical historical study." },
+          { letter: "B", trap: "Correct Answer", reason: "Accurately summarizes intentional disengagement of aids and cultivating spatial mindfulness." },
+          { letter: "C", trap: "Extreme / Misleading", reason: "Recommends routine commutes and orienteering, not 'exclusively unfamiliar terrain'." },
+          { letter: "D", trap: "Not Given", reason: "fMRI scans are research tools, not clinical daily therapies." }
+        ]
+      }
+    ];
+
+    // --- State Management ---
+    let currentQuestionIndex = 0;
+    let userAnswers = {};      // { 1: "B", 2: "C", ... }
+    let eliminatedOptions = {}; // { "1_A": true, "1_D": true }
+    let flaggedQuestions = new Set();
+    let isSubmitted = false;
+    let timeRemaining = 20 * 60; // 20 minutes in seconds
+    let timerInterval = null;
+    let isTimerRunning = false;
+
+    // --- DOM Elements ---
+    const timerDisplay = document.getElementById("timerDisplay");
+    const timerBadge = document.getElementById("timerBadge");
+    const timerToggleBtn = document.getElementById("timerToggleBtn");
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const questionNav = document.getElementById("questionNav");
+    const questionsContainer = document.getElementById("questionsContainer");
+    const prevQBtn = document.getElementById("prevQBtn");
+    const nextQBtn = document.getElementById("nextQBtn");
+    const flagQBtn = document.getElementById("flagQBtn");
+    const submitExamBtn = document.getElementById("submitExamBtn");
+    const scoreModal = document.getElementById("scoreModal");
+    const scoreValue = document.getElementById("scoreValue");
+    const bandValue = document.getElementById("bandValue");
+    const scoreCircle = document.getElementById("scoreCircle");
+    const feedbackMessage = document.getElementById("feedbackMessage");
+    const viewDetailedAnalysisBtn = document.getElementById("viewDetailedAnalysisBtn");
+    const answerKeyTabBtn = document.getElementById("answerKeyTabBtn");
+    const diagnosticsList = document.getElementById("diagnosticsList");
+    const retryAllBtn = document.getElementById("retryAllBtn");
+    const retryIncorrectBtn = document.getElementById("retryIncorrectBtn");
+    const modalRetryBtn = document.getElementById("modalRetryBtn");
+
+    // --- Initialization ---
+    function init() {
+      renderNav();
+      renderQuestions();
+      showQuestion(0);
+      startTimer();
+      bindEvents();
+      renderDiagnostics();
+    }
+
+    // --- Tab Navigation ---
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+        document.querySelectorAll(".view-panel").forEach(p => p.classList.remove("active"));
+
+        btn.classList.add("active");
+        const tabId = btn.getAttribute("data-tab");
+        document.getElementById(`${tabId}View`).classList.add("active");
+      });
+    });
+
+    // --- Render Question Palette ---
+    function renderNav() {
+      questionNav.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.className = "q-nav-btn";
+        btn.id = `nav-btn-${idx}`;
+        btn.textContent = q.id;
+
+        if (idx === currentQuestionIndex) btn.classList.add("active");
+        if (userAnswers[q.id]) btn.classList.add("answered");
+        if (flaggedQuestions.has(q.id)) btn.classList.add("flagged");
+
+        if (isSubmitted) {
+          if (userAnswers[q.id] === q.correct) {
+            btn.classList.add("correct");
+          } else {
+            btn.classList.add("incorrect");
+          }
+        }
+
+        btn.addEventListener("click", () => showQuestion(idx));
+        questionNav.appendChild(btn);
+      });
+    }
+
+    // --- Render Questions ---
+    function renderQuestions() {
+      questionsContainer.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const card = document.createElement("div");
+        card.className = `question-card ${idx === 0 ? 'active' : ''}`;
+        card.id = `question-card-${idx}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          const isSelected = userAnswers[q.id] === opt.letter;
+          const isEliminated = eliminatedOptions[`${q.id}_${opt.letter}`];
+          let extraClass = "";
+
+          if (isSubmitted) {
+            if (opt.letter === q.correct) extraClass = "correct-choice";
+            else if (isSelected && opt.letter !== q.correct) extraClass = "wrong-choice";
+          }
+
+          optionsHtml += `
+            <div class="option-item ${isSelected ? 'selected' : ''} ${isEliminated ? 'eliminated' : ''} ${extraClass}" 
+                 data-qid="${q.id}" data-opt="${opt.letter}">
+              <div class="option-letter">${opt.letter}</div>
+              <div class="option-text">${opt.text}</div>
+              <div class="option-actions">
+                <button class="strike-btn" title="Eliminate option" onclick="toggleEliminate(event, ${q.id}, '${opt.letter}')">✂️</button>
+              </div>
+            </div>
+          `;
+        });
+
+        // Rationale container if submitted
+        let rationaleHtml = "";
+        if (isSubmitted) {
+          rationaleHtml = `
+            <div class="rationale-container">
+              <div class="evidence-box">
+                <strong>📍 Exact Passage Evidence (Paragraph ${q.para}):</strong>
+                "${q.evidenceQuote}"
+                <div style="margin-top: 0.5rem;">
+                  <button class="btn btn-outline btn-sm" onclick="highlightAndJumpToEvidence('${q.evidenceId}')">🔍 Show in Passage</button>
+                </div>
+              </div>
+              <div class="distractor-breakdown">
+                <strong>🚨 Distractor Analysis:</strong>
+                ${q.distractors.map(d => `
+                  <div class="distractor-card ${d.letter === q.correct ? 'pass' : 'fail'}">
+                    <span class="trap-tag ${d.letter === q.correct ? 'correct' : 'trap'}">${d.trap}</span>
+                    <strong>Option ${d.letter}:</strong> ${d.reason}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        }
+
+        card.innerHTML = `
+          <div class="q-meta">
+            <span class="q-number-badge">Question ${q.id} of 12</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Ref: Paragraph [${q.para}]</span>
+          </div>
+          <div class="q-stem">${q.stem}</div>
+          <div class="options-list">${optionsHtml}</div>
+          ${rationaleHtml}
+        `;
+
+        questionsContainer.appendChild(card);
+      });
+
+      // Bind option clicks
+      document.querySelectorAll(".option-item").forEach(item => {
+        item.addEventListener("click", function(e) {
+          if (e.target.classList.contains("strike-btn")) return;
+          if (isSubmitted) return;
+
+          const qid = parseInt(this.getAttribute("data-qid"));
+          const opt = this.getAttribute("data-opt");
+
+          userAnswers[qid] = opt;
+          renderNav();
+          renderQuestions();
+          showQuestion(currentQuestionIndex);
+        });
+      });
+    }
+
+    // --- Show Specific Question ---
+    function showQuestion(index) {
+      currentQuestionIndex = index;
+      document.querySelectorAll(".question-card").forEach((c, idx) => {
+        c.classList.toggle("active", idx === index);
+      });
+
+      document.querySelectorAll(".q-nav-btn").forEach((b, idx) => {
+        b.classList.toggle("active", idx === index);
+      });
+
+      prevQBtn.disabled = index === 0;
+      nextQBtn.textContent = index === questionsData.length - 1 ? "Finish / Review" : "Next →";
+
+      const currentQ = questionsData[index];
+      flagQBtn.textContent = flaggedQuestions.has(currentQ.id) ? "🚩 Unflag" : "🏳️ Flag";
+    }
+
+    // --- Toggle Strike / Eliminate ---
+    window.toggleEliminate = function(event, qid, letter) {
+      event.stopPropagation();
+      const key = `${qid}_${letter}`;
+      if (eliminatedOptions[key]) {
+        delete eliminatedOptions[key];
+      } else {
+        eliminatedOptions[key] = true;
+      }
+      renderQuestions();
+      showQuestion(currentQuestionIndex);
+    };
+
+    // --- Jump and Highlight Evidence in Passage ---
+    window.highlightAndJumpToEvidence = function(evidenceId) {
+      const target = document.querySelector(`[data-evidence="${evidenceId}"]`);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.classList.add("flash");
+        setTimeout(() => target.classList.remove("flash"), 2500);
+      }
+    };
+
+    // --- Timer Mechanism ---
+    function startTimer() {
+      if (timerInterval) clearInterval(timerInterval);
+      isTimerRunning = true;
+      timerToggleBtn.textContent = "Pause";
+
+      timerInterval = setInterval(() => {
+        if (timeRemaining > 0) {
+          timeRemaining--;
+          updateTimerDisplay();
+        } else {
+          clearInterval(timerInterval);
+          submitExam();
+        }
+      }, 1000);
+    }
+
+    function pauseTimer() {
+      if (isTimerRunning) {
+        clearInterval(timerInterval);
+        isTimerRunning = false;
+        timerToggleBtn.textContent = "Resume";
+      } else {
+        startTimer();
+      }
+    }
+
+    function updateTimerDisplay() {
+      const mins = Math.floor(timeRemaining / 60);
+      const secs = timeRemaining % 60;
+      timerDisplay.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+
+      if (timeRemaining <= 300 && timeRemaining > 60) {
+        timerBadge.className = "timer-badge warning";
+      } else if (timeRemaining <= 60) {
+        timerBadge.className = "timer-badge danger";
+      } else {
+        timerBadge.className = "timer-badge";
+      }
+    }
+
+    // --- Submit Exam & Scoring ---
+    function submitExam() {
+      clearInterval(timerInterval);
+      isSubmitted = true;
+
+      let score = 0;
+      questionsData.forEach(q => {
+        if (userAnswers[q.id] === q.correct) {
+          score++;
+        }
+      });
+
+      // Calculate IELTS Reading Band Approximation for 12 Questions
+      let band = "5.0";
+      if (score === 12) band = "Band 9.0 (Expert)";
+      else if (score === 11) band = "Band 8.5 (Very Good)";
+      else if (score === 10) band = "Band 8.0 (Very Good)";
+      else if (score === 9) band = "Band 7.5 (Good)";
+      else if (score === 8) band = "Band 7.0 (Good)";
+      else if (score === 7) band = "Band 6.5 (Competent)";
+      else if (score === 6) band = "Band 6.0 (Competent)";
+      else band = "Band 5.5 or below (Needs Practice)";
+
+      scoreValue.textContent = `${score}/12`;
+      bandValue.textContent = band;
+      const percent = (score / 12) * 100;
+      scoreCircle.style.setProperty("--percent", percent);
+
+      feedbackMessage.innerHTML = `You answered <strong>${score} out of 12</strong> questions correctly (${Math.round(percent)}%).`;
+
+      scoreModal.classList.add("active");
+      answerKeyTabBtn.style.display = "inline-block";
+
+      renderNav();
+      renderQuestions();
+      renderDiagnostics();
+      showQuestion(0);
+    }
+
+    // --- Diagnostics Render ---
+    function renderDiagnostics() {
+      diagnosticsList.innerHTML = "";
+      questionsData.forEach(q => {
+        const userChoice = userAnswers[q.id] || "None";
+        const isRight = userChoice === q.correct;
+
+        const card = document.createElement("div");
+        card.className = "card";
+        card.style.borderLeft = isSubmitted 
+          ? (isRight ? "4px solid var(--success)" : "4px solid var(--danger)")
+          : "1px solid var(--border)";
+
+        card.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <h4 style="font-size: 1rem;">Question ${q.id}: ${q.stem}</h4>
+            <span class="brand-badge" style="background: ${isRight ? 'var(--success)' : 'var(--danger)'}">
+              ${isSubmitted ? (isRight ? 'CORRECT' : 'INCORRECT') : 'Q' + q.id}
+            </span>
+          </div>
+          <div style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+            <strong>Your Choice:</strong> Option ${userChoice} &nbsp;|&nbsp; 
+            <strong>Correct Answer:</strong> <span style="color: var(--success); font-weight: 700;">Option ${q.correct}</span>
+          </div>
+          <div class="evidence-box">
+            <strong>Exact Evidence (Paragraph ${q.para}):</strong> "${q.evidenceQuote}"
+          </div>
+          <div class="distractor-breakdown">
+            ${q.distractors.map(d => `
+              <div class="distractor-card ${d.letter === q.correct ? 'pass' : 'fail'}">
+                <span class="trap-tag ${d.letter === q.correct ? 'correct' : 'trap'}">${d.trap}</span>
+                <strong>Option ${d.letter}:</strong> ${d.reason}
+              </div>
+            `).join('')}
+          </div>
+        `;
+        diagnosticsList.appendChild(card);
+      });
+    }
+
+    // --- Retry Workflows ---
+    function resetAndRetry(onlyIncorrect = false) {
+      if (onlyIncorrect) {
+        // Keep only correct answers, clear wrong ones
+        questionsData.forEach(q => {
+          if (userAnswers[q.id] !== q.correct) {
+            delete userAnswers[q.id];
+          }
+        });
+        const remainingCount = questionsData.length - Object.keys(userAnswers).length;
+        timeRemaining = Math.max(remainingCount * 90, 180); // 1.5 min per question
+      } else {
+        userAnswers = {};
+        eliminatedOptions = {};
+        flaggedQuestions.clear();
+        timeRemaining = 20 * 60;
+      }
+
+      isSubmitted = false;
+      scoreModal.classList.remove("active");
+      
+      // Switch to simulator tab
+      document.querySelector('[data-tab="simulator"]').click();
+
+      renderNav();
+      renderQuestions();
+      renderDiagnostics();
+      showQuestion(0);
+      startTimer();
+    }
+
+    // --- Bind All Events ---
+    function bindEvents() {
+      prevQBtn.addEventListener("click", () => {
+        if (currentQuestionIndex > 0) showQuestion(currentQuestionIndex - 1);
+      });
+
+      nextQBtn.addEventListener("click", () => {
+        if (currentQuestionIndex < questionsData.length - 1) {
+          showQuestion(currentQuestionIndex + 1);
+        } else {
+          submitExam();
+        }
+      });
+
+      flagQBtn.addEventListener("click", () => {
+        const qid = questionsData[currentQuestionIndex].id;
+        if (flaggedQuestions.has(qid)) {
+          flaggedQuestions.delete(qid);
+        } else {
+          flaggedQuestions.add(qid);
+        }
+        renderNav();
+        showQuestion(currentQuestionIndex);
+      });
+
+      submitExamBtn.addEventListener("click", () => {
+        const answeredCount = Object.keys(userAnswers).length;
+        if (answeredCount < 12) {
+          if (confirm(`You have answered ${answeredCount} of 12 questions. Submit test now?`)) {
+            submitExam();
+          }
+        } else {
+          submitExam();
+        }
+      });
+
+      timerToggleBtn.addEventListener("click", pauseTimer);
+
+      themeToggleBtn.addEventListener("click", () => {
+        const isDark = document.body.getAttribute("data-theme") === "dark";
+        if (isDark) {
+          document.body.removeAttribute("data-theme");
+          themeToggleBtn.textContent = "🌙 Theme";
+        } else {
+          document.body.setAttribute("data-theme", "dark");
+          themeToggleBtn.textContent = "☀️ Theme";
+        }
+      });
+
+      viewDetailedAnalysisBtn.addEventListener("click", () => {
+        scoreModal.classList.remove("active");
+        answerKeyTabBtn.click();
+      });
+
+      modalRetryBtn.addEventListener("click", () => resetAndRetry(false));
+      retryAllBtn.addEventListener("click", () => resetAndRetry(false));
+      retryIncorrectBtn.addEventListener("click", () => resetAndRetry(true));
+    }
+
+    // Run on load
+    init();
+  </script>
+</body>
+</html>
