@@ -1,14 +1,17 @@
 # 📚 Master Workspace Educational Content Catalog
 
-> *Auto-generated on 2026-08-31 14:38 via `scripts/build_workspace_index.py`*
+> *Auto-generated on 2026-08-31 15:53 via `scripts/build_workspace_index.py`*
 
 This catalog indexes all structured lesson plans, test prep modules, question banks, and interactive simulators across the workspace.
 
 ---
 
-## 🌐 ESL Modules & Resources (0 Total)
+## 🌐 ESL Modules & Resources (2 Total)
 
-*No content files currently created in `ESL/`.*
+| Type | Title / Topic | Target Level | Format | Direct Link |
+| :--- | :--- | :--- | :--- | :--- |
+| Interactive Simulator | Past-Tenses-B1-Speaking-Lab | `Interactive Webapp` | 🚀 **Interactive App** | [B1 Past Tenses Speaking Lab | Past Simple, Present Perfect & Past Perfect](ESL/B1/past-tenses-b1-speaking-lab.html) |
+| Lesson Plan | Worksheet | Drill | Past Simple vs Present Perfect & Past Simple vs Past Perfect (Speaking-First Lab) | `CEFR B1` | 📄 Markdown | [B1 Past Tenses Speaking Lab: Teacher Guide & Student Handout](ESL/B1/b1_past_tenses_speaking_lab.md) |
 
 ## 🌐 IELTS Modules & Resources (4 Total)
 
