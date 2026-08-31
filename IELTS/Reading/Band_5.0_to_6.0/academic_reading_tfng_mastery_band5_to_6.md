@@ -15,7 +15,27 @@ content_type: "Lesson Plan | Drill | Analysis"
 
 ---
 
-## 🎯 1. The Definitive T/F/NG Logic Framework
+## 👨‍🏫 1. Comprehensive Teacher Lesson Plan & Classroom Guide
+
+### Pacing & Lesson Flow (60-Minute Model)
+
+| Stage | Timing | Pedagogical Action & Classroom Task | Interaction |
+| :--- | :---: | :--- | :---: |
+| **1. The Logic Matrix Hook** | 8 min | Present the classic trap: *"Water freezes at 0°C."* If text says *"Scientists studied cold temperatures"*, why is the answer **NOT GIVEN** and not **TRUE**? Establish the strict "No Outside Knowledge" exam rule. | Plenary |
+| **2. Modifiers & Qualifying Words** | 12 min | Teach the impact of qualifiers (*all, majority, some, exclusively, may, proved*). Demonstrate how adding one word changes a statement from TRUE to FALSE. | Teacher-led |
+| **3. Controlled Skill Drills** | 15 min | Pairs complete **Exercise 1 (FALSE vs NOT GIVEN Matrix)** and **Exercise 2 (Qualifying Words Detector)**. Plenary review. | Pairs ➔ Plenary |
+| **4. Reading Passage & Exam Drill** | 20 min | Students read *The Rise of Vertical Farming* and answer Questions 1–6 independently under timed conditions. | Individual |
+| **5. Rationale Dissection** | 5 min | Granular rationale breakdown of the distractor traps. | Plenary |
+
+### Concept Checking Questions (CCQs) for Teachers
+- *Q: "If a statement is true in real life, does that mean it's TRUE in IELTS Reading?"*  
+  **A:** **No.** It is only TRUE if the passage directly mentions and agrees with it.
+- *Q: "What is the exact difference between FALSE and NOT GIVEN?"*  
+  **A:** **FALSE** means the text states the opposite fact (direct contradiction). **NOT GIVEN** means the text does not contain enough information to confirm or contradict the statement.
+
+---
+
+## 🎯 2. The Definitive T/F/NG Logic Framework
 
 ```
 +----------------+----------------------------------------------------------------------+
@@ -28,21 +48,13 @@ content_type: "Lesson Plan | Drill | Analysis"
 |                | (The text states the exact opposite or an incompatible fact).         |
 +----------------+----------------------------------------------------------------------+
 | NOT GIVEN      | The statement CANNOT BE CONFIRMED or DISPROVED by the passage.        |
-|                | (There is no information, or the fact is partially missing).         |
+|                | (There is no information, or key elements are missing).               |
 +----------------+----------------------------------------------------------------------+
 ```
 
-### The 3 Golden Rules
-1. **Never Assume from Real-World Knowledge**: Even if a statement is factually true in real life (e.g. *"Water boils at 100 degrees"*), if the passage does not mention it, the answer is `NOT GIVEN`.
-2. **Watch the Modifiers & Quantifiers**:
-   - `All` vs `Some` vs `The majority`
-   - `Always` vs `Often` vs `Under specific circumstances`
-   - `Proved` vs `Suggested` vs `Hypothesized`
-3. **Sequential Order**: T/F/NG questions almost always follow the chronological order of the text. If you find Question 1 in Paragraph 2 and Question 3 in Paragraph 4, Question 2 MUST be between them.
-
 ---
 
-## 📄 2. Academic Reading Passage: The Rise of Vertical Farming
+## 📄 3. Academic Reading Passage: The Rise of Vertical Farming
 
 ```
 [Paragraph A]
@@ -60,7 +72,7 @@ Despite these compelling ecological benefits, vertical farming currently encount
 
 ---
 
-## ❓ 3. Practice Items: True / False / Not Given
+## ❓ 4. Practice Items: True / False / Not Given
 
 *Do the following statements agree with the information given in the Reading Passage?*  
 *In boxes 1–6 on your answer sheet, write:*
@@ -77,13 +89,52 @@ Despite these compelling ecological benefits, vertical farming currently encount
 
 ---
 
-## 🔑 4. Answer Key & Step-by-Step Rationales
+## 🏋️ 5. Targeted Skill-Building Exercises
 
+### Exercise 1: The FALSE vs. NOT GIVEN Diagnostic Lab
+*Read the micro-text and determine if the statement is FALSE or NOT GIVEN.*
+
+- **Micro-Text:** *"The company produces electric scooters exclusively for the domestic European market."*
+  1. **Statement A:** *"The company sells electric scooters to customers in North America."* ➔ `[ .......... ]`
+  2. **Statement B:** *"The company plans to launch electric bicycles next year."* ➔ `[ .......... ]`
+  3. **Statement C:** *"The company manufactures traditional petrol motorcycles."* ➔ `[ .......... ]`
+
+---
+
+### Exercise 2: The Qualifying Word Trap Detector
+*Identify how the qualifying word in bold alters the truth value compared to the text.*
+
+- **Text:** *"Many migratory bird species occasionally alter their flight trajectories during severe storms."*
+  1. **Statement:** *"Migratory birds **always** alter their flight paths during storms."* ➔ **Answer:** `[ .......... ]` *(Reason: 'Occasionally' vs 'Always')*
+  2. **Statement:** *"Some birds adjust their flight routes when bad weather occurs."* ➔ **Answer:** `[ .......... ]`
+
+---
+
+## 🔑 6. Answer Key & Step-by-Step Rationales
+
+### Main Reading Practice Key (Questions 1–6)
 | Q | Answer | Textual Evidence & Logical Breakdown |
 | :---: | :---: | :--- |
 | **1** | **TRUE** | *Passage [Para A]*: "...having already degraded **over a third** of the planet's arable land..." <br>*Analysis*: "More than one-third" perfectly matches "over a third". Factually identical. |
 | **2** | **FALSE** | *Passage [Para B]*: "In aeroponics, plant roots are **suspended in air and misted** at precise intervals..." <br>*Analysis*: Submerging roots underwater is the opposite of suspending roots in air and misting them. Contradicts text. |
-| **3** | **NOT GIVEN** | *Passage [Para B/D]*: The text discusses water savings (95%) and electricity consumption, but **nowhere** does it compare total carbon emissions between vertical and traditional farms. Do not guess! |
+| **3** | **NOT GIVEN** | *Passage [Para B/D]*: The text discusses water savings (95%) and electricity consumption, but **nowhere** does it compare total carbon emissions between vertical and traditional farms. |
 | **4** | **FALSE** | *Passage [Para C]*: "...enclosed indoor facilities **eliminate the need** for chemical pesticides and herbicides..." <br>*Analysis*: "Require minimal" contradicts "eliminate the need" (which means zero pesticides needed). |
 | **5** | **TRUE** | *Passage [Para C]*: "...produce can be harvested **year-round on continuous 30-day crop cycles**... impervious to unpredictable weather patterns..." <br>*Analysis*: Matches "harvested continuously without being limited by weather seasons". |
 | **6** | **TRUE** | *Passage [Para D]*: "...the continuous electrical energy required... remains a **significant operational cost**..." <br>*Analysis*: Matches "major financial challenge". |
+
+### Exercise 1 Answer Key
+1. **FALSE** *(Exclusively in Europe directly contradicts selling in North America).*
+2. **NOT GIVEN** *(Passage says nothing about future plans for electric bicycles).*
+3. **NOT GIVEN** *(Passage mentions electric scooters; no info provided on petrol motorcycles).*
+
+### Exercise 2 Answer Key
+1. **FALSE** *(Text says 'occasionally'; statement says 'always'. Extreme qualifier creates a contradiction).*
+2. **TRUE** *('Many occasionally' is accurately paraphrased by 'Some adjust').*
+
+---
+
+## 📚 7. Self-Study 3-Step Action Plan
+
+1. **Step 1 (Scan for Anchor Words):** Underline dates, capitalized names, and technical terms in the question first.
+2. **Step 2 (Examine Modifiers):** Check if the question uses extreme words (*all, only, completely, never*).
+3. **Step 3 (Verify Contradiction vs Absence):** If the text doesn't explicitly refute the fact, choose **NOT GIVEN**.
