@@ -1,6 +1,6 @@
 # 📚 Master Workspace Educational Content Catalog
 
-> *Auto-generated on 2026-08-31 19:05 via `scripts/build_workspace_index.py`*
+> *Auto-generated on 2026-08-31 19:11 via `scripts/build_workspace_index.py`*
 
 This catalog indexes all structured lesson plans, test prep modules, question banks, and interactive simulators across the workspace, along with independent domain portals.
 
@@ -25,7 +25,7 @@ This catalog indexes all structured lesson plans, test prep modules, question ba
 | Lesson Plan | Dream Jobs & Careers + School & Academic Pressures | `CEFR B1` | 📄 Markdown | [Dream Big, Stress Less: Careers & School Life (B1 Teen ESL)](ESL/B1/b1_dream_jobs_and_school_pressures.md) |
 | Lesson Plan | Worksheet | Drill | Past Simple vs Present Perfect & Past Simple vs Past Perfect (High School / 15yo Speaking Lab) | `CEFR B1` | 📄 Markdown | [B1 Past Tenses Speaking Lab (High School Edition): Teacher Guide & Student Handout](ESL/B1/b1_past_tenses_speaking_lab.md) |
 
-## 🌐 IELTS Modules & Resources (46 Total)
+## 🌐 IELTS Modules & Resources (48 Total)
 
 | Type | Title / Topic | Target Level | Format | Direct Link |
 | :--- | :--- | :--- | :--- | :--- |
@@ -46,6 +46,7 @@ This catalog indexes all structured lesson plans, test prep modules, question ba
 | Interactive Simulator | Ielts Academic Task1 Line Graph Training Pack | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1 — Line Graph Mastery Training Pack](IELTS/Writing_Task1/ielts_academic_task1_line_graph_training_pack.html) |
 | Interactive Simulator | Ielts Academic Task1 Band 5 To 6 Breakthrough | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1: Band 6+ Breakthrough Masterclass | IELTS Academic Study Module](IELTS/Writing_Task1/Band_5.0_to_6.0/ielts_academic_task1_band_5_to_6_breakthrough.html) |
 | Interactive Simulator | Academic Writing Task1 Bar And Pie Band6 To 7 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1: Bar &amp; Pie Charts (Band 6.0 ➔ 7.0) | IELTS Academic Study Module](IELTS/Writing_Task1/Band_6.0_to_7.0/academic_writing_task1_bar_and_pie_band6_to_7.html) |
+| Interactive Simulator | Academic Writing Task1 Mixed Charts Band5 To 6 5 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1: Mixed Charts &amp; Multiple Visuals (Band 5.0 ➔ 6.5) | IELTS Academic Study Module](IELTS/Writing_Task1/Band_5.0_to_6.0/academic_writing_task1_mixed_charts_band5_to_6_5.html) |
 | Interactive Simulator | Academic Writing Task1 Process And Flowchart Band7 To 8 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1: Process &amp; Flowchart Masterclass | IELTS Academic Study Module](IELTS/Writing_Task1/Band_7.0_to_8.0/academic_writing_task1_process_and_flowchart_band7_to_8.html) |
 | Interactive Simulator | Academic Writing Task1 Maps And Mixed Data Band8 To 9 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1: Urban Maps &amp; Mixed Graphics (Band 9.0) | IELTS Academic Study Module](IELTS/Writing_Task1/Band_8.0_to_9.0/academic_writing_task1_maps_and_mixed_data_band8_to_9.html) |
 | Interactive Simulator | Academic Writing Task2 Discuss Both Views Band6 To 7 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 2: Discuss Both Views (Band 6.0 ➔ 7.0) | IELTS Academic Study Module](IELTS/Writing_Task2/Band_6.0_to_7.0/academic_writing_task2_discuss_both_views_band6_to_7.html) |
@@ -66,6 +67,7 @@ This catalog indexes all structured lesson plans, test prep modules, question ba
 | Lesson Plan | Drill | Model Essay | Academic Speaking Part 2: 1-Minute Note-Taking Framework & 2-Minute Long Turn | `Band 6.0 to 7.0` | 📄 Markdown | [IELTS Academic Speaking Part 2: Long Turn Mastery (Band 6.0 ➔ 7.0)](IELTS/Speaking/Band_6.0_to_7.0/academic_speaking_part2_long_turn_strategy_band6_to_7.md) |
 | Lesson Plan | Drill | Model Essay | Academic Speaking Part 3: Abstract Discourse, Speculation & The AREA Framework | `Band 7.0 to 8.0` | 📄 Markdown | [IELTS Academic Speaking Part 3: Abstract Discussion Masterclass (Band 8.0)](IELTS/Speaking/Band_7.0_to_8.0/academic_speaking_part3_abstract_discussion_band7_to_8.md) |
 | Lesson Plan | Model Essay | Analysis | Academic Writing Task 1: Comparative Bar Charts & Pie Charts Mastery | `Band 6.0 to 7.0` | 📄 Markdown | [IELTS Academic Writing Task 1: Bar & Pie Charts (Band 6.0 ➔ 7.0)](IELTS/Writing_Task1/Band_6.0_to_7.0/academic_writing_task1_bar_and_pie_band6_to_7.md) |
+| Lesson Plan | Model Essay | Analysis | Academic Writing Task 1: Mixed Charts & Multiple Visuals Mastery | `Band 5.0 to 6.5` | 📄 Markdown | [IELTS Academic Writing Task 1: Mixed Charts & Multiple Visuals (Band 5.0 ➔ 6.5)](IELTS/Writing_Task1/Band_5.0_to_6.0/academic_writing_task1_mixed_charts_band5_to_6_5.md) |
 | Lesson Plan | Model Essay | Analysis | Academic Writing Task 1: Industrial Processes & Natural Life Cycles | `Band 7.0 to 8.0` | 📄 Markdown | [IELTS Academic Writing Task 1: Process & Flowchart Masterclass](IELTS/Writing_Task1/Band_7.0_to_8.0/academic_writing_task1_process_and_flowchart_band7_to_8.md) |
 | Lesson Plan | Model Essay | Analysis | Academic Writing Task 1: Comparative Urban Maps & Mixed Data Synthesis | `Band 8.0 to 9.0` | 📄 Markdown | [IELTS Academic Writing Task 1: Urban Maps & Mixed Graphics (Band 9.0)](IELTS/Writing_Task1/Band_8.0_to_9.0/academic_writing_task1_maps_and_mixed_data_band8_to_9.md) |
 | Lesson Plan | Model Essay | Analysis | Academic Writing Task 2: Discuss Both Views & Give Your Opinion | `Band 6.0 to 7.0` | 📄 Markdown | [IELTS Academic Writing Task 2: Discuss Both Views (Band 6.0 ➔ 7.0)](IELTS/Writing_Task2/Band_6.0_to_7.0/academic_writing_task2_discuss_both_views_band6_to_7.md) |
