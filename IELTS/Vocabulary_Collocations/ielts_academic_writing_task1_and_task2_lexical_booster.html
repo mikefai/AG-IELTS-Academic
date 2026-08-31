@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IELTS Academic Listening: Section 4 University Lecture Masterclass (Band 8.0 ➔ 9.0) | IELTS Academic Study Module</title>
+  <title>IELTS Academic Writing: Task 1 &amp; Task 2 Lexical Booster (Band 7.0 ➔ 9.0) | IELTS Academic Study Module</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -603,7 +603,7 @@
   <header>
     <div class="header-container">
       <div class="nav-left">
-        <a href="../../index.html" class="btn-back">← Back to IELTS Academic Portal</a>
+        <a href="../index.html" class="btn-back">← Back to IELTS Academic Portal</a>
         <span class="domain-tag">🎯 IELTS</span>
       </div>
       <div class="nav-actions">
@@ -668,37 +668,103 @@
 
     <div class="module-hero">
       <div class="module-meta-pills">
-        <span class="meta-pill highlight">Band 8.0 to 9.0</span>
+        <span class="meta-pill highlight">Band 7.0 to 9.0</span>
         <span class="meta-pill">Lesson Plan | Drill | Analysis</span>
         <span class="meta-pill">📅 2026-08-31</span>
       </div>
-      <h1 class="module-title">IELTS Academic Listening: Section 4 University Lecture Masterclass (Band 8.0 ➔ 9.0)</h1>
+      <h1 class="module-title">IELTS Academic Writing: Task 1 & Task 2 Lexical Booster (Band 7.0 ➔ 9.0)</h1>
       <p style="color: var(--text-muted); font-size: 0.95rem;">Interactive Academic Study Module • Pedagogically Scaffolded Curriculum</p>
     </div>
 
     
+        <!-- Struggling Student Scaffolding & Sentence Frame Generator -->
+        <div class="scaffold-card" id="studentScaffold">
+          <div class="scaffold-header" onclick="toggleScaffold()">
+            <div class="scaffold-title">
+              <span>🧩</span> <strong>Need Help Writing? Click for Sentence Starters & Formulas (Band 6.5+ Frames)</strong>
+            </div>
+            <span class="scaffold-toggle-icon" id="scaffoldIcon">▼</span>
+          </div>
+          <div class="scaffold-content" id="scaffoldContent">
+            <p class="scaffold-intro">Click any formula below to automatically paste it into your Writing Arena:</p>
+            <div class="starter-grid">
+              <button class="starter-btn" onclick="insertSentenceStarter('intro')">
+                <span class="tag">Introduction</span>
+                <code>"The [graph/table] illustrates changes in [Topic] across [Categories] between [Year] and [Year]..."</code>
+              </button>
+              <button class="starter-btn" onclick="insertSentenceStarter('overview')">
+                <span class="tag">Dual Overview</span>
+                <code>"Overall, while [Category A] experienced a substantial upward trajectory, [Category B] saw a marked decline..."</code>
+              </button>
+              <button class="starter-btn" onclick="insertSentenceStarter('body1')">
+                <span class="tag">Body 1 (Main Data)</span>
+                <code>"Looking first at the leading sector, [Item A] accounted for the highest proportion at [X%], followed closely by..."</code>
+              </button>
+              <button class="starter-btn" onclick="insertSentenceStarter('body2')">
+                <span class="tag">Body 2 (Contrast)</span>
+                <code>"In stark contrast, [Item C] recorded merely a negligible fraction of [Z%], before recovering slightly to..."</code>
+              </button>
+            </div>
+            <div class="pitfall-radar">
+              <strong>⚠️ Common Mistakes Radar:</strong>
+              <ul>
+                <li><strong>Never put raw figures in the Overview:</strong> Save percentages and specific dates for Body 1 and 2.</li>
+                <li><strong>Avoid repeating "shows":</strong> Use <em>illustrates, delineates, outlines, depicts, reveals</em>.</li>
+                <li><strong>Avoid copying prompt words:</strong> Paraphrase nouns (*proportion ➔ share*, *tourists ➔ visitors*).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
     
+        <section class="interactive-tool-card" id="writing-arena">
+          <div class="tool-header">
+            <div class="tool-title">✍️ Interactive Writing Arena & Word Counter</div>
+            <div class="tool-badges">
+              <span class="badge">Target: 150+ Words</span>
+              <span class="badge" id="timerDisplay">20:00</span>
+            </div>
+          </div>
+          <div class="tool-body">
+            <div class="timer-controls">
+              <button class="btn-tool" onclick="startWritingTimer(20)">▶️ Start Exam Timer (20m)</button>
+              <button class="btn-tool btn-tool-outline" onclick="pauseWritingTimer()">⏸️ Pause</button>
+              <button class="btn-tool btn-tool-outline" onclick="resetWritingTimer(20)">🔄 Reset</button>
+              <button class="btn-tool btn-tool-outline" onclick="clearWritingDraft()">🗑️ Clear</button>
+            </div>
+            <textarea id="essayEditor" placeholder="Type your response here to practice timed exam conditions..." rows="12" oninput="updateWordStats(150)"></textarea>
+            <div class="stats-bar">
+              <div class="stat-group">
+                <span class="stat-label">Word Count:</span>
+                <span class="stat-value" id="wordCount">0</span> / 150 words
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="wordProgressBar" style="width: 0%;"></div>
+              </div>
+              <div id="wordFeedback" class="word-status-badge">Need 150 words</div>
+            </div>
+          </div>
+        </section>
+        
     
 
     <article class="module-content-card">
-      <h1 id="ielts-academic-listening-section-4-university-lecture-masterclass-band-80--90" class="study-heading h1">🎧 IELTS Academic Listening: Section 4 University Lecture Masterclass (Band 8.0 ➔ 9.0)</h1>
+      <h1 id="ielts-academic-writing-task-1--task-2-lexical-booster-band-70--90" class="study-heading h1">✍️ IELTS Academic Writing: Task 1 &amp; Task 2 Lexical Booster (Band 7.0 ➔ 9.0)</h1>
 <p></p>
 <h2 id="module-overview" class="study-heading h2">📋 Module Overview</h2>
 <ul class="study-list">
-<li><strong>Exam Section</strong>: Listening Section 4 (Academic Monologue / University lecture / 1 speaker / 10 continuous questions)</li>
-<li><strong>Target Transition</strong>: Band 8.0 ➔ 9.0</li>
-<li><strong>Question Types</strong>: High-Density Note Completion, Process Summaries</li>
-<li><strong>The Core Problem for Band 7.5 Candidates</strong>:</li>
+<li><strong>Exam Focus</strong>: Lexical Resource (LR) for Academic Writing Task 1 &amp; Task 2</li>
+<li><strong>Target Transition</strong>: Band 7.0 ➔ 9.0</li>
+<li><strong>The Core Problem for Band 6.0–6.5 Candidates</strong>:</li>
 </ul>
-<p>  - No mid-section pause: Candidates lose tracking if they miss one word and fail to catch where the lecturer is in the notes.</p>
-<p>  - Making spelling or plural suffix slips (<em>"turbine"</em> ❌ instead of <em>"turbines"</em> ✅) under rapid acoustic delivery.</p>
-<p>  - Focusing on searching for verbatim prompt words rather than listening for <strong>macro-signpost transitions</strong>.</p>
+<p>  - In Task 1: Repeating <em>"increased/decreased"</em> 10 times and copying raw percentages (<em>"25%, 50%, 75%"</em>) without lexical proportion rephrasing (<em>"a quarter, the vast majority, three-quarters"</em>).</p>
+<p>  - In Task 2: Relying on generic, low-register verbs (<em>"shows", "makes", "helps", "thinks"</em>) instead of analytical academic verbs (<em>"substantiates", "precipitates", "underpins", "exacerbates"</em>).</p>
 <ul class="study-list">
 <li><strong>Pedagogical Objectives</strong>:</li>
 </ul>
-<p>  1. Master <strong>Lecture Discourse Signposts</strong> (<em>"Turning now to...", "What is particularly salient here is..."</em>).</p>
-<p>  2. Implement <strong>Pre-Listening Word-Form &amp; Morphological Prediction</strong>.</p>
-<p>  3. Perfect <strong>Single/Plural Acoustic Discrimination and Exact Spelling Verification</strong>.</p>
+<p>  1. Master <strong>Dynamic Trend &amp; Degree Adverbials</strong> for Task 1 data movements.</p>
+<p>  2. Implement the <strong>Proportion &amp; Fraction Rephrasing System</strong> to eliminate raw number repetition.</p>
+<p>  3. Deploy <strong>High-Precision Academic Argumentative Verbs &amp; Discourse Markers</strong> for Task 2 essays.</p>
 <p></p>
 <hr class="study-divider">
 <p></p>
@@ -714,164 +780,144 @@
 <th>Interaction</th>
 </tr></thead><tbody>
 <tr>
-<td><strong>1. The 60-Second Scan Drill</strong></td>
+<td><strong>1. The "Repetition Trap" Warmer</strong></td>
 <td>8 min</td>
-<td>Display a full 10-question Section 4 note sheet. Give students strictly 60 seconds to highlight the 4 structural subheadings. Show how subheadings act as safety anchors.</td>
+<td>Present a student Task 1 paragraph with 6 instances of <em>"increased"</em> and <em>"25%"</em>. Ask students: <em>"How does lexical repetition cap Lexical Resource at Band 6.0?"</em></td>
 <td>Plenary</td>
 </tr>
 <tr>
-<td><strong>2. Discourse Signposting Lab</strong></td>
+<td><strong>2. Trend &amp; Fraction Matrix</strong></td>
 <td>12 min</td>
-<td>Teach the 4 categories of academic lecture cues: Defining/Classifying, Shifting Focus, Emphasizing Core Mechanisms, and Citing Real-World Applications.</td>
+<td>Teach the 4 categories of data variation: Trajectory, Rate/Magnitude, Proportion Synonyms, and Data Plateauing.</td>
 <td>Teacher-led</td>
 </tr>
 <tr>
-<td><strong>3. Guided Note-Taking Breakdown</strong></td>
+<td><strong>3. Task 2 Analytical Verb Lab</strong></td>
 <td>10 min</td>
-<td>Walk through the Biomimicry &amp; Marine Hydrodynamics transcript excerpt. Highlight the exact cues preceding target answers.</td>
+<td>Contrast low-level verbs with their academic equivalents (<em>"makes worse" ➔ "exacerbates", "supports" ➔ "corroborates"</em>).</td>
 <td>Plenary</td>
 </tr>
 <tr>
 <td><strong>4. 3-Stage Skill Building</strong></td>
 <td>15 min</td>
-<td>Pairs complete <strong>Exercise 1 (Signpost Decoder Gym)</strong> and <strong>Exercise 2 (Spelling &amp; Plural Suffix Accuracy Lab)</strong>.</td>
+<td>Pairs complete <strong>Exercise 1 (Fraction &amp; Proportion Transformer)</strong> and <strong>Exercise 2 (Analytical Verb Nuance Sifter)</strong>.</td>
 <td>Pairs ➔ Plenary</td>
 </tr>
 <tr>
-<td><strong>5. Full Section 4 Simulation</strong></td>
+<td><strong>5. Applied Writing Arena</strong></td>
 <td>15 min</td>
-<td>Individual continuous 10-item listening test using the built-in TTS Audio Reader. Plenary rationale review.</td>
-<td>Individual ➔ Plenary</td>
+<td>Students write a 100-word comparative data report using at least 4 proportion rephrasings and 3 upgraded verbs in the interactive Writing Arena.</td>
+<td>Individual</td>
 </tr>
 </tbody>
 </table></div>
 <p></p>
 <h3 id="concept-checking-questions-ccqs-for-teachers" class="study-heading h3">Concept Checking Questions (CCQs) for Teachers</h3>
 <ul class="study-list">
-<li><em>Q: "If the notes say 'maintaining [1] ............ surfaces', what word class is needed?"</em>  </li>
+<li><em>Q: "Can I write 'a half of the people' in Task 1?"</em>  </li>
 </ul>
-<p>  <strong>A:</strong> <strong>An adjective</strong> (or attributive noun) describing surfaces (e.g. <em>smooth, streamlined, polished</em>).</p>
+<p>  <strong>A:</strong> <strong>No.</strong> Write <em>"half the population"</em> or <em>"50 percent of respondents"</em> (drop the <em>"a"</em> before <em>"half"</em>).</p>
 <ul class="study-list">
-<li><em>Q: "If you lose your place during Section 4, what should you do immediately?"</em>  </li>
+<li><em>Q: "What is the difference between 'plateaued' and 'stabilized'?"</em>  </li>
 </ul>
-<p>  <strong>A:</strong> <strong>Look at the next major bold subheading.</strong> Do not panic or try to search backward; reset your eyes on the next section anchor.</p>
+<p>  <strong>A:</strong> <strong>Plateaued</strong> describes leveling off <em>after an upward climb</em>; <strong>stabilized</strong> describes settling into an even trend after fluctuations.</p>
 <p></p>
 <hr class="study-divider">
 <p></p>
-<h2 id="2-in-depth-study-notes-high-density-lecture-signposting" class="study-heading h2">📚 2. In-Depth Study Notes: High-Density Lecture Signposting</h2>
+<h2 id="2-in-depth-study-notes-the-task-1--2-lexical-power-matrices" class="study-heading h2">📊 2. In-Depth Study Notes: The Task 1 &amp; 2 Lexical Power Matrices</h2>
 <p></p>
+<h3 id="matrix-1-task-1-trend-rate--trajectory-descriptors" class="study-heading h3">Matrix 1: Task 1 Trend, Rate &amp; Trajectory Descriptors</h3>
+<div class="code-block-wrapper"><div class="code-header"><span>Sample / Model Text</span><div class="code-actions"><button class="btn-copy-code" onclick="readTextChunk(this)">🔊 Read</button><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div></div><pre><code class="language-">+-----------------------------------+-----------------------------------+-----------------------------------+
+| RAPID / STEEP UPWARD MOVEMENT     | GRADUAL / MODERATE MOVEMENT       | DRAMATIC DOWNWARD PLUNGE          |
++-----------------------------------+-----------------------------------+-----------------------------------+
+| • soared / surged dramatically    | • experienced a steady climb      | • plummeted / slumped precipitously|
+| • experienced exponential growth  | • registered a marginal uptick    | • suffered a steep contraction    |
+| • witnessed a sharp escalation    | • rose incrementally year-on-year | • collapsed to an all-time low    |
+| • peaked at an unprecedented high | • progressed gradually upwards    | • diminished progressively        |
++-----------------------------------+-----------------------------------+-----------------------------------+</code></pre></div>
+<p></p>
+<h3 id="matrix-2-the-proportion-fraction--quantity-rephrasing-system" class="study-heading h3">Matrix 2: The Proportion, Fraction &amp; Quantity Rephrasing System</h3>
 <div class="code-block-wrapper"><div class="code-header"><span>Sample / Model Text</span><div class="code-actions"><button class="btn-copy-code" onclick="readTextChunk(this)">🔊 Read</button><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div></div><pre><code class="language-">+-----------------------------------+-----------------------------------------------------------+
-| LECTURER&#x27;S RHETORICAL FUNCTION    | SPOKEN SIGNPOST PHRASES &amp; ACOUSTIC CUES                   |
+| PERCENTAGE / DATA POINT           | BAND 8.0+ PROPORTIONAL PARAPHRASE                         |
 +-----------------------------------+-----------------------------------------------------------+
-| INTRODUCING TECHNICAL CONCEPTS    | • &quot;By [Term], we are essentially referring to...&quot;         |
-|                                   | • &quot;This brings us to the fundamental principle of...&quot;     |
-|                                   |                                                           |
-| SHIFTING THEMATIC FOCUS           | • &quot;Turning our attention now to the second dimension...&quot;   |
-|                                   | • &quot;Having examined the theoretical model, let us look at&quot; |
-|                                   |                                                           |
-| EMPHASIZING CRITICAL FINDINGS     | • &quot;What proves particularly salient in these trials is...&quot;|
-|                                   | • &quot;The paramount breakthrough occurred when researchers...&quot;|
-|                                   |                                                           |
-| HIGHLIGHTING REAL APPLICATIONS    | • &quot;In practical industrial settings, this translates into&quot;|
-|                                   | • &quot;Commercial engineers have harnessed this by...&quot;       |
+| 75% – 80%                         | &quot;the vast majority / approximately four-fifths of&quot;         |
+| 66% (two-thirds)                  | &quot;precisely two-thirds / double the proportion of&quot;         |
+| 50% (half)                        | &quot;one out of every two / exactly half the cohort&quot;          |
+| 33% (one-third)                   | &quot;just under a third / one in three participants&quot;          |
+| 25% (one-quarter)                 | &quot;a quarter of the total / one in four respondents&quot;        |
+| 10% – 12%                         | &quot;roughly one in ten / a small fraction of&quot;                |
+| 2% – 4%                           | &quot;a negligible minority / an almost imperceptible share&quot;   |
 +-----------------------------------+-----------------------------------------------------------+</code></pre></div>
 <p></p>
+<h3 id="matrix-3-task-2-high-precision-academic-argumentative-verbs" class="study-heading h3">Matrix 3: Task 2 High-Precision Academic Argumentative Verbs</h3>
+<div class="code-block-wrapper"><div class="code-header"><span>Sample / Model Text</span><div class="code-actions"><button class="btn-copy-code" onclick="readTextChunk(this)">🔊 Read</button><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div></div><pre><code class="language-">+-----------------------------------+-----------------------------------+-----------------------------------+
+| CAUSATION &amp; CATALYSIS             | SUPPORT &amp; SUBSTANTIATION          | WEAKENING &amp; REFUTATION            |
++-----------------------------------+-----------------------------------+-----------------------------------+
+| • precipitates / engenders        | • corroborates / substantiates    | • undermines / erodes             |
+| • acts as a primary catalyst for  | • underpins / reinforces          | • calls into question             |
+| • exacerbates / compounds         | • validates / exemplifies         | • refutes / contradicts           |
+| • culminates in / gives rise to   | • lends credence to               | • trivializes / negates           |
++-----------------------------------+-----------------------------------+-----------------------------------+</code></pre></div>
+<p></p>
 <hr class="study-divider">
 <p></p>
-<h2 id="3-guided-exercise-annotated-biomimicry-lecture-transcript" class="study-heading h2">🔍 3. Guided Exercise: Annotated Biomimicry Lecture Transcript</h2>
+<h2 id="3-guided-exercise-annotated-lexical-transformation-lab" class="study-heading h2">🔍 3. Guided Exercise: Annotated Lexical Transformation Lab</h2>
 <p></p>
-<div class="code-block-wrapper"><div class="code-header"><span>Sample / Model Text</span><div class="code-actions"><button class="btn-copy-code" onclick="readTextChunk(this)">🔊 Read</button><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div></div><pre><code class="language-">=========================================================================================
-                    BIOMIMICRY &amp; CETACEAN DYNAMICS LECTURE TRANSCRIPT
-=========================================================================================
-[Lecturer]: &quot;Good afternoon. In today&#x27;s seminar on bio-inspired fluid mechanics, we&#x27;ll examine 
-how marine mammals have revolutionized modern aerodynamic design. 
-
-For nearly a century, classical aeronautical engineering operated on the assumption that foil 
-surfaces must be engineered to be completely (1) smooth to prevent turbulent flow separation. 
-Any surface irregularities were considered detrimental to aerodynamic efficiency.
-
-However, marine biologists studying humpback whales encountered a profound biological paradox. 
-Despite weighing in excess of thirty tonnes, these massive cetaceans exhibit astonishing 
-underwater (2) agility, executing tight banking maneuvers that should theoretically induce 
-hydrodynamic stalls. 
-
-Upon closer inspection of the whale&#x27;s pectoral flippers, researchers discovered that the leading 
-edge is not streamlined; rather, it is lined with large, rounded protuberances known as 
-(3) tubercles.
-
-Turning now to the aerodynamic principles involved: when tested in water flumes, these 
-tubercles were found to channel oncoming fluid into concentrated, high-velocity vortices. 
-This continuous vortex generation energized the boundary layer, delaying aerodynamic (4) stall 
-by up to forty percent at elevated angles of attack. 
-
-In terms of modern industrial adoption, renewable energy companies are now applying these 
-scalloped leading edges to wind (5) turbines, resulting in a thirty percent boost in electrical 
-yield in low-wind conditions.&quot;
-=========================================================================================</code></pre></div>
+<h3 id="original-band-55-data-description-repetitive--mechanical" class="study-heading h3">Original Band 5.5 Data Description (Repetitive &amp; Mechanical):</h3>
+<blockquote class="study-quote"><em>"In 2010, 50% of people used cars. In 2015, this number increased to 75%. In 2020, it decreased to 25%. Solar energy was 2% in 2010 and it increased to 10% in 2020. This shows that solar energy is becoming popular."</em></blockquote>
 <p></p>
-<h4 id="acoustic--grammatical-clues" class="study-heading h4">Acoustic &amp; Grammatical Clues:</h4>
-<ul class="study-list">
-<li><strong>(1) smooth</strong>: Spoken as <em>"must be engineered to be completely smooth"</em>. Fits adjective slot before <em>"surfaces"</em>.</li>
-<li><strong>(2) agility</strong>: Spoken as <em>"exhibit astonishing underwater agility"</em>. Fits abstract noun slot after <em>"underwater"</em>.</li>
-<li><strong>(3) tubercles</strong>: Spoken as <em>"protuberances known as tubercles"</em>. Plural count noun; spelling must be exact.</li>
-<li><strong>(4) stall</strong>: Spoken as <em>"delaying aerodynamic stall by up to forty percent"</em>. Technical aviation noun.</li>
-<li><strong>(5) turbines</strong>: Spoken as <em>"wind turbines"</em>. Must be plural to match renewable energy context.</li>
-</ul>
+<h3 id="upgraded-band-85-model-lexical-variety--proportions-integrated" class="study-heading h3">Upgraded Band 8.5 Model (Lexical Variety &amp; Proportions Integrated):</h3>
+<blockquote class="study-quote"><em>"In 2010, <strong>exactly half the surveyed population</strong> commuted via private automobiles. Over the subsequent five-year period, this figure <strong>surged dramatically to peak at three-quarters of the cohort</strong>, before <strong>plummeting precipitously to a mere quarter</strong> by 2020. Conversely, solar energy adoption, which represented <strong>a negligible 2% share initially</strong>, <strong>registered a fivefold expansion</strong> to capture <strong>one in ten households</strong>, <strong>substantiating a pronounced transition</strong> towards renewable energy consumption."</em></blockquote>
+<p></p>
+<h4 id="key-upgrades-analyzed" class="study-heading h4">Key Upgrades Analyzed:</h4>
+<p>1. <em>"50% of people"</em> ➔ <em>"exactly half the surveyed population"</em>.</p>
+<p>2. <em>"increased to 75%"</em> ➔ <em>"surged dramatically to peak at three-quarters of the cohort"</em>.</p>
+<p>3. <em>"decreased to 25%"</em> ➔ <em>"plummeting precipitously to a mere quarter"</em>.</p>
+<p>4. <em>"2% in 2010"</em> ➔ <em>"a negligible 2% share initially"</em>.</p>
+<p>5. <em>"increased to 10%"</em> ➔ <em>"registered a fivefold expansion to capture one in ten households"</em>.</p>
+<p>6. <em>"This shows that"</em> ➔ <em>"substantiating a pronounced transition towards"</em>.</p>
 <p></p>
 <hr class="study-divider">
 <p></p>
 <h2 id="4-3-distinct-score-upgrade-exercises" class="study-heading h2">🏋️ 4. 3 Distinct Score-Upgrade Exercises</h2>
 <p></p>
-<h3 id="exercise-1-lecture-signpost-decoder--section-tracking-gym" class="study-heading h3">Exercise 1: Lecture Signpost Decoder &amp; Section Tracking Gym</h3>
-<p><em>Match each spoken transition cue with the section heading it is introducing:</em></p>
+<h3 id="exercise-1-proportion--fraction-transformer" class="study-heading h3">Exercise 1: Proportion &amp; Fraction Transformer</h3>
+<p><em>Convert each raw statistical data point into an academic proportional paraphrase.</em></p>
 <p></p>
-<div class="code-block-wrapper"><div class="code-header"><span>Sample / Model Text</span><div class="code-actions"><button class="btn-copy-code" onclick="readTextChunk(this)">🔊 Read</button><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div></div><pre><code class="language-">+-----------------------------------+-----------------------------------------------------------+
-| SPOKEN TRANSITION CUE             | SECTION HEADING MATCH                                     |
-+-----------------------------------+-----------------------------------------------------------+
-| 1. &quot;Let us now shift our focus to | A) Future Commercial Applications                         |
-|    the underlying cellular level&quot; |                                                           |
-| 2. &quot;In practical manufacturing,   | B) Microscopic Biological Mechanisms                      |
-|    this is already utilized in&quot;   |                                                           |
-| 3. &quot;Historically, scientists held | C) Methodological Experimental Setup                      |
-|    the assumption that&quot;           |                                                           |
-| 4. &quot;To empirically evaluate this, | D) Traditional Theoretical Background                     |
-|    we constructed a water flume&quot;  |                                                           |
-+-----------------------------------+-----------------------------------------------------------+</code></pre></div>
-<p><strong>Answers:</strong> 1: <code>[ ..... ]</code> | 2: <code>[ ..... ]</code> | 3: <code>[ ..... ]</code> | 4: <code>[ ..... ]</code></p>
+<p>1. <strong>Raw Data:</strong> <em>"33% of university graduates could not find jobs."</em>  </p>
+<p>   ➔ <strong>Proportional Paraphrase (Use: <em>one in three / a third of</em>):</strong>  </p>
+<p>   ........................................................................................................................................</p>
+<p>2. <strong>Raw Data:</strong> <em>"74% of households owned two or more vehicles."</em>  </p>
+<p>   ➔ <strong>Proportional Paraphrase (Use: <em>just under three-quarters / the vast majority</em>):</strong>  </p>
+<p>   ........................................................................................................................................</p>
+<p>3. <strong>Raw Data:</strong> <em>"3% of consumers purchased electric vehicles in 2015."</em>  </p>
+<p>   ➔ <strong>Proportional Paraphrase (Use: <em>a negligible minority / an almost imperceptible share</em>):</strong>  </p>
+<p>   ........................................................................................................................................</p>
 <p></p>
 <hr class="study-divider">
 <p></p>
-<h3 id="exercise-2-rapid-academic-spelling--plural-suffix-accuracy-lab" class="study-heading h3">Exercise 2: Rapid Academic Spelling &amp; Plural Suffix Accuracy Lab</h3>
-<p><em>Correct any spelling or morphological errors in the student notes below:</em></p>
+<h3 id="exercise-2-analytical-verb-nuance-sifter" class="study-heading h3">Exercise 2: Analytical Verb Nuance Sifter</h3>
+<p><em>Select the most precise academic verb from the pair in brackets to elevate the sentence.</em></p>
 <p></p>
-<p>1. Incorrect: <em>"The experiment measured changes in atmospheric presure."</em> ➔ <strong>Correction:</strong> <code>[ .................... ]</code></p>
-<p>2. Incorrect: <em>"Engineers installed new prototype wind turbin."</em> ➔ <strong>Correction:</strong> <code>[ .................... ]</code></p>
-<p>3. Incorrect: <em>"The substance demonstrated high electrical conductivety."</em> ➔ <strong>Correction:</strong> <code>[ .................... ]</code></p>
-<p>4. Incorrect: <em>"Observations revealed that migratory bird flew in V-formation."</em> ➔ <strong>Correction:</strong> <code>[ .................... ]</code></p>
+<p>1. <em>"The excessive use of social media [makes worse / exacerbates] adolescent anxiety and sleep deprivation."</em>  </p>
+<p>   ➔ <strong>Selected Verb:</strong> <code>[ .................... ]</code></p>
+<p>2. <em>"Recent empirical studies [substantiate / show up] the claim that bilingualism enhances cognitive flexibility."</em>  </p>
+<p>   ➔ <strong>Selected Verb:</strong> <code>[ .................... ]</code></p>
+<p>3. <em>"Chronic inflation [erodes / breaks] the purchasing power of middle-income households."</em>  </p>
+<p>   ➔ <strong>Selected Verb:</strong> <code>[ .................... ]</code></p>
+<p>4. <em>"Deforestation in the Amazon basin [precipitates / brings] irreversible biodiversity loss."</em>  </p>
+<p>   ➔ <strong>Selected Verb:</strong> <code>[ .................... ]</code></p>
 <p></p>
 <hr class="study-divider">
 <p></p>
-<h3 id="exercise-3-complete-section-4-lecture-note-completion-test" class="study-heading h3">Exercise 3: Complete Section 4 Lecture Note Completion Test</h3>
-<p></p>
-<p><em>Complete the notes below.</em>  </p>
-<p><em>Write <strong>ONE WORD ONLY</strong> for each answer.</em></p>
+<h3 id="exercise-3-complete-task-1-comparative-paragraph-challenge" class="study-heading h3">Exercise 3: Complete Task 1 Comparative Paragraph Challenge</h3>
+<p><em>Rewrite the basic data notes below into a coherent 100-word Band 8.5 comparative paragraph in the interactive Writing Arena:</em></p>
 <p></p>
 <div class="code-block-wrapper"><div class="code-header"><span>Sample / Model Text</span><div class="code-actions"><button class="btn-copy-code" onclick="readTextChunk(this)">🔊 Read</button><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div></div><pre><code class="language-">========================================================================
-             LECTURE: BIOMIMETIC ENGINEERING &amp; CETACEAN DYNAMICS
-========================================================================
-Traditional Aerodynamic Assumption:
-• Foil surfaces had to remain completely (1) .................... to prevent drag.
-
-The Humpback Whale Anatomy:
-• Demonstrates remarkable underwater (2) .................... during high-speed turns.
-• Leading edges of pectoral fins are covered in bumps termed (3) .................... .
-
-Hydrodynamic Mechanism:
-• Vortices delay the onset of aerodynamic (4) .................... during steep maneuvers.
-
-Industrial Applications:
-• Installed on the blades of modern wind (5) .................... to boost energy yield.
-• Used on high-speed commercial aircraft to improve fuel (6) .................... .
+DATA NOTES: Renewable Energy Adoption in City X (2010 vs 2020)
+* Wind Energy: 10% in 2010 ➔ 40% in 2020 (steady fourfold increase)
+* Coal Power: 65% in 2010 ➔ 20% in 2020 (sharp collapse to one-fifth)
+* Nuclear Energy: Remained constant at 25% (exactly a quarter throughout)
 ========================================================================</code></pre></div>
 <p></p>
 <hr class="study-divider">
@@ -879,66 +925,26 @@ Industrial Applications:
 <h2 id="5-complete-answer-key--step-by-step-rationales" class="study-heading h2">🔑 5. Complete Answer Key &amp; Step-by-Step Rationales</h2>
 <p></p>
 <h3 id="exercise-1-answer-key" class="study-heading h3">Exercise 1 Answer Key</h3>
-<ul class="study-list">
-<li><strong>1 ➔ B</strong> (<em>Microscopic Biological Mechanisms</em>)</li>
-<li><strong>2 ➔ A</strong> (<em>Future Commercial Applications</em>)</li>
-<li><strong>3 ➔ D</strong> (<em>Traditional Theoretical Background</em>)</li>
-<li><strong>4 ➔ C</strong> (<em>Methodological Experimental Setup</em>)</li>
-</ul>
+<p>1. <strong>Model:</strong> <em>"Approximately <strong>one in three tertiary graduates</strong> [or <strong>just under a third of the graduate cohort</strong>] struggled to secure employment."</em></p>
+<p>2. <strong>Model:</strong> <em>"<strong>The vast majority of households, representing nearly three-quarters of the total</strong>, possessed two or more motor vehicles."</em></p>
+<p>3. <strong>Model:</strong> <em>"Electric vehicles accounted for <strong>a negligible minority of just 3% of overall automotive purchases</strong> in 2015."</em></p>
 <p></p>
 <h3 id="exercise-2-answer-key" class="study-heading h3">Exercise 2 Answer Key</h3>
-<p>1. <strong>pressure</strong> <em>(double 's' required).</em></p>
-<p>2. <strong>turbines</strong> <em>(plural form required by context).</em></p>
-<p>3. <strong>conductivity</strong> <em>(spelled with 'i', not 'e').</em></p>
-<p>4. <strong>birds</strong> <em>(plural noun needed to match generic subject).</em></p>
+<p>1. <strong>exacerbates</strong> <em>(formal academic verb meaning to make an already bad situation worse).</em></p>
+<p>2. <strong>substantiate</strong> <em>(precise academic verb meaning to provide evidence supporting a claim).</em></p>
+<p>3. <strong>erodes</strong> <em>(metaphorical academic verb describing the gradual destruction of value/power).</em></p>
+<p>4. <strong>precipitates</strong> <em>(high-register verb meaning to cause an undesirable event to happen suddenly).</em></p>
 <p></p>
-<h3 id="exercise-3-answer-key-questions-16" class="study-heading h3">Exercise 3 Answer Key (Questions 1–6)</h3>
-<div class="table-container"><table class="data-table">
-<thead><tr>
-<th>Q</th>
-<th>Correct Word</th>
-<th>Audio Transcript Evidence</th>
-</tr></thead><tbody>
-<tr>
-<td><strong>1</strong></td>
-<td><strong>smooth</strong></td>
-<td><em>"operated on the assumption that foil surfaces must be engineered to be completely smooth..."</em></td>
-</tr>
-<tr>
-<td><strong>2</strong></td>
-<td><strong>agility</strong></td>
-<td><em>"these massive cetaceans exhibit astonishing underwater agility..."</em></td>
-</tr>
-<tr>
-<td><strong>3</strong></td>
-<td><strong>tubercles</strong></td>
-<td><em>"large, rounded protuberances known as tubercles."</em></td>
-</tr>
-<tr>
-<td><strong>4</strong></td>
-<td><strong>stall</strong></td>
-<td><em>"delaying aerodynamic stall by up to forty percent..."</em></td>
-</tr>
-<tr>
-<td><strong>5</strong></td>
-<td><strong>turbines</strong></td>
-<td><em>"applying these scalloped leading edges to wind turbines..."</em></td>
-</tr>
-<tr>
-<td><strong>6</strong></td>
-<td><strong>efficiency</strong></td>
-<td><em>"reduce parasitic drag, thereby maximizing aviation fuel efficiency."</em></td>
-</tr>
-</tbody>
-</table></div>
+<h3 id="exercise-3-model-answer" class="study-heading h3">Exercise 3 Model Answer</h3>
+<blockquote class="study-quote"><em>"Between 2010 and 2020, City X underwent a radical restructuring of its energy profile. Coal power, which initially constituted <strong>nearly two-thirds (65%) of the total energy supply</strong>, <strong>plummeted precipitously to represent a mere one-fifth (20%)</strong> by the end of the decade. Conversely, wind energy <strong>registered a dramatic fourfold expansion, escalating from one in ten households (10%) to account for fully two-fifths (40%)</strong> of municipal generation. Throughout this period, nuclear power generation <strong>remained remarkably stable, consistently supplying precisely one-quarter (25%) of the city's electricity demand</strong>."</em></blockquote>
 <p></p>
 <hr class="study-divider">
 <p></p>
 <h2 id="6-self-study-3-step-action-plan" class="study-heading h2">📚 6. Self-Study 3-Step Action Plan</h2>
 <p></p>
-<p>1. <strong>Step 1 (Heading Mapping - 60 seconds):</strong> Circle all bold subheadings before the audio starts. Use them as milestones.</p>
-<p>2. <strong>Step 2 (Grammatical Slot Prediction - 30 seconds):</strong> Predict the part of speech (Noun, Verb, Adjective) and whether nouns will be singular or plural.</p>
-<p>3. <strong>Step 3 (Immediate Spelling Check - End of Section):</strong> Spend the final 30 seconds verifying double consonants (<em>pressure, accommodation, occurrence</em>) and plural <code>-s</code> suffixes.</p>
+<p>1. <strong>Step 1 (Raw Number Ban - 2 mins):</strong> When analyzing Task 1 visuals, circle any percentage that can be rephrased as a fraction (<em>50% ➔ half, 25% ➔ a quarter, 33% ➔ a third</em>).</p>
+<p>2. <strong>Step 2 (Verb Swap - 3 mins):</strong> In Task 2, replace generic verbs (<em>"show", "make", "cause"</em>) with precise analytical terms (<em>"demonstrate", "precipitate", "exacerbate"</em>).</p>
+<p>3. <strong>Step 3 (Arena Practice):</strong> Draft your full report in the interactive Writing Arena below, verifying that no single trend verb is used more than once.</p>
     </article>
 
     
@@ -1044,7 +1050,7 @@ Industrial Applications:
       }
       editor.value += text;
       editor.focus();
-      updateWordStats(250);
+      updateWordStats(150);
     }
 
     // Copy Code Helper
@@ -1125,7 +1131,7 @@ Industrial Applications:
 
     // Writing Arena Logic
     let timerInterval = null;
-    let timerSeconds = 2400;
+    let timerSeconds = 1200;
     function startWritingTimer(mins) {
       clearInterval(timerInterval);
       timerSeconds = mins * 60;
@@ -1178,7 +1184,7 @@ Industrial Applications:
     function clearWritingDraft() {
       if (confirm('Clear current draft?')) {
         document.getElementById('essayEditor').value = '';
-        updateWordStats(250);
+        updateWordStats(150);
       }
     }
     (function() {
@@ -1186,7 +1192,7 @@ Industrial Applications:
       const editor = document.getElementById('essayEditor');
       if (saved && editor) {
         editor.value = saved;
-        updateWordStats(250);
+        updateWordStats(150);
       }
     })();
 
