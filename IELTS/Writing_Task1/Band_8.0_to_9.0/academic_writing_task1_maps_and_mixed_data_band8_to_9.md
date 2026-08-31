@@ -47,9 +47,9 @@ content_type: "Lesson Plan | Model Essay | Analysis"
 
 <div class="visual-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 25px 0;">
   <!-- Map 1995 -->
-  <div style="flex: 1 1 350px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 15px; box-shadow: var(--shadow);">
-    <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.95rem;">📍 Port Henderson (1995)</h4>
-    <svg viewBox="0 0 340 260" style="width: 100%; height: auto;" role="img" aria-label="Map of Port Henderson in 1995">
+  <div style="flex: 1 1 350px; background: var(--card-bg, #ffffff); border: 1px solid var(--border, #e2e8f0); border-radius: 10px; padding: 15px; box-shadow: var(--shadow);">
+    <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.95rem; color: var(--text, #0f172a);">📍 Port Henderson (1995)</h4>
+    <svg viewBox="0 0 340 260" style="width: 100%; height: auto; font-family: system-ui, -apple-system, sans-serif;" role="img" aria-label="Map of Port Henderson in 1995">
       <!-- Sea background -->
       <rect x="10" y="10" width="100" height="240" rx="4" fill="#dbeafe" />
       <text x="50" y="40" font-size="11" fill="#1e40af" font-weight="bold">SEA</text>
@@ -73,7 +73,7 @@ content_type: "Lesson Plan | Model Essay | Analysis"
 
       <!-- Single Road N-S -->
       <line x1="210" y1="10" x2="210" y2="250" stroke="#64748b" stroke-width="4" />
-      <text x="215" y="145" font-size="8" fill="var(--text-muted)" transform="rotate(90, 215, 145)">Main Road (Single)</text>
+      <text x="215" y="145" font-size="8" fill="var(--text-muted, #64748b)" transform="rotate(90, 215, 145)">Main Road (Single)</text>
 
       <!-- Commercial Shops & Park -->
       <rect x="120" y="145" width="80" height="45" rx="3" fill="#fed7aa" stroke="#ea580c" />
@@ -90,9 +90,9 @@ content_type: "Lesson Plan | Model Essay | Analysis"
   </div>
 
   <!-- Map 2020 -->
-  <div style="flex: 1 1 350px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 15px; box-shadow: var(--shadow);">
-    <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.95rem;">📍 Port Henderson (2020 - Redeveloped)</h4>
-    <svg viewBox="0 0 340 260" style="width: 100%; height: auto;" role="img" aria-label="Map of Port Henderson in 2020">
+  <div style="flex: 1 1 350px; background: var(--card-bg, #ffffff); border: 1px solid var(--border, #e2e8f0); border-radius: 10px; padding: 15px; box-shadow: var(--shadow);">
+    <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.95rem; color: var(--text, #0f172a);">📍 Port Henderson (2020 - Redeveloped)</h4>
+    <svg viewBox="0 0 340 260" style="width: 100%; height: auto; font-family: system-ui, -apple-system, sans-serif;" role="img" aria-label="Map of Port Henderson in 2020">
       <!-- Sea background -->
       <rect x="10" y="10" width="100" height="240" rx="4" fill="#dbeafe" />
       <text x="50" y="40" font-size="11" fill="#1e40af" font-weight="bold">SEA</text>
@@ -121,7 +121,7 @@ content_type: "Lesson Plan | Model Essay | Analysis"
       
       <!-- High Speed Train Station -->
       <circle cx="210" cy="120" r="10" fill="#dc2626" />
-      <text x="210" y="124" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">🚆</text>
+      <text x="210" y="124" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">🚆</text>
 
       <!-- Expanded Shopping Mall (Covering Old Park) -->
       <rect x="120" y="135" width="80" height="65" rx="3" fill="#fed7aa" stroke="#ea580c" />
