@@ -111,17 +111,42 @@ def markdown_to_html_rich(md: str) -> str:
         return "\n".join(html_tbl)
 
     def process_inline(text: str) -> str:
-        # Escape html entities safely
+        # 1. Pre-protect Markdown links
+        links = []
+        def save_link(m):
+            link_text = m.group(1)
+            link_url = m.group(2).strip()
+            if "file:///" in link_url:
+                link_url = link_url.split("/")[-1]
+            links.append((link_text, link_url))
+            return f"@@LINK_{len(links)-1}@@"
+
+        # 2. Pre-protect inline code
+        codes = []
+        def save_code(m):
+            code_text = html.escape(m.group(1))
+            codes.append(code_text)
+            return f"@@CODE_{len(codes)-1}@@"
+
+        text = re.sub(r"\[(.+?)\]\((.+?)\)", save_link, text)
+        text = re.sub(r"`(.+?)`", save_code, text)
+
+        # 3. Escape HTML
         text = html.escape(text, quote=False)
-        # Bold
+
+        # 4. Bold and Italic formatting
         text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
-        # Italic
         text = re.sub(r"\*(.+?)\*", r"<em>\1</em>", text)
-        text = re.sub(r"_(.+?)_", r"<em>\1</em>", text)
-        # Inline code
-        text = re.sub(r"`(.+?)`", r"<code>\1</code>", text)
-        # Links
-        text = re.sub(r"\[(.+?)\]\((.+?)\)", r'<a href="\2" target="_blank" rel="noopener">\1</a>', text)
+        text = re.sub(r"(?<!\w)_(.+?)_(?!\w)", r"<em>\1</em>", text)
+
+        # 5. Restore Code
+        for idx, c in enumerate(codes):
+            text = text.replace(f"@@CODE_{idx}@@", f"<code>{c}</code>")
+
+        # 6. Restore Links
+        for idx, (lt, lu) in enumerate(links):
+            text = text.replace(f"@@LINK_{idx}@@", f'<a href="{lu}">{html.escape(lt)}</a>')
+
         return text
 
     i = 0

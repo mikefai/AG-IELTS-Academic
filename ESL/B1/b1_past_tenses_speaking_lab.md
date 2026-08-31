@@ -8,7 +8,7 @@ content_type: "Lesson Plan | Worksheet | Drill"
 
 # 🎙️ B1 Past Tenses Speaking Lab (High School Edition): Teacher Guide & Student Handout
 
-> **Interactive Web App**: [`past-tenses-b1-speaking-lab.html`](file:///c:/Users/micha/OneDrive/Desktop/AG%20TEACHING/ESL/B1/past-tenses-b1-speaking-lab.html)  
+> **Interactive Web App**: [`past-tenses-b1-speaking-lab.html`](past-tenses-b1-speaking-lab.html)  
 > **Target Group**: High School Students (15 years old / Teens) — CEFR B1 (Intermediate)  
 > **Duration**: 60–90 Minutes (Flexible PPP Model)  
 > **Core Themes**: School Life, Exams, Clubs, Gaming, Social Media, Friendship, Sports, Emergencies  
