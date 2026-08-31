@@ -800,6 +800,43 @@
       display: none;
     }
 
+    .quiz-palette {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 1.5rem;
+      padding: 0.75rem;
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
+
+    .quiz-palette-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .quiz-palette-btn.answered-correct {
+      background: var(--success);
+      color: white;
+      border-color: var(--success);
+    }
+
+    .quiz-palette-btn.answered-wrong {
+      background: var(--danger);
+      color: white;
+      border-color: var(--danger);
+    }
+
     .quiz-report {
       background: var(--surface);
       border: 2px solid var(--primary-border);
@@ -1258,7 +1295,7 @@
     @media print {
       header, .subnav, .sidebar, .header-controls, .timer-console, 
       .checklist-grid, .flashcard-controls, .gym-input-row button, 
-      .lesson-toggle, .notes-box, #themeToggle, .btn-tool {
+      .lesson-toggle, .notes-box, #themeToggle, .btn-tool, .quiz-palette {
         display: none !important;
       }
 
@@ -2004,6 +2041,11 @@
             Test your mastery of <strong>Past Simple vs Present Perfect</strong>, <strong>Been to vs Gone to</strong>, <strong>Since vs For</strong>, and <strong>Storytelling Past Perfect</strong>.
           </p>
 
+          <!-- Question Jump Palette -->
+          <div class="quiz-palette" id="quizPaletteContainer" aria-label="Question Navigation Palette">
+            <!-- Injected by JS -->
+          </div>
+
           <div id="quizContainer">
             <!-- Injected by JS from LESSON_DATA.quiz -->
           </div>
@@ -2312,7 +2354,7 @@
           id: 13,
           bad: "When I reached the stadium, our team scored two goals already.",
           fix: "When I reached the stadium, our team had already scored two goals.",
-          rule: "The goals were scored before arriving $\\rightarrow$ Past Perfect."
+          rule: "The goals were scored before arriving -> Past Perfect."
         },
         {
           id: 14,
@@ -2411,7 +2453,7 @@
           q: "The school bus _______ when we arrived at the stop, so we had to call a taxi.",
           opts: ["already left", "has already left", "had already left", "was leaving"],
           ans: 2,
-          exp: "The bus left before we reached the stop $\\rightarrow$ Past Perfect ('had already left')."
+          exp: "The bus left before we reached the stop -> Past Perfect ('had already left')."
         },
         {
           id: 13,
@@ -2432,7 +2474,7 @@
           q: "She felt confident before the English presentation because she _______ for three days.",
           opts: ["rehearsed", "has rehearsed", "had rehearsed", "rehearses"],
           ans: 2,
-          exp: "Rehearsing took place before the presentation $\\rightarrow$ Past Perfect."
+          exp: "Rehearsing took place before the presentation -> Past Perfect."
         },
         {
           id: 16,
@@ -2446,7 +2488,7 @@
           q: "I _______ to bed early last night because I had a big math exam today.",
           opts: ["went", "have gone", "had gone", "go"],
           ans: 0,
-          exp: "'Last night' is a finished past time $\\rightarrow$ Past Simple ('went')."
+          exp: "'Last night' is a finished past time -> Past Simple ('went')."
         },
         {
           id: 18,
@@ -2460,7 +2502,7 @@
           q: "After he _______ dinner, he washed his gym kit.",
           opts: ["ate", "has eaten", "had eaten", "was eating"],
           ans: 2,
-          exp: "Eating dinner happened before washing the kit $\\rightarrow$ Past Perfect ('had eaten')."
+          exp: "Eating dinner happened before washing the kit -> Past Perfect ('had eaten')."
         },
         {
           id: 20,
@@ -2488,14 +2530,14 @@
           q: "I _______ the guitar when I was in middle school, but I play drums now.",
           opts: ["played", "have played", "had played", "play"],
           ans: 0,
-          exp: "'When I was in middle school' is a completed past period $\\rightarrow$ Past Simple ('played')."
+          exp: "'When I was in middle school' is a completed past period -> Past Simple ('played')."
         },
         {
           id: 24,
           q: "I was shocked when I opened my locker because someone _______ my notebook.",
           opts: ["took", "has taken", "had taken", "takes"],
           ans: 2,
-          exp: "Taking the notebook happened earlier than opening the locker $\\rightarrow$ Past Perfect."
+          exp: "Taking the notebook happened earlier than opening the locker -> Past Perfect."
         },
         {
           id: 25,
@@ -2509,14 +2551,14 @@
           q: "The volleyball referee blew the whistle because the ball _______ out of bounds.",
           opts: ["fell", "has fallen", "had fallen", "falls"],
           ans: 2,
-          exp: "The ball fell out before the referee blew the whistle $\\rightarrow$ Past Perfect."
+          exp: "The ball fell out before the referee blew the whistle -> Past Perfect."
         },
         {
           id: 27,
           q: "I _______ three chapters of this book so far this week.",
           opts: ["read", "have read", "had read", "am reading"],
           ans: 1,
-          exp: "'This week' is still happening $\\rightarrow$ Present Perfect ('have read')."
+          exp: "'This week' is still happening -> Present Perfect ('have read')."
         },
         {
           id: 28,
@@ -2530,14 +2572,14 @@
           q: "She _______ her homework yet, so she can't join our Discord call right now.",
           opts: ["didn't finish", "hasn't finished", "hadn't finished", "doesn't finish"],
           ans: 1,
-          exp: "Negative sentence with 'yet' and present result $\\rightarrow$ Present Perfect ('hasn't finished')."
+          exp: "Negative sentence with 'yet' and present result -> Present Perfect ('hasn't finished')."
         },
         {
           id: 30,
           q: "Before I started 9th grade, I _______ any foreign language classes.",
           opts: ["didn't take", "haven't taken", "hadn't taken", "wasn't taking"],
           ans: 2,
-          exp: "Before starting 9th grade in the past $\\rightarrow$ Earlier past requires Past Perfect ('hadn't taken')."
+          exp: "Before starting 9th grade in the past -> Earlier past requires Past Perfect ('hadn't taken')."
         }
       ],
 
@@ -2577,31 +2619,35 @@
        LOCAL STORAGE INITIALIZATION (ptlab_*)
        ======================================================= */
     function initStorage() {
-      const savedNotes = localStorage.getItem('ptlab_notes');
-      if (savedNotes) {
-        const notesBox = document.getElementById('myNotesBox');
-        if (notesBox) notesBox.value = savedNotes;
-      }
+      try {
+        const savedNotes = localStorage.getItem('ptlab_notes');
+        if (savedNotes) {
+          const notesBox = document.getElementById('myNotesBox');
+          if (notesBox) notesBox.value = savedNotes;
+        }
 
-      const savedCards = localStorage.getItem('ptlab_known_cards');
-      if (savedCards) {
-        try {
+        const savedCards = localStorage.getItem('ptlab_known_cards');
+        if (savedCards) {
           state.flashcardsKnown = new Set(JSON.parse(savedCards));
-        } catch (e) { console.error(e); }
-      }
+        }
 
-      const savedQuizScore = localStorage.getItem('ptlab_quiz_best');
-      if (savedQuizScore) {
-        document.getElementById('stat-quiz-best').innerText = savedQuizScore;
+        const savedQuizScore = localStorage.getItem('ptlab_quiz_best');
+        if (savedQuizScore) {
+          document.getElementById('stat-quiz-best').innerText = savedQuizScore;
+        }
+      } catch (e) {
+        console.warn('Storage unavailable or restricted:', e);
       }
 
       updateDashboardStats();
     }
 
     function updateDashboardStats() {
-      document.getElementById('stat-cards-done').innerText = `${state.flashcardsKnown.size}/${LESSON_DATA.vocabulary.length}`;
-      document.getElementById('stat-verbs-done').innerText = `${state.verbsMastered}/${LESSON_DATA.irregularVerbs.length}`;
-      localStorage.setItem('ptlab_known_cards', JSON.stringify(Array.from(state.flashcardsKnown)));
+      try {
+        document.getElementById('stat-cards-done').innerText = `${state.flashcardsKnown.size}/${LESSON_DATA.vocabulary.length}`;
+        document.getElementById('stat-verbs-done').innerText = `${state.verbsMastered}/${LESSON_DATA.irregularVerbs.length}`;
+        localStorage.setItem('ptlab_known_cards', JSON.stringify(Array.from(state.flashcardsKnown)));
+      } catch (e) {}
     }
 
     function toggleTheme() {
@@ -2609,13 +2655,17 @@
       const cur = html.getAttribute('data-theme');
       const next = cur === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', next);
-      localStorage.setItem('ptlab_theme', next);
+      try {
+        localStorage.setItem('ptlab_theme', next);
+      } catch (e) {}
     }
 
-    const savedTheme = localStorage.getItem('ptlab_theme');
-    if (savedTheme) {
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    }
+    try {
+      const savedTheme = localStorage.getItem('ptlab_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    } catch (e) {}
 
     /* =======================================================
        TAB SWITCHING & LESSON FLOW INTEGRATION
@@ -2789,9 +2839,26 @@
     /* =======================================================
        SPEAKING TIMER & AUDIO CHIMES (WEB AUDIO API)
        ======================================================= */
+    let globalAudioCtx = null;
+
+    function getAudioContext() {
+      if (!globalAudioCtx) {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (AudioContextClass) {
+          globalAudioCtx = new AudioContextClass();
+        }
+      }
+      if (globalAudioCtx && globalAudioCtx.state === 'suspended') {
+        globalAudioCtx.resume();
+      }
+      return globalAudioCtx;
+    }
+
     function playChime(type) {
       try {
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const audioCtx = getAudioContext();
+        if (!audioCtx) return;
+
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
         osc.connect(gain);
@@ -2912,12 +2979,12 @@
         const isKnown = state.flashcardsKnown.has(idx);
         return `
           <div>
-            <div class="flashcard" id="flashcard-${idx}" onclick="flipCard(${idx})">
+            <div class="flashcard" id="flashcard-${idx}" onclick="flipCard(${idx})" tabindex="0" onkeypress="if(event.key==='Enter'||event.key===' ') flipCard(${idx})" aria-label="${item.word} flashcard">
               <div class="flashcard-inner">
                 <div class="flashcard-front">
                   <div class="card-cat">${item.cat}</div>
                   <div class="card-word">${item.word}</div>
-                  <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem;">(Click to flip)</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem;">(Click / Press Enter to flip)</div>
                 </div>
                 <div class="flashcard-back">
                   <div class="card-def">${item.meaning}</div>
@@ -3026,7 +3093,9 @@
     }
 
     function handleDragStart(e, idx) {
-      e.dataTransfer.setData('text/plain', idx);
+      if (e.dataTransfer) {
+        e.dataTransfer.setData('text/plain', idx);
+      }
       state.selectedMarkerId = idx;
     }
 
@@ -3038,8 +3107,8 @@
     function handleDrop(e, bucketName) {
       e.preventDefault();
       e.currentTarget.classList.remove('drag-over');
-      const idx = e.dataTransfer.getData('text/plain') || state.selectedMarkerId;
-      placeMarkerInBucket(Number(idx), bucketName);
+      const idx = e.dataTransfer ? e.dataTransfer.getData('text/plain') : state.selectedMarkerId;
+      placeMarkerInBucket(Number(idx !== '' ? idx : state.selectedMarkerId), bucketName);
     }
 
     function selectMarkerForClick(idx) {
@@ -3125,8 +3194,8 @@
       const feedbackEl = document.getElementById(`gym-feedback-${id}`);
       if (!item || !inputEl || !feedbackEl) return;
 
-      const userVal = inputEl.value.trim().toLowerCase().replace(/[.,!?'"`]/g, '');
-      const correctVal = item.fix.toLowerCase().replace(/[.,!?'"`]/g, '');
+      const userVal = inputEl.value.trim().toLowerCase().replace(/[.,!?'"`’“”]/g, '').replace(/\s+/g, ' ');
+      const correctVal = item.fix.toLowerCase().replace(/[.,!?'"`’“”]/g, '').replace(/\s+/g, ' ');
 
       const isMatch = (userVal === correctVal);
 
@@ -3152,7 +3221,14 @@
        ======================================================= */
     function renderQuiz() {
       const container = document.getElementById('quizContainer');
+      const palette = document.getElementById('quizPaletteContainer');
       if (!container) return;
+
+      if (palette) {
+        palette.innerHTML = LESSON_DATA.quiz.map(q => `
+          <button class="quiz-palette-btn" id="palette-btn-${q.id}" onclick="scrollToQuizQuestion(${q.id})">${q.id}</button>
+        `).join('');
+      }
 
       container.innerHTML = LESSON_DATA.quiz.map(q => `
         <div class="quiz-question-box" id="quiz-q-${q.id}">
@@ -3171,6 +3247,13 @@
       `).join('');
     }
 
+    function scrollToQuizQuestion(qId) {
+      const el = document.getElementById(`quiz-q-${qId}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
     function selectQuizOption(qId, selectedIdx) {
       const q = LESSON_DATA.quiz.find(x => x.id === qId);
       if (!q) return;
@@ -3185,14 +3268,17 @@
       const selectedBtn = document.getElementById(`opt-${qId}-${selectedIdx}`);
       const correctBtn = document.getElementById(`opt-${qId}-${q.ans}`);
       const expEl = document.getElementById(`quiz-exp-${qId}`);
+      const paletteBtn = document.getElementById(`palette-btn-${qId}`);
 
       if (selectedIdx === q.ans) {
         if (selectedBtn) selectedBtn.classList.add('selected-correct');
+        if (paletteBtn) paletteBtn.classList.add('answered-correct');
         expEl.style.borderLeftColor = 'var(--success)';
         expEl.innerHTML = `<strong>✅ Correct!</strong> ${q.exp}`;
       } else {
         if (selectedBtn) selectedBtn.classList.add('selected-wrong');
         if (correctBtn) correctBtn.classList.add('reveal-correct');
+        if (paletteBtn) paletteBtn.classList.add('answered-wrong');
         expEl.style.borderLeftColor = 'var(--danger)';
         expEl.innerHTML = `<strong>❌ Not quite.</strong> Correct answer: <strong>${q.opts[q.ans]}</strong>. ${q.exp}`;
       }
@@ -3224,7 +3310,9 @@
       document.getElementById('reportMsgDisplay').innerText = msg;
       document.getElementById('quizReport').style.display = 'block';
 
-      localStorage.setItem('ptlab_quiz_best', `${pct}%`);
+      try {
+        localStorage.setItem('ptlab_quiz_best', `${pct}%`);
+      } catch (e) {}
       document.getElementById('stat-quiz-best').innerText = `${pct}%`;
     }
 
@@ -3240,7 +3328,9 @@
        ======================================================= */
     function saveNotes() {
       const val = document.getElementById('myNotesBox').value;
-      localStorage.setItem('ptlab_notes', val);
+      try {
+        localStorage.setItem('ptlab_notes', val);
+      } catch (e) {}
       const status = document.getElementById('notesStatus');
       status.innerText = 'Saved ✓';
       setTimeout(() => { status.innerText = ''; }, 2000);
@@ -3248,25 +3338,39 @@
 
     function copyNotes() {
       const val = document.getElementById('myNotesBox').value;
-      navigator.clipboard.writeText(val).then(() => {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(val).then(() => {
+          const status = document.getElementById('notesStatus');
+          status.innerText = 'Copied to clipboard! 📋';
+          setTimeout(() => { status.innerText = ''; }, 2000);
+        });
+      } else {
+        // Fallback
+        const textarea = document.getElementById('myNotesBox');
+        textarea.select();
+        document.execCommand('copy');
         const status = document.getElementById('notesStatus');
         status.innerText = 'Copied to clipboard! 📋';
         setTimeout(() => { status.innerText = ''; }, 2000);
-      });
+      }
     }
 
     function clearNotes() {
       if (confirm('Are you sure you want to clear your notes?')) {
         document.getElementById('myNotesBox').value = '';
-        localStorage.removeItem('ptlab_notes');
+        try {
+          localStorage.removeItem('ptlab_notes');
+        } catch (e) {}
       }
     }
 
     function resetProgress() {
       if (confirm('Reset all saved exercises, flashcards, and notes?')) {
-        localStorage.removeItem('ptlab_known_cards');
-        localStorage.removeItem('ptlab_quiz_best');
-        localStorage.removeItem('ptlab_notes');
+        try {
+          localStorage.removeItem('ptlab_known_cards');
+          localStorage.removeItem('ptlab_quiz_best');
+          localStorage.removeItem('ptlab_notes');
+        } catch (e) {}
         state.flashcardsKnown.clear();
         state.quizAnswers = {};
         state.verbsMastered = 0;
