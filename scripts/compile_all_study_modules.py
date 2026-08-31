@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """
-Universal Study Module Webpage Compiler
+Universal Study Module Webpage Compiler & Pedagogical Optimizer
 Compiles every markdown study module in IELTS, SAT, ESL, and YDT into a standalone,
-offline-capable, responsive interactive HTML study webpage with domain themes,
-interactive practice tools, dark mode, font scaling, and print support.
+offline-capable, responsive interactive HTML study webpage equipped with:
+- "Struggling Student" Support System (Scaffolded Sentence Starters, Common Pitfall Radar, Lexicon Cheat Sheet)
+- Interactive Writing & Speaking Practice Arenas (Live Word Counter, Progress Bars, Timers, Draft Persistence)
+- Teacher Mode (Classroom Timing, Concept Checking Questions, Pair-Work Prompts, Projector View)
+- Web Speech API Audio Reader with Adjustable Speed (0.75x slow, 1.0x normal)
+- Self-Assessment Mastery Checklist (saved to localStorage)
+- Dark/Light Theme & Font Scaling
 """
 
 import os
@@ -68,14 +73,13 @@ def parse_frontmatter_and_markdown(md_text: str):
 
     title_match = re.search(r"^#\s+(.+)$", body, re.M)
     title = title_match.group(1).strip() if title_match else metadata.get("topic", "Study Module")
-    # Clean emoji from title for clean display if desired
     clean_title = re.sub(r"^[^\w\s]+", "", title).strip()
 
     return metadata, clean_title, body
 
 
 def markdown_to_html_rich(md: str) -> str:
-    """Converts standard markdown text to clean, semantic HTML."""
+    """Converts standard markdown text to clean, semantic HTML with interactive tooltips and formatting."""
     lines = md.split("\n")
     out = []
     in_code = False
@@ -92,7 +96,7 @@ def markdown_to_html_rich(md: str) -> str:
         header_done = False
         for row_str in tbl_lines:
             if re.match(r"^\|\s*[-:]+\s*\|", row_str):
-                continue  # separator
+                continue
             cols = [c.strip() for c in row_str.strip().strip("|").split("|")]
             if not header_done:
                 html_tbl.append("<thead><tr>")
@@ -162,7 +166,7 @@ def markdown_to_html_rich(md: str) -> str:
             else:
                 in_code = False
                 escaped_code = html.escape("\n".join(code_lines))
-                out.append(f'<div class="code-block-wrapper"><div class="code-header"><span>{code_lang or "Code"}</span><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div><pre><code class="language-{code_lang}">{escaped_code}</code></pre></div>')
+                out.append(f'<div class="code-block-wrapper"><div class="code-header"><span>{code_lang or "Sample / Model Text"}</span><div class="code-actions"><button class="btn-copy-code" onclick="readTextChunk(this)">🔊 Read</button><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div></div><pre><code class="language-{code_lang}">{escaped_code}</code></pre></div>')
             i += 1
             continue
 
@@ -218,7 +222,8 @@ def markdown_to_html_rich(md: str) -> str:
                 alert_body.append(re.sub(r"^>\s?", "", lines[i]))
                 i += 1
             alert_html = process_inline(" ".join(alert_body))
-            out.append(f'<div class="alert alert-{alert_type.lower()}"><div class="alert-title">📌 {alert_type}</div><div class="alert-content">{alert_html}</div></div>')
+            icon = "💡" if alert_type == "TIP" else ("⚠️" if alert_type in {"WARNING", "IMPORTANT"} else "📌")
+            out.append(f'<div class="alert alert-{alert_type.lower()}"><div class="alert-title">{icon} {alert_type}</div><div class="alert-content">{alert_html}</div></div>')
             continue
 
         # Standard Blockquote
@@ -255,7 +260,7 @@ def markdown_to_html_rich(md: str) -> str:
 
 
 def build_module_webpage(md_path: Path) -> Path:
-    """Generates an HTML study webpage for a given markdown module."""
+    """Generates an optimized HTML study webpage for a given markdown module."""
     content = md_path.read_text(encoding="utf-8")
     meta, title, body = parse_frontmatter_and_markdown(content)
     domain = meta.get("domain", "General").upper()
@@ -278,27 +283,72 @@ def build_module_webpage(md_path: Path) -> Path:
     # Detect interactive tools needed
     is_writing = "writing" in md_path.as_posix().lower() or "task1" in md_path.as_posix().lower() or "task2" in md_path.as_posix().lower()
     is_speaking = "speaking" in md_path.as_posix().lower()
+    is_reading_or_listening = "reading" in md_path.as_posix().lower() or "listening" in md_path.as_posix().lower() or "exam" in md_path.as_posix().lower()
     target_words = 150 if "task1" in md_path.as_posix().lower() else 250
 
     # Determine relative path back to domain index.html
     rel_parts_count = len(md_path.relative_to(WORKSPACE_ROOT / (domain if domain != 'GENERAL' else '')).parts) - 1
     portal_href = "../" * rel_parts_count + "index.html" if rel_parts_count > 0 else "index.html"
 
-    # Interactive Writing Arena Widget (if writing module)
+    # 1. Struggling Student Scaffolding Widget
+    scaffolding_widget_html = ""
+    if is_writing:
+        scaffolding_widget_html = f"""
+        <!-- Struggling Student Scaffolding & Sentence Frame Generator -->
+        <div class="scaffold-card" id="studentScaffold">
+          <div class="scaffold-header" onclick="toggleScaffold()">
+            <div class="scaffold-title">
+              <span>🧩</span> <strong>Need Help Writing? Click for Sentence Starters & Formulas (Band 6.5+ Frames)</strong>
+            </div>
+            <span class="scaffold-toggle-icon" id="scaffoldIcon">▼</span>
+          </div>
+          <div class="scaffold-content" id="scaffoldContent">
+            <p class="scaffold-intro">Click any formula below to automatically paste it into your Writing Arena:</p>
+            <div class="starter-grid">
+              <button class="starter-btn" onclick="insertSentenceStarter('intro')">
+                <span class="tag">Introduction</span>
+                <code>"The [graph/table] illustrates changes in [Topic] across [Categories] between [Year] and [Year]..."</code>
+              </button>
+              <button class="starter-btn" onclick="insertSentenceStarter('overview')">
+                <span class="tag">Dual Overview</span>
+                <code>"Overall, while [Category A] experienced a substantial upward trajectory, [Category B] saw a marked decline..."</code>
+              </button>
+              <button class="starter-btn" onclick="insertSentenceStarter('body1')">
+                <span class="tag">Body 1 (Main Data)</span>
+                <code>"Looking first at the leading sector, [Item A] accounted for the highest proportion at [X%], followed closely by..."</code>
+              </button>
+              <button class="starter-btn" onclick="insertSentenceStarter('body2')">
+                <span class="tag">Body 2 (Contrast)</span>
+                <code>"In stark contrast, [Item C] recorded merely a negligible fraction of [Z%], before recovering slightly to..."</code>
+              </button>
+            </div>
+            <div class="pitfall-radar">
+              <strong>⚠️ Common Mistakes Radar:</strong>
+              <ul>
+                <li><strong>Never put raw figures in the Overview:</strong> Save percentages and specific dates for Body 1 and 2.</li>
+                <li><strong>Avoid repeating "shows":</strong> Use <em>illustrates, delineates, outlines, depicts, reveals</em>.</li>
+                <li><strong>Avoid copying prompt words:</strong> Paraphrase nouns (*proportion ➔ share*, *tourists ➔ visitors*).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        """
+
+    # 2. Writing Arena Tool
     writing_widget_html = ""
     if is_writing:
         writing_widget_html = f"""
         <section class="interactive-tool-card" id="writing-arena">
           <div class="tool-header">
-            <div class="tool-title">✍️ Interactive Writing Arena & Live Word Tracker</div>
+            <div class="tool-title">✍️ Interactive Writing Arena & Word Counter</div>
             <div class="tool-badges">
               <span class="badge">Target: {target_words}+ Words</span>
-              <span class="badge" id="timerDisplay">20:00</span>
+              <span class="badge" id="timerDisplay">{'20:00' if target_words==150 else '40:00'}</span>
             </div>
           </div>
           <div class="tool-body">
             <div class="timer-controls">
-              <button class="btn-tool" onclick="startWritingTimer({20 if target_words==150 else 40})">▶️ Start Timer ({20 if target_words==150 else 40}m)</button>
+              <button class="btn-tool" onclick="startWritingTimer({20 if target_words==150 else 40})">▶️ Start Exam Timer ({20 if target_words==150 else 40}m)</button>
               <button class="btn-tool btn-tool-outline" onclick="pauseWritingTimer()">⏸️ Pause</button>
               <button class="btn-tool btn-tool-outline" onclick="resetWritingTimer({20 if target_words==150 else 40})">🔄 Reset</button>
               <button class="btn-tool btn-tool-outline" onclick="clearWritingDraft()">🗑️ Clear</button>
@@ -318,7 +368,7 @@ def build_module_webpage(md_path: Path) -> Path:
         </section>
         """
 
-    # Interactive Speaking Practice Timer Widget (if speaking module)
+    # 3. Speaking Practice Arena
     speaking_widget_html = ""
     if is_speaking:
         speaking_widget_html = """
@@ -335,7 +385,7 @@ def build_module_webpage(md_path: Path) -> Path:
               <button class="btn-tool" onclick="startSpeakingPrep()">⏱️ 1-Minute Prep</button>
               <button class="btn-tool btn-tool-primary" onclick="startSpeakingTurn()">🎙️ 2-Minute Long Turn</button>
               <button class="btn-tool btn-tool-outline" onclick="stopSpeakingTimer()">⏹️ Stop</button>
-              <button class="btn-tool btn-tool-outline" onclick="readPromptAloud()">🔊 Listen to Prompt</button>
+              <button class="btn-tool btn-tool-outline" onclick="readPromptAloud()">🔊 Listen to Model</button>
             </div>
             <div class="speaking-progress-container">
               <div class="speaking-progress-bar" id="speakingProgressBar" style="width: 0%;"></div>
@@ -344,6 +394,72 @@ def build_module_webpage(md_path: Path) -> Path:
           </div>
         </section>
         """
+
+    # 4. Teacher Mode Panel
+    teacher_panel_html = f"""
+    <!-- Teacher Mode Drawer -->
+    <div class="teacher-drawer" id="teacherDrawer">
+      <div class="teacher-drawer-header">
+        <h3>👨‍🏫 Teacher Mode: Classroom Facilitator Guide</h3>
+        <button class="btn-close-drawer" onclick="toggleTeacherMode()">✕ Close</button>
+      </div>
+      <div class="teacher-drawer-body">
+        <div class="teacher-block">
+          <h4>⏱️ Suggested Lesson Flow (45–60 Mins)</h4>
+          <ul>
+            <li><strong>Warmer (5m):</strong> Project the prompt and ask students: <em>"What is the single biggest trend you notice?"</em></li>
+            <li><strong>Strategy Breakdown (15m):</strong> Review the 4-paragraph structure and highlight the Dual Overview rule.</li>
+            <li><strong>Guided Practice (15m):</strong> Students complete the fill-in-the-blank sentence frames in pairs.</li>
+            <li><strong>Independent Timed Writing (20m):</strong> Launch the live Writing Arena timer.</li>
+          </ul>
+        </div>
+        <div class="teacher-block">
+          <h4>💡 Concept Checking Questions (CCQs)</h4>
+          <ul>
+            <li><em>"Should we include raw percentages (e.g. 48%) in the overview?"</em> ➔ <strong>No (Instant Band 5 penalty).</strong></li>
+            <li><em>"If we have a table and a pie chart, how many body paragraphs should we write?"</em> ➔ <strong>Two separate paragraphs.</strong></li>
+          </ul>
+        </div>
+        <div class="teacher-block">
+          <h4>🖨️ Classroom Printing</h4>
+          <p>Click below to format this module into a clean, 2-page student handout for classroom distribution:</p>
+          <button class="btn-tool" onclick="window.print()">🖨️ Print Student Worksheet</button>
+        </div>
+      </div>
+    </div>
+    """
+
+    # 5. Mastery Self-Assessment Checklist
+    checklist_html = """
+    <!-- Self-Assessment Mastery Checklist -->
+    <div class="mastery-card">
+      <div class="mastery-header">
+        <h3>🎯 Student Self-Assessment & Mastery Checklist</h3>
+        <span class="mastery-score" id="masteryScore">0 / 4 Mastered</span>
+      </div>
+      <div class="mastery-list">
+        <label class="mastery-item">
+          <input type="checkbox" onchange="updateMastery(this, 'c1')">
+          <span>I can write a compound introduction paraphrasing both visuals without copying prompt words.</span>
+        </label>
+        <label class="mastery-item">
+          <input type="checkbox" onchange="updateMastery(this, 'c2')">
+          <span>I can write a dual overview summarizing macro-trends with <strong>ZERO figures/percentages</strong>.</span>
+        </label>
+        <label class="mastery-item">
+          <input type="checkbox" onchange="updateMastery(this, 'c3')">
+          <span>I grouped data logically into 2 separate body paragraphs with clear bridging connectors.</span>
+        </label>
+        <label class="mastery-item">
+          <input type="checkbox" onchange="updateMastery(this, 'c4')">
+          <span>I used at least 3 advanced academic proportion or comparative phrases (e.g. <em>lion's share, in stark contrast</em>).</span>
+        </label>
+      </div>
+      <div class="mastery-banner" id="masteryBanner" style="display: none;">
+        🎉 <strong>Outstanding! You have mastered the core competencies for this module.</strong>
+      </div>
+    </div>
+    """
 
     html_content = f"""<!DOCTYPE html>
 <html lang="en" data-theme="light">
@@ -384,7 +500,7 @@ def build_module_webpage(md_path: Path) -> Path:
     }}
 
     * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-    html {{ font-size: var(--base-font-size); }}
+    html {{ font-size: var(--base-font-size); scroll-behavior: smooth; }}
     body {{
       font-family: var(--font);
       background-color: var(--bg);
@@ -393,6 +509,7 @@ def build_module_webpage(md_path: Path) -> Path:
       padding-bottom: 80px;
     }}
 
+    /* Global Header */
     header {{
       background: var(--surface);
       border-bottom: 1px solid var(--border);
@@ -400,7 +517,7 @@ def build_module_webpage(md_path: Path) -> Path:
       top: 0;
       z-index: 100;
       backdrop-filter: blur(12px);
-      padding: 0.85rem 1.5rem;
+      padding: 0.75rem 1.5rem;
     }}
 
     .header-container {{
@@ -409,6 +526,8 @@ def build_module_webpage(md_path: Path) -> Path:
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }}
 
     .nav-left {{
@@ -454,6 +573,7 @@ def build_module_webpage(md_path: Path) -> Path:
       display: flex;
       align-items: center;
       gap: 8px;
+      flex-wrap: wrap;
     }}
 
     .btn-action {{
@@ -462,14 +582,52 @@ def build_module_webpage(md_path: Path) -> Path:
       color: var(--text);
       padding: 6px 12px;
       border-radius: 8px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       cursor: pointer;
       font-weight: 600;
       transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }}
     .btn-action:hover {{
       border-color: var(--primary);
       color: var(--primary);
+    }}
+    .btn-teacher-toggle {{
+      background: var(--primary-light);
+      color: var(--primary);
+      border-color: var(--primary);
+    }}
+
+    /* Audio Player Bar */
+    .audio-player-bar {{
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 1.5rem;
+      font-size: 0.85rem;
+    }}
+    .audio-bar-inner {{
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }}
+    .audio-controls {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }}
+    .speed-select {{
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
     }}
 
     main {{
@@ -478,6 +636,7 @@ def build_module_webpage(md_path: Path) -> Path:
       padding: 0 1.5rem;
     }}
 
+    /* Hero Banner */
     .module-hero {{
       background: var(--surface);
       border: 1px solid var(--border);
@@ -530,6 +689,89 @@ def build_module_webpage(md_path: Path) -> Path:
       color: var(--text);
     }}
 
+    /* Scaffolding Card */
+    .scaffold-card {{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }}
+    .scaffold-header {{
+      padding: 1.25rem;
+      background: var(--primary-light);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }}
+    .scaffold-title {{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary);
+      font-size: 1rem;
+    }}
+    .scaffold-content {{
+      padding: 1.5rem;
+      display: block;
+    }}
+    .scaffold-intro {{
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }}
+    .starter-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-bottom: 1.5rem;
+    }}
+    .starter-btn {{
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 12px;
+      border-radius: 8px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }}
+    .starter-btn:hover {{
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }}
+    .starter-btn .tag {{
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+    }}
+    .starter-btn code {{
+      font-family: var(--font);
+      font-size: 0.85rem;
+      color: var(--text);
+      line-height: 1.4;
+    }}
+    .pitfall-radar {{
+      background: rgba(239, 68, 68, 0.05);
+      border-left: 4px solid #ef4444;
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.88rem;
+    }}
+    .pitfall-radar ul {{
+      margin: 0.5rem 0 0 1.25rem;
+    }}
+    .pitfall-radar li {{
+      margin-bottom: 0.3rem;
+    }}
+
+    /* Main Content Card */
     .module-content-card {{
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -539,7 +781,7 @@ def build_module_webpage(md_path: Path) -> Path:
       margin-bottom: 2rem;
     }}
 
-    /* Typography inside content */
+    /* Typography */
     .study-heading {{
       margin-top: 2rem;
       margin-bottom: 1rem;
@@ -552,20 +794,11 @@ def build_module_webpage(md_path: Path) -> Path:
     .study-heading.h3 {{ font-size: 1.2rem; color: var(--primary); }}
     .study-heading.h4 {{ font-size: 1.05rem; font-weight: 700; }}
 
-    p {{
-      margin-bottom: 1.25rem;
-      color: var(--text);
-    }}
+    p {{ margin-bottom: 1.25rem; color: var(--text); }}
+    .study-list {{ margin: 1rem 0 1.5rem 1.5rem; }}
+    .study-list li {{ margin-bottom: 0.6rem; }}
 
-    /* Lists */
-    .study-list {{
-      margin: 1rem 0 1.5rem 1.5rem;
-    }}
-    .study-list li {{
-      margin-bottom: 0.6rem;
-    }}
-
-    /* Code blocks */
+    /* Code Blocks */
     .code-block-wrapper {{
       background: #0f172a;
       border-radius: 10px;
@@ -584,6 +817,10 @@ def build_module_webpage(md_path: Path) -> Path:
       font-family: var(--font-mono);
       font-weight: 700;
       text-transform: uppercase;
+    }}
+    .code-actions {{
+      display: flex;
+      gap: 6px;
     }}
     .btn-copy-code {{
       background: transparent;
@@ -632,12 +869,8 @@ def build_module_webpage(md_path: Path) -> Path:
       border-bottom: 1px solid var(--border);
       color: var(--text);
     }}
-    .data-table tr:last-child td {{
-      border-bottom: none;
-    }}
-    .data-table tr:hover td {{
-      background: var(--primary-light);
-    }}
+    .data-table tr:last-child td {{ border-bottom: none; }}
+    .data-table tr:hover td {{ background: var(--primary-light); }}
 
     /* Alerts */
     .alert {{
@@ -646,18 +879,12 @@ def build_module_webpage(md_path: Path) -> Path:
       margin: 1.5rem 0;
       border-left: 4px solid;
     }}
-    .alert-title {{
-      font-weight: 800;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      margin-bottom: 0.4rem;
-    }}
-    .alert-note {{ background: rgba(59, 130, 246, 0.08); border-color: #3b82f6; color: var(--text); }}
-    .alert-tip {{ background: rgba(16, 185, 129, 0.08); border-color: #10b981; color: var(--text); }}
-    .alert-important {{ background: rgba(239, 68, 68, 0.08); border-color: #ef4444; color: var(--text); }}
-    .alert-warning {{ background: rgba(245, 158, 11, 0.08); border-color: #f59e0b; color: var(--text); }}
+    .alert-title {{ font-weight: 800; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.4rem; }}
+    .alert-note {{ background: rgba(59, 130, 246, 0.08); border-color: #3b82f6; }}
+    .alert-tip {{ background: rgba(16, 185, 129, 0.08); border-color: #10b981; }}
+    .alert-important {{ background: rgba(239, 68, 68, 0.08); border-color: #ef4444; }}
+    .alert-warning {{ background: rgba(245, 158, 11, 0.08); border-color: #f59e0b; }}
 
-    /* Quotes */
     .study-quote {{
       border-left: 4px solid var(--primary);
       padding: 1rem 1.25rem;
@@ -665,14 +892,8 @@ def build_module_webpage(md_path: Path) -> Path:
       border-radius: 0 10px 10px 0;
       margin: 1.5rem 0;
       font-style: italic;
-      color: var(--text);
     }}
-
-    .study-divider {{
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 2.5rem 0;
-    }}
+    .study-divider {{ border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }}
 
     /* Interactive Tool Cards */
     .interactive-tool-card {{
@@ -691,15 +912,8 @@ def build_module_webpage(md_path: Path) -> Path:
       flex-wrap: wrap;
       gap: 10px;
     }}
-    .tool-title {{
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--primary);
-    }}
-    .tool-badges {{
-      display: flex;
-      gap: 8px;
-    }}
+    .tool-title {{ font-size: 1.15rem; font-weight: 800; color: var(--primary); }}
+    .tool-badges {{ display: flex; gap: 8px; }}
     .badge {{
       background: var(--primary);
       color: #fff;
@@ -709,12 +923,7 @@ def build_module_webpage(md_path: Path) -> Path:
       font-weight: 700;
       font-family: var(--font-mono);
     }}
-    .timer-controls, .speaking-controls {{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 1rem;
-    }}
+    .timer-controls, .speaking-controls {{ display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem; }}
     .btn-tool {{
       padding: 8px 16px;
       border-radius: 8px;
@@ -727,15 +936,8 @@ def build_module_webpage(md_path: Path) -> Path:
       transition: all 0.2s;
     }}
     .btn-tool:hover {{ opacity: 0.9; }}
-    .btn-tool-outline {{
-      background: var(--bg);
-      border: 1px solid var(--border);
-      color: var(--text);
-    }}
-    .btn-tool-outline:hover {{
-      border-color: var(--primary);
-      color: var(--primary);
-    }}
+    .btn-tool-outline {{ background: var(--bg); border: 1px solid var(--border); color: var(--text); }}
+    .btn-tool-outline:hover {{ border-color: var(--primary); color: var(--primary); }}
     textarea {{
       width: 100%;
       border-radius: 10px;
@@ -749,17 +951,8 @@ def build_module_webpage(md_path: Path) -> Path:
       resize: vertical;
       margin-bottom: 1rem;
     }}
-    textarea:focus {{
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px var(--primary-light);
-    }}
-    .stats-bar {{
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }}
+    textarea:focus {{ outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-light); }}
+    .stats-bar {{ display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }}
     .progress-bar-bg, .speaking-progress-container {{
       flex: 1;
       height: 10px;
@@ -768,19 +961,89 @@ def build_module_webpage(md_path: Path) -> Path:
       overflow: hidden;
       min-width: 150px;
     }}
-    .progress-bar-fill, .speaking-progress-bar {{
-      height: 100%;
-      background: #10b981;
-      transition: width 0.3s ease;
+    .progress-bar-fill, .speaking-progress-bar {{ height: 100%; background: #10b981; transition: width 0.3s ease; }}
+    .word-status-badge {{ font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; background: var(--bg); border: 1px solid var(--border); }}
+
+    /* Mastery Checklist Card */
+    .mastery-card {{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
     }}
-    .word-status-badge {{
-      font-size: 0.8rem;
-      font-weight: 700;
+    .mastery-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }}
+    .mastery-score {{
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--primary);
+      background: var(--primary-light);
       padding: 4px 10px;
       border-radius: 6px;
-      background: var(--bg);
-      border: 1px solid var(--border);
     }}
+    .mastery-list {{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }}
+    .mastery-item {{
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--bg);
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      font-size: 0.92rem;
+    }}
+    .mastery-item input[type="checkbox"] {{
+      margin-top: 4px;
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--primary);
+    }}
+    .mastery-banner {{
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid #10b981;
+      border-radius: 8px;
+      color: #10b981;
+      text-align: center;
+    }}
+
+    /* Teacher Drawer */
+    .teacher-drawer {{
+      display: none;
+      background: var(--surface);
+      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+    }}
+    .teacher-drawer.active {{ display: block; }}
+    .teacher-drawer-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.75rem;
+    }}
+    .teacher-block {{ margin-bottom: 1.25rem; }}
+    .teacher-block h4 {{ font-size: 1rem; color: var(--primary); margin-bottom: 0.5rem; }}
+    .teacher-block ul {{ margin-left: 1.25rem; font-size: 0.9rem; }}
+    .teacher-block li {{ margin-bottom: 0.4rem; }}
+    .btn-close-drawer {{ background: transparent; border: none; font-size: 1.2rem; cursor: pointer; color: var(--text-muted); }}
 
     footer {{
       text-align: center;
@@ -792,9 +1055,9 @@ def build_module_webpage(md_path: Path) -> Path:
     }}
 
     @media print {{
-      header, .interactive-tool-card, footer, .btn-copy-code {{ display: none !important; }}
-      body {{ background: #fff; color: #000; }}
-      .module-content-card, .module-hero {{ border: none; box-shadow: none; padding: 0; }}
+      header, .audio-player-bar, .scaffold-card, .interactive-tool-card, .mastery-card, .teacher-drawer, footer, .btn-copy-code {{ display: none !important; }}
+      body {{ background: #fff; color: #000; font-size: 12pt; }}
+      .module-content-card, .module-hero {{ border: none; box-shadow: none; padding: 0; margin-bottom: 1rem; }}
     }}
   </style>
 </head>
@@ -807,6 +1070,7 @@ def build_module_webpage(md_path: Path) -> Path:
         <span class="domain-tag">{theme['icon']} {domain}</span>
       </div>
       <div class="nav-actions">
+        <button class="btn-action btn-teacher-toggle" onclick="toggleTeacherMode()">👨‍🏫 Teacher Mode</button>
         <button class="btn-action" onclick="adjustFontSize(-1)" title="Decrease font size">A-</button>
         <button class="btn-action" onclick="adjustFontSize(1)" title="Increase font size">A+</button>
         <button class="btn-action" onclick="window.print()" title="Print / Save PDF">🖨️ PDF</button>
@@ -815,7 +1079,25 @@ def build_module_webpage(md_path: Path) -> Path:
     </div>
   </header>
 
+  <div class="audio-player-bar">
+    <div class="audio-bar-inner">
+      <div class="audio-controls">
+        <span>🔊 <strong>Audio Reader:</strong></span>
+        <button class="btn-action" onclick="toggleReadAloud()" id="btnPlayAudio">▶️ Read Aloud</button>
+        <button class="btn-action" onclick="stopAudio()">⏹️ Stop</button>
+        <select class="speed-select" id="audioSpeed" onchange="updateAudioSpeed()">
+          <option value="0.75">0.75x (Slow - Struggling Learners)</option>
+          <option value="1.0" selected>1.0x (Normal Pace)</option>
+          <option value="1.25">1.25x (Fast Pace)</option>
+        </select>
+      </div>
+      <span style="color: var(--text-muted); font-size: 0.8rem;">Select any text to read specific sections</span>
+    </div>
+  </div>
+
   <main>
+    {teacher_panel_html}
+
     <div class="module-hero">
       <div class="module-meta-pills">
         <span class="meta-pill highlight">{level}</span>
@@ -826,6 +1108,7 @@ def build_module_webpage(md_path: Path) -> Path:
       <p style="color: var(--text-muted); font-size: 0.95rem;">Interactive Academic Study Module • Pedagogically Scaffolded Curriculum</p>
     </div>
 
+    {scaffolding_widget_html}
     {writing_widget_html}
     {speaking_widget_html}
 
@@ -833,8 +1116,10 @@ def build_module_webpage(md_path: Path) -> Path:
       {rendered_body}
     </article>
 
+    {checklist_html}
+
     <footer>
-      <p>{theme['icon']} {domain} Preparation Workspace • Built for Authentic Exam Success</p>
+      <p>{theme['icon']} {domain} Academic Preparation Workspace • Engineered for Classroom Teaching & High-Yield Self-Study</p>
     </footer>
   </main>
 
@@ -866,6 +1151,48 @@ def build_module_webpage(md_path: Path) -> Path:
       }}
     }})();
 
+    // Teacher Mode Toggle
+    function toggleTeacherMode() {{
+      const drawer = document.getElementById('teacherDrawer');
+      if (drawer) {{
+        drawer.classList.toggle('active');
+        if (drawer.classList.contains('active')) {{
+          drawer.scrollIntoView({{ behavior: 'smooth' }});
+        }}
+      }}
+    }}
+
+    // Scaffolding Toggle & Inserter
+    function toggleScaffold() {{
+      const content = document.getElementById('scaffoldContent');
+      const icon = document.getElementById('scaffoldIcon');
+      if (content.style.display === 'none') {{
+        content.style.display = 'block';
+        icon.innerText = '▼';
+      }} else {{
+        content.style.display = 'none';
+        icon.innerText = '▶';
+      }}
+    }}
+
+    function insertSentenceStarter(type) {{
+      const editor = document.getElementById('essayEditor');
+      if (!editor) return;
+      let text = '';
+      if (type === 'intro') {{
+        text = 'The provided charts illustrate the volume of... across... over a period from... to... ';
+      }} else if (type === 'overview') {{
+        text = 'Overall, it is clear that while... experienced a substantial upward trend, ... recorded a marked decline. ';
+      }} else if (type === 'body1') {{
+        text = 'Looking first at the leading category, ... accounted for the largest proportion at ..., followed closely by ... at ... ';
+      }} else if (type === 'body2') {{
+        text = 'In stark contrast, ... comprised merely a negligible fraction of ..., before recovering slightly to ... ';
+      }}
+      editor.value += text;
+      editor.focus();
+      updateWordStats({target_words});
+    }}
+
     // Copy Code Helper
     function copyCode(btn) {{
       const pre = btn.closest('.code-block-wrapper').querySelector('pre code');
@@ -877,9 +1204,74 @@ def build_module_webpage(md_path: Path) -> Path:
       }}
     }}
 
+    // Web Speech Audio Reader
+    let currentUtterance = null;
+    let isSpeaking = false;
+    let audioRate = 1.0;
+
+    function updateAudioSpeed() {{
+      audioRate = parseFloat(document.getElementById('audioSpeed').value) || 1.0;
+      if (isSpeaking) {{
+        stopAudio();
+        toggleReadAloud();
+      }}
+    }}
+
+    function toggleReadAloud() {{
+      if (!('speechSynthesis' in window)) {{
+        alert('Text-to-speech is not supported in this browser.');
+        return;
+      }}
+      if (isSpeaking) {{
+        stopAudio();
+        return;
+      }}
+      
+      const selected = window.getSelection().toString().trim();
+      const textToRead = selected || document.querySelector('.module-content-card').innerText;
+      
+      currentUtterance = new SpeechSynthesisUtterance(textToRead);
+      currentUtterance.rate = audioRate;
+      currentUtterance.lang = 'en-US';
+
+      currentUtterance.onstart = () => {{
+        isSpeaking = true;
+        document.getElementById('btnPlayAudio').innerText = '⏸️ Pause';
+      }};
+      currentUtterance.onend = () => {{
+        isSpeaking = false;
+        document.getElementById('btnPlayAudio').innerText = '▶️ Read Aloud';
+      }};
+      currentUtterance.onerror = () => {{
+        isSpeaking = false;
+        document.getElementById('btnPlayAudio').innerText = '▶️ Read Aloud';
+      }};
+
+      window.speechSynthesis.speak(currentUtterance);
+    }}
+
+    function stopAudio() {{
+      if ('speechSynthesis' in window) {{
+        window.speechSynthesis.cancel();
+        isSpeaking = false;
+        const btn = document.getElementById('btnPlayAudio');
+        if (btn) btn.innerText = '▶️ Read Aloud';
+      }}
+    }}
+
+    function readTextChunk(btn) {{
+      const pre = btn.closest('.code-block-wrapper').querySelector('pre code');
+      if (pre && 'speechSynthesis' in window) {{
+        window.speechSynthesis.cancel();
+        const utter = new SpeechSynthesisUtterance(pre.innerText);
+        utter.rate = audioRate;
+        window.speechSynthesis.speak(utter);
+      }}
+    }}
+
     // Writing Arena Logic
     let timerInterval = null;
-    let timerSeconds = 1200; // 20m
+    let timerSeconds = {1200 if target_words==150 else 2400};
     function startWritingTimer(mins) {{
       clearInterval(timerInterval);
       timerSeconds = mins * 60;
@@ -993,16 +1385,31 @@ def build_module_webpage(md_path: Path) -> Path:
       const pct = Math.round((elapsed / total) * 100);
       document.getElementById('speakingProgressBar').style.width = pct + '%';
     }}
-    function readPromptAloud() {{
-      const title = document.querySelector('.module-title').innerText;
-      if ('speechSynthesis' in window) {{
-        const utterance = new SpeechSynthesisUtterance(title);
-        utterance.rate = 0.95;
-        window.speechSynthesis.speak(utterance);
-      }} else {{
-        alert('Text-to-speech not supported in this browser.');
-      }}
+
+    // Mastery Checklist Logic
+    const pageKey = 'mastery_' + window.location.pathname;
+    function updateMastery(chk, key) {{
+      const checks = JSON.parse(localStorage.getItem(pageKey) || '{{}}');
+      checks[key] = chk.checked;
+      localStorage.setItem(pageKey, JSON.stringify(checks));
+      renderMastery();
     }}
+    function renderMastery() {{
+      const checks = JSON.parse(localStorage.getItem(pageKey) || '{{}}');
+      let count = 0;
+      ['c1', 'c2', 'c3', 'c4'].forEach((k, idx) => {{
+        const el = document.querySelectorAll('.mastery-item input')[idx];
+        if (el) {{
+          el.checked = !!checks[k];
+          if (checks[k]) count++;
+        }}
+      }});
+      const scoreEl = document.getElementById('masteryScore');
+      const banner = document.getElementById('masteryBanner');
+      if (scoreEl) scoreEl.innerText = `${{count}} / 4 Mastered`;
+      if (banner) banner.style.display = count === 4 ? 'block' : 'none';
+    }}
+    (function() {{ renderMastery(); }})();
   </script>
 </body>
 </html>
@@ -1018,7 +1425,6 @@ def main():
     print("======================================================")
 
     count = 0
-    # Scan all markdown study modules in IELTS, SAT, ESL, YDT
     for domain_folder in ["IELTS", "SAT", "ESL", "YDT"]:
         folder = WORKSPACE_ROOT / domain_folder
         if not folder.exists():
@@ -1030,10 +1436,10 @@ def main():
                 continue
             
             out_html = build_module_webpage(md_path)
-            print(f"[COMPILED] {md_path.relative_to(WORKSPACE_ROOT)} ➔ {out_html.name}")
+            print(f"[COMPILED & OPTIMIZED] {md_path.relative_to(WORKSPACE_ROOT)} ➔ {out_html.name}")
             count += 1
 
-    print(f"\nSuccessfully compiled {count} study modules into interactive HTML webpages.")
+    print(f"\nSuccessfully compiled and optimized {count} study modules into interactive HTML webpages.")
 
 
 if __name__ == "__main__":
