@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Academic Writing Task 1: Band 6+ Breakthrough Masterclass | IELTS Academic Study Module</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ef4444;
+      --primary-dark: #dc2626;
+      --primary-light: rgba(239, 68, 68, 0.08);
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --radius: 12px;
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --base-font-size: 16px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0b0f19;
+      --surface: #131b2e;
+      --card-bg: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary-light: rgba(255, 255, 255, 0.05);
+      --border: #334155;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: var(--base-font-size); }
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      padding: 0.85rem 1.5rem;
+    }
+
+    .header-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-back:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .domain-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(239, 68, 68, 0.08);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-action {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-action:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .module-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .module-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), #3b82f6);
+    }
+
+    .module-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .meta-pill {
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .meta-pill.highlight {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .module-title {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .module-content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+    }
+
+    /* Typography inside content */
+    .study-heading {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      color: var(--text);
+      scroll-margin-top: 80px;
+    }
+    .study-heading.h1 { font-size: 1.8rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+    .study-heading.h2 { font-size: 1.45rem; border-left: 4px solid var(--primary); padding-left: 12px; }
+    .study-heading.h3 { font-size: 1.2rem; color: var(--primary); }
+    .study-heading.h4 { font-size: 1.05rem; font-weight: 700; }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    /* Lists */
+    .study-list {
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+    .study-list li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* Code blocks */
+    .code-block-wrapper {
+      background: #0f172a;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+      border: 1px solid #334155;
+    }
+    .code-header {
+      background: #1e293b;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .btn-copy-code {
+      background: transparent;
+      border: 1px solid #475569;
+      color: #cbd5e1;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    .btn-copy-code:hover {
+      background: #334155;
+      color: #fff;
+    }
+    pre {
+      padding: 1.25rem;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #e2e8f0;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      text-align: left;
+    }
+    .data-table th {
+      background: var(--bg);
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border);
+      font-weight: 700;
+      color: var(--text);
+    }
+    .data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+    .data-table tr:hover td {
+      background: var(--primary-light);
+    }
+
+    /* Alerts */
+    .alert {
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      border-left: 4px solid;
+    }
+    .alert-title {
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .alert-note { background: rgba(59, 130, 246, 0.08); border-color: #3b82f6; color: var(--text); }
+    .alert-tip { background: rgba(16, 185, 129, 0.08); border-color: #10b981; color: var(--text); }
+    .alert-important { background: rgba(239, 68, 68, 0.08); border-color: #ef4444; color: var(--text); }
+    .alert-warning { background: rgba(245, 158, 11, 0.08); border-color: #f59e0b; color: var(--text); }
+
+    /* Quotes */
+    .study-quote {
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      background: var(--bg);
+      border-radius: 0 10px 10px 0;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    .study-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* Interactive Tool Cards */
+    .interactive-tool-card {
+      background: var(--surface);
+      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
+    }
+    .tool-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tool-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .tool-badges {
+      display: flex;
+      gap: 8px;
+    }
+    .badge {
+      background: var(--primary);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+    .timer-controls, .speaking-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    .btn-tool {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: #fff;
+      transition: all 0.2s;
+    }
+    .btn-tool:hover { opacity: 0.9; }
+    .btn-tool-outline {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-tool-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 1rem;
+      padding: 1rem;
+      line-height: 1.6;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+    .stats-bar {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .progress-bar-bg, .speaking-progress-container {
+      flex: 1;
+      height: 10px;
+      background: var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+      min-width: 150px;
+    }
+    .progress-bar-fill, .speaking-progress-bar {
+      height: 100%;
+      background: #10b981;
+      transition: width 0.3s ease;
+    }
+    .word-status-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media print {
+      header, .interactive-tool-card, footer, .btn-copy-code { display: none !important; }
+      body { background: #fff; color: #000; }
+      .module-content-card, .module-hero { border: none; box-shadow: none; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="nav-left">
+        <a href="../../index.html" class="btn-back">← Back to IELTS Academic Portal</a>
+        <span class="domain-tag">🎯 IELTS</span>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-action" onclick="adjustFontSize(-1)" title="Decrease font size">A-</button>
+        <button class="btn-action" onclick="adjustFontSize(1)" title="Increase font size">A+</button>
+        <button class="btn-action" onclick="window.print()" title="Print / Save PDF">🖨️ PDF</button>
+        <button class="btn-action" onclick="toggleTheme()">🌓 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="module-hero">
+      <div class="module-meta-pills">
+        <span class="meta-pill highlight">Band 5.0 to 6.5</span>
+        <span class="meta-pill">Lesson Plan | Analysis | Drill</span>
+        <span class="meta-pill">📅 2026-08-31</span>
+      </div>
+      <h1 class="module-title">IELTS Academic Writing Task 1: Band 6+ Breakthrough Masterclass</h1>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">Interactive Academic Study Module • Pedagogically Scaffolded Curriculum</p>
+    </div>
+
+    
+        <section class="interactive-tool-card" id="writing-arena">
+          <div class="tool-header">
+            <div class="tool-title">✍️ Interactive Writing Arena & Live Word Tracker</div>
+            <div class="tool-badges">
+              <span class="badge">Target: 150+ Words</span>
+              <span class="badge" id="timerDisplay">20:00</span>
+            </div>
+          </div>
+          <div class="tool-body">
+            <div class="timer-controls">
+              <button class="btn-tool" onclick="startWritingTimer(20)">▶️ Start Timer (20m)</button>
+              <button class="btn-tool btn-tool-outline" onclick="pauseWritingTimer()">⏸️ Pause</button>
+              <button class="btn-tool btn-tool-outline" onclick="resetWritingTimer(20)">🔄 Reset</button>
+              <button class="btn-tool btn-tool-outline" onclick="clearWritingDraft()">🗑️ Clear</button>
+            </div>
+            <textarea id="essayEditor" placeholder="Type your response here to practice timed exam conditions..." rows="12" oninput="updateWordStats(150)"></textarea>
+            <div class="stats-bar">
+              <div class="stat-group">
+                <span class="stat-label">Word Count:</span>
+                <span class="stat-value" id="wordCount">0</span> / 150 words
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="wordProgressBar" style="width: 0%;"></div>
+              </div>
+              <div id="wordFeedback" class="word-status-badge">Need 150 words</div>
+            </div>
+          </div>
+        </section>
+        
+    
+
+    <article class="module-content-card">
+      <h1 id="ielts-academic-writing-task-1-band-6-breakthrough-masterclass" class="study-heading h1">🎯 IELTS Academic Writing Task 1: Band 6+ Breakthrough Masterclass</h1>
+<h2 id="module-overview" class="study-heading h2">📋 Module Overview</h2>
+<ul class="study-list">
+<li><strong>Domain</strong>: IELTS Academic Writing Task 1</li>
+<li><strong>Target Audience</strong>: Candidates scoring Band 5.0–5.5 who struggle with mechanical data listing, missing overviews, and lexical repetition.</li>
+<li><strong>Goal</strong>: Achieve a consistent Band 6.5–7.5 score by executing the 4-Paragraph Skeleton, writing high-impact macro-overviews with zero numbers, and utilizing functional academic collocations.</li>
+<li><strong>Interactive Companion Webapp</strong>: Available in <a href="task1<em>band</em>breakthrough/index.html" target="_blank" rel="noopener"><code>task1<em>band</em>breakthrough/index.html</code></a>.</li>
+</ul>
+<hr class="study-divider">
+<h2 id="1-know-the-battlefield--exam-structure--4-criteria" class="study-heading h2">🎯 1. Know the Battlefield — Exam Structure &amp; 4 Criteria</h2>
+<div class="table-container"><table class="data-table">
+<thead><tr>
+<th>Parameter</th>
+<th>Specification</th>
+<th>Examiner Rule</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Recommended Time</strong></td>
+<td>20 Minutes</td>
+<td>Spend no more than 20 mins to leave 40 mins for Task 2 (worth 2/3 of total score).</td>
+</tr>
+<tr>
+<td><strong>Minimum Word Count</strong></td>
+<td>150 Words</td>
+<td><strong>Writing under 150 words caps Task Achievement at Band 5.</strong> Target: 160–190 words.</td>
+</tr>
+<tr>
+<td><strong>Scoring Weight</strong></td>
+<td>33.3% (1/3 of Writing)</td>
+<td>Divided into 4 equally weighted criteria (25% each).</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="the-4-criteria-breakdown-band-6-vs-band-7" class="study-heading h3">The 4 Criteria Breakdown: Band 6 vs Band 7</h3>
+<div class="code-block-wrapper"><div class="code-header"><span>Code</span><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div><pre><code class="language-">                  ┌────────────────────────────────────────────────────────┐
+                  │              4 CRITERIA OF TASK 1 (25% EACH)           │
+                  └────────────────────────────────────────────────────────┘
+                       │                  │                  │                  │
+         ┌─────────────┴──────┐ ┌────────┴─────────┐ ┌───────┴────────┐ ┌──────┴──────────────┐
+         │  Task Achievement  │ │  Coherence &amp;     │ │    Lexical     │ │  Grammatical Range   │
+         │       (TA)         │ │  Cohesion (CC)   │ │  Resource (LR) │ │  &amp; Accuracy (GRA)    │
+         └────────────────────┘ └──────────────────┘ └────────────────┘ └─────────────────────┘</code></pre></div>
+<p>1. <strong>Task Achievement (TA)</strong>:</p>
+<p>   - <em>Band 6 Requirement</em>: Presents an overview with some information. Highlights main trends, but some data may be mechanical or missing key details.</p>
+<p>   - <em>Band 7 Requirement</em>: Provides a clear, well-developed overview. Key features are clearly identified, highlighted, and logically illustrated with accurate data.</p>
+<p>   - 🚨 <strong>The Hard Rule</strong>: <em>A missing or unclear overview (or putting numbers in the overview) limits Task Achievement to Band 5.</em></p>
+<p>2. <strong>Coherence &amp; Cohesion (CC)</strong>:</p>
+<p>   - <em>Band 6 Requirement</em>: Organizes information coherently with clear overall progression. Uses cohesive devices, but some may be repetitive or mechanical.</p>
+<p>   - <em>Band 7 Requirement</em>: Information and ideas are logically sequenced with clear progression throughout. Uses a varied range of cohesive devices seamlessly.</p>
+<p>3. <strong>Lexical Resource (LR)</strong>:</p>
+<p>   - <em>Band 6 Requirement</em>: Adequate range of vocabulary. Attempts less common vocabulary with some errors in word choice, spelling, or collocation.</p>
+<p>   - <em>Band 7 Requirement</em>: Uses a sufficient range of vocabulary with flexibility and precision. Accurately uses less common collocations with rare minor slips.</p>
+<p>4. <strong>Grammatical Range &amp; Accuracy (GRA)</strong>:</p>
+<p>   - <em>Band 6 Requirement</em>: Uses a mix of simple and complex sentence forms. Makes some grammatical and punctuation errors, though meaning remains clear.</p>
+<p>   - <em>Band 7 Requirement</em>: Uses a variety of complex structures (passives, relative clauses, adverbials). Produces frequent error-free sentences.</p>
+<hr class="study-divider">
+<h2 id="2-the-6-question-types" class="study-heading h2">📊 2. The 6 Question Types</h2>
+<p>1. <strong>Line Graph</strong>: Continuous time trends. Focus on starting/ending points, overall trajectories, and peak/intersection points.</p>
+<p>2. <strong>Bar Chart</strong>: Discrete comparisons. Focus on tallest/shortest bars and category rank order.</p>
+<p>3. <strong>Pie Chart</strong>: Proportions totaling 100%. Focus on dominant slices and percentage shifts.</p>
+<p>4. <strong>Table</strong>: Dense data. Focus on row/column totals, highs/lows, and overarching patterns.</p>
+<p>5. <strong>Process Diagram</strong>: Chronological transformation. Focus on step count, raw inputs, transformation stages, and final outputs (Use Passive Voice!).</p>
+<p>6. <strong>Map / Floor Plan</strong>: Spatial/urban development over time. Focus on additions, demolitions, expansions, and directional prepositions.</p>
+<hr class="study-divider">
+<h2 id="3-the-4-paragraph-skeleton" class="study-heading h2">🏗️ 3. The 4-Paragraph Skeleton</h2>
+<ul class="study-list">
+<li><strong>Paragraph 1: Introduction (~30 words, 1–2 sentences)</strong>: Paraphrase the prompt stimulus. Never copy &gt;3 words verbatim.</li>
+<li><strong>Paragraph 2: The Overview (~40 words, 2–3 sentences)</strong>: Identify 2–3 macro trends. Start with <em>"Overall, ..."</em>. <strong>NEVER include numbers, percentages, or dates!</strong></li>
+<li><strong>Paragraph 3: Detail Paragraph 1 (~50 words, 3–4 sentences)</strong>: Group the first logical subset of data (e.g. upward trends). Provide exact numbers and starting/ending values.</li>
+<li><strong>Paragraph 4: Detail Paragraph 2 (~50 words, 3–4 sentences)</strong>: Group the remaining data (e.g. downward trends or anomalies). Contrast with Paragraph 3. <em>(No conclusion needed).</em></li>
+</ul>
+<hr class="study-divider">
+<h2 id="4-the-7-deadly-sins-of-task-1" class="study-heading h2">💀 4. The 7 Deadly Sins of Task 1</h2>
+<p>1. <strong>Listing Every Single Number</strong>: Turns your essay into an unreadable spreadsheet.</p>
+<p>2. <strong>Missing or Number-Heavy Overview</strong>: Triggers a hard Band 5 cap in Task Achievement.</p>
+<p>3. <strong>Inserting Personal Opinions</strong>: You are an objective reporter, not an essayist.</p>
+<p>4. <strong>Copying the Prompt Word-for-Word</strong>: Copied words are deducted from your word count.</p>
+<p>5. <strong>Wrong Tense for Time Period</strong>: Past dates require Past Simple; future projections require <em>"is projected to"</em>.</p>
+<p>6. <strong>Repeating "Shows" and "Increased"</strong>: Causes vocabulary stagnation at Band 5.</p>
+<p>7. <strong>Wall of Text (No Paragraphing)</strong>: Severe penalty in Coherence &amp; Cohesion.</p>
+<hr class="study-divider">
+<h2 id="5-complete-model-response-band-80-level" class="study-heading h2">🔑 5. Complete Model Response (Band 8.0 Level)</h2>
+<h3 id="prompt" class="study-heading h3">Prompt</h3>
+<blockquote class="study-quote">The line graph illustrates the percentage of households with internet access in three European countries (UK, Germany, Spain) between 2000 and 2020.</blockquote>
+<div class="code-block-wrapper"><div class="code-header"><span>Code</span><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div><pre><code class="language-">+---------------------------------------------------------------------------------------+
+|                                    BAND 8.0 ESSAY                                     |
++---------------------------------------------------------------------------------------+
+| [P1: Intro]                                                                           |
+| The line graph illustrates the proportion of households with access to the            |
+| internet across three European nations—the UK, Germany, and Spain—over a              |
+| 20-year period from 2000 to 2020.                                                     |
+|                                                                                       |
+| [P2: Overview]                                                                        |
+| Overall, all three countries experienced significant upward trajectories in home      |
+| internet connectivity over the two decades. Notably, while the UK consistently        |
+| maintained the highest penetration rates throughout, Spain recorded the most rapid    |
+| acceleration despite starting from the lowest base.                                   |
+|                                                                                       |
+| [P3: Detail 1]                                                                        |
+| Looking first at the leading nations, the UK began the period with roughly 30% of    |
+| households connected in 2000. This figure climbed steadily to surpass the 50% mark    |
+| by 2010, before culminating at a peak of precisely 90% by 2020. Similarly, Germany    |
+| followed a parallel trajectory, rising from 20% in 2000 to approximately 80% at the   |
+| end of the period, trailing the UK by roughly 10 percentage points throughout.        |
+|                                                                                       |
+| [P4: Detail 2]                                                                        |
+| In stark contrast, Spain initially registered a modest adoption rate of merely 10%    |
+| in 2000. However, after moderate growth to 35% in 2010, Spanish internet connectivity  |
+| surged dramatically over the final decade, reaching 70% in 2020 and substantially    |
+| narrowing the gap with its northern counterparts.                                     |
++---------------------------------------------------------------------------------------+</code></pre></div>
+<hr class="study-divider">
+<h2 id="6-classroom-drill--answer-key" class="study-heading h2">🔑 6. Classroom Drill &amp; Answer Key</h2>
+<h3 id="drill-paraphrase-the-following-prompt" class="study-heading h3">Drill: Paraphrase the Following Prompt</h3>
+<blockquote class="study-quote"><strong>Original</strong>: "The bar chart below shows the number of cars produced in Japan, the USA, and Germany from 2005 to 2015."</blockquote>
+<ul class="study-list">
+<li><strong>Model Paraphrase</strong>: <em>"The bar chart compares automotive manufacturing output across Japan, the United States, and Germany over a ten-year span from 2005 to 2015."</em></li>
+<li><strong>Rationale</strong>:</li>
+</ul>
+<p>  - <em>"shows"</em> ➔ <em>"compares / illustrates"</em></p>
+<p>  - <em>"the number of cars produced"</em> ➔ <em>"automotive manufacturing output"</em></p>
+<p>  - <em>"in Japan, the USA, and Germany"</em> ➔ <em>"across Japan, the United States, and Germany"</em></p>
+<p>  - <em>"from 2005 to 2015"</em> ➔ <em>"over a ten-year span from 2005 to 2015"</em></p>
+    </article>
+
+    <footer>
+      <p>🎯 IELTS Preparation Workspace • Built for Authentic Exam Success</p>
+    </footer>
+  </main>
+
+  <script>
+    // Theme Switcher
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('study_theme', next);
+    }
+    (function() {
+      const saved = localStorage.getItem('study_theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+
+    // Font Scaling
+    let currentScale = 16;
+    function adjustFontSize(delta) {
+      currentScale = Math.min(22, Math.max(13, currentScale + delta));
+      document.documentElement.style.setProperty('--base-font-size', currentScale + 'px');
+      localStorage.setItem('study_font_size', currentScale);
+    }
+    (function() {
+      const savedSize = localStorage.getItem('study_font_size');
+      if (savedSize) {
+        currentScale = parseInt(savedSize, 10);
+        document.documentElement.style.setProperty('--base-font-size', currentScale + 'px');
+      }
+    })();
+
+    // Copy Code Helper
+    function copyCode(btn) {
+      const pre = btn.closest('.code-block-wrapper').querySelector('pre code');
+      if (pre) {
+        navigator.clipboard.writeText(pre.innerText).then(() => {
+          btn.innerText = '✅ Copied!';
+          setTimeout(() => btn.innerText = '📋 Copy', 2000);
+        });
+      }
+    }
+
+    // Writing Arena Logic
+    let timerInterval = null;
+    let timerSeconds = 1200; // 20m
+    function startWritingTimer(mins) {
+      clearInterval(timerInterval);
+      timerSeconds = mins * 60;
+      updateTimerDisplay();
+      timerInterval = setInterval(() => {
+        if (timerSeconds <= 0) {
+          clearInterval(timerInterval);
+          alert('⏰ Time is up! Review and edit your response.');
+          return;
+        }
+        timerSeconds--;
+        updateTimerDisplay();
+      }, 1000);
+    }
+    function pauseWritingTimer() { clearInterval(timerInterval); }
+    function resetWritingTimer(mins) {
+      clearInterval(timerInterval);
+      timerSeconds = mins * 60;
+      updateTimerDisplay();
+    }
+    function updateTimerDisplay() {
+      const m = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
+      const s = (timerSeconds % 60).toString().padStart(2, '0');
+      const el = document.getElementById('timerDisplay');
+      if (el) el.innerText = `${m}:${s}`;
+    }
+    function updateWordStats(target) {
+      const text = document.getElementById('essayEditor').value.trim();
+      const words = text ? text.split(/\s+/).length : 0;
+      const countEl = document.getElementById('wordCount');
+      const progEl = document.getElementById('wordProgressBar');
+      const fbEl = document.getElementById('wordFeedback');
+      if (countEl) countEl.innerText = words;
+      const pct = Math.min(100, Math.round((words / target) * 100));
+      if (progEl) {
+        progEl.style.width = pct + '%';
+        progEl.style.background = words >= target ? '#10b981' : '#f59e0b';
+      }
+      if (fbEl) {
+        if (words >= target) {
+          fbEl.innerText = `✅ Met Target (${words} words)`;
+          fbEl.style.color = '#10b981';
+        } else {
+          fbEl.innerText = `Need ${target - words} more words`;
+          fbEl.style.color = '#f59e0b';
+        }
+      }
+      localStorage.setItem('draft_' + window.location.pathname, text);
+    }
+    function clearWritingDraft() {
+      if (confirm('Clear current draft?')) {
+        document.getElementById('essayEditor').value = '';
+        updateWordStats(150);
+      }
+    }
+    (function() {
+      const saved = localStorage.getItem('draft_' + window.location.pathname);
+      const editor = document.getElementById('essayEditor');
+      if (saved && editor) {
+        editor.value = saved;
+        updateWordStats(150);
+      }
+    })();
+
+    // Speaking Arena Logic
+    let speakingInterval = null;
+    let speakingSecs = 60;
+    function startSpeakingPrep() {
+      clearInterval(speakingInterval);
+      speakingSecs = 60;
+      document.getElementById('speakingPhaseBadge').innerText = '1-Min Prep';
+      document.getElementById('speakingPhaseBadge').style.background = '#f59e0b';
+      document.getElementById('speakingFeedback').innerText = 'Taking notes... Think about Past, Present, Future context.';
+      speakingInterval = setInterval(() => {
+        if (speakingSecs <= 0) {
+          clearInterval(speakingInterval);
+          alert('⏰ Prep time over! Begin speaking now.');
+          startSpeakingTurn();
+          return;
+        }
+        speakingSecs--;
+        updateSpeakingUI(60);
+      }, 1000);
+    }
+    function startSpeakingTurn() {
+      clearInterval(speakingInterval);
+      speakingSecs = 120;
+      document.getElementById('speakingPhaseBadge').innerText = 'Speaking (2m)';
+      document.getElementById('speakingPhaseBadge').style.background = '#10b981';
+      document.getElementById('speakingFeedback').innerText = '🎙️ Speak continuously. Develop your points fully!';
+      speakingInterval = setInterval(() => {
+        if (speakingSecs <= 0) {
+          clearInterval(speakingInterval);
+          alert('🏁 2 minutes complete! Excellent practice.');
+          document.getElementById('speakingPhaseBadge').innerText = 'Completed';
+          return;
+        }
+        speakingSecs--;
+        updateSpeakingUI(120);
+      }, 1000);
+    }
+    function stopSpeakingTimer() {
+      clearInterval(speakingInterval);
+      document.getElementById('speakingPhaseBadge').innerText = 'Stopped';
+    }
+    function updateSpeakingUI(total) {
+      const m = Math.floor(speakingSecs / 60).toString().padStart(2, '0');
+      const s = (speakingSecs % 60).toString().padStart(2, '0');
+      document.getElementById('speakingTimerDisplay').innerText = `${m}:${s}`;
+      const elapsed = total - speakingSecs;
+      const pct = Math.round((elapsed / total) * 100);
+      document.getElementById('speakingProgressBar').style.width = pct + '%';
+    }
+    function readPromptAloud() {
+      const title = document.querySelector('.module-title').innerText;
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(title);
+        utterance.rate = 0.95;
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert('Text-to-speech not supported in this browser.');
+      }
+    }
+  </script>
+</body>
+</html>

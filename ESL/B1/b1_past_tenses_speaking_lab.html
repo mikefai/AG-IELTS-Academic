@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B1 Past Tenses Speaking Lab (High School Edition): Teacher Guide &amp; Student Handout | ESL Academic Study Module</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #10b981;
+      --primary-dark: #059669;
+      --primary-light: rgba(16, 185, 129, 0.08);
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --radius: 12px;
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --base-font-size: 16px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0b0f19;
+      --surface: #131b2e;
+      --card-bg: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary-light: rgba(255, 255, 255, 0.05);
+      --border: #334155;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: var(--base-font-size); }
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      padding: 0.85rem 1.5rem;
+    }
+
+    .header-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-back:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .domain-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(16, 185, 129, 0.08);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-action {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-action:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .module-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .module-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), #3b82f6);
+    }
+
+    .module-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .meta-pill {
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .meta-pill.highlight {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .module-title {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .module-content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+    }
+
+    /* Typography inside content */
+    .study-heading {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      color: var(--text);
+      scroll-margin-top: 80px;
+    }
+    .study-heading.h1 { font-size: 1.8rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+    .study-heading.h2 { font-size: 1.45rem; border-left: 4px solid var(--primary); padding-left: 12px; }
+    .study-heading.h3 { font-size: 1.2rem; color: var(--primary); }
+    .study-heading.h4 { font-size: 1.05rem; font-weight: 700; }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    /* Lists */
+    .study-list {
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+    .study-list li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* Code blocks */
+    .code-block-wrapper {
+      background: #0f172a;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+      border: 1px solid #334155;
+    }
+    .code-header {
+      background: #1e293b;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .btn-copy-code {
+      background: transparent;
+      border: 1px solid #475569;
+      color: #cbd5e1;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    .btn-copy-code:hover {
+      background: #334155;
+      color: #fff;
+    }
+    pre {
+      padding: 1.25rem;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #e2e8f0;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      text-align: left;
+    }
+    .data-table th {
+      background: var(--bg);
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border);
+      font-weight: 700;
+      color: var(--text);
+    }
+    .data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+    .data-table tr:hover td {
+      background: var(--primary-light);
+    }
+
+    /* Alerts */
+    .alert {
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      border-left: 4px solid;
+    }
+    .alert-title {
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .alert-note { background: rgba(59, 130, 246, 0.08); border-color: #3b82f6; color: var(--text); }
+    .alert-tip { background: rgba(16, 185, 129, 0.08); border-color: #10b981; color: var(--text); }
+    .alert-important { background: rgba(239, 68, 68, 0.08); border-color: #ef4444; color: var(--text); }
+    .alert-warning { background: rgba(245, 158, 11, 0.08); border-color: #f59e0b; color: var(--text); }
+
+    /* Quotes */
+    .study-quote {
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      background: var(--bg);
+      border-radius: 0 10px 10px 0;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    .study-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* Interactive Tool Cards */
+    .interactive-tool-card {
+      background: var(--surface);
+      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
+    }
+    .tool-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tool-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .tool-badges {
+      display: flex;
+      gap: 8px;
+    }
+    .badge {
+      background: var(--primary);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+    .timer-controls, .speaking-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    .btn-tool {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: #fff;
+      transition: all 0.2s;
+    }
+    .btn-tool:hover { opacity: 0.9; }
+    .btn-tool-outline {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-tool-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 1rem;
+      padding: 1rem;
+      line-height: 1.6;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+    .stats-bar {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .progress-bar-bg, .speaking-progress-container {
+      flex: 1;
+      height: 10px;
+      background: var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+      min-width: 150px;
+    }
+    .progress-bar-fill, .speaking-progress-bar {
+      height: 100%;
+      background: #10b981;
+      transition: width 0.3s ease;
+    }
+    .word-status-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media print {
+      header, .interactive-tool-card, footer, .btn-copy-code { display: none !important; }
+      body { background: #fff; color: #000; }
+      .module-content-card, .module-hero { border: none; box-shadow: none; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="nav-left">
+        <a href="../index.html" class="btn-back">← Back to ESL Learning Portal</a>
+        <span class="domain-tag">🌍 ESL</span>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-action" onclick="adjustFontSize(-1)" title="Decrease font size">A-</button>
+        <button class="btn-action" onclick="adjustFontSize(1)" title="Increase font size">A+</button>
+        <button class="btn-action" onclick="window.print()" title="Print / Save PDF">🖨️ PDF</button>
+        <button class="btn-action" onclick="toggleTheme()">🌓 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="module-hero">
+      <div class="module-meta-pills">
+        <span class="meta-pill highlight">CEFR B1</span>
+        <span class="meta-pill">Lesson Plan | Worksheet | Drill</span>
+        <span class="meta-pill">📅 2026-08-31</span>
+      </div>
+      <h1 class="module-title">B1 Past Tenses Speaking Lab (High School Edition): Teacher Guide & Student Handout</h1>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">Interactive Academic Study Module • Pedagogically Scaffolded Curriculum</p>
+    </div>
+
+    
+    
+        <section class="interactive-tool-card" id="speaking-arena">
+          <div class="tool-header">
+            <div class="tool-title">🎙️ Speaking Exam Timer & Audio Prompter</div>
+            <div class="tool-badges">
+              <span class="badge" id="speakingPhaseBadge">Ready</span>
+              <span class="badge" id="speakingTimerDisplay">01:00</span>
+            </div>
+          </div>
+          <div class="tool-body">
+            <div class="speaking-controls">
+              <button class="btn-tool" onclick="startSpeakingPrep()">⏱️ 1-Minute Prep</button>
+              <button class="btn-tool btn-tool-primary" onclick="startSpeakingTurn()">🎙️ 2-Minute Long Turn</button>
+              <button class="btn-tool btn-tool-outline" onclick="stopSpeakingTimer()">⏹️ Stop</button>
+              <button class="btn-tool btn-tool-outline" onclick="readPromptAloud()">🔊 Listen to Prompt</button>
+            </div>
+            <div class="speaking-progress-container">
+              <div class="speaking-progress-bar" id="speakingProgressBar" style="width: 0%;"></div>
+            </div>
+            <div class="speaking-cue-feedback" id="speakingFeedback">Click '1-Minute Prep' to begin your planning time.</div>
+          </div>
+        </section>
+        
+
+    <article class="module-content-card">
+      <h1 id="b1-past-tenses-speaking-lab-high-school-edition-teacher-guide--student-handout" class="study-heading h1">🎙️ B1 Past Tenses Speaking Lab (High School Edition): Teacher Guide &amp; Student Handout</h1>
+<blockquote class="study-quote"><strong>Interactive Web App</strong>: <a href="file:///c:/Users/micha/OneDrive/Desktop/AG%20TEACHING/ESL/B1/past-tenses-b1-speaking-lab.html" target="_blank" rel="noopener"><code>past-tenses-b1-speaking-lab.html</code></a>   <strong>Target Group</strong>: High School Students (15 years old / Teens) — CEFR B1 (Intermediate)   <strong>Duration</strong>: 60–90 Minutes (Flexible PPP Model)   <strong>Core Themes</strong>: School Life, Exams, Clubs, Gaming, Social Media, Friendship, Sports, Emergencies   <strong>Target Contrast 1</strong>: Past Simple vs. Present Perfect (<em>Finished Time Box</em> vs. <em>Connected to Now</em>, <em>Been vs Gone</em>, <em>Since vs For</em>)   <strong>Target Contrast 2</strong>: Past Simple vs. Past Perfect (<em>Storytelling / The Earlier Past</em>, <em>3-Tense Master Narrative Formula</em>)   <strong>Learner L1 Interference Focus</strong>: Turkish (<em>-di'li geçmiş zaman</em> vs. <em>Present Perfect / -den beri</em>)</blockquote>
+<hr class="study-divider">
+<h2 id="1-lesson-overview--scaffolding-ppp-flow" class="study-heading h2">📋 1. Lesson Overview &amp; Scaffolding (PPP Flow)</h2>
+<div class="table-container"><table class="data-table">
+<thead><tr>
+<th>Stage</th>
+<th>Timing (90' / 60')</th>
+<th>Pedagogical Objective &amp; Student Action</th>
+<th>Mode</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>1. Warmer / Hook</strong></td>
+<td>5' / 5'</td>
+<td>Activate teen schemata: <em>Have you ever forgotten your homework / had phone die?</em> + Past Simple detail follow-ups.</td>
+<td>Plenary &amp; Pairs</td>
+</tr>
+<tr>
+<td><strong>2. Presentation A</strong></td>
+<td>12' / 12'</td>
+<td>Meaning, Form, Pronunciation (MFP): Visual timelines (<em>Finished Box</em> vs. <em>Connected to Now</em>), <em>Been vs Gone</em>, <em>Since vs For</em>, spoken contractions (<code>I've</code>, <code>she's</code>).</td>
+<td>Teacher-led &amp; Concept Checks (CCQs)</td>
+</tr>
+<tr>
+<td><strong>3. Controlled Drill A</strong></td>
+<td>10' / 8'</td>
+<td>20 Time-marker categorization and 25 target irregular verbs trainer.</td>
+<td>Individual / Pairs</td>
+</tr>
+<tr>
+<td><strong>4. Freer Practice A</strong></td>
+<td>10' / 8'</td>
+<td>"Find someone who..." 10-prompt communicative high-school mingling grid.</td>
+<td>Class Mingle</td>
+</tr>
+<tr>
+<td><strong>5. Presentation B</strong></td>
+<td>12' / 10'</td>
+<td>Narrative timeline: The "Earlier Past" (<code>had + V3</code>), 3-Tense Storytelling Formula, weak <code>had</code> / contraction <code>I'd</code>.</td>
+<td>Guided Discovery</td>
+</tr>
+<tr>
+<td><strong>6. Error Gym (Optional)</strong></td>
+<td>8' / <em>Skip</em></td>
+<td>Spotting and correcting 15 typical teen intermediate tense errors.</td>
+<td>Individual / Pairs</td>
+</tr>
+<tr>
+<td><strong>7. Speaking Studio</strong></td>
+<td>12' / 10'</td>
+<td>60-Second Monologue Challenge across 5 high-school topic cards with 3-tier scaffold and Web Audio timers.</td>
+<td>Pair Speaking &amp; Timers</td>
+</tr>
+<tr>
+<td><strong>8. Story-Building (Optional)</strong></td>
+<td>10' / <em>Skip</em></td>
+<td>Emoji sequence narrative challenge (Project Emergency) combining Past Simple &amp; Past Perfect.</td>
+<td>Small Groups</td>
+</tr>
+<tr>
+<td><strong>9. Assessment &amp; Reflection</strong></td>
+<td>11' / 7'</td>
+<td>30-Item Diagnostic Quiz, score report, and 5 self-study homework tasks.</td>
+<td>Individual</td>
+</tr>
+</tbody>
+</table></div>
+<hr class="study-divider">
+<h2 id="2-core-grammar--meaning-systems" class="study-heading h2">📘 2. Core Grammar &amp; Meaning Systems</h2>
+<h3 id="a-module-a-past-simple-vs-present-perfect" class="study-heading h3">A. Module A: Past Simple vs Present Perfect</h3>
+<h4 id="1-meaning--concept" class="study-heading h4">1. Meaning &amp; Concept</h4>
+<ul class="study-list">
+<li><strong>Past Simple</strong>: The time period is <strong>finished and closed</strong> in the past.</li>
+</ul>
+<p>  - <em>Example</em>: <em>"I played basketball with my classmates yesterday."</em> (Yesterday is finished).</p>
+<ul class="study-list">
+<li><strong>Present Perfect</strong>: The action is <strong>connected to the present moment</strong> in 3 primary ways:</li>
+</ul>
+<p>  1. <strong>Life Experience</strong> (time unspecified): <em>"Have you ever watched an esports final live?"</em></p>
+<p>  2. <strong>Recent Result</strong> (action happened recently, result is now): <em>"My phone battery has died (I can't message my friends now)."</em></p>
+<p>  3. <strong>Unfinished State / Time Period</strong>: <em>"I've studied at this high school for two years."</em> / <em>"I've had three exams this week."</em></p>
+<h4 id="2-deep-dive-been-to-vs-gone-to" class="study-heading h4">2. Deep Dive: "Been to" vs "Gone to"</h4>
+<ul class="study-list">
+<li><strong>Been to</strong> (Visited and returned): <em>"Defne has been to the canteen."</em> (She went there, got a snack, and is back with us now).</li>
+<li><strong>Gone to</strong> (Still at the destination): <em>"Defne has gone to the canteen."</em> (She is at the canteen right now; look for her there).</li>
+</ul>
+<h4 id="3-deep-dive-since-vs-for" class="study-heading h4">3. Deep Dive: "Since" vs "For"</h4>
+<ul class="study-list">
+<li><strong>Since + Specific Point</strong>: <em>since 8:30 AM, since last September, since I started 9th grade, since 2021</em>.</li>
+<li><strong>For + Length of Time</strong>: <em>for 45 minutes, for two weeks, for three periods, for five years</em>.</li>
+</ul>
+<h4 id="4-signal-word-bank--positions" class="study-heading h4">4. Signal Word Bank &amp; Positions</h4>
+<ul class="study-list">
+<li><strong>Past Simple</strong>: <code>yesterday</code>, <code>... ago</code>, <code>last night/week/year</code>, <code>in 2022</code>, <code>when I was in middle school</code>, <code>during 8th grade</code>.</li>
+<li><strong>Present Perfect</strong>: <code>ever</code>, <code>never</code>, <code>just</code> (mid-position), <code>already</code> (mid-position), <code>yet</code> (end-position in negative/questions), <code>since</code>, <code>for</code>, <code>this morning/week</code> (unfinished).</li>
+</ul>
+<hr class="study-divider">
+<h3 id="b-module-b-past-simple-vs-past-perfect-storytelling" class="study-heading h3">B. Module B: Past Simple vs Past Perfect (Storytelling)</h3>
+<h4 id="1-meaning--the-earlier-past" class="study-heading h4">1. Meaning &amp; The "Earlier Past"</h4>
+<p>We use Past Perfect (<code>had + V3</code>) when narrating in the past and jumping back to an action that happened <strong>before</strong> the main past storyline.</p>
+<ul class="study-list">
+<li><em>Event 1 (First in time)</em>: The school bus had left (<code>had + V3</code>).</li>
+<li><em>Event 2 (Second in time)</em>: I reached the stop (Past Simple).</li>
+<li><em>Combined</em>: <em>"When I reached the bus stop, the bus had already left."</em> (I missed the bus and had to walk!).</li>
+</ul>
+<h4 id="2-the-3-tense-master-narrative-formula" class="study-heading h4">2. The 3-Tense Master Narrative Formula</h4>
+<p>Fluent storytellers combine three past tenses seamlessly:</p>
+<p>1. <strong>Background Atmosphere</strong> (Past Continuous): <em>"I was walking to class in the morning..."</em></p>
+<p>2. <strong>Main Event</strong> (Past Simple): <em>"when I suddenly opened my backpack..."</em></p>
+<p>3. <strong>Earlier Background Cause</strong> (Past Perfect): <em>"and realised that I had left my homework notebook on my desk at home!"</em></p>
+<h4 id="3-spoken-contractions" class="study-heading h4">3. Spoken Contractions</h4>
+<ul class="study-list">
+<li><code>I had</code> $\rightarrow$ <strong>/aɪd/</strong> (<code>I'd</code>)</li>
+<li><code>She had</code> $\rightarrow$ <strong>/ʃiːd/</strong> (<code>She'd</code>)</li>
+</ul>
+<hr class="study-divider">
+<h2 id="3-turkish-learner-l1-notes-high-school-focus" class="study-heading h2">🇹🇷 3. Turkish Learner L1 Notes (High School Focus)</h2>
+<p>1. <strong>Eksik Zaman Kavramı</strong>: Türkçe'de "Present Perfect" yapısının bağımsız bir zaman kipi yoktur. Hem <em>"Dün maç yaptık"</em> hem de <em>"Daha önce hiç voleybol maçına gittin mi?"</em> cümlelerinde <em>-di'li</em> geçmiş zaman kullanılır.</p>
+<p>2. <strong>-den beri / for Hatası</strong>: Türkçe konuşurları <em>"3 yıldır sıra arkadaşımı tanıyorum"</em> derken geniş zaman kullandığı için İngilizce'de <em>"I know my partner since 3 years"</em> hatasını yaparlar. İngilizce kural: Eylem geçmişte başlayıp şimdiye kadar geliyorsa <strong>Present Perfect</strong> (<code>I have known my partner for 3 years</code>) zorunludur.</p>
+<p>3. <strong>Zaman Zarflarına Dikkat</strong>: Cümlede net bir geçmiş zaman zarfı (<code>yesterday</code>, <code>ago</code>, <code>last year</code>, <code>in 2022</code>) varsa <strong>asla</strong> Present Perfect kullanılmaz; <strong>Past Simple (V2)</strong> kullanılır.</p>
+<hr class="study-divider">
+<h2 id="4-classroom-speaking-tasks-teen--high-school-edition" class="study-heading h2">🗣️ 4. Classroom Speaking Tasks (Teen &amp; High School Edition)</h2>
+<h3 id="task-1-high-school-warmer-pair-questions--model-answers" class="study-heading h3">Task 1: High School Warmer (Pair Questions &amp; Model Answers)</h3>
+<p>1. <strong>Q</strong>: <em>"Have you ever forgotten your homework or school uniform?"</em>  </p>
+<p>   <strong>Follow-Up</strong>: <em>"When did it happen? What did your teacher say?"</em>  </p>
+<p>   <strong>Model Answer</strong>: <em>"Yes, I have! Last term I forgot my math project at home. My teacher let me submit it during lunch break."</em></p>
+<p>2. <strong>Q</strong>: <em>"Have you ever played in a high-stakes gaming match or sports tournament?"</em>  </p>
+<p>   <strong>Follow-Up</strong>: <em>"What game or sport was it? Did your team win?"</em>  </p>
+<p>   <strong>Model Answer</strong>: <em>"Yes, I played in a school basketball final last winter. It was super intense, and we won by two points!"</em></p>
+<p>3. <strong>Q</strong>: <em>"Have you ever had your phone battery die at the worst possible moment?"</em>  </p>
+<p>   <strong>Follow-Up</strong>: <em>"Where were you? How did you solve the problem?"</em>  </p>
+<p>   <strong>Model Answer</strong>: <em>"Yes! Last month my phone died while I was waiting for the bus. I had to borrow a classmate's phone to call my parents."</em></p>
+<p>4. <strong>Q</strong>: <em>"Have you ever met a famous YouTuber, athlete, or celebrity?"</em>  </p>
+<p>   <strong>Follow-Up</strong>: <em>"Who was it? What did you say to them?"</em>  </p>
+<p>   <strong>Model Answer</strong>: <em>"Yes, I saw a famous gaming streamer at a tech expo in Istanbul last year. I took a quick selfie with him!"</em></p>
+<p>5. <strong>Q</strong>: <em>"Have you ever overslept and arrived late for a school exam?"</em>  </p>
+<p>   <strong>Follow-Up</strong>: <em>"Why did you oversleep? What happened when you entered the class?"</em>  </p>
+<p>   <strong>Model Answer</strong>: <em>"Yes, once in 9th grade my alarm failed. By the time I reached the classroom, the exam had already started!"</em></p>
+<p>6. <strong>Q</strong>: <em>"Have you ever performed on stage (singing, theater, presentation)?"</em>  </p>
+<p>   <strong>Follow-Up</strong>: <em>"How did you feel before going on stage? How did it go?"</em>  </p>
+<p>   <strong>Model Answer</strong>: <em>"Yes, I gave a presentation at the school science fair. I was really nervous at first, but everyone clapped in the end."</em></p>
+<h3 id="task-2-60-second-monologue-speaking-cards-5-teen-topics" class="study-heading h3">Task 2: 60-Second Monologue Speaking Cards (5 Teen Topics)</h3>
+<ul class="study-list">
+<li><strong>Card 1 (Unforgettable School Trip / Camp)</strong>: Talk about the most exciting school excursion you have experienced.</li>
+<li><strong>Card 2 (The Homework Emergency - Past Perfect Focus)</strong>: Talk about a stressful situation when something went wrong with your school project.</li>
+<li><strong>Card 3 (Gaming / Sports Milestone)</strong>: Talk about an epic video game victory or tournament final you will never forget.</li>
+<li><strong>Card 4 (A New Skill Learned Recently)</strong>: Talk about a hobby, digital skill (coding, video editing), or sport you have picked up recently.</li>
+<li><strong>Card 5 (An Embarrassing Moment in Class)</strong>: Talk about a funny or awkward situation that happened at school.</li>
+</ul>
+<hr class="study-divider">
+<h2 id="5-diagnostic-quiz-30-assessment-items" class="study-heading h2">📝 5. Diagnostic Quiz (30 Assessment Items)</h2>
+<p>1. I <em>_</em><em>_</em>_ to London three times in my life.</p>
+<p>   - (A) went</p>
+<p>   - (B) have been</p>
+<p>   - (C) had been</p>
+<p>   - (D) was going</p>
+<p>2. My brother <em>_</em><em>_</em>_ a new gaming laptop last Saturday.</p>
+<p>   - (A) bought</p>
+<p>   - (B) has bought</p>
+<p>   - (C) had bought</p>
+<p>   - (D) buys</p>
+<p>3. When we reached the exam room, we realised we <em>_</em><em>_</em>_ our student IDs at home!</p>
+<p>   - (A) left</p>
+<p>   - (B) have left</p>
+<p>   - (C) had left</p>
+<p>   - (D) were leaving</p>
+<p>4. <em>_</em><em>_</em><em> you ever </em><em>_</em><em>_</em> an esports final live in a stadium?</p>
+<p>   - (A) Did / watch</p>
+<p>   - (B) Have / watched</p>
+<p>   - (C) Had / watched</p>
+<p>   - (D) Do / watch</p>
+<p>5. Defne is not in the classroom right now; she <em>_</em><em>_</em>_ to the school library to study.</p>
+<p>   - (A) has been</p>
+<p>   - (B) has gone</p>
+<p>   - (C) had gone</p>
+<p>   - (D) went</p>
+<p>6. By the time the teacher entered the classroom, the students <em>_</em><em>_</em>_ their textbooks.</p>
+<p>   - (A) opened</p>
+<p>   - (B) have opened</p>
+<p>   - (C) had opened</p>
+<p>   - (D) were opening</p>
+<p>7. I <em>_</em><em>_</em>_ my desk partner since our first day in 9th grade.</p>
+<p>   - (A) knew</p>
+<p>   - (B) have known</p>
+<p>   - (C) know</p>
+<p>   - (D) had known</p>
+<p>8. Tom <em>_</em><em>_</em>_ to football practice yesterday because he had a fever.</p>
+<p>   - (A) didn't go</p>
+<p>   - (B) hasn't gone</p>
+<p>   - (C) hadn't gone</p>
+<p>   - (D) doesn't go</p>
+<p>9. I was super hungry during 5th period because I <em>_</em><em>_</em>_ anything since 7 AM.</p>
+<p>   - (A) didn't eat</p>
+<p>   - (B) haven't eaten</p>
+<p>   - (C) hadn't eaten</p>
+<p>   - (D) wasn't eating</p>
+<p>10. Look! Someone <em>_</em><em>_</em>_ a funny sticker on the teacher's whiteboard.</p>
+<p>    - (A) stuck</p>
+<p>    - (B) has stuck</p>
+<p>    - (C) had stuck</p>
+<p>    - (D) sticks</p>
+<p>11. When did you <em>_</em><em>_</em>_ your coding project?</p>
+<p>    - (A) finish</p>
+<p>    - (B) finished</p>
+<p>    - (C) have finished</p>
+<p>    - (D) had finished</p>
+<p>12. The school bus <em>_</em><em>_</em>_ when we arrived at the stop, so we had to call a taxi.</p>
+<p>    - (A) already left</p>
+<p>    - (B) has already left</p>
+<p>    - (C) had already left</p>
+<p>    - (D) was leaving</p>
+<p>13. I <em>_</em><em>_</em>_ three glasses of water so far today.</p>
+<p>    - (A) drank</p>
+<p>    - (B) have drunk</p>
+<p>    - (C) had drunk</p>
+<p>    - (D) drink</p>
+<p>14. Atatürk <em>_</em><em>_</em>_ the Republic of Türkiye in 1923.</p>
+<p>    - (A) founded</p>
+<p>    - (B) has founded</p>
+<p>    - (C) had founded</p>
+<p>    - (D) found</p>
+<p>15. She felt confident before the English presentation because she <em>_</em><em>_</em>_ for three days.</p>
+<p>    - (A) rehearsed</p>
+<p>    - (B) has rehearsed</p>
+<p>    - (C) had rehearsed</p>
+<p>    - (D) rehearses</p>
+<p>16. We have lived in this neighbourhood <em>_</em><em>_</em>_ five years now.</p>
+<p>    - (A) since</p>
+<p>    - (B) for</p>
+<p>    - (C) during</p>
+<p>    - (D) ago</p>
+<p>17. I <em>_</em><em>_</em>_ to bed early last night because I had a big math exam today.</p>
+<p>    - (A) went</p>
+<p>    - (B) have gone</p>
+<p>    - (C) had gone</p>
+<p>    - (D) go</p>
+<p>18. Have you submitted your history assignment <em>_</em><em>_</em>_?</p>
+<p>    - (A) already</p>
+<p>    - (B) just</p>
+<p>    - (C) yet</p>
+<p>    - (D) since</p>
+<p>19. After he <em>_</em><em>_</em>_ dinner, he washed his gym kit.</p>
+<p>    - (A) ate</p>
+<p>    - (B) has eaten</p>
+<p>    - (C) had eaten</p>
+<p>    - (D) was eating</p>
+<p>20. I <em>_</em><em>_</em>_ my best friend two minutes ago.</p>
+<p>    - (A) messaged</p>
+<p>    - (B) have messaged</p>
+<p>    - (C) had messaged</p>
+<p>    - (D) message</p>
+<p>21. Ali: 'Where is your sister?' — Zeynep: 'She <em>_</em><em>_</em>_ to the supermarket; she'll be back in 10 minutes.'</p>
+<p>    - (A) has been</p>
+<p>    - (B) has gone</p>
+<p>    - (C) had been</p>
+<p>    - (D) went</p>
+<p>22. We <em>_</em><em>_</em>_ this online multiplayer game since last October.</p>
+<p>    - (A) played</p>
+<p>    - (B) have played</p>
+<p>    - (C) had played</p>
+<p>    - (D) play</p>
+<p>23. I <em>_</em><em>_</em>_ the guitar when I was in middle school, but I play drums now.</p>
+<p>    - (A) played</p>
+<p>    - (B) have played</p>
+<p>    - (C) had played</p>
+<p>    - (D) play</p>
+<p>24. I was shocked when I opened my locker because someone <em>_</em><em>_</em>_ my notebook.</p>
+<p>    - (A) took</p>
+<p>    - (B) has taken</p>
+<p>    - (C) had taken</p>
+<p>    - (D) takes</p>
+<p>25. Have you ever <em>_</em><em>_</em>_ to Cappadocia on a school trip?</p>
+<p>    - (A) gone</p>
+<p>    - (B) been</p>
+<p>    - (C) went</p>
+<p>    - (D) be</p>
+<p>26. The volleyball referee blew the whistle because the ball <em>_</em><em>_</em>_ out of bounds.</p>
+<p>    - (A) fell</p>
+<p>    - (B) has fallen</p>
+<p>    - (C) had fallen</p>
+<p>    - (D) falls</p>
+<p>27. I <em>_</em><em>_</em>_ three chapters of this book so far this week.</p>
+<p>    - (A) read</p>
+<p>    - (B) have read</p>
+<p>    - (C) had read</p>
+<p>    - (D) am reading</p>
+<p>28. While I was studying in my room, the power <em>_</em><em>_</em>_ out suddenly.</p>
+<p>    - (A) went</p>
+<p>    - (B) has gone</p>
+<p>    - (C) had gone</p>
+<p>    - (D) goes</p>
+<p>29. She <em>_</em><em>_</em>_ her homework yet, so she can't join our Discord call right now.</p>
+<p>    - (A) didn't finish</p>
+<p>    - (B) hasn't finished</p>
+<p>    - (C) hadn't finished</p>
+<p>    - (D) doesn't finish</p>
+<p>30. Before I started 9th grade, I <em>_</em><em>_</em>_ any foreign language classes.</p>
+<p>    - (A) didn't take</p>
+<p>    - (B) haven't taken</p>
+<p>    - (C) had hadn't taken</p>
+<p>    - (D) wasn't taking</p>
+<hr class="study-divider">
+<h2 id="6-answer-key--comprehensive-explanations" class="study-heading h2">🔑 6. Answer Key &amp; Comprehensive Explanations</h2>
+<h3 id="answer-key-table" class="study-heading h3">Answer Key Table</h3>
+<div class="table-container"><table class="data-table">
+<thead><tr>
+<th>Item</th>
+<th>Correct Answer</th>
+<th>Target Grammar Focus</th>
+<th>Key Rationale</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>B</strong> (<code>have been</code>)</td>
+<td>Past Simple vs. Present Perfect</td>
+<td>Unspecified life experience count up to now.</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>A</strong> (<code>bought</code>)</td>
+<td>Past Simple vs. Present Perfect</td>
+<td>Specific finished past time (<code>last Saturday</code>).</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>C</strong> (<code>had left</code>)</td>
+<td>Past Simple vs. Past Perfect</td>
+<td>Earlier past action occurring before reaching school.</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>B</strong> (<code>Have / watched</code>)</td>
+<td>Experiential Question</td>
+<td>Standard formula <code>Have you ever + V3</code> for life experiences.</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>B</strong> (<code>has gone</code>)</td>
+<td>Been to vs. Gone to</td>
+<td>Subject is currently at the library and has not returned.</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>C</strong> (<code>had opened</code>)</td>
+<td>Past Simple vs. Past Perfect</td>
+<td><code>By the time</code> indicates opening happened before teacher arrived.</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td><strong>B</strong> (<code>have known</code>)</td>
+<td>Since vs. For</td>
+<td>Ongoing relationship starting at point in past (<code>since 9th grade</code>).</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td><strong>A</strong> (<code>didn't go</code>)</td>
+<td>Past Simple Negative</td>
+<td>Specific finished day (<code>yesterday</code>).</td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td><strong>C</strong> (<code>hadn't eaten</code>)</td>
+<td>Past Narrative Cause</td>
+<td>Past condition (<code>was hungry</code>) caused by earlier non-eating.</td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td><strong>B</strong> (<code>has stuck</code>)</td>
+<td>Present Result</td>
+<td><code>Look!</code> draws attention to visible result in present.</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td><strong>A</strong> (<code>finish</code>)</td>
+<td>Auxiliary Verb Rule</td>
+<td>After <code>did</code>, verb must remain in base form <code>V1</code>.</td>
+</tr>
+<tr>
+<td><strong>12</strong></td>
+<td><strong>C</strong> (<code>had already left</code>)</td>
+<td>Narrative Sequence</td>
+<td>Bus departed before passengers arrived at the stop.</td>
+</tr>
+<tr>
+<td><strong>13</strong></td>
+<td><strong>B</strong> (<code>have drunk</code>)</td>
+<td>Unfinished Time Period</td>
+<td><code>Today</code> is still ongoing; more water may be consumed.</td>
+</tr>
+<tr>
+<td><strong>14</strong></td>
+<td><strong>A</strong> (<code>founded</code>)</td>
+<td>Historical Fact</td>
+<td>Specific past year (<code>in 1923</code>) requires Past Simple.</td>
+</tr>
+<tr>
+<td><strong>15</strong></td>
+<td><strong>C</strong> (<code>had rehearsed</code>)</td>
+<td>Past Perfect Precedence</td>
+<td>Rehearsal took place prior to the presentation.</td>
+</tr>
+<tr>
+<td><strong>16</strong></td>
+<td><strong>B</strong> (<code>for</code>)</td>
+<td>Duration Marker</td>
+<td><code>for</code> accompanies duration / length of time (<code>five years</code>).</td>
+</tr>
+<tr>
+<td><strong>17</strong></td>
+<td><strong>A</strong> (<code>went</code>)</td>
+<td>Finished Past Marker</td>
+<td>Specific finished evening (<code>last night</code>).</td>
+</tr>
+<tr>
+<td><strong>18</strong></td>
+<td><strong>C</strong> (<code>yet</code>)</td>
+<td>Adverb Position</td>
+<td><code>yet</code> sits at end of question expecting completion.</td>
+</tr>
+<tr>
+<td><strong>19</strong></td>
+<td><strong>C</strong> (<code>had eaten</code>)</td>
+<td>Narrative Sequencing</td>
+<td>Eating completed prior to washing gym kit.</td>
+</tr>
+<tr>
+<td><strong>20</strong></td>
+<td><strong>A</strong> (<code>messaged</code>)</td>
+<td>Time Expression Rule</td>
+<td><code>... ago</code> strictly demands Past Simple (<code>V2</code>).</td>
+</tr>
+<tr>
+<td><strong>21</strong></td>
+<td><strong>B</strong> (<code>has gone</code>)</td>
+<td>Been vs. Gone Context</td>
+<td>She is at the store right now (<code>back in 10 minutes</code>).</td>
+</tr>
+<tr>
+<td><strong>22</strong></td>
+<td><strong>B</strong> (<code>have played</code>)</td>
+<td>Ongoing Habit with Since</td>
+<td>Habit started at point in time (<code>since last October</code>).</td>
+</tr>
+<tr>
+<td><strong>23</strong></td>
+<td><strong>A</strong> (<code>played</code>)</td>
+<td>Finished Life Stage</td>
+<td><code>When I was in middle school</code> is a closed past period.</td>
+</tr>
+<tr>
+<td><strong>24</strong></td>
+<td><strong>C</strong> (<code>had taken</code>)</td>
+<td>Past Mystery / Discovery</td>
+<td>Taking notebook happened before opening the locker.</td>
+</tr>
+<tr>
+<td><strong>25</strong></td>
+<td><strong>B</strong> (<code>been</code>)</td>
+<td>Life Travel Experience</td>
+<td>Use <code>been to</code> for visiting and returning from a trip.</td>
+</tr>
+<tr>
+<td><strong>26</strong></td>
+<td><strong>C</strong> (<code>had fallen</code>)</td>
+<td>Narrative Cause</td>
+<td>Ball landed out of bounds prior to referee whistle.</td>
+</tr>
+<tr>
+<td><strong>27</strong></td>
+<td><strong>B</strong> (<code>have read</code>)</td>
+<td>Unfinished Period</td>
+<td><code>This week</code> is still open and ongoing.</td>
+</tr>
+<tr>
+<td><strong>28</strong></td>
+<td><strong>A</strong> (<code>went</code>)</td>
+<td>Interrupted Narrative</td>
+<td>Sudden interrupting event takes Past Simple.</td>
+</tr>
+<tr>
+<td><strong>29</strong></td>
+<td><strong>B</strong> (<code>hasn't finished</code>)</td>
+<td>Present Result with Yet</td>
+<td><code>Yet</code> + inability to join Discord call right now.</td>
+</tr>
+<tr>
+<td><strong>30</strong></td>
+<td><strong>C</strong> (<code>hadn't taken</code>)</td>
+<td>Past Reference Point</td>
+<td>Earlier past before starting 9th grade.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="detailed-distractor-rationales" class="study-heading h3">Detailed Distractor Rationales</h3>
+<ul class="study-list">
+<li><strong>Item 5</strong>: <em>(A) has been</em> means she visited and is already back; <em>(C) had gone</em> has no secondary past reference; <em>(D) went</em> is a single past event without the present location implication.</li>
+<li><strong>Item 14</strong>: <em>(B) has founded</em> violates the rule that historical events in named past years take Past Simple; <em>(C) had founded</em> is redundant without a later past reference point.</li>
+<li><strong>Item 21</strong>: <em>(A) has been</em> would mean she is already back home, contradicting the sentence <em>"she'll be back in 10 minutes"</em>.</li>
+<li><strong>Item 25</strong>: <em>(A) gone</em> implies the speaker is still in Cappadocia right now; in asking about life travel experience, English uses <em>been to</em>.</li>
+<li><strong>Item 29</strong>: <em>(A) didn't finish</em> ignores the keyword <em>yet</em> and the immediate present consequence; <em>(C) hadn't finished</em> is past narrative.</li>
+</ul>
+    </article>
+
+    <footer>
+      <p>🌍 ESL Preparation Workspace • Built for Authentic Exam Success</p>
+    </footer>
+  </main>
+
+  <script>
+    // Theme Switcher
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('study_theme', next);
+    }
+    (function() {
+      const saved = localStorage.getItem('study_theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+
+    // Font Scaling
+    let currentScale = 16;
+    function adjustFontSize(delta) {
+      currentScale = Math.min(22, Math.max(13, currentScale + delta));
+      document.documentElement.style.setProperty('--base-font-size', currentScale + 'px');
+      localStorage.setItem('study_font_size', currentScale);
+    }
+    (function() {
+      const savedSize = localStorage.getItem('study_font_size');
+      if (savedSize) {
+        currentScale = parseInt(savedSize, 10);
+        document.documentElement.style.setProperty('--base-font-size', currentScale + 'px');
+      }
+    })();
+
+    // Copy Code Helper
+    function copyCode(btn) {
+      const pre = btn.closest('.code-block-wrapper').querySelector('pre code');
+      if (pre) {
+        navigator.clipboard.writeText(pre.innerText).then(() => {
+          btn.innerText = '✅ Copied!';
+          setTimeout(() => btn.innerText = '📋 Copy', 2000);
+        });
+      }
+    }
+
+    // Writing Arena Logic
+    let timerInterval = null;
+    let timerSeconds = 1200; // 20m
+    function startWritingTimer(mins) {
+      clearInterval(timerInterval);
+      timerSeconds = mins * 60;
+      updateTimerDisplay();
+      timerInterval = setInterval(() => {
+        if (timerSeconds <= 0) {
+          clearInterval(timerInterval);
+          alert('⏰ Time is up! Review and edit your response.');
+          return;
+        }
+        timerSeconds--;
+        updateTimerDisplay();
+      }, 1000);
+    }
+    function pauseWritingTimer() { clearInterval(timerInterval); }
+    function resetWritingTimer(mins) {
+      clearInterval(timerInterval);
+      timerSeconds = mins * 60;
+      updateTimerDisplay();
+    }
+    function updateTimerDisplay() {
+      const m = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
+      const s = (timerSeconds % 60).toString().padStart(2, '0');
+      const el = document.getElementById('timerDisplay');
+      if (el) el.innerText = `${m}:${s}`;
+    }
+    function updateWordStats(target) {
+      const text = document.getElementById('essayEditor').value.trim();
+      const words = text ? text.split(/\s+/).length : 0;
+      const countEl = document.getElementById('wordCount');
+      const progEl = document.getElementById('wordProgressBar');
+      const fbEl = document.getElementById('wordFeedback');
+      if (countEl) countEl.innerText = words;
+      const pct = Math.min(100, Math.round((words / target) * 100));
+      if (progEl) {
+        progEl.style.width = pct + '%';
+        progEl.style.background = words >= target ? '#10b981' : '#f59e0b';
+      }
+      if (fbEl) {
+        if (words >= target) {
+          fbEl.innerText = `✅ Met Target (${words} words)`;
+          fbEl.style.color = '#10b981';
+        } else {
+          fbEl.innerText = `Need ${target - words} more words`;
+          fbEl.style.color = '#f59e0b';
+        }
+      }
+      localStorage.setItem('draft_' + window.location.pathname, text);
+    }
+    function clearWritingDraft() {
+      if (confirm('Clear current draft?')) {
+        document.getElementById('essayEditor').value = '';
+        updateWordStats(250);
+      }
+    }
+    (function() {
+      const saved = localStorage.getItem('draft_' + window.location.pathname);
+      const editor = document.getElementById('essayEditor');
+      if (saved && editor) {
+        editor.value = saved;
+        updateWordStats(250);
+      }
+    })();
+
+    // Speaking Arena Logic
+    let speakingInterval = null;
+    let speakingSecs = 60;
+    function startSpeakingPrep() {
+      clearInterval(speakingInterval);
+      speakingSecs = 60;
+      document.getElementById('speakingPhaseBadge').innerText = '1-Min Prep';
+      document.getElementById('speakingPhaseBadge').style.background = '#f59e0b';
+      document.getElementById('speakingFeedback').innerText = 'Taking notes... Think about Past, Present, Future context.';
+      speakingInterval = setInterval(() => {
+        if (speakingSecs <= 0) {
+          clearInterval(speakingInterval);
+          alert('⏰ Prep time over! Begin speaking now.');
+          startSpeakingTurn();
+          return;
+        }
+        speakingSecs--;
+        updateSpeakingUI(60);
+      }, 1000);
+    }
+    function startSpeakingTurn() {
+      clearInterval(speakingInterval);
+      speakingSecs = 120;
+      document.getElementById('speakingPhaseBadge').innerText = 'Speaking (2m)';
+      document.getElementById('speakingPhaseBadge').style.background = '#10b981';
+      document.getElementById('speakingFeedback').innerText = '🎙️ Speak continuously. Develop your points fully!';
+      speakingInterval = setInterval(() => {
+        if (speakingSecs <= 0) {
+          clearInterval(speakingInterval);
+          alert('🏁 2 minutes complete! Excellent practice.');
+          document.getElementById('speakingPhaseBadge').innerText = 'Completed';
+          return;
+        }
+        speakingSecs--;
+        updateSpeakingUI(120);
+      }, 1000);
+    }
+    function stopSpeakingTimer() {
+      clearInterval(speakingInterval);
+      document.getElementById('speakingPhaseBadge').innerText = 'Stopped';
+    }
+    function updateSpeakingUI(total) {
+      const m = Math.floor(speakingSecs / 60).toString().padStart(2, '0');
+      const s = (speakingSecs % 60).toString().padStart(2, '0');
+      document.getElementById('speakingTimerDisplay').innerText = `${m}:${s}`;
+      const elapsed = total - speakingSecs;
+      const pct = Math.round((elapsed / total) * 100);
+      document.getElementById('speakingProgressBar').style.width = pct + '%';
+    }
+    function readPromptAloud() {
+      const title = document.querySelector('.module-title').innerText;
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(title);
+        utterance.rate = 0.95;
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert('Text-to-speech not supported in this browser.');
+      }
+    }
+  </script>
+</body>
+</html>

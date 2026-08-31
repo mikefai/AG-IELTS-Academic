@@ -1,6 +1,6 @@
 # 📚 Master Workspace Educational Content Catalog
 
-> *Auto-generated on 2026-08-31 18:53 via `scripts/build_workspace_index.py`*
+> *Auto-generated on 2026-08-31 18:58 via `scripts/build_workspace_index.py`*
 
 This catalog indexes all structured lesson plans, test prep modules, question banks, and interactive simulators across the workspace, along with independent domain portals.
 
@@ -15,20 +15,44 @@ This catalog indexes all structured lesson plans, test prep modules, question ba
 
 ---
 
-## 🌐 ESL Modules & Resources (3 Total)
+## 🌐 ESL Modules & Resources (5 Total)
 
 | Type | Title / Topic | Target Level | Format | Direct Link |
 | :--- | :--- | :--- | :--- | :--- |
 | Interactive Simulator | Past-Tenses-B1-Speaking-Lab | `Interactive Webapp` | 🚀 **Interactive App** | [B1 Past Tenses Speaking Lab (High School Edition) | Past Simple, Present Perfect & Past Perfect](ESL/B1/past-tenses-b1-speaking-lab.html) |
+| Interactive Simulator | B1 Past Tenses Speaking Lab | `Interactive Webapp` | 🚀 **Interactive App** | [B1 Past Tenses Speaking Lab (High School Edition): Teacher Guide &amp; Student Handout | ESL Academic Study Module](ESL/B1/b1_past_tenses_speaking_lab.html) |
+| Interactive Simulator | B1 Dream Jobs And School Pressures | `Interactive Webapp` | 🚀 **Interactive App** | [Dream Big, Stress Less: Careers &amp; School Life (B1 Teen ESL) | ESL Academic Study Module](ESL/B1/b1_dream_jobs_and_school_pressures.html) |
 | Lesson Plan | Dream Jobs & Careers + School & Academic Pressures | `CEFR B1` | 📄 Markdown | [Dream Big, Stress Less: Careers & School Life (B1 Teen ESL)](ESL/B1/b1_dream_jobs_and_school_pressures.md) |
 | Lesson Plan | Worksheet | Drill | Past Simple vs Present Perfect & Past Simple vs Past Perfect (High School / 15yo Speaking Lab) | `CEFR B1` | 📄 Markdown | [B1 Past Tenses Speaking Lab (High School Edition): Teacher Guide & Student Handout](ESL/B1/b1_past_tenses_speaking_lab.md) |
 
-## 🌐 IELTS Modules & Resources (24 Total)
+## 🌐 IELTS Modules & Resources (46 Total)
 
 | Type | Title / Topic | Target Level | Format | Direct Link |
 | :--- | :--- | :--- | :--- | :--- |
+| Interactive Simulator | Ielts Academic Full Practice Exam 01 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Full Diagnostic Practice Examination 01 | IELTS Academic Study Module](IELTS/Mock_Tests/ielts_academic_full_practice_exam_01.html) |
+| Interactive Simulator | Listening Section1 Form Completion Band5 To 6 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Listening: Section 1 Form Completion Masterclass | IELTS Academic Study Module](IELTS/Listening/Band_5.0_to_6.0/listening_section1_form_completion_band5_to_6.html) |
+| Interactive Simulator | Listening Section2 Multiple Choice And Maps Band6 To 7 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Listening: Section 2 Map Labeling &amp; MCQs Masterclass | IELTS Academic Study Module](IELTS/Listening/Band_6.0_to_7.0/listening_section2_multiple_choice_and_maps_band6_to_7.html) |
+| Interactive Simulator | Listening Section3 Academic Discussion Band7 To 8 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Listening: Section 3 Multi-Speaker Discussion Masterclass | IELTS Academic Study Module](IELTS/Listening/Band_7.0_to_8.0/listening_section3_academic_discussion_band7_to_8.html) |
+| Interactive Simulator | Listening Section4 Academic Lecture Notes Band8 To 9 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Listening: Section 4 University Lecture Masterclass | IELTS Academic Study Module](IELTS/Listening/Band_8.0_to_9.0/listening_section4_academic_lecture_notes_band8_to_9.html) |
 | Interactive Simulator | Ielts Reading Mcq App | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Reading: MCQ Masterclass & Interactive Simulator](IELTS/Reading/Band_7.0_to_8.0/ielts_reading_mcq_app.html) |
+| Interactive Simulator | Academic Reading Matching Headings Band6 To 7 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Reading: Matching Headings Masterclass | IELTS Academic Study Module](IELTS/Reading/Band_6.0_to_7.0/academic_reading_matching_headings_band6_to_7.html) |
+| Interactive Simulator | Academic Reading Mcq Masterclass | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Reading: Multiple-Choice Questions (MCQs) Masterclass | IELTS Academic Study Module](IELTS/Reading/Band_7.0_to_8.0/academic_reading_mcq_masterclass.html) |
+| Interactive Simulator | Academic Reading Summary Completion And Inference Band8 To 9 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Reading: Summary Completion &amp; Complex Inference Masterclass | IELTS Academic Study Module](IELTS/Reading/Band_8.0_to_9.0/academic_reading_summary_completion_and_inference_band8_to_9.html) |
+| Interactive Simulator | Academic Reading Tfng Mastery Band5 To 6 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Reading: True / False / Not Given (T/F/NG) Masterclass | IELTS Academic Study Module](IELTS/Reading/Band_5.0_to_6.0/academic_reading_tfng_mastery_band5_to_6.html) |
+| Interactive Simulator | Ielts Academic Speaking Band 5 5 To 6 5 Mock | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Speaking Mock Exam (Band 5.5 – 6.5 Focus) | IELTS Academic Study Module](IELTS/Speaking/Band_5.0_to_6.0/ielts_academic_speaking_band_5_5_to_6_5_mock.html) |
+| Interactive Simulator | Academic Speaking Part2 Long Turn Strategy Band6 To 7 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Speaking Part 2: Long Turn Mastery (Band 6.0 ➔ 7.0) | IELTS Academic Study Module](IELTS/Speaking/Band_6.0_to_7.0/academic_speaking_part2_long_turn_strategy_band6_to_7.html) |
+| Interactive Simulator | Academic Speaking Part3 Abstract Discussion Band7 To 8 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Speaking Part 3: Abstract Discussion Masterclass (Band 8.0) | IELTS Academic Study Module](IELTS/Speaking/Band_7.0_to_8.0/academic_speaking_part3_abstract_discussion_band7_to_8.html) |
+| Interactive Simulator | Academic Speaking Idiomatic Fluency And Pronunciation Band8 To 9 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Speaking: Idiomatic Fluency &amp; Pronunciation (Band 9.0) | IELTS Academic Study Module](IELTS/Speaking/Band_8.0_to_9.0/academic_speaking_idiomatic_fluency_and_pronunciation_band8_to_9.html) |
 | Interactive Simulator | Ielts Academic Task1 Line Graph Training Pack | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1 — Line Graph Mastery Training Pack](IELTS/Writing_Task1/ielts_academic_task1_line_graph_training_pack.html) |
+| Interactive Simulator | Ielts Academic Task1 Band 5 To 6 Breakthrough | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1: Band 6+ Breakthrough Masterclass | IELTS Academic Study Module](IELTS/Writing_Task1/Band_5.0_to_6.0/ielts_academic_task1_band_5_to_6_breakthrough.html) |
+| Interactive Simulator | Academic Writing Task1 Bar And Pie Band6 To 7 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1: Bar &amp; Pie Charts (Band 6.0 ➔ 7.0) | IELTS Academic Study Module](IELTS/Writing_Task1/Band_6.0_to_7.0/academic_writing_task1_bar_and_pie_band6_to_7.html) |
+| Interactive Simulator | Academic Writing Task1 Process And Flowchart Band7 To 8 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1: Process &amp; Flowchart Masterclass | IELTS Academic Study Module](IELTS/Writing_Task1/Band_7.0_to_8.0/academic_writing_task1_process_and_flowchart_band7_to_8.html) |
+| Interactive Simulator | Academic Writing Task1 Maps And Mixed Data Band8 To 9 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1: Urban Maps &amp; Mixed Graphics (Band 9.0) | IELTS Academic Study Module](IELTS/Writing_Task1/Band_8.0_to_9.0/academic_writing_task1_maps_and_mixed_data_band8_to_9.html) |
+| Interactive Simulator | Academic Writing Task2 Discuss Both Views Band6 To 7 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 2: Discuss Both Views (Band 6.0 ➔ 7.0) | IELTS Academic Study Module](IELTS/Writing_Task2/Band_6.0_to_7.0/academic_writing_task2_discuss_both_views_band6_to_7.html) |
+| Interactive Simulator | Academic Writing Task2 Opinion Agree Disagree Band5 To 6 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 2: Opinion Essays (Band 5.0 ➔ 6.0) | IELTS Academic Study Module](IELTS/Writing_Task2/Band_5.0_to_6.0/academic_writing_task2_opinion_agree_disagree_band5_to_6.html) |
+| Interactive Simulator | Academic Writing Task2 Problem Solution Cause Effect Band7 To 8 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 2: Problem &amp; Solution Masterclass | IELTS Academic Study Module](IELTS/Writing_Task2/Band_7.0_to_8.0/academic_writing_task2_problem_solution_cause_effect_band7_to_8.html) |
+| Interactive Simulator | Academic Writing Task2 Direct Question Double Prompt Band8 To 9 | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 2: Two-Part Direct Questions (Band 9.0) | IELTS Academic Study Module](IELTS/Writing_Task2/Band_8.0_to_9.0/academic_writing_task2_direct_question_double_prompt_band8_to_9.html) |
+| Interactive Simulator | Ielts Academic High Scoring Collocations And Lexical Resource | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic: High-Scoring Collocations &amp; Lexical Resource Bank | IELTS Academic Study Module](IELTS/Vocabulary_Collocations/ielts_academic_high_scoring_collocations_and_lexical_resource.html) |
 | Lesson Plan & Practice Module | Academic Reading - Multiple-Choice Questions (MCQ) Masterclass | `Band 7.5 - 9.0` | 📄 Markdown | [IELTS Academic Reading: Multiple-Choice Questions (MCQs) Masterclass](IELTS/Reading/Band_7.0_to_8.0/academic_reading_mcq_masterclass.md) |
 | Lesson Plan | Analysis | Drill | Academic Writing Task 1: Complete Band 6+ Breakthrough Guide | `Band 5.0 to 6.5` | 📄 Markdown | [IELTS Academic Writing Task 1: Band 6+ Breakthrough Masterclass](IELTS/Writing_Task1/Band_5.0_to_6.0/ielts_academic_task1_band_5_to_6_breakthrough.md) |
 | Lesson Plan | Drill | Analysis | Listening Section 1: Form Completion, Numbers, Names & Distraction Traps | `Band 5.0 to 6.0` | 📄 Markdown | [IELTS Academic Listening: Section 1 Form Completion Masterclass](IELTS/Listening/Band_5.0_to_6.0/listening_section1_form_completion_band5_to_6.md) |
@@ -52,20 +76,23 @@ This catalog indexes all structured lesson plans, test prep modules, question ba
 | Speaking Mock & Model Responses | Academic Speaking Full Mock Exam & Band 5.5 vs 6.5 Comparative Analysis | `Band 5.5 - 6.5` | 📄 Markdown | [IELTS Academic Speaking Mock Exam (Band 5.5 – 6.5 Focus)](IELTS/Speaking/Band_5.0_to_6.0/ielts_academic_speaking_band_5_5_to_6_5_mock.md) |
 | Vocabulary Bank | Worksheet | Analysis | Academic Vocabulary & High-Scoring Thematic Collocations Master Bank | `Band 7.0 to 9.0` | 📄 Markdown | [IELTS Academic: High-Scoring Collocations & Lexical Resource Bank](IELTS/Vocabulary_Collocations/ielts_academic_high_scoring_collocations_and_lexical_resource.md) |
 
-## 🌐 SAT Modules & Resources (2 Total)
+## 🌐 SAT Modules & Resources (3 Total)
 
 | Type | Title / Topic | Target Level | Format | Direct Link |
 | :--- | :--- | :--- | :--- | :--- |
 | Interactive Simulator | Sat Digital Ebrw Interactive Trainer | `Interactive Webapp` | 🚀 **Interactive App** | [Digital SAT EBRW Practice Module: Craft & Structure | Interactive Simulator](SAT/Reading_Writing/sat_digital_ebrw_interactive_trainer.html) |
+| Interactive Simulator | Sat Craft And Structure Words In Context Set 01 | `Interactive Webapp` | 🚀 **Interactive App** | [Digital SAT Reading &amp; Writing: Words in Context Drill Set 01 | SAT Academic Study Module](SAT/Reading_Writing/Craft_and_Structure/sat_craft_and_structure_words_in_context_set_01.html) |
 | Question Bank / Drill | Craft and Structure: High-Utility Words in Context & Rhetorical Precision | `Score 700 - 800` | 📄 Markdown | [Digital SAT Reading & Writing: Words in Context Drill Set 01](SAT/Reading_Writing/Craft_and_Structure/sat_craft_and_structure_words_in_context_set_01.md) |
 
-## 🌐 YDT Modules & Resources (7 Total)
+## 🌐 YDT Modules & Resources (9 Total)
 
 | Type | Title / Topic | Target Level | Format | Direct Link |
 | :--- | :--- | :--- | :--- | :--- |
-| Interactive Simulator | Ydt Mock Exam 40Q | `Interactive Webapp` | 🚀 **Interactive App** | [YDT Diagnostic Mock Exam | 40 Soruluk Tanılama Sınavı](YDT/Denemeler/ydt_mock_exam_40q.html) |
-| Interactive Simulator | Ydt Tenses Konu Anlatimi | `Interactive Webapp` | 🚀 **Interactive App** | [YDT İngilizce: 12 Tense Master Portal & 60 Soru Bankası](YDT/Konu_Anlatimi/ydt_tenses_konu_anlatimi.html) |
+| Interactive Simulator | Ydt Mock Exam 40Q | `Interactive Webapp` | 🚀 **Interactive App** | [YDT İngilizce — 40 Soruluk Tanılama Deneme Sınavı | YDT Academic Study Module](YDT/Denemeler/ydt_mock_exam_40q.html) |
+| Interactive Simulator | Ydt Okuma Parcalari Calisma Modulu 01 | `Interactive Webapp` | 🚀 **Interactive App** | [YDT İngilizce — Okuma Parçaları (Reading Passages) Çalışma Modülü | YDT Academic Study Module](YDT/Soru_Bankasi/Reading_Passages/ydt_okuma_parcalari_calisma_modulu_01.html) |
+| Interactive Simulator | Ydt Tenses Konu Anlatimi | `Interactive Webapp` | 🚀 **Interactive App** | [YDT İngilizce: 12 Tense Master Konu Anlatımı, Kullanım Rehberi ve ÖSYM Soru Bankası | YDT Academic Study Module](YDT/Konu_Anlatimi/ydt_tenses_konu_anlatimi.html) |
 | Interactive Simulator | Ydt Vocabulary Quiz App | `Interactive Webapp` | 🚀 **Interactive App** | [YDT İngilizce: Yüksek Frekanslı Akademik Kelime Rehberi & Özgün Kelime Testi | Interactive Exam Simulator](YDT/Vocabulary/ydt_vocabulary_quiz_app.html) |
+| Interactive Simulator | Ydt Essential Academic Vocabulary Set 01 | `Interactive Webapp` | 🚀 **Interactive App** | [YDT İngilizce: Yüksek Frekanslı Akademik Kelime Rehberi &amp; Özgün Kelime Testi | YDT Academic Study Module](YDT/Vocabulary/ydt_essential_academic_vocabulary_set_01.html) |
 | Konu Anlatımı & Master Web Simulator | İngilizce 12 Tense Master Konu Anlatımı, Tüm Kullanım Alanları (5 Örnekli), 60 ÖSYM Çıkmış/Özgün Soru Bankası, İleri Düzey Tuzaklar ve Şık Eleme Stratejileri | `YDT 75+ Net | ÖSYM Standard` | 📄 Markdown | [YDT İngilizce: 12 Tense Master Konu Anlatımı, Kullanım Rehberi ve ÖSYM Soru Bankası](YDT/Konu_Anlatimi/ydt_tenses_konu_anlatimi.md) |
 | Mock Test | Diagnostic YDT Mock Exam (40 Questions) | `YDT 55-65 Net | CEFR B1-B2` | 📄 Markdown | [YDT İngilizce — 40 Soruluk Tanılama Deneme Sınavı](YDT/Denemeler/ydt_mock_exam_40q.md) |
 | Vocabulary Bank & Drills | YDT İngilizce Yüksek Frekanslı Akademik Kelimeler, Phrasal Verbs & Çözümlü Test | `YDT 70+ Net | CEFR B1 - B2` | 📄 Markdown | [YDT İngilizce: Yüksek Frekanslı Akademik Kelime Rehberi & Özgün Kelime Testi](YDT/Vocabulary/ydt_essential_academic_vocabulary_set_01.md) |

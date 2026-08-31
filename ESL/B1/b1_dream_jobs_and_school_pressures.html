@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Big, Stress Less: Careers &amp; School Life (B1 Teen ESL) | ESL Academic Study Module</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #10b981;
+      --primary-dark: #059669;
+      --primary-light: rgba(16, 185, 129, 0.08);
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --radius: 12px;
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --base-font-size: 16px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0b0f19;
+      --surface: #131b2e;
+      --card-bg: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary-light: rgba(255, 255, 255, 0.05);
+      --border: #334155;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: var(--base-font-size); }
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      padding: 0.85rem 1.5rem;
+    }
+
+    .header-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-back:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .domain-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(16, 185, 129, 0.08);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-action {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-action:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .module-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .module-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), #3b82f6);
+    }
+
+    .module-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .meta-pill {
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .meta-pill.highlight {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .module-title {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .module-content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+    }
+
+    /* Typography inside content */
+    .study-heading {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      color: var(--text);
+      scroll-margin-top: 80px;
+    }
+    .study-heading.h1 { font-size: 1.8rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+    .study-heading.h2 { font-size: 1.45rem; border-left: 4px solid var(--primary); padding-left: 12px; }
+    .study-heading.h3 { font-size: 1.2rem; color: var(--primary); }
+    .study-heading.h4 { font-size: 1.05rem; font-weight: 700; }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    /* Lists */
+    .study-list {
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+    .study-list li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* Code blocks */
+    .code-block-wrapper {
+      background: #0f172a;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+      border: 1px solid #334155;
+    }
+    .code-header {
+      background: #1e293b;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .btn-copy-code {
+      background: transparent;
+      border: 1px solid #475569;
+      color: #cbd5e1;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    .btn-copy-code:hover {
+      background: #334155;
+      color: #fff;
+    }
+    pre {
+      padding: 1.25rem;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #e2e8f0;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      text-align: left;
+    }
+    .data-table th {
+      background: var(--bg);
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border);
+      font-weight: 700;
+      color: var(--text);
+    }
+    .data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+    .data-table tr:hover td {
+      background: var(--primary-light);
+    }
+
+    /* Alerts */
+    .alert {
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      border-left: 4px solid;
+    }
+    .alert-title {
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .alert-note { background: rgba(59, 130, 246, 0.08); border-color: #3b82f6; color: var(--text); }
+    .alert-tip { background: rgba(16, 185, 129, 0.08); border-color: #10b981; color: var(--text); }
+    .alert-important { background: rgba(239, 68, 68, 0.08); border-color: #ef4444; color: var(--text); }
+    .alert-warning { background: rgba(245, 158, 11, 0.08); border-color: #f59e0b; color: var(--text); }
+
+    /* Quotes */
+    .study-quote {
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      background: var(--bg);
+      border-radius: 0 10px 10px 0;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    .study-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* Interactive Tool Cards */
+    .interactive-tool-card {
+      background: var(--surface);
+      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
+    }
+    .tool-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tool-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .tool-badges {
+      display: flex;
+      gap: 8px;
+    }
+    .badge {
+      background: var(--primary);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+    .timer-controls, .speaking-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    .btn-tool {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: #fff;
+      transition: all 0.2s;
+    }
+    .btn-tool:hover { opacity: 0.9; }
+    .btn-tool-outline {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-tool-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 1rem;
+      padding: 1rem;
+      line-height: 1.6;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+    .stats-bar {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .progress-bar-bg, .speaking-progress-container {
+      flex: 1;
+      height: 10px;
+      background: var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+      min-width: 150px;
+    }
+    .progress-bar-fill, .speaking-progress-bar {
+      height: 100%;
+      background: #10b981;
+      transition: width 0.3s ease;
+    }
+    .word-status-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media print {
+      header, .interactive-tool-card, footer, .btn-copy-code { display: none !important; }
+      body { background: #fff; color: #000; }
+      .module-content-card, .module-hero { border: none; box-shadow: none; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="nav-left">
+        <a href="../index.html" class="btn-back">← Back to ESL Learning Portal</a>
+        <span class="domain-tag">🌍 ESL</span>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-action" onclick="adjustFontSize(-1)" title="Decrease font size">A-</button>
+        <button class="btn-action" onclick="adjustFontSize(1)" title="Increase font size">A+</button>
+        <button class="btn-action" onclick="window.print()" title="Print / Save PDF">🖨️ PDF</button>
+        <button class="btn-action" onclick="toggleTheme()">🌓 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="module-hero">
+      <div class="module-meta-pills">
+        <span class="meta-pill highlight">CEFR B1</span>
+        <span class="meta-pill">Lesson Plan</span>
+        <span class="meta-pill">📅 2026-08-31</span>
+      </div>
+      <h1 class="module-title">Dream Big, Stress Less: Careers & School Life (B1 Teen ESL)</h1>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">Interactive Academic Study Module • Pedagogically Scaffolded Curriculum</p>
+    </div>
+
+    
+    
+
+    <article class="module-content-card">
+      <h1 id="dream-big-stress-less-careers--school-life-b1-teen-esl" class="study-heading h1">🎓 Dream Big, Stress Less: Careers &amp; School Life (B1 Teen ESL)</h1>
+<h2 id="pedagogical-overview" class="study-heading h2">📌 Pedagogical Overview</h2>
+<ul class="study-list">
+<li><strong>Target Audience:</strong> Teen ESL Learners (ages 13–17, CEFR A2+ to B1).</li>
+<li><strong>Core Themes:</strong></li>
+</ul>
+<p>  1. <em>Dream Jobs &amp; Careers</em> (aspirations, digital skills, freelance, workplace dynamics).</p>
+<p>  2. <em>School &amp; Academic Pressures</em> (homework workload, exam anxiety, expectations, study-life balance).</p>
+<ul class="study-list">
+<li><strong>Focus:</strong> Speaking and vocabulary first, minimal grammar clarification, followed by leveled reading comprehension.</li>
+<li><strong>Interactive Offline Implementation:</strong> Located in <code>lesson-page/</code> (<code>index.html</code>, <code>css/styles.css</code>, <code>js/data.js</code>, <code>js/storage.js</code>, <code>js/app.js</code>).</li>
+</ul>
+<hr class="study-divider">
+<h2 id="target-seed-vocabulary-bank-recycled-80" class="study-heading h2">🗂️ Target Seed Vocabulary Bank (Recycled 80%+)</h2>
+<h3 id="1-jobs--careers" class="study-heading h3">1. Jobs &amp; Careers</h3>
+<ul class="study-list">
+<li><code>career</code>: A job or profession you do for a long period of your life.</li>
+<li><code>salary</code>: The regular monthly earnings you receive for work.</li>
+<li><code>apply for</code>: To formally request a job position.</li>
+<li><code>skills</code>: Learned abilities developed through practice.</li>
+<li><code>experience</code>: Practical knowledge gained from past work.</li>
+<li><code>boss</code>: The supervisor in charge of workplace operations.</li>
+<li><code>colleague</code>: A coworker in the same team or organization.</li>
+<li><code>interview</code>: A formal evaluation meeting for job candidates.</li>
+<li><code>qualifications</code>: Official certificates and degrees verifying capability.</li>
+<li><code>dream job</code>: The ideal profession someone desires most.</li>
+<li><code>earn</code>: To obtain money in exchange for labor.</li>
+<li><code>hire</code>: To employ someone for wages.</li>
+<li><code>resign</code>: To officially leave an employment position.</li>
+<li><code>promote</code>: To advance an employee to a higher rank.</li>
+<li><code>freelance</code>: Working on individual contracts rather than for one employer.</li>
+<li><code>entrepreneur</code>: An individual who launches a commercial enterprise.</li>
+<li><code>remote working</code>: Performing job duties from home using digital tools.</li>
+</ul>
+<h3 id="2-school--academic-pressures" class="study-heading h3">2. School &amp; Academic Pressures</h3>
+<ul class="study-list">
+<li><code>grades</code>: Scores or letters representing academic performance.</li>
+<li><code>exam</code>: A formal test evaluating subject mastery.</li>
+<li><code>deadline</code>: The final agreed date/time for work submission.</li>
+<li><code>stressed</code>: Experiencing emotional strain and anxiety.</li>
+<li><code>pressure</code>: Demands from family, teachers, or peers.</li>
+<li><code>revise</code>: Reviewing course materials prior to evaluation.</li>
+<li><code>homework</code>: Assignments allocated for completion after school.</li>
+<li><code>expectations</code>: Standards anticipated by parents or educators.</li>
+<li><code>compare</code>: Measuring one's achievements against peers.</li>
+<li><code>compete</code>: Striving to outperform others.</li>
+<li><code>fail</code>: Not meeting the minimum passing benchmark.</li>
+<li><code>pass</code>: Successfully reaching or exceeding the exam benchmark.</li>
+<li><code>scholarship</code>: Educational funding granted on academic/sporting merit.</li>
+<li><code>workload</code>: The aggregate quantity of study or tasks required.</li>
+<li><code>burnout</code>: Physical and cognitive collapse due to chronic overload.</li>
+<li><code>balance</code>: Equilibrium between academic duties and rest.</li>
+<li><code>mental health</code>: Psychological, emotional, and social well-being.</li>
+</ul>
+<h3 id="3-feelings--opinion-adjectives" class="study-heading h3">3. Feelings &amp; Opinion Adjectives</h3>
+<ul class="study-list">
+<li><code>ambitious</code>, <code>creative</code>, <code>challenging</code>, <code>rewarding</code>, <code>exhausted</code>, <code>motivated</code>, <code>overwhelmed</code>, <code>proud</code>, <code>confident</code>, <code>disappointed</code>.</li>
+</ul>
+<hr class="study-divider">
+<h2 id="discussion-questions-bank-30-items" class="study-heading h2">💬 Discussion Questions Bank (30 Items)</h2>
+<div class="table-container"><table class="data-table">
+<thead><tr>
+<th>ID</th>
+<th>Level</th>
+<th>Topic</th>
+<th>Type</th>
+<th>Question Summary</th>
+<th>Scaffold Hint</th>
+</tr></thead><tbody>
+<tr>
+<td><code>q<em>job</em>01</code></td>
+<td>A2</td>
+<td>Jobs</td>
+<td>Personal</td>
+<td>What did you want to be at age 7 vs. now?</td>
+<td>Starter: "When I was 7, I wanted to be..."</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>02</code></td>
+<td>A2</td>
+<td>Jobs</td>
+<td>Opinion</td>
+<td>High salary vs. loving your work?</td>
+<td>Compare money vs. daily happiness.</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>03</code></td>
+<td>A2</td>
+<td>Jobs</td>
+<td>Creative</td>
+<td>Forever job: chef, game designer, or vet?</td>
+<td>Give 2 concrete reasons.</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>04</code></td>
+<td>B1</td>
+<td>Jobs</td>
+<td>Hypothetical</td>
+<td>Let your phone data pick your future career?</td>
+<td>Screen time interests reflection.</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>05</code></td>
+<td>B1</td>
+<td>Jobs</td>
+<td>Ranking</td>
+<td>Rank 5 jobs by stress: surgeon, pilot, influencer, teacher, coder.</td>
+<td>Use comparatives: "A surgeon is more stressful than..."</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>06</code></td>
+<td>B1</td>
+<td>Jobs</td>
+<td>Creative</td>
+<td>Invent a job for the year 2050.</td>
+<td>E.g. Space guide, AI psychologist.</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>07</code></td>
+<td>B1</td>
+<td>Jobs</td>
+<td>Opinion</td>
+<td>Remote working vs. office colleagues?</td>
+<td>Pros (no commute) vs. cons (isolation).</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>08</code></td>
+<td>B1</td>
+<td>Jobs</td>
+<td>Debate</td>
+<td>Freelance entrepreneur vs. steady boss?</td>
+<td>Independence vs. income security.</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>09</code></td>
+<td>B1</td>
+<td>Jobs</td>
+<td>Hypothetical</td>
+<td>2 strengths and 1 weakness in a job interview?</td>
+<td>"My greatest strength is..."</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>10</code></td>
+<td>B2</td>
+<td>Jobs</td>
+<td>Debate</td>
+<td>Will AI replace 50% of creative jobs?</td>
+<td>"On the one hand... On the other hand..."</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>11</code></td>
+<td>B2</td>
+<td>Jobs</td>
+<td>Hypothetical</td>
+<td>Zombie apocalypse survival skills?</td>
+<td>Practical skills under extreme pressure.</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>12</code></td>
+<td>A2</td>
+<td>Jobs</td>
+<td>Personal</td>
+<td>Favorite part-time holiday job to try?</td>
+<td>E.g. barista, camp counselor.</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>13</code></td>
+<td>B1</td>
+<td>Jobs</td>
+<td>Opinion</td>
+<td>Toxic boss traits vs. inspiring leader?</td>
+<td>Adjectives: demanding, supportive, fair.</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>14</code></td>
+<td>B2</td>
+<td>Jobs</td>
+<td>Ranking</td>
+<td>Rank: money, holidays, fame, helping society.</td>
+<td>Prioritizing intrinsic vs extrinsic values.</td>
+</tr>
+<tr>
+<td><code>q<em>job</em>15</code></td>
+<td>B1</td>
+<td>Jobs</td>
+<td>Creative</td>
+<td>Switch jobs with a celebrity for 1 day?</td>
+<td>Describe their daily routine.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>16</code></td>
+<td>A2</td>
+<td>School</td>
+<td>Opinion</td>
+<td>Best student with top grades vs. happiest student?</td>
+<td>Focus on mental health and balance.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>17</code></td>
+<td>A2</td>
+<td>School</td>
+<td>Personal</td>
+<td>Subject you feel proud of vs. stressed by?</td>
+<td>Personal reflection on strengths.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>18</code></td>
+<td>A2</td>
+<td>School</td>
+<td>Creative</td>
+<td>If animals went to school, who gets best grades?</td>
+<td>E.g. owls vs. sloths.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>19</code></td>
+<td>B1</td>
+<td>School</td>
+<td>Debate</td>
+<td>Should schools ban homework completely?</td>
+<td>Need for rest vs. independent practice.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>20</code></td>
+<td>B1</td>
+<td>School</td>
+<td>Opinion</td>
+<td>Where does the biggest pressure come from?</td>
+<td>Parents, teachers, peers, or self.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>21</code></td>
+<td>B1</td>
+<td>School</td>
+<td>Hypothetical</td>
+<td>What if students were paid a salary for high exam marks?</td>
+<td>Motivation vs. hyper-competition.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>22</code></td>
+<td>B1</td>
+<td>School</td>
+<td>Ranking</td>
+<td>Top causes of teen exhaustion.</td>
+<td>Homework, early alarms, exams, screens.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>23</code></td>
+<td>A2</td>
+<td>School</td>
+<td>Creative</td>
+<td>Delete one subject, add one life skill subject.</td>
+<td>E.g. Financial literacy, cooking.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>24</code></td>
+<td>B1</td>
+<td>School</td>
+<td>Personal</td>
+<td>How do you revise before exams (music vs silence)?</td>
+<td>Flashcards, Pomodoro technique.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>25</code></td>
+<td>B2</td>
+<td>School</td>
+<td>Debate</td>
+<td>Replace high-stakes exams with project portfolios?</td>
+<td>Memorization under panic vs. authentic mastery.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>26</code></td>
+<td>B1</td>
+<td>School</td>
+<td>Opinion</td>
+<td>Does comparing grades hurt friendships?</td>
+<td>Friendly rivalry vs. anxiety.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>27</code></td>
+<td>B2</td>
+<td>School</td>
+<td>Hypothetical</td>
+<td>How to coach an overwhelmed friend before a deadline?</td>
+<td>Actionable stress relief steps.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>28</code></td>
+<td>A2</td>
+<td>School</td>
+<td>Personal</td>
+<td>Best way to relax after a stressful school week?</td>
+<td>Gaming, sports, drawing, sleep.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>29</code></td>
+<td>B1</td>
+<td>School</td>
+<td>Debate</td>
+<td>Should school start at 10:00 AM for teen sleep biology?</td>
+<td>Circadian rhythms vs. family schedules.</td>
+</tr>
+<tr>
+<td><code>q<em>sch</em>30</code></td>
+<td>B2</td>
+<td>School</td>
+<td>Ranking</td>
+<td>What matters most for university scholarships?</td>
+<td>Grades, portfolios, sports, volunteering.</td>
+</tr>
+</tbody>
+</table></div>
+<hr class="study-divider">
+<h2 id="tiered-speaking--vocabulary-exercises-28-exercises" class="study-heading h2">🏋️ Tiered Speaking &amp; Vocabulary Exercises (28 Exercises)</h2>
+<ul class="study-list">
+<li><strong>A2 Tier (10):</strong></li>
+</ul>
+<p>  1. <code>ex<em>a2</em>01</code>: Job-word ↔ definition matching (boss, salary, colleague, interview, skills, dream job).</p>
+<p>  2. <code>ex<em>a2</em>02</code>: Odd-one-out with rationale.</p>
+<p>  3. <code>ex<em>a2</em>03</code>: 3-Category sorting box (Jobs / Feelings / School).</p>
+<p>  4. <code>ex<em>a2</em>04</code>: School vocabulary gap-fill with word bank.</p>
+<p>  5. <code>ex<em>a2</em>05</code>: Emoji-to-word emotion/action quiz.</p>
+<p>  6. <code>ex<em>a2</em>06</code>: "Find someone who..." communicative speaking board.</p>
+<p>  7. <code>ex<em>a2</em>07</code>: Job titles &amp; required skills matching.</p>
+<p>  8. <code>ex<em>a2</em>08</code>: School scenario feeling selector.</p>
+<p>  9. <code>ex<em>a2</em>09</code>: True or False vocabulary check with corrections.</p>
+<p>  10. <code>ex<em>a2</em>10</code>: Sentence builder unscramble tiles.</p>
+<ul class="study-list">
+<li><strong>B1 Tier (10):</strong></li>
+</ul>
+<p>  11. <code>ex<em>b1</em>01</code>: Collocation matching (meet a deadline, earn a salary, win a scholarship).</p>
+<p>  12. <code>ex<em>b1</em>02</code>: Word formation (employ → employer → employee, qualify → qualifications).</p>
+<p>  13. <code>ex<em>b1</em>03</code>: Second conditional sentence unscramble.</p>
+<p>  14. <code>ex<em>b1</em>04</code>: Job interview mini-dialogue completion.</p>
+<p>  15. <code>ex<em>b1</em>05</code>: Peer support mini-dialogue completion.</p>
+<p>  16. <code>ex<em>b1</em>06</code>: Role-play Card 1: Teen App Tester &amp; Studio Manager.</p>
+<p>  17. <code>ex<em>b1</em>07</code>: Role-play Card 2: Overwhelmed Student &amp; Supportive Friend.</p>
+<p>  18. <code>ex<em>b1</em>08</code>: Role-play Card 3: Freelance Designer &amp; Client Deadline Negotiation.</p>
+<p>  19. <code>ex<em>b1</em>09</code>: "Would you rather...?" Career Edition Dilemma Cards.</p>
+<p>  20. <code>ex<em>b1</em>10</code>: "Would you rather...?" School Workload Edition Dilemma Cards.</p>
+<ul class="study-list">
+<li><strong>B2 Tier (8):</strong></li>
+</ul>
+<p>  21. <code>ex<em>b2</em>01</code>: Idioms matching (burn the midnight oil, learn the ropes, get the hang of it, hit the books, bite off more than you can chew).</p>
+<p>  22. <code>ex<em>b2</em>02</code>: Phrasal verbs in context (give up, take on, figure out, burn out, get ahead).</p>
+<p>  23. <code>ex<em>b2</em>03</code>: Nuance sort (ambitious vs pushy, confident vs arrogant).</p>
+<p>  24. <code>ex<em>b2</em>04</code>: Debate Duel: AI &amp; Future of Creative Dream Jobs.</p>
+<p>  25. <code>ex<em>b2</em>05</code>: Debate Duel: Standardized Testing vs Portfolio Assessment.</p>
+<p>  26. <code>ex<em>b2</em>06</code>: Debate Duel: Mandatory Part-Time Teen Jobs.</p>
+<p>  27. <code>ex<em>b2</em>07</code>: Taboo Speaking Cards Deck A (Boss, Deadline, Salary, Homework).</p>
+<p>  28. <code>ex<em>b2</em>08</code>: Taboo Speaking Cards Deck B (Entrepreneur, Burnout, Scholarship, Freelance).</p>
+<hr class="study-divider">
+<h2 id="compact-grammar-notes-5-essential-forms" class="study-heading h2">📐 Compact Grammar Notes (5 Essential Forms)</h2>
+<p>1. <strong><code>want to</code> / <code>would like to</code> + Verb (Dream Jobs)</strong></p>
+<p>   - <em>Form:</em> <code>Subject + want(s) to / would like to + base verb</code></p>
+<p>   - <em>Example:</em> "She would like to work remotely as a freelance graphic designer."</p>
+<p>   - <em>Teen Mistake:</em> <code><em>I would like to working in a game studio.</em></code> ➔ <code>✅ I would like to work in a game studio.</code></p>
+<p>2. <strong>Second Conditional for Unreal Situations</strong></p>
+<p>   - <em>Form:</em> <code>If + past simple, ... would/could + base verb</code></p>
+<p>   - <em>Example:</em> "If I could choose any career, I would be a marine biologist."</p>
+<p>   - <em>Teen Mistake:</em> <code><em>If I will have time, I would revise.</em></code> ➔ <code>✅ If I had time, I would revise.</code></p>
+<p>3. <strong>Modals of Obligation &amp; Advice (<code>have to</code>, <code>must</code>, <code>should</code>)</strong></p>
+<p>   - <em>Form:</em> <code>must/have to + base verb</code> (obligation), <code>should + base verb</code> (advice), <code>don't have to</code> (optional).</p>
+<p>   - <em>Example:</em> "You don't have to get 100% on every test to have a successful life."</p>
+<p>   - <em>Teen Mistake:</em> <code><em>You must to revise tonight.</em></code> ➔ <code>✅ You must revise tonight.</code></p>
+<p>4. <strong>Quantifiers: <code>too + noun</code> vs <code>(not) enough</code></strong></p>
+<p>   - <em>Form:</em> <code>too much + uncountable</code> (homework), <code>too many + countable</code> (exams), <code>(not) enough + noun</code>.</p>
+<p>   - <em>Example:</em> "I have too much homework and not enough sleep this week."</p>
+<p>   - <em>Teen Mistake:</em> <code><em>Our teacher gave us too many homework.</em></code> ➔ <code>✅ ...too much homework.</code></p>
+<p>5. <strong>Comparatives &amp; Superlatives</strong></p>
+<p>   - <em>Form:</em> <code>adj + -er than</code>, <code>more + adj + than</code>, <code>the most + adj</code>, <code>better / worse</code>.</p>
+<p>   - <em>Example:</em> "Physics is more challenging than history, but surgeon is the most stressful job."</p>
+<p>   - <em>Teen Mistake:</em> <code><em>Being a boss is more better than an employee.</em></code> ➔ <code>✅ ...much better...</code></p>
+<hr class="study-divider">
+<h2 id="reading-zone-passages--tasks" class="study-heading h2">📖 Reading Zone Passages &amp; Tasks</h2>
+<h3 id="text-a-a2-180-words-my-weird-dream-job-virtual-world-builder" class="study-heading h3">Text A (A2+, ~180 words): "My Weird Dream Job: Virtual World Builder"</h3>
+<ul class="study-list">
+<li><strong>Passage:</strong> 16-year-old Leo's experience building 3D islands and earning a freelance salary from his bedroom.</li>
+<li><strong>Task 1:</strong> 6 True / False comprehension checks with textual rationales.</li>
+<li><strong>Task 2:</strong> 6 Vocabulary definition matches (<code>freelance</code>, <code>salary</code>, <code>deadline</code>, <code>rewarding</code>, <code>ambitions</code>, <code>skills</code>).</li>
+</ul>
+<h3 id="text-b-b1-220-words-the-great-homework-debate-leo-vs-maya" class="study-heading h3">Text B (B1, ~220 words): "The Great Homework Debate: Leo vs Maya"</h3>
+<ul class="study-list">
+<li><strong>Passage:</strong> Maya (pro-homework with coordination) vs Leo (anti-homework, highlighting burnout and sleep loss).</li>
+<li><strong>Task 1:</strong> 4 Multiple-Choice questions testing key arguments and proposals.</li>
+<li><strong>Task 2:</strong> 5 "Which Student Says It?" opinion attribution items.</li>
+</ul>
+<h3 id="text-c-b1-250-words-dear-teen-guide-overwhelmed-by-expectations" class="study-heading h3">Text C (B1+, ~250 words): "Dear Teen Guide: Overwhelmed by Expectations"</h3>
+<ul class="study-list">
+<li><strong>Passage:</strong> Olivia's letter detailing scholarship pressure from parents + Dr. Sam's 3-step prescription for boundaries and mental health.</li>
+<li><strong>Task 1:</strong> 4 Multiple-Choice comprehension questions.</li>
+<li><strong>Task 2:</strong> 4 Vocabulary-in-context checks (<code>scholarship</code>, <code>overwhelmed</code>, <code>academic burnout</code>, <code>set hard boundaries</code>).</li>
+<li><strong>Task 3:</strong> 1 Inference item evaluating Dr. Sam's underlying message.</li>
+</ul>
+<hr class="study-divider">
+<h2 id="comprehensive-answer-key--teacher-rationales" class="study-heading h2">🔑 Comprehensive Answer Key &amp; Teacher Rationales</h2>
+<h3 id="grammar-practice-checks" class="study-heading h3">Grammar Practice Checks</h3>
+<p>1. <strong>Rule 1 (<code>want to / would like to</code>):</strong> 1) <code>wants to be</code>, 2) <code>would like to apply</code>, 3) <code>want to work</code>.</p>
+<p>2. <strong>Rule 2 (Second Conditional):</strong> 1) <code>had</code>, 2) <code>would / study</code>, 3) <code>would resign</code>.</p>
+<p>3. <strong>Rule 3 (Modals):</strong> 1) <code>don't have to panic</code>, 2) <code>should get</code>, 3) <code>have to wear</code>.</p>
+<p>4. <strong>Rule 4 (Quantifiers):</strong> 1) <code>enough</code>, 2) <code>too many</code>, 3) <code>enough</code>.</p>
+<p>5. <strong>Rule 5 (Comparatives/Superlatives):</strong> 1) <code>more stressful</code>, 2) <code>most rewarding</code>, 3) <code>better</code>.</p>
+<h3 id="reading-zone-tasks" class="study-heading h3">Reading Zone Tasks</h3>
+<ul class="study-list">
+<li><strong>Text A Task 1:</strong> 1) False (Leo wants to be a virtual builder, not doctor), 2) True, 3) True, 4) False (he finds it 'extremely rewarding'), 5) False (parents were worried at first), 6) True.</li>
+<li><strong>Text A Task 2:</strong> freelance ➔ working for different clients; salary ➔ money received for work; deadline ➔ required submission time; rewarding ➔ giving positive feelings; ambitions ➔ strong hopes for success; skills ➔ learned abilities.</li>
+<li><strong>Text B Task 1:</strong> 1) A (remember facts &amp; time management), 2) A (coordinate workload), 3) A (burnout &amp; sleep deprivation), 4) A (make homework optional).</li>
+<li><strong>Text B Task 2:</strong> 1) Maya, 2) Leo, 3) Both, 4) Leo, 5) Maya.</li>
+<li><strong>Text C Task 1:</strong> 1) A (heavy study workload &amp; scholarship expectations), 2) A (feels like a complete failure), 3) A (stop studying at 9:30 PM &amp; get 8 hours sleep), 4) A (high pressure harms actual performance).</li>
+<li><strong>Text C Task 2:</strong> 1) A (free financial grant for study), 2) A (unable to cope with demands), 3) A (severe chronic exhaustion), 4) A (establish strict study limits).</li>
+<li><strong>Text C Task 3:</strong> 1) A (mental rest directly enables academic success).</li>
+</ul>
+    </article>
+
+    <footer>
+      <p>🌍 ESL Preparation Workspace • Built for Authentic Exam Success</p>
+    </footer>
+  </main>
+
+  <script>
+    // Theme Switcher
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('study_theme', next);
+    }
+    (function() {
+      const saved = localStorage.getItem('study_theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+
+    // Font Scaling
+    let currentScale = 16;
+    function adjustFontSize(delta) {
+      currentScale = Math.min(22, Math.max(13, currentScale + delta));
+      document.documentElement.style.setProperty('--base-font-size', currentScale + 'px');
+      localStorage.setItem('study_font_size', currentScale);
+    }
+    (function() {
+      const savedSize = localStorage.getItem('study_font_size');
+      if (savedSize) {
+        currentScale = parseInt(savedSize, 10);
+        document.documentElement.style.setProperty('--base-font-size', currentScale + 'px');
+      }
+    })();
+
+    // Copy Code Helper
+    function copyCode(btn) {
+      const pre = btn.closest('.code-block-wrapper').querySelector('pre code');
+      if (pre) {
+        navigator.clipboard.writeText(pre.innerText).then(() => {
+          btn.innerText = '✅ Copied!';
+          setTimeout(() => btn.innerText = '📋 Copy', 2000);
+        });
+      }
+    }
+
+    // Writing Arena Logic
+    let timerInterval = null;
+    let timerSeconds = 1200; // 20m
+    function startWritingTimer(mins) {
+      clearInterval(timerInterval);
+      timerSeconds = mins * 60;
+      updateTimerDisplay();
+      timerInterval = setInterval(() => {
+        if (timerSeconds <= 0) {
+          clearInterval(timerInterval);
+          alert('⏰ Time is up! Review and edit your response.');
+          return;
+        }
+        timerSeconds--;
+        updateTimerDisplay();
+      }, 1000);
+    }
+    function pauseWritingTimer() { clearInterval(timerInterval); }
+    function resetWritingTimer(mins) {
+      clearInterval(timerInterval);
+      timerSeconds = mins * 60;
+      updateTimerDisplay();
+    }
+    function updateTimerDisplay() {
+      const m = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
+      const s = (timerSeconds % 60).toString().padStart(2, '0');
+      const el = document.getElementById('timerDisplay');
+      if (el) el.innerText = `${m}:${s}`;
+    }
+    function updateWordStats(target) {
+      const text = document.getElementById('essayEditor').value.trim();
+      const words = text ? text.split(/\s+/).length : 0;
+      const countEl = document.getElementById('wordCount');
+      const progEl = document.getElementById('wordProgressBar');
+      const fbEl = document.getElementById('wordFeedback');
+      if (countEl) countEl.innerText = words;
+      const pct = Math.min(100, Math.round((words / target) * 100));
+      if (progEl) {
+        progEl.style.width = pct + '%';
+        progEl.style.background = words >= target ? '#10b981' : '#f59e0b';
+      }
+      if (fbEl) {
+        if (words >= target) {
+          fbEl.innerText = `✅ Met Target (${words} words)`;
+          fbEl.style.color = '#10b981';
+        } else {
+          fbEl.innerText = `Need ${target - words} more words`;
+          fbEl.style.color = '#f59e0b';
+        }
+      }
+      localStorage.setItem('draft_' + window.location.pathname, text);
+    }
+    function clearWritingDraft() {
+      if (confirm('Clear current draft?')) {
+        document.getElementById('essayEditor').value = '';
+        updateWordStats(250);
+      }
+    }
+    (function() {
+      const saved = localStorage.getItem('draft_' + window.location.pathname);
+      const editor = document.getElementById('essayEditor');
+      if (saved && editor) {
+        editor.value = saved;
+        updateWordStats(250);
+      }
+    })();
+
+    // Speaking Arena Logic
+    let speakingInterval = null;
+    let speakingSecs = 60;
+    function startSpeakingPrep() {
+      clearInterval(speakingInterval);
+      speakingSecs = 60;
+      document.getElementById('speakingPhaseBadge').innerText = '1-Min Prep';
+      document.getElementById('speakingPhaseBadge').style.background = '#f59e0b';
+      document.getElementById('speakingFeedback').innerText = 'Taking notes... Think about Past, Present, Future context.';
+      speakingInterval = setInterval(() => {
+        if (speakingSecs <= 0) {
+          clearInterval(speakingInterval);
+          alert('⏰ Prep time over! Begin speaking now.');
+          startSpeakingTurn();
+          return;
+        }
+        speakingSecs--;
+        updateSpeakingUI(60);
+      }, 1000);
+    }
+    function startSpeakingTurn() {
+      clearInterval(speakingInterval);
+      speakingSecs = 120;
+      document.getElementById('speakingPhaseBadge').innerText = 'Speaking (2m)';
+      document.getElementById('speakingPhaseBadge').style.background = '#10b981';
+      document.getElementById('speakingFeedback').innerText = '🎙️ Speak continuously. Develop your points fully!';
+      speakingInterval = setInterval(() => {
+        if (speakingSecs <= 0) {
+          clearInterval(speakingInterval);
+          alert('🏁 2 minutes complete! Excellent practice.');
+          document.getElementById('speakingPhaseBadge').innerText = 'Completed';
+          return;
+        }
+        speakingSecs--;
+        updateSpeakingUI(120);
+      }, 1000);
+    }
+    function stopSpeakingTimer() {
+      clearInterval(speakingInterval);
+      document.getElementById('speakingPhaseBadge').innerText = 'Stopped';
+    }
+    function updateSpeakingUI(total) {
+      const m = Math.floor(speakingSecs / 60).toString().padStart(2, '0');
+      const s = (speakingSecs % 60).toString().padStart(2, '0');
+      document.getElementById('speakingTimerDisplay').innerText = `${m}:${s}`;
+      const elapsed = total - speakingSecs;
+      const pct = Math.round((elapsed / total) * 100);
+      document.getElementById('speakingProgressBar').style.width = pct + '%';
+    }
+    function readPromptAloud() {
+      const title = document.querySelector('.module-title').innerText;
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(title);
+        utterance.rate = 0.95;
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert('Text-to-speech not supported in this browser.');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Academic Reading: Multiple-Choice Questions (MCQs) Masterclass | IELTS Academic Study Module</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ef4444;
+      --primary-dark: #dc2626;
+      --primary-light: rgba(239, 68, 68, 0.08);
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --radius: 12px;
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --base-font-size: 16px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0b0f19;
+      --surface: #131b2e;
+      --card-bg: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary-light: rgba(255, 255, 255, 0.05);
+      --border: #334155;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: var(--base-font-size); }
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      padding: 0.85rem 1.5rem;
+    }
+
+    .header-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-back:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .domain-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(239, 68, 68, 0.08);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-action {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-action:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .module-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .module-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), #3b82f6);
+    }
+
+    .module-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .meta-pill {
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .meta-pill.highlight {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .module-title {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .module-content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+    }
+
+    /* Typography inside content */
+    .study-heading {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      color: var(--text);
+      scroll-margin-top: 80px;
+    }
+    .study-heading.h1 { font-size: 1.8rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+    .study-heading.h2 { font-size: 1.45rem; border-left: 4px solid var(--primary); padding-left: 12px; }
+    .study-heading.h3 { font-size: 1.2rem; color: var(--primary); }
+    .study-heading.h4 { font-size: 1.05rem; font-weight: 700; }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    /* Lists */
+    .study-list {
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+    .study-list li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* Code blocks */
+    .code-block-wrapper {
+      background: #0f172a;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+      border: 1px solid #334155;
+    }
+    .code-header {
+      background: #1e293b;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .btn-copy-code {
+      background: transparent;
+      border: 1px solid #475569;
+      color: #cbd5e1;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    .btn-copy-code:hover {
+      background: #334155;
+      color: #fff;
+    }
+    pre {
+      padding: 1.25rem;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #e2e8f0;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      text-align: left;
+    }
+    .data-table th {
+      background: var(--bg);
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border);
+      font-weight: 700;
+      color: var(--text);
+    }
+    .data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+    .data-table tr:hover td {
+      background: var(--primary-light);
+    }
+
+    /* Alerts */
+    .alert {
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      border-left: 4px solid;
+    }
+    .alert-title {
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .alert-note { background: rgba(59, 130, 246, 0.08); border-color: #3b82f6; color: var(--text); }
+    .alert-tip { background: rgba(16, 185, 129, 0.08); border-color: #10b981; color: var(--text); }
+    .alert-important { background: rgba(239, 68, 68, 0.08); border-color: #ef4444; color: var(--text); }
+    .alert-warning { background: rgba(245, 158, 11, 0.08); border-color: #f59e0b; color: var(--text); }
+
+    /* Quotes */
+    .study-quote {
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      background: var(--bg);
+      border-radius: 0 10px 10px 0;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    .study-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* Interactive Tool Cards */
+    .interactive-tool-card {
+      background: var(--surface);
+      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
+    }
+    .tool-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tool-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .tool-badges {
+      display: flex;
+      gap: 8px;
+    }
+    .badge {
+      background: var(--primary);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+    .timer-controls, .speaking-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    .btn-tool {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: #fff;
+      transition: all 0.2s;
+    }
+    .btn-tool:hover { opacity: 0.9; }
+    .btn-tool-outline {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-tool-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 1rem;
+      padding: 1rem;
+      line-height: 1.6;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+    .stats-bar {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .progress-bar-bg, .speaking-progress-container {
+      flex: 1;
+      height: 10px;
+      background: var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+      min-width: 150px;
+    }
+    .progress-bar-fill, .speaking-progress-bar {
+      height: 100%;
+      background: #10b981;
+      transition: width 0.3s ease;
+    }
+    .word-status-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media print {
+      header, .interactive-tool-card, footer, .btn-copy-code { display: none !important; }
+      body { background: #fff; color: #000; }
+      .module-content-card, .module-hero { border: none; box-shadow: none; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="nav-left">
+        <a href="../../index.html" class="btn-back">← Back to IELTS Academic Portal</a>
+        <span class="domain-tag">🎯 IELTS</span>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-action" onclick="adjustFontSize(-1)" title="Decrease font size">A-</button>
+        <button class="btn-action" onclick="adjustFontSize(1)" title="Increase font size">A+</button>
+        <button class="btn-action" onclick="window.print()" title="Print / Save PDF">🖨️ PDF</button>
+        <button class="btn-action" onclick="toggleTheme()">🌓 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="module-hero">
+      <div class="module-meta-pills">
+        <span class="meta-pill highlight">Band 7.5 - 9.0</span>
+        <span class="meta-pill">Lesson Plan & Practice Module</span>
+        <span class="meta-pill">📅 2026-08-26</span>
+      </div>
+      <h1 class="module-title">IELTS Academic Reading: Multiple-Choice Questions (MCQs) Masterclass</h1>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">Interactive Academic Study Module • Pedagogically Scaffolded Curriculum</p>
+    </div>
+
+    
+    
+
+    <article class="module-content-card">
+      <h1 id="ielts-academic-reading-multiple-choice-questions-mcqs-masterclass" class="study-heading h1">📖 IELTS Academic Reading: Multiple-Choice Questions (MCQs) Masterclass</h1>
+<p>Multiple-Choice Questions in IELTS Academic Reading test your ability to understand complex arguments, distinguish main ideas from supporting details, identify subtle nuance, and avoid sophisticated traps designed to mislead careless readers.</p>
+<hr class="study-divider">
+<h2 id="part-1-theoretical-framework--strategy-guide" class="study-heading h2">🧭 PART 1: Theoretical Framework &amp; Strategy Guide</h2>
+<h3 id="1-question-stem-analysis" class="study-heading h3">1. Question-Stem Analysis</h3>
+<p>The question stem contains crucial operational signals. Analyzing the stem before glancing at the options prevents cognitive overload.</p>
+<p>1. <strong>Locating Keywords vs. Qualifying Words</strong>:</p>
+<p>   - <strong>Locating Keywords</strong> (Nouns, proper names, technical terms, dates): Direct you to the specific paragraph (e.g., <em>Dr. Aris Thorne</em>, <em>neuroplasticity</em>, <em>19th-century urbanization</em>).</p>
+<p>   - <strong>Qualifying Words / Modifiers</strong> (Adverbs, quantifiers, modals): Define the scope of the question (e.g., <em>primarily, initially, solely, tends to, rarely, largely</em>). A stem asking why an author <em>primarily</em> criticizes a policy requires the fundamental reason, not a secondary passing mention.</p>
+<p>2. <strong>Types of Stems</strong>:</p>
+<p>   - <strong>Direct Question</strong>: <em>"Why did the researchers choose deep-sea sponges?"</em> (Focus on cause/reason).</p>
+<p>   - <strong>Incomplete Sentence</strong>: <em>"According to the second paragraph, the main vulnerability of mangrove ecosystems is..."</em> (Requires grammatical and semantic completion).</p>
+<p>   - <strong>Author's Perspective / Purpose</strong>: <em>"The writer mentions the steam engine in paragraph D in order to illustrate..."</em> (Tests rhetorical function rather than raw data).</p>
+<p>   - <strong>Negative / Exclusion Stems</strong>: <em>"Which of the following is NOT cited as a factor?"</em> (Requires verifying 3 present items and finding the 1 absent or contradicted item).</p>
+<hr class="study-divider">
+<h3 id="2-option-comparison-matrix" class="study-heading h3">2. Option Comparison Matrix</h3>
+<p>When faced with four options (A, B, C, D), evaluate how they relate to one another before rushing to the text:</p>
+<ul class="study-list">
+<li><strong>Pair Splitting</strong>: Frequently, two options will represent polar viewpoints (e.g., <em>A: It increases cognitive retention</em> vs. <em>B: It impairs memory retrieval</em>), while the other two are tangential distractors. Often, the correct choice is within the polarized pair.</li>
+<li><strong>Scope &amp; Degree Comparison</strong>:</li>
+</ul>
+<p>  - Compare absolute vs. hedged terms across options (<em>proves conclusively</em> vs. <em>suggests a correlation</em>). IELTS academic texts overwhelmingly favor hedged language.</p>
+<p>  - Notice singular vs. plural nouns (<em>one distinct mechanism</em> vs. <em>multiple overlapping processes</em>).</p>
+<hr class="study-divider">
+<h3 id="3-the-4-step-slpe-elimination-strategy" class="study-heading h3">3. The 4-Step S.L.P.E. Elimination Strategy</h3>
+<div class="code-block-wrapper"><div class="code-header"><span>Code</span><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div><pre><code class="language-">[ Step 1: SCAN &amp; IDENTIFY ]
+Extract 2-3 unique anchor terms from the question stem. Determine question focus.
+                   │
+                   ▼
+[ Step 2: LOCATE &amp; READ THE TARGET WINDOW ]
+Navigate to the exact passage location. Read 2 sentences before and 2 sentences after (the &quot;Golden Context Window&quot;).
+                   │
+                   ▼
+[ Step 3: FORMULATE YOUR OWN ANSWER (PRE-PHRASE) ]
+Before reading options A-D, state the answer in your own words based purely on the text.
+                   │
+                   ▼
+[ Step 4: ELIMINATE DISTRACTORS (S.L.P.E.) ]
+Match your pre-phrased idea to the options. Systematically disqualify flawed options using the 5 Distractor Traps.</code></pre></div>
+<hr class="study-divider">
+<h3 id="4-the-5-deadly-ielts-distractor-traps" class="study-heading h3">4. The 5 Deadly IELTS Distractor Traps</h3>
+<div class="table-container"><table class="data-table">
+<thead><tr>
+<th>Trap Type</th>
+<th>Trap Name</th>
+<th>Mechanism</th>
+<th>How to Neutralize</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Trap 1</strong></td>
+<td><strong>Verbatim Echo (Word-Spotting Trap)</strong></td>
+<td>Uses exact words copied verbatim from the passage, but alters the context, agent, or cause-and-effect relationship.</td>
+<td>Remember: <em>Matching words do NOT equal matching meaning</em>. Check syntax and subject-object roles.</td>
+</tr>
+<tr>
+<td><strong>Trap 2</strong></td>
+<td><strong>Opposite / Direct Contradiction</strong></td>
+<td>States the exact reverse of the text, often through prefixes (<em>un-</em>, <em>in-</em>), subtle negations (<em>failed to</em>), or temporal shifts.</td>
+<td>Cross-check polarity (positive vs. negative claims).</td>
+</tr>
+<tr>
+<td><strong>Trap 3</strong></td>
+<td><strong>Not Given / Speculative Extrapolation</strong></td>
+<td>Sounds logical, reasonable, and factually true in real-world knowledge, but has zero factual grounding in the passage.</td>
+<td>Ground every claim in explicit text evidence. Reject outside knowledge.</td>
+</tr>
+<tr>
+<td><strong>Trap 4</strong></td>
+<td><strong>Extreme / Absolute Generalization</strong></td>
+<td>Introduces categorical terms (<em>always, completely, exclusively, all, impossible</em>) when the passage used cautious qualifiers (<em>often, largely, can</em>).</td>
+<td>Disqualify unhedged absolutes unless the text is equally extreme.</td>
+</tr>
+<tr>
+<td><strong>Trap 5</strong></td>
+<td><strong>Partial Truth / Half-Right Distortion</strong></td>
+<td>The first half of the option matches the text perfectly, but the second clause introduces an erroneous detail or incorrect rationale.</td>
+<td>Read the entire option through to the final word before accepting it.</td>
+</tr>
+</tbody>
+</table></div>
+<hr class="study-divider">
+<h2 id="part-2-academic-reading-passage" class="study-heading h2">📜 PART 2: Academic Reading Passage</h2>
+<p><strong>Target Time</strong>: 20 Minutes (Reading &amp; 12 Questions)  </p>
+<p><strong>Word Count</strong>: 832 words  </p>
+<h3 id="the-architecture-of-memory-the-cognitive-implications-of-spatial-navigation" class="study-heading h3">The Architecture of Memory: The Cognitive Implications of Spatial Navigation</h3>
+<p><strong>[A]</strong> For millennia, human survival hinged upon our neurological capacity to construct sophisticated mental representations of physical space. Hunter-gatherers relied on internal cognitive cartography to track nomadic herds across undulating savannahs, locate ephemeral water holes, and navigate dense, trackless forests without artificial aids. Neurobiologists have long recognized that this ancient survival mechanism is anchored in the hippocampus—a seahorse-shaped structure tucked deep inside the medial temporal lobe—and its adjacent entorhinal cortex. Within these neural substrates, specialized place cells and grid cells fire in precise geometric coordination, generating a dynamic internal coordinate system that maps our trajectory through three-dimensional space.</p>
+<p><strong>[B]</strong> However, in the contemporary era, the widespread adoption of Global Positioning System (GPS) turn-by-turn navigation has precipitated a radical shift in how human beings traverse their physical environments. Rather than observing environmental landmarks, inferring cardinal directions from the sun’s azimuth, or synthesizing multi-sensory topological cues into an integrated cognitive map, modern travelers increasingly surrender their spatial agency to automated digital guidance. Users are guided by disembodied vocal prompts and algorithmic blue lines on handheld screens, transforming active navigational problem-solving into passive cue-following.</p>
+<p><strong>[C]</strong> A landmark neuroimaging study conducted by Dr. Eleanor Maguire and her colleagues at University College London provided the foundational baseline for understanding spatial neuroplasticity. By examining licensed London taxi drivers—who must memorize "The Knowledge," an exhaustive mental blueprint of 25,000 streets and thousands of landmarks—Maguire demonstrated that these drivers possessed significantly greater grey matter volume in the posterior hippocampus compared to matched control subjects. Crucially, this volumetric increase was directly proportional to the number of years spent navigating the labyrinthine capital. Subsequent research revealed that when these drivers retired and ceased active mental mapping, their posterior hippocampal volume experienced measurable atrophy, demonstrating that spatial neural architecture is dynamically use-dependent.</p>
+<p><strong>[D]</strong> Building on Maguire’s paradigm, contemporary neuroscientist Dr. Stefan Bohbot conducted fMRI experiments comparing habitual GPS users with individuals who navigate using allocentric strategies (relying on mental spatial maps independent of current viewpoint). Bohbot’s findings revealed that habitual GPS reliance correlates with decreased functional connectivity between the hippocampus and the prefrontal cortex, alongside reduced resting-state activity in hippocampal place-cell networks. When navigating via turn-by-turn automation, participants predominantly engaged the caudate nucleus—a subcortical structure associated with automated habit formation and stimulus-response conditioning—effectively bypassing the computational demands of the hippocampus entirely.</p>
+<p><strong>[E]</strong> The cognitive ramifications of this hippocampal disengagement extend far beyond mere geographic disorientation. The hippocampus does not operate in anatomical isolation; it constitutes the master switchboard for episodic memory—the ability to encode, consolidate, and vividly recall autobiographical experiences situated in time and place. Neuroscientists hypothesize that spatial mapping and episodic memory share an identical evolutionary scaffold: we remember <em>what</em> happened by anchoring it to <em>where</em> and <em>when</em> it transpired. Consequently, chronic underutilization of hippocampal spatial circuits may accelerate the degradation of broader episodic memory retrieval mechanisms, particularly in aging populations susceptible to neurodegenerative decline.</p>
+<p><strong>[F]</strong> Furthermore, psychological investigations into human environmental perception suggest that passive navigation induces an effect known as "spatial amnesia." In controlled field trials, pedestrians navigating an unfamiliar urban district with handheld GPS devices exhibited markedly inferior recall of architectural landmarks, storefront facades, and topographical gradients compared to counterparts who navigated using printed cartographic maps or spontaneous exploration. Eye-tracking data demonstrated that GPS users suffered from severe tunnel vision, fixating up to 70 percent of their visual attention on the digital interface rather than encoding environmental cues. This attentional capture detaches the individual from their immediate physical reality, impoverishing the richness of lived experience.</p>
+<p><strong>[G]</strong> Critics of the digital-atrophy hypothesis argue that technological offloading is simply an evolutionary progression, liberating cognitive bandwidth for higher-order abstract reasoning, creative synthesis, and digital literacy. Proponents of this view suggest that just as the invention of the printing press eliminated the necessity for oral mnemonic traditions without degrading human intellect, digital navigation tools merely reallocate neural resources toward novel technological proficiencies. </p>
+<p><strong>[H]</strong> Nevertheless, most cognitive neurobiologists maintain that the analogy with the printing press is fundamentally flawed. While literacy supplements and enhances cognitive capacity by externalizing conceptual knowledge, automated navigation replaces an active, structural biological computation with passive behavioral conformity. To safeguard neurocognitive resilience across the lifespan, researchers advocate for "navigational cross-training": intentionally disengaging digital navigational aids during routine commutes, engaging in orienteering, and cultivating active spatial mindfulness in our daily journeys.</p>
+<hr class="study-divider">
+<h2 id="part-3-twelve-ielts-academic-multiple-choice-questions" class="study-heading h2">📝 PART 3: Twelve IELTS Academic Multiple-Choice Questions</h2>
+<p>Choose the correct letter, <strong>A</strong>, <strong>B</strong>, <strong>C</strong>, or <strong>D</strong>.</p>
+<hr class="study-divider">
+<h3 id="question-1" class="study-heading h3">Question 1</h3>
+<p><strong>According to Paragraph A, why was spatial navigation vital for early humans?</strong></p>
+<ul class="study-list">
+<li><strong>A)</strong> It enabled them to engineer sophisticated geographical maps.</li>
+<li><strong>B)</strong> It was essential for securing basic resources and moving across untracked territories.</li>
+<li><strong>C)</strong> It accelerated the evolutionary enlargement of the medial temporal lobe.</li>
+<li><strong>D)</strong> It allowed them to track celestial movements across the savannah.</li>
+</ul>
+<hr class="study-divider">
+<h3 id="question-2" class="study-heading h3">Question 2</h3>
+<p><strong>In Paragraph B, the author argues that modern GPS technology has...</strong></p>
+<ul class="study-list">
+<li><strong>A)</strong> improved the speed at which users synthesize sensory topological cues.</li>
+<li><strong>B)</strong> caused travelers to reject traditional cardinal directions deliberately.</li>
+<li><strong>C)</strong> reduced navigation from an active mental process to passive obedience.</li>
+<li><strong>D)</strong> eliminated the human need to travel across unfamiliar environments.</li>
+</ul>
+<hr class="study-divider">
+<h3 id="question-3" class="study-heading h3">Question 3</h3>
+<p><strong>What was a key finding of Eleanor Maguire's study of London taxi drivers (Paragraph C)?</strong></p>
+<ul class="study-list">
+<li><strong>A)</strong> The drivers' hippocampal enlargement was irreversible even after retirement.</li>
+<li><strong>B)</strong> The drivers' grey matter density in the posterior hippocampus expanded with driving experience.</li>
+<li><strong>C)</strong> Memorizing "The Knowledge" required higher overall intelligence than control subjects possessed.</li>
+<li><strong>D)</strong> London taxi drivers had superior navigation skills in unfamiliar foreign cities.</li>
+</ul>
+<hr class="study-divider">
+<h3 id="question-4" class="study-heading h3">Question 4</h3>
+<p><strong>The research by Dr. Stefan Bohbot mentioned in Paragraph D demonstrates that habitual GPS usage...</strong></p>
+<ul class="study-list">
+<li><strong>A)</strong> activates the caudate nucleus at the expense of hippocampal engagement.</li>
+<li><strong>B)</strong> permanently damages the neural pathways of the prefrontal cortex.</li>
+<li><strong>C)</strong> forces the hippocampus to process automated habit formation.</li>
+<li><strong>D)</strong> increases functional connectivity between place-cell networks and subcortical structures.</li>
+</ul>
+<hr class="study-divider">
+<h3 id="question-5" class="study-heading h3">Question 5</h3>
+<p><strong>Why is hippocampal disengagement considered dangerous to broader cognition (Paragraph E)?</strong></p>
+<ul class="study-list">
+<li><strong>A)</strong> It destroys the human ability to calculate temporal intervals.</li>
+<li><strong>B)</strong> It causes the brain to confuse spatial coordinates with sensory data.</li>
+<li><strong>C)</strong> It may weaken episodic memory since memory recall shares neural architecture with spatial mapping.</li>
+<li><strong>D)</strong> It directly triggers the immediate onset of acute neurodegenerative diseases.</li>
+</ul>
+<hr class="study-divider">
+<h3 id="question-6" class="study-heading h3">Question 6</h3>
+<p><strong>The phenomenon of "spatial amnesia" described in Paragraph F is primarily caused by...</strong></p>
+<ul class="study-list">
+<li><strong>A)</strong> defective cartographic representation in modern mobile applications.</li>
+<li><strong>B)</strong> excessive visual fixation on electronic screens at the expense of environmental encoding.</li>
+<li><strong>C)</strong> physical exhaustion resulting from walking in unfamiliar urban districts.</li>
+<li><strong>D)</strong> an innate human inability to recall storefront facades and landmarks.</li>
+</ul>
+<hr class="study-divider">
+<h3 id="question-7" class="study-heading h3">Question 7</h3>
+<p><strong>What do defenders of digital navigation argue in Paragraph G?</strong></p>
+<ul class="study-list">
+<li><strong>A)</strong> GPS navigation enhances human capacity for spatial computation.</li>
+<li><strong>B)</strong> Digital offloading frees mental capacity for complex and creative cognitive tasks.</li>
+<li><strong>C)</strong> The printing press caused more significant intellectual degradation than GPS.</li>
+<li><strong>D)</strong> Modern users possess greater memory retention than oral storytellers.</li>
+</ul>
+<hr class="study-divider">
+<h3 id="question-8" class="study-heading h3">Question 8</h3>
+<p><strong>Why does the author reject the comparison with the printing press in Paragraph H?</strong></p>
+<ul class="study-list">
+<li><strong>A)</strong> The printing press was invented much earlier than digital navigation systems.</li>
+<li><strong>B)</strong> The printing press degraded oral memory, whereas GPS improves visual literacy.</li>
+<li><strong>C)</strong> The printing press augmented cognitive functions, whereas GPS displaces active neural computations.</li>
+<li><strong>D)</strong> Printed media requires conscious memorization, while GPS requires no literacy.</li>
+</ul>
+<hr class="study-divider">
+<h3 id="question-9" class="study-heading h3">Question 9</h3>
+<p><strong>What is the writer's primary purpose in writing this article?</strong></p>
+<ul class="study-list">
+<li><strong>A)</strong> To advocate for a complete ban on GPS technology in automobiles.</li>
+<li><strong>B)</strong> To examine how digital navigation affects brain architecture and argue for preserving spatial cognitive faculties.</li>
+<li><strong>C)</strong> To critique Eleanor Maguire’s methodology regarding London cab drivers.</li>
+<li><strong>D)</strong> To compare urban pedestrian orientation with ancient nomadic migrations.</li>
+</ul>
+<hr class="study-divider">
+<h3 id="question-10" class="study-heading h3">Question 10</h3>
+<p><strong>Which of the following would be an example of "allocentric navigation" as implied in Paragraph D?</strong></p>
+<ul class="study-list">
+<li><strong>A)</strong> Following audio prompts telling you to turn right at the next intersection.</li>
+<li><strong>B)</strong> Memorizing a sequence of left and right turns relative to your body's movement.</li>
+<li><strong>C)</strong> Maintaining an internal mental map of the city grid relative to fixed landmarks.</li>
+<li><strong>D)</strong> Glancing at an algorithmic blue line on a smartphone screen while walking.</li>
+</ul>
+<hr class="study-divider">
+<h3 id="question-11" class="study-heading h3">Question 11</h3>
+<p><strong>According to Paragraph C, what happened to London taxi drivers when they retired?</strong></p>
+<ul class="study-list">
+<li><strong>A)</strong> Their posterior hippocampal volume showed measurable reduction.</li>
+<li><strong>B)</strong> Their ability to recall general episodic memories deteriorated immediately.</li>
+<li><strong>C)</strong> They retained identical hippocampal grey matter density throughout their lives.</li>
+<li><strong>D)</strong> Their caudate nucleus shrank due to lack of motor stimulation.</li>
+</ul>
+<hr class="study-divider">
+<h3 id="question-12" class="study-heading h3">Question 12</h3>
+<p><strong>What practical solution does the author recommend in Paragraph H to maintain cognitive health?</strong></p>
+<ul class="study-list">
+<li><strong>A)</strong> Studying historical cartography and ancient navigation techniques.</li>
+<li><strong>B)</strong> Regularly navigating without digital assistance and practicing spatial awareness.</li>
+<li><strong>C)</strong> Commuting exclusively through unfamiliar and challenging geographical terrain.</li>
+<li><strong>D)</strong> Undergoing periodic fMRI brain scans to monitor hippocampal volume.</li>
+</ul>
+<hr class="study-divider">
+<h2 id="part-4-comprehensive-answer-key-text-evidence--distractor-analysis" class="study-heading h2">🔑 PART 4: Comprehensive Answer Key, Text Evidence &amp; Distractor Analysis</h2>
+<div class="table-container"><table class="data-table">
+<thead><tr>
+<th>Question</th>
+<th>Correct Option</th>
+<th>Paragraph &amp; Evidence Location</th>
+<th>Focus Skill Tested</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Q1</strong></td>
+<td><strong>B</strong></td>
+<td>Paragraph A (Lines 2–4)</td>
+<td>Scanning for explicit causal reasons</td>
+</tr>
+<tr>
+<td><strong>Q2</strong></td>
+<td><strong>C</strong></td>
+<td>Paragraph B (Lines 4–6)</td>
+<td>Identifying author's core claim / semantic paraphrase</td>
+</tr>
+<tr>
+<td><strong>Q3</strong></td>
+<td><strong>B</strong></td>
+<td>Paragraph C (Lines 4–6)</td>
+<td>Interpreting scientific data &amp; correlation</td>
+</tr>
+<tr>
+<td><strong>Q4</strong></td>
+<td><strong>A</strong></td>
+<td>Paragraph D (Lines 5–7)</td>
+<td>Identifying neurological mechanism / trade-off</td>
+</tr>
+<tr>
+<td><strong>Q5</strong></td>
+<td><strong>C</strong></td>
+<td>Paragraph E (Lines 2–5)</td>
+<td>Understanding cross-functional cognitive connections</td>
+</tr>
+<tr>
+<td><strong>Q6</strong></td>
+<td><strong>B</strong></td>
+<td>Paragraph F (Lines 4–6)</td>
+<td>Isolating root cause vs. observational symptoms</td>
+</tr>
+<tr>
+<td><strong>Q7</strong></td>
+<td><strong>B</strong></td>
+<td>Paragraph G (Lines 1–3)</td>
+<td>Accurately representing counter-arguments</td>
+</tr>
+<tr>
+<td><strong>Q8</strong></td>
+<td><strong>C</strong></td>
+<td>Paragraph H (Lines 1–4)</td>
+<td>Evaluating rhetorical analogy &amp; distinction</td>
+</tr>
+<tr>
+<td><strong>Q9</strong></td>
+<td><strong>B</strong></td>
+<td>Whole Passage Synthesis</td>
+<td>Global authorial purpose &amp; macro-structure</td>
+</tr>
+<tr>
+<td><strong>Q10</strong></td>
+<td><strong>C</strong></td>
+<td>Paragraph D &amp; Concept Definition</td>
+<td>Applying concept to real-world scenario</td>
+</tr>
+<tr>
+<td><strong>Q11</strong></td>
+<td><strong>A</strong></td>
+<td>Paragraph C (Lines 6–8)</td>
+<td>Detail verification &amp; post-study effects</td>
+</tr>
+<tr>
+<td><strong>Q12</strong></td>
+<td><strong>B</strong></td>
+<td>Paragraph H (Lines 5–7)</td>
+<td>Extracting specific author recommendations</td>
+</tr>
+</tbody>
+</table></div>
+<hr class="study-divider">
+<h3 id="in-depth-distractor-rationale-why-each-option-succeeds-or-fails" class="study-heading h3">In-Depth Distractor Rationale (Why Each Option Succeeds or Fails)</h3>
+<h4 id="question-1" class="study-heading h4">Question 1</h4>
+<ul class="study-list">
+<li><strong>Correct: B</strong></li>
+</ul>
+<p>  - <em>Evidence</em>: Paragraph A states: <em>"Hunter-gatherers relied on internal cognitive cartography to track nomadic herds across undulating savannahs, locate ephemeral water holes, and navigate dense, trackless forests..."</em></p>
+<p>  - <em>Why B is right</em>: "Securing basic resources" paraphrases tracking herds and finding water holes; "moving across untracked territories" matches navigating trackless forests.</p>
+<ul class="study-list">
+<li><strong>Distractor A (Trap 1 - Verbatim Echo Distortion)</strong>: Mentions "sophisticated geographical maps", but Paragraph A mentions <em>mental representations</em> and <em>internal cognitive cartography</em>, not engineered physical maps.</li>
+<li><strong>Distractor C (Trap 3 - Not Given / Speculative Extrapolation)</strong>: While the lobe is mentioned, the text never claims spatial navigation "accelerated its evolutionary enlargement."</li>
+<li><strong>Distractor D (Trap 5 - Partial Truth / Distortion)</strong>: Savannah is mentioned, but tracking celestial movements is not cited as the primary reason for early survival navigation.</li>
+</ul>
+<h4 id="question-2" class="study-heading h4">Question 2</h4>
+<ul class="study-list">
+<li><strong>Correct: C</strong></li>
+</ul>
+<p>  - <em>Evidence</em>: Paragraph B states: <em>"...transforming active navigational problem-solving into passive cue-following."</em></p>
+<p>  - <em>Why C is right</em>: "Reduced navigation from an active mental process to passive obedience" is a direct, accurate paraphrase of transforming active problem-solving into passive cue-following.</p>
+<ul class="study-list">
+<li><strong>Distractor A (Trap 2 - Opposite / Contradiction)</strong>: Modern GPS prevents users from synthesizing cues (<em>"Rather than... synthesizing multi-sensory topological cues"</em>), it does not improve it.</li>
+<li><strong>Distractor B (Trap 3 - Not Given / Extreme)</strong>: Users do not "deliberately reject" cardinal directions; they simply surrender their agency to automated prompts.</li>
+<li><strong>Distractor D (Trap 4 - Extreme / Absolute)</strong>: GPS does not eliminate the need to travel; it changes <em>how</em> we navigate.</li>
+</ul>
+<h4 id="question-3" class="study-heading h4">Question 3</h4>
+<ul class="study-list">
+<li><strong>Correct: B</strong></li>
+</ul>
+<p>  - <em>Evidence</em>: Paragraph C states: <em>"Crucially, this volumetric increase was directly proportional to the number of years spent navigating the labyrinthine capital."</em></p>
+<p>  - <em>Why B is right</em>: "Expanded with driving experience" perfectly captures "directly proportional to the number of years spent navigating."</p>
+<ul class="study-list">
+<li><strong>Distractor A (Trap 2 - Opposite / Contradiction)</strong>: The text states the exact opposite: when drivers retired, their hippocampus <em>"experienced measurable atrophy."</em></li>
+<li><strong>Distractor C (Trap 3 - Not Given / Unsupported)</strong>: The text mentions matched control subjects, but never claims the drivers had higher general intelligence.</li>
+<li><strong>Distractor D (Trap 3 - Not Given / Out of Scope)</strong>: The study examined London only; navigation in foreign cities was never tested.</li>
+</ul>
+<h4 id="question-4" class="study-heading h4">Question 4</h4>
+<ul class="study-list">
+<li><strong>Correct: A</strong></li>
+</ul>
+<p>  - <em>Evidence</em>: Paragraph D states: <em>"participants predominantly engaged the caudate nucleus... effectively bypassing the computational demands of the hippocampus entirely."</em></p>
+<p>  - <em>Why A is right</em>: Directly reflects the shift from hippocampal computation to caudate nucleus habit-based activation.</p>
+<ul class="study-list">
+<li><strong>Distractor B (Trap 4 - Extreme Language)</strong>: The text notes "decreased functional connectivity", not that it "permanently damages" pathways.</li>
+<li><strong>Distractor C (Trap 1 - Syntactic Confusion)</strong>: The caudate nucleus processes habit formation, not the hippocampus.</li>
+<li><strong>Distractor D (Trap 2 - Opposite / Contradiction)</strong>: Connectivity and activity were <em>reduced</em>, not increased.</li>
+</ul>
+<h4 id="question-5" class="study-heading h4">Question 5</h4>
+<ul class="study-list">
+<li><strong>Correct: C</strong></li>
+</ul>
+<p>  - <em>Evidence</em>: Paragraph E states: <em>"the hippocampus... constitutes the master switchboard for episodic memory... spatial mapping and episodic memory share an identical evolutionary scaffold: we remember what happened by anchoring it to where and when it transpired."</em></p>
+<p>  - <em>Why C is right</em>: Explains the shared evolutionary and neurological scaffolding between spatial mapping and episodic memory consolidation.</p>
+<ul class="study-list">
+<li><strong>Distractor A (Trap 4 - Extreme / Distortion)</strong>: It does not "destroy the ability to calculate temporal intervals"; it impairs episodic memory retrieval.</li>
+<li><strong>Distractor B (Trap 3 - Not Given / Fabricated Concept)</strong>: The text makes no claim about the brain confusing spatial coordinates with sensory data.</li>
+<li><strong>Distractor D (Trap 4 - Extreme / Causality Trap)</strong>: It may make populations <em>susceptible</em> to decline, but does not "directly trigger immediate onset of acute diseases."</li>
+</ul>
+<h4 id="question-6" class="study-heading h4">Question 6</h4>
+<ul class="study-list">
+<li><strong>Correct: B</strong></li>
+</ul>
+<p>  - <em>Evidence</em>: Paragraph F states: <em>"Eye-tracking data demonstrated that GPS users suffered from severe tunnel vision, fixating up to 70 percent of their visual attention on the digital interface rather than encoding environmental cues."</em></p>
+<p>  - <em>Why B is right</em>: Explains the root causal mechanism of spatial amnesia: attentional capture by the screen preventing environmental encoding.</p>
+<ul class="study-list">
+<li><strong>Distractor A (Trap 3 - Not Given / Unrelated Blame)</strong>: The applications' cartographic quality is never blamed; user behavior is.</li>
+<li><strong>Distractor C (Trap 3 - Not Given / Irrelevant Detail)</strong>: Physical exhaustion is never mentioned as a factor.</li>
+<li><strong>Distractor D (Trap 2 - Opposite / Contradiction)</strong>: People who used paper maps or explored freely remembered facades well; the deficit is not innate.</li>
+</ul>
+<h4 id="question-7" class="study-heading h4">Question 7</h4>
+<ul class="study-list">
+<li><strong>Correct: B</strong></li>
+</ul>
+<p>  - <em>Evidence</em>: Paragraph G states: <em>"Critics of the digital-atrophy hypothesis argue that technological offloading is simply an evolutionary progression, liberating cognitive bandwidth for higher-order abstract reasoning, creative synthesis..."</em></p>
+<p>  - <em>Why B is right</em>: Direct synonym match: "liberating cognitive bandwidth" = "frees mental capacity".</p>
+<ul class="study-list">
+<li><strong>Distractor A (Trap 2 - Opposite / Contradiction)</strong>: Critics acknowledge spatial offloading, not that GPS enhances spatial computation.</li>
+<li><strong>Distractor C (Trap 1 - Verbatim Echo Distortion)</strong>: Paragraph G states the printing press did <em>not</em> degrade human intellect.</li>
+<li><strong>Distractor D (Trap 3 - Not Given / Fabricated Comparison)</strong>: The text mentions oral mnemonic traditions, but makes no claim about modern memory retention being superior.</li>
+</ul>
+<h4 id="question-8" class="study-heading h4">Question 8</h4>
+<ul class="study-list">
+<li><strong>Correct: C</strong></li>
+</ul>
+<p>  - <em>Evidence</em>: Paragraph H states: <em>"While literacy supplements and enhances cognitive capacity by externalizing conceptual knowledge, automated navigation replaces an active, structural biological computation with passive behavioral conformity."</em></p>
+<p>  - <em>Why C is right</em>: Captures the distinction between augmenting capacity vs. replacing biological computation with passive conformity.</p>
+<ul class="study-list">
+<li><strong>Distractor A (Trap 3 - Not Given / Trivial Irrelevance)</strong>: Historical dates are not the reason the cognitive analogy fails.</li>
+<li><strong>Distractor B (Trap 1 - Distortion / Contradiction)</strong>: The text says the printing press did not degrade intellect.</li>
+<li><strong>Distractor D (Trap 3 - Not Given / Absurd Extrapolation)</strong>: The claim that printed media requires conscious memorization while GPS requires no literacy is inaccurate and unstated.</li>
+</ul>
+<h4 id="question-9" class="study-heading h4">Question 9</h4>
+<ul class="study-list">
+<li><strong>Correct: B</strong></li>
+</ul>
+<p>  - <em>Evidence</em>: Global synthesis of paragraphs A through H, culminating in the call to understand neural effects and adopt navigational cross-training.</p>
+<p>  - <em>Why B is right</em>: Accurately encompasses the objective scientific overview and the concluding normative recommendation.</p>
+<ul class="study-list">
+<li><strong>Distractor A (Trap 4 - Extreme / Out of Scope)</strong>: The author advocates mindful use and cross-training, not a governmental ban on automotive GPS.</li>
+<li><strong>Distractor C (Trap 3 - Not Given / Inverted Stance)</strong>: The author praises Maguire's work as a "landmark" foundational baseline.</li>
+<li><strong>Distractor D (Trap 5 - Partial Scope / Narrow Focus)</strong>: Ancient nomads are only mentioned briefly in Paragraph A as historical context.</li>
+</ul>
+<h4 id="question-10" class="study-heading h4">Question 10</h4>
+<ul class="study-list">
+<li><strong>Correct: C</strong></li>
+</ul>
+<p>  - <em>Evidence</em>: Paragraph D defines allocentric strategies as <em>"relying on mental spatial maps independent of current viewpoint."</em></p>
+<p>  - <em>Why C is right</em>: Maintaining a viewpoint-independent mental map of the city grid and fixed landmarks is the textbook definition of allocentric navigation.</p>
+<ul class="study-list">
+<li><strong>Distractor A (Trap 1 - Example of GPS / Egocentric Cue)</strong>: Following turn-by-turn audio prompts is passive GPS following.</li>
+<li><strong>Distractor B (Trap 2 - Egocentric Navigation)</strong>: Relative to one's own body movement is <em>egocentric</em>, not allocentric.</li>
+<li><strong>Distractor D (Trap 1 - Example of Passive GPS)</strong>: Following a smartphone line is the passive automated method criticized in the text.</li>
+</ul>
+<h4 id="question-11" class="study-heading h4">Question 11</h4>
+<ul class="study-list">
+<li><strong>Correct: A</strong></li>
+</ul>
+<p>  - <em>Evidence</em>: Paragraph C states: <em>"Subsequent research revealed that when these drivers retired and ceased active mental mapping, their posterior hippocampal volume experienced measurable atrophy..."</em></p>
+<p>  - <em>Why A is right</em>: "Measurable reduction" is an exact synonym for "measurable atrophy."</p>
+<ul class="study-list">
+<li><strong>Distractor B (Trap 3 - Not Given / Over-Generalization)</strong>: The text notes hippocampal atrophy, but does not state their episodic memories immediately collapsed.</li>
+<li><strong>Distractor C (Trap 2 - Opposite / Contradiction)</strong>: Their density did not stay identical; it decreased upon retirement.</li>
+<li><strong>Distractor D (Trap 1 - Syntactic Confusion)</strong>: The caudate nucleus was examined in GPS users in Paragraph D, not retired taxi drivers in Paragraph C.</li>
+</ul>
+<h4 id="question-12" class="study-heading h4">Question 12</h4>
+<ul class="study-list">
+<li><strong>Correct: B</strong></li>
+</ul>
+<p>  - <em>Evidence</em>: Paragraph H states: <em>"researchers advocate for 'navigational cross-training': intentionally disengaging digital navigational aids during routine commutes, engaging in orienteering, and cultivating active spatial mindfulness in our daily journeys."</em></p>
+<p>  - <em>Why B is right</em>: Concisely summarizes the three elements of the author's recommended solution.</p>
+<ul class="study-list">
+<li><strong>Distractor A (Trap 1 - Distortion)</strong>: Studying historical cartography is not recommended; practicing active spatial navigation is.</li>
+<li><strong>Distractor C (Trap 4 - Extreme / Distortion)</strong>: Recommends routine commutes and orienteering, not "exclusively unfamiliar and challenging geographical terrain."</li>
+<li><strong>Distractor D (Trap 3 - Not Given / Impractical)</strong>: fMRI scans were research tools, not recommended therapeutic exercises.</li>
+</ul>
+<hr class="study-divider">
+<h2 id="part-5-timed-retry--self-diagnostic-protocol" class="study-heading h2">⏱️ PART 5: Timed Retry &amp; Self-Diagnostic Protocol</h2>
+<h3 id="band-score-conversion-chart-for-12-questions" class="study-heading h3">Band Score Conversion Chart (for 12 Questions)</h3>
+<ul class="study-list">
+<li><strong>12 / 12</strong>: Band 9.0 (Expert User)</li>
+<li><strong>11 / 12</strong>: Band 8.5 (Very Good User)</li>
+<li><strong>10 / 12</strong>: Band 7.5 – 8.0 (Good User)</li>
+<li><strong>8 – 9 / 12</strong>: Band 6.5 – 7.0 (Competent User)</li>
+<li><strong>6 – 7 / 12</strong>: Band 5.5 – 6.0 (Modest User)</li>
+<li><strong>&lt; 6 / 12</strong>: Band &lt; 5.5 (Requires targeted remedial drill on Distractor Elimination)</li>
+</ul>
+<h3 id="systematic-error-log-template-for-timed-retries" class="study-heading h3">Systematic Error-Log Template for Timed Retries</h3>
+<p>When retrying this test or analyzing mistakes, log each error in this table:</p>
+<div class="table-container"><table class="data-table">
+<thead><tr>
+<th>Question #</th>
+<th>My Wrong Choice</th>
+<th>The Correct Choice</th>
+<th>Trap I Fell Into (1–5)</th>
+<th>Why Did I Choose the Distractor? (Root Cause)</th>
+<th>Keyword / Sentence I Misread in Passage</th>
+</tr></thead><tbody>
+<tr>
+<td><em>e.g. Q4</em></td>
+<td><em>B</em></td>
+<td><em>A</em></td>
+<td><em>Trap 4 (Extreme)</em></td>
+<td><em>I saw "prefrontal cortex" and assumed it meant damage.</em></td>
+<td><em>Misread "decreased connectivity" as permanent destruction.</em></td>
+</tr>
+</tbody>
+</table></div>
+    </article>
+
+    <footer>
+      <p>🎯 IELTS Preparation Workspace • Built for Authentic Exam Success</p>
+    </footer>
+  </main>
+
+  <script>
+    // Theme Switcher
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('study_theme', next);
+    }
+    (function() {
+      const saved = localStorage.getItem('study_theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+
+    // Font Scaling
+    let currentScale = 16;
+    function adjustFontSize(delta) {
+      currentScale = Math.min(22, Math.max(13, currentScale + delta));
+      document.documentElement.style.setProperty('--base-font-size', currentScale + 'px');
+      localStorage.setItem('study_font_size', currentScale);
+    }
+    (function() {
+      const savedSize = localStorage.getItem('study_font_size');
+      if (savedSize) {
+        currentScale = parseInt(savedSize, 10);
+        document.documentElement.style.setProperty('--base-font-size', currentScale + 'px');
+      }
+    })();
+
+    // Copy Code Helper
+    function copyCode(btn) {
+      const pre = btn.closest('.code-block-wrapper').querySelector('pre code');
+      if (pre) {
+        navigator.clipboard.writeText(pre.innerText).then(() => {
+          btn.innerText = '✅ Copied!';
+          setTimeout(() => btn.innerText = '📋 Copy', 2000);
+        });
+      }
+    }
+
+    // Writing Arena Logic
+    let timerInterval = null;
+    let timerSeconds = 1200; // 20m
+    function startWritingTimer(mins) {
+      clearInterval(timerInterval);
+      timerSeconds = mins * 60;
+      updateTimerDisplay();
+      timerInterval = setInterval(() => {
+        if (timerSeconds <= 0) {
+          clearInterval(timerInterval);
+          alert('⏰ Time is up! Review and edit your response.');
+          return;
+        }
+        timerSeconds--;
+        updateTimerDisplay();
+      }, 1000);
+    }
+    function pauseWritingTimer() { clearInterval(timerInterval); }
+    function resetWritingTimer(mins) {
+      clearInterval(timerInterval);
+      timerSeconds = mins * 60;
+      updateTimerDisplay();
+    }
+    function updateTimerDisplay() {
+      const m = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
+      const s = (timerSeconds % 60).toString().padStart(2, '0');
+      const el = document.getElementById('timerDisplay');
+      if (el) el.innerText = `${m}:${s}`;
+    }
+    function updateWordStats(target) {
+      const text = document.getElementById('essayEditor').value.trim();
+      const words = text ? text.split(/\s+/).length : 0;
+      const countEl = document.getElementById('wordCount');
+      const progEl = document.getElementById('wordProgressBar');
+      const fbEl = document.getElementById('wordFeedback');
+      if (countEl) countEl.innerText = words;
+      const pct = Math.min(100, Math.round((words / target) * 100));
+      if (progEl) {
+        progEl.style.width = pct + '%';
+        progEl.style.background = words >= target ? '#10b981' : '#f59e0b';
+      }
+      if (fbEl) {
+        if (words >= target) {
+          fbEl.innerText = `✅ Met Target (${words} words)`;
+          fbEl.style.color = '#10b981';
+        } else {
+          fbEl.innerText = `Need ${target - words} more words`;
+          fbEl.style.color = '#f59e0b';
+        }
+      }
+      localStorage.setItem('draft_' + window.location.pathname, text);
+    }
+    function clearWritingDraft() {
+      if (confirm('Clear current draft?')) {
+        document.getElementById('essayEditor').value = '';
+        updateWordStats(250);
+      }
+    }
+    (function() {
+      const saved = localStorage.getItem('draft_' + window.location.pathname);
+      const editor = document.getElementById('essayEditor');
+      if (saved && editor) {
+        editor.value = saved;
+        updateWordStats(250);
+      }
+    })();
+
+    // Speaking Arena Logic
+    let speakingInterval = null;
+    let speakingSecs = 60;
+    function startSpeakingPrep() {
+      clearInterval(speakingInterval);
+      speakingSecs = 60;
+      document.getElementById('speakingPhaseBadge').innerText = '1-Min Prep';
+      document.getElementById('speakingPhaseBadge').style.background = '#f59e0b';
+      document.getElementById('speakingFeedback').innerText = 'Taking notes... Think about Past, Present, Future context.';
+      speakingInterval = setInterval(() => {
+        if (speakingSecs <= 0) {
+          clearInterval(speakingInterval);
+          alert('⏰ Prep time over! Begin speaking now.');
+          startSpeakingTurn();
+          return;
+        }
+        speakingSecs--;
+        updateSpeakingUI(60);
+      }, 1000);
+    }
+    function startSpeakingTurn() {
+      clearInterval(speakingInterval);
+      speakingSecs = 120;
+      document.getElementById('speakingPhaseBadge').innerText = 'Speaking (2m)';
+      document.getElementById('speakingPhaseBadge').style.background = '#10b981';
+      document.getElementById('speakingFeedback').innerText = '🎙️ Speak continuously. Develop your points fully!';
+      speakingInterval = setInterval(() => {
+        if (speakingSecs <= 0) {
+          clearInterval(speakingInterval);
+          alert('🏁 2 minutes complete! Excellent practice.');
+          document.getElementById('speakingPhaseBadge').innerText = 'Completed';
+          return;
+        }
+        speakingSecs--;
+        updateSpeakingUI(120);
+      }, 1000);
+    }
+    function stopSpeakingTimer() {
+      clearInterval(speakingInterval);
+      document.getElementById('speakingPhaseBadge').innerText = 'Stopped';
+    }
+    function updateSpeakingUI(total) {
+      const m = Math.floor(speakingSecs / 60).toString().padStart(2, '0');
+      const s = (speakingSecs % 60).toString().padStart(2, '0');
+      document.getElementById('speakingTimerDisplay').innerText = `${m}:${s}`;
+      const elapsed = total - speakingSecs;
+      const pct = Math.round((elapsed / total) * 100);
+      document.getElementById('speakingProgressBar').style.width = pct + '%';
+    }
+    function readPromptAloud() {
+      const title = document.querySelector('.module-title').innerText;
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(title);
+        utterance.rate = 0.95;
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert('Text-to-speech not supported in this browser.');
+      }
+    }
+  </script>
+</body>
+</html>

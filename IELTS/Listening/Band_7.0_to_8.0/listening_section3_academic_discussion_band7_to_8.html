@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Academic Listening: Section 3 Multi-Speaker Discussion Masterclass | IELTS Academic Study Module</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ef4444;
+      --primary-dark: #dc2626;
+      --primary-light: rgba(239, 68, 68, 0.08);
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --radius: 12px;
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --base-font-size: 16px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0b0f19;
+      --surface: #131b2e;
+      --card-bg: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary-light: rgba(255, 255, 255, 0.05);
+      --border: #334155;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: var(--base-font-size); }
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      padding: 0.85rem 1.5rem;
+    }
+
+    .header-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-back:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .domain-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(239, 68, 68, 0.08);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-action {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-action:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .module-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .module-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), #3b82f6);
+    }
+
+    .module-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .meta-pill {
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .meta-pill.highlight {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .module-title {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .module-content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+    }
+
+    /* Typography inside content */
+    .study-heading {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      color: var(--text);
+      scroll-margin-top: 80px;
+    }
+    .study-heading.h1 { font-size: 1.8rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+    .study-heading.h2 { font-size: 1.45rem; border-left: 4px solid var(--primary); padding-left: 12px; }
+    .study-heading.h3 { font-size: 1.2rem; color: var(--primary); }
+    .study-heading.h4 { font-size: 1.05rem; font-weight: 700; }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    /* Lists */
+    .study-list {
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+    .study-list li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* Code blocks */
+    .code-block-wrapper {
+      background: #0f172a;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+      border: 1px solid #334155;
+    }
+    .code-header {
+      background: #1e293b;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .btn-copy-code {
+      background: transparent;
+      border: 1px solid #475569;
+      color: #cbd5e1;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    .btn-copy-code:hover {
+      background: #334155;
+      color: #fff;
+    }
+    pre {
+      padding: 1.25rem;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #e2e8f0;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      text-align: left;
+    }
+    .data-table th {
+      background: var(--bg);
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border);
+      font-weight: 700;
+      color: var(--text);
+    }
+    .data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+    .data-table tr:hover td {
+      background: var(--primary-light);
+    }
+
+    /* Alerts */
+    .alert {
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      border-left: 4px solid;
+    }
+    .alert-title {
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .alert-note { background: rgba(59, 130, 246, 0.08); border-color: #3b82f6; color: var(--text); }
+    .alert-tip { background: rgba(16, 185, 129, 0.08); border-color: #10b981; color: var(--text); }
+    .alert-important { background: rgba(239, 68, 68, 0.08); border-color: #ef4444; color: var(--text); }
+    .alert-warning { background: rgba(245, 158, 11, 0.08); border-color: #f59e0b; color: var(--text); }
+
+    /* Quotes */
+    .study-quote {
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      background: var(--bg);
+      border-radius: 0 10px 10px 0;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    .study-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* Interactive Tool Cards */
+    .interactive-tool-card {
+      background: var(--surface);
+      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
+    }
+    .tool-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tool-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .tool-badges {
+      display: flex;
+      gap: 8px;
+    }
+    .badge {
+      background: var(--primary);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+    .timer-controls, .speaking-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    .btn-tool {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: #fff;
+      transition: all 0.2s;
+    }
+    .btn-tool:hover { opacity: 0.9; }
+    .btn-tool-outline {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-tool-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 1rem;
+      padding: 1rem;
+      line-height: 1.6;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+    .stats-bar {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .progress-bar-bg, .speaking-progress-container {
+      flex: 1;
+      height: 10px;
+      background: var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+      min-width: 150px;
+    }
+    .progress-bar-fill, .speaking-progress-bar {
+      height: 100%;
+      background: #10b981;
+      transition: width 0.3s ease;
+    }
+    .word-status-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media print {
+      header, .interactive-tool-card, footer, .btn-copy-code { display: none !important; }
+      body { background: #fff; color: #000; }
+      .module-content-card, .module-hero { border: none; box-shadow: none; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="nav-left">
+        <a href="../../index.html" class="btn-back">← Back to IELTS Academic Portal</a>
+        <span class="domain-tag">🎯 IELTS</span>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-action" onclick="adjustFontSize(-1)" title="Decrease font size">A-</button>
+        <button class="btn-action" onclick="adjustFontSize(1)" title="Increase font size">A+</button>
+        <button class="btn-action" onclick="window.print()" title="Print / Save PDF">🖨️ PDF</button>
+        <button class="btn-action" onclick="toggleTheme()">🌓 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="module-hero">
+      <div class="module-meta-pills">
+        <span class="meta-pill highlight">Band 7.0 to 8.0</span>
+        <span class="meta-pill">Lesson Plan | Drill | Analysis</span>
+        <span class="meta-pill">📅 2026-08-31</span>
+      </div>
+      <h1 class="module-title">IELTS Academic Listening: Section 3 Multi-Speaker Discussion Masterclass</h1>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">Interactive Academic Study Module • Pedagogically Scaffolded Curriculum</p>
+    </div>
+
+    
+    
+
+    <article class="module-content-card">
+      <h1 id="ielts-academic-listening-section-3-multi-speaker-discussion-masterclass" class="study-heading h1">🎧 IELTS Academic Listening: Section 3 Multi-Speaker Discussion Masterclass</h1>
+<h2 id="module-overview" class="study-heading h2">📋 Module Overview</h2>
+<ul class="study-list">
+<li><strong>Skill Focus</strong>: Section 3 (Academic context / 2–4 speakers: students &amp; university tutor discussing coursework/research)</li>
+<li><strong>Target Transition</strong>: Band 7.0 ➔ 8.0</li>
+<li><strong>Question Types</strong>: Matching Opinion/Speakers, Flowchart Completion, Multi-Option MCQs</li>
+<li><strong>Key Challenges</strong>: Tracking who says what, recognizing subtle concession vs disagreement markers, shifts in speaker consensus.</li>
+</ul>
+<hr class="study-divider">
+<h2 id="1-advanced-section-3-strategies-for-band-80" class="study-heading h2">🎯 1. Advanced Section 3 Strategies for Band 8.0</h2>
+<p>1. <strong>Speaker Attribution Tracking</strong>:</p>
+<p>   - In Section 3, questions often ask: <em>"What do both students agree about?"</em> or <em>"What was Jack's concern regarding...?"</em>.</p>
+<p>   - Listen for vocal cues (male vs female voice) and conversational signaling:</p>
+<p>     - <em>Concession</em>: "I see your point, but...", "That may be true in theory, however..."</p>
+<p>     - <em>Agreement</em>: "I couldn't agree more", "That's precisely what I found", "You've hit the nail on the head".</p>
+<p>     - <em>Partial agreement</em>: "Up to a point, though we shouldn't overlook..."</p>
+<p>2. <strong>Paraphrased Academic Methodology</strong>:</p>
+<p>   - Spoken text will use everyday conversational synonyms for academic terms:</p>
+<p>     - <em>"sample size"</em> ➔ <em>"number of participants recruited"</em></p>
+<p>     - <em>"methodological bias"</em> ➔ <em>"skewed results from how we selected them"</em></p>
+<p>     - <em>"longitudinal study"</em> ➔ <em>"tracking them over several semesters"</em></p>
+<hr class="study-divider">
+<h2 id="2-practice-test-psychology-research-methodology-project" class="study-heading h2">📝 2. Practice Test: Psychology Research Methodology Project</h2>
+<h3 id="questions-14-matching-opinions" class="study-heading h3">Questions 1–4 (Matching Opinions)</h3>
+<p><em>Who expresses each of the following opinions regarding the initial pilot study?</em>  </p>
+<p><em>Choose the correct letter, <strong>A</strong>, <strong>B</strong>, or <strong>C</strong>.</em></p>
+<p><strong>A</strong> — Liam  </p>
+<p><strong>B</strong> — Chloe  </p>
+<p><strong>C</strong> — Both Liam and Chloe  </p>
+<p><strong>1.</strong> The qualitative questionnaire took too long for subjects to finish. <code>......</code>  </p>
+<p><strong>2.</strong> The eye-tracking software calibrated accurately across all trials. <code>......</code>  </p>
+<p><strong>3.</strong> The control group demographic was insufficiently diverse. <code>......</code>  </p>
+<p><strong>4.</strong> The statistical regression model needs simplification before the final presentation. <code>......</code>  </p>
+<hr class="study-divider">
+<h3 id="questions-58-flowchart-completion" class="study-heading h3">Questions 5–8 (Flowchart Completion)</h3>
+<p><em>Complete the flowchart below.</em>  </p>
+<p><em>Write <strong>NO MORE THAN TWO WORDS</strong> for each answer.</em></p>
+<div class="code-block-wrapper"><div class="code-header"><span>Code</span><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div><pre><code class="language-">========================================================================
+       REVISED RESEARCH PROCEDURE: COGNITIVE OVERLOAD IN ADULTS
+========================================================================
+
+Step 1: Administer the baseline (5) .......................... assessment to all 80 participants.
+                              │
+                              ▼
+Step 2: Divide cohort into two groups based on their (6) .......................... scores.
+                              │
+                              ▼
+Step 3: Introduce the auditory distraction task inside the soundproof (7) .......................... .
+                              │
+                              ▼
+Step 4: Record physiological stress responses using wireless (8) .......................... monitors.
+========================================================================</code></pre></div>
+<hr class="study-divider">
+<h2 id="3-full-audio-transcript" class="study-heading h2">📜 3. Full Audio Transcript</h2>
+<div class="code-block-wrapper"><div class="code-header"><span>Code</span><button class="btn-copy-code" onclick="copyCode(this)">📋 Copy</button></div><pre><code class="language-">[Audio Track Starts]
+Tutor:  Come in, Liam, Chloe. Have a seat. I&#x27;ve had a chance to review the preliminary results from your pilot study on cognitive load and multitasking. How do you feel the trial run went?
+Chloe:  Overall, it was very illuminating, Professor Davies. Though we definitely encountered a few logistical bottlenecks. For instance, the written questionnaire we handed out at the start took participants nearly 40 minutes instead of the estimated 15, which caused severe fatigue before the actual cognitive tasks even began.
+Liam:   Yes, I completely agree with Chloe on that. People were visibly exhausted before we even booted up the computers. We definitely need to prune the non-essential demographic questions.
+Tutor:  Right, condense the survey to under ten minutes. What about the technical apparatus?
+Liam:   The eye-tracking cameras worked flawlessly from my perspective. We didn&#x27;t lose a single data stream during the pupil dilation tests.
+Chloe:  Well, Liam, you were monitoring the calibration screen, but on my end, two of the subjects who wore bifocal glasses kept causing infrared reflections that threw off the calibration markers until we manually recalibrated them. So I wouldn&#x27;t say it was entirely seamless.
+Tutor:  That&#x27;s a common issue with optical trackers. Make sure you screen for specialized corrective lenses in your exclusion criteria for the main trial. Now, looking at your sample composition, what are your thoughts?
+Chloe:  I was really concerned that all 25 pilot participants were undergraduate psychology students aged 19 to 22. That&#x27;s hardly representative of the broader adult working population we are attempting to model.
+Liam:   I actually think that homogeneity was helpful for a baseline pilot, Chloe. It minimized extraneous variables like differing baseline career stresses.
+Tutor:  Chloe makes a valid point for the full study, but Liam is right that for pilot calibration, a uniform cohort is acceptable. And regarding your data analysis pipeline?
+Liam:   We attempted to apply a three-way multivariate regression model, but looking at the scatter plots, it&#x27;s overly convoluted and obscures the primary reaction time findings.
+Chloe:  Absolutely. If we present that multi-layered model to the faculty board, they&#x27;ll spend the entire Q&amp;A interrogating the math rather than the psychological implications. We should revert to a straightforward two-way ANOVA.
+Tutor:  I concur. Keep the statistical framework clean and interpretable. Now, let&#x27;s walk through your revised four-step procedure for the full trial with 80 subjects...
+Liam:   First, every participant will complete a standardized working memory assessment to establish their baseline cognitive capacity.
+Chloe:  Then, rather than randomizing blindly, we will split the cohort into high-capacity and low-capacity groups according to their working memory scores to ensure balanced distribution.
+Liam:   Next, during the experimental phase, each subject will perform the dual-task stimulus while exposed to randomized auditory background noise inside the department&#x27;s soundproof booth.
+Chloe:  And throughout the 15-minute challenge, we will continuously monitor autonomic stress levels by fitting each participant with wireless heart rate monitors, allowing us to correlate cognitive failure with cardiovascular spikes.
+Tutor:  Excellent refinement. Let&#x27;s draft the ethics committee submission...
+[Audio Track Ends]</code></pre></div>
+<hr class="study-divider">
+<h2 id="4-answer-key--granular-distractor-analysis" class="study-heading h2">🔑 4. Answer Key &amp; Granular Distractor Analysis</h2>
+<div class="table-container"><table class="data-table">
+<thead><tr>
+<th>Question</th>
+<th>Correct Answer</th>
+<th>Detailed Rationale &amp; Distractor Analysis</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>C (Both)</strong></td>
+<td><em>Chloe</em>: Questionnaire took 40 mins causing fatigue. &lt;br&gt;<em>Liam</em>: <em>"I completely agree with Chloe on that."</em> Both agreed it was too long.</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>A (Liam only)</strong></td>
+<td><em>Liam</em>: Software worked flawlessly. &lt;br&gt;<em>Chloe disagrees</em>: Subjects with bifocals threw off calibration.</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>B (Chloe only)</strong></td>
+<td><em>Chloe</em>: Concerned undergraduates aged 19–22 were not diverse. &lt;br&gt;<em>Liam disagrees</em>: Thought homogeneity was advantageous for baseline.</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>C (Both)</strong></td>
+<td><em>Liam</em>: Regression is overly convoluted. &lt;br&gt;<em>Chloe</em>: <em>"Absolutely... we should revert to a straightforward two-way ANOVA."</em> Both agree.</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>working memory</strong></td>
+<td><em>Step 1</em>: Standardized <code>working memory</code> assessment.</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>working memory</strong></td>
+<td><em>Step 2</em>: Divide cohort into groups based on their <code>working memory</code> scores.</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td><strong>(soundproof) booth / chamber</strong></td>
+<td><em>Step 3</em>: Stimulus performed inside soundproof <code>booth</code>.</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td><strong>heart rate</strong></td>
+<td><em>Step 4</em>: Stress monitored with wireless <code>heart rate</code> monitors.</td>
+</tr>
+</tbody>
+</table></div>
+    </article>
+
+    <footer>
+      <p>🎯 IELTS Preparation Workspace • Built for Authentic Exam Success</p>
+    </footer>
+  </main>
+
+  <script>
+    // Theme Switcher
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('study_theme', next);
+    }
+    (function() {
+      const saved = localStorage.getItem('study_theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+
+    // Font Scaling
+    let currentScale = 16;
+    function adjustFontSize(delta) {
+      currentScale = Math.min(22, Math.max(13, currentScale + delta));
+      document.documentElement.style.setProperty('--base-font-size', currentScale + 'px');
+      localStorage.setItem('study_font_size', currentScale);
+    }
+    (function() {
+      const savedSize = localStorage.getItem('study_font_size');
+      if (savedSize) {
+        currentScale = parseInt(savedSize, 10);
+        document.documentElement.style.setProperty('--base-font-size', currentScale + 'px');
+      }
+    })();
+
+    // Copy Code Helper
+    function copyCode(btn) {
+      const pre = btn.closest('.code-block-wrapper').querySelector('pre code');
+      if (pre) {
+        navigator.clipboard.writeText(pre.innerText).then(() => {
+          btn.innerText = '✅ Copied!';
+          setTimeout(() => btn.innerText = '📋 Copy', 2000);
+        });
+      }
+    }
+
+    // Writing Arena Logic
+    let timerInterval = null;
+    let timerSeconds = 1200; // 20m
+    function startWritingTimer(mins) {
+      clearInterval(timerInterval);
+      timerSeconds = mins * 60;
+      updateTimerDisplay();
+      timerInterval = setInterval(() => {
+        if (timerSeconds <= 0) {
+          clearInterval(timerInterval);
+          alert('⏰ Time is up! Review and edit your response.');
+          return;
+        }
+        timerSeconds--;
+        updateTimerDisplay();
+      }, 1000);
+    }
+    function pauseWritingTimer() { clearInterval(timerInterval); }
+    function resetWritingTimer(mins) {
+      clearInterval(timerInterval);
+      timerSeconds = mins * 60;
+      updateTimerDisplay();
+    }
+    function updateTimerDisplay() {
+      const m = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
+      const s = (timerSeconds % 60).toString().padStart(2, '0');
+      const el = document.getElementById('timerDisplay');
+      if (el) el.innerText = `${m}:${s}`;
+    }
+    function updateWordStats(target) {
+      const text = document.getElementById('essayEditor').value.trim();
+      const words = text ? text.split(/\s+/).length : 0;
+      const countEl = document.getElementById('wordCount');
+      const progEl = document.getElementById('wordProgressBar');
+      const fbEl = document.getElementById('wordFeedback');
+      if (countEl) countEl.innerText = words;
+      const pct = Math.min(100, Math.round((words / target) * 100));
+      if (progEl) {
+        progEl.style.width = pct + '%';
+        progEl.style.background = words >= target ? '#10b981' : '#f59e0b';
+      }
+      if (fbEl) {
+        if (words >= target) {
+          fbEl.innerText = `✅ Met Target (${words} words)`;
+          fbEl.style.color = '#10b981';
+        } else {
+          fbEl.innerText = `Need ${target - words} more words`;
+          fbEl.style.color = '#f59e0b';
+        }
+      }
+      localStorage.setItem('draft_' + window.location.pathname, text);
+    }
+    function clearWritingDraft() {
+      if (confirm('Clear current draft?')) {
+        document.getElementById('essayEditor').value = '';
+        updateWordStats(250);
+      }
+    }
+    (function() {
+      const saved = localStorage.getItem('draft_' + window.location.pathname);
+      const editor = document.getElementById('essayEditor');
+      if (saved && editor) {
+        editor.value = saved;
+        updateWordStats(250);
+      }
+    })();
+
+    // Speaking Arena Logic
+    let speakingInterval = null;
+    let speakingSecs = 60;
+    function startSpeakingPrep() {
+      clearInterval(speakingInterval);
+      speakingSecs = 60;
+      document.getElementById('speakingPhaseBadge').innerText = '1-Min Prep';
+      document.getElementById('speakingPhaseBadge').style.background = '#f59e0b';
+      document.getElementById('speakingFeedback').innerText = 'Taking notes... Think about Past, Present, Future context.';
+      speakingInterval = setInterval(() => {
+        if (speakingSecs <= 0) {
+          clearInterval(speakingInterval);
+          alert('⏰ Prep time over! Begin speaking now.');
+          startSpeakingTurn();
+          return;
+        }
+        speakingSecs--;
+        updateSpeakingUI(60);
+      }, 1000);
+    }
+    function startSpeakingTurn() {
+      clearInterval(speakingInterval);
+      speakingSecs = 120;
+      document.getElementById('speakingPhaseBadge').innerText = 'Speaking (2m)';
+      document.getElementById('speakingPhaseBadge').style.background = '#10b981';
+      document.getElementById('speakingFeedback').innerText = '🎙️ Speak continuously. Develop your points fully!';
+      speakingInterval = setInterval(() => {
+        if (speakingSecs <= 0) {
+          clearInterval(speakingInterval);
+          alert('🏁 2 minutes complete! Excellent practice.');
+          document.getElementById('speakingPhaseBadge').innerText = 'Completed';
+          return;
+        }
+        speakingSecs--;
+        updateSpeakingUI(120);
+      }, 1000);
+    }
+    function stopSpeakingTimer() {
+      clearInterval(speakingInterval);
+      document.getElementById('speakingPhaseBadge').innerText = 'Stopped';
+    }
+    function updateSpeakingUI(total) {
+      const m = Math.floor(speakingSecs / 60).toString().padStart(2, '0');
+      const s = (speakingSecs % 60).toString().padStart(2, '0');
+      document.getElementById('speakingTimerDisplay').innerText = `${m}:${s}`;
+      const elapsed = total - speakingSecs;
+      const pct = Math.round((elapsed / total) * 100);
+      document.getElementById('speakingProgressBar').style.width = pct + '%';
+    }
+    function readPromptAloud() {
+      const title = document.querySelector('.module-title').innerText;
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(title);
+        utterance.rate = 0.95;
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert('Text-to-speech not supported in this browser.');
+      }
+    }
+  </script>
+</body>
+</html>
