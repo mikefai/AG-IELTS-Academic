@@ -170,16 +170,77 @@ with one-way degassing valves to preserve freshness.
 =========================================================================================
 ```
 
+## 👨‍🏫 4. Comprehensive Teacher Lesson Plan & Classroom Guide
+
+### Pacing & Lesson Flow (60-Minute Model)
+
+| Stage | Timing | Pedagogical Action & Classroom Task | Interaction |
+| :--- | :---: | :--- | :---: |
+| **1. Hook & Stage Counting** | 7 min | Display the 7-stage SVG flowchart. Ask: *"What is the beginning material and what is the end product? How many total stages?"* Model the Overview sentence. | Plenary |
+| **2. Passive Voice Gym** | 13 min | Teach Present Simple Passive transformations (`is/are + Past Participle`). Identify verbs requiring irregular forms (*grind ➔ ground, freeze ➔ frozen*). | Teacher-led |
+| **3. 3-Stage Skill Building** | 15 min | Pairs complete **Exercise 1 (Active to Passive Transformation)** and **Exercise 2 (Sequencing Adverbial Lab)**. | Pairs ➔ Plenary |
+| **4. Timed Writing Arena** | 20 min | 20-minute timed write in the interactive arena targeting 150+ words. | Individual |
+| **5. Criterion Peer Audit** | 5 min | Check for stage completeness, passive voice percentage, and zero raw opinions. | Pairs |
+
+### Concept Checking Questions (CCQs) for Teachers
+- *Q: "Can I use active voice like 'The worker roasts the beans' in an industrial process?"*  
+  **A:** **No.** The human worker is incidental. Use passive voice: *"The beans are roasted in rotating drums"*.
+- *Q: "What must be included in the overview of a process diagram?"*  
+  **A:** **The total number of stages**, the starting raw input, and the final finished product.
+
 ---
 
-## 🔍 3. Examiner Rubric Analysis
+## 🏋️ 5. 3 Distinct Exercises for Learners
 
-1. **Task Achievement (Band 8.5)**:
-   - Identifies total stage count (7 phases) and endpoints in the overview.
-   - Covers all technical steps without omitting intermediate phases or inserting extraneous external explanations.
-2. **Coherence & Cohesion (Band 8.5)**:
-   - Sophisticated sequencing: *In the initial stage, Following collection, are subsequently transferred, Once fully dried, Following rapid cooling, immediately packaged*.
-3. **Lexical Resource (Band 8.0)**:
-   - High-precision technical lexicon: *mechanically depulped, fermentation vats, residual mucilage, elevated drying beds, mechanical hulling, rotating drum roasters, vacuum-sealed*.
-4. **Grammatical Range & Accuracy (Band 8.5)**:
-   - Flawless passive voice integration paired with complex participial clauses (*"yielding raw green coffee beans", "equipped with one-way degassing valves"*).
+### Exercise 1: Active-to-Passive Industrial Transformation Drill
+*Convert each active sentence into an academic Present Simple Passive structure.*
+
+1. **Active (Band 5):** *"Workers pick the red coffee cherries by hand."*  
+   ➔ **Passive Upgrade (Band 8):** ....................................................................................................................
+2. **Active (Band 5):** *"A machine strips away the outer pulp from the beans."*  
+   ➔ **Passive Upgrade (Band 8):** ....................................................................................................................
+3. **Active (Band 5):** *"They spread the wet beans on raised beds to dry in the sun."*  
+   ➔ **Passive Upgrade (Band 8):** ....................................................................................................................
+4. **Active (Band 5):** *"Heavy mechanical rollers hull the dry parchment skin."*  
+   ➔ **Passive Upgrade (Band 8):** ....................................................................................................................
+
+---
+
+### Exercise 2: Sequencing & Participle Clause Connector Lab
+*Combine each pair of steps into a single sophisticated sentence using the participle or adverbial prompt in parentheses.*
+
+1. Step A: *The cherries are immersed in water to remove floating debris.*  
+   Step B: *They are transferred to mechanical depulping machines.*  
+   *(Use: Having been immersed in water... the cherries are subsequently...)*  
+   ➔ ........................................................................................................................................
+2. Step A: *The beans are roasted at 200°C to 220°C.*  
+   Step B: *They are rapidly cooled with cold air streams to halt further thermal cooking.*  
+   *(Use: Once roasted at... the beans undergo rapid cooling...)*  
+   ➔ ........................................................................................................................................
+
+---
+
+### Exercise 3: Complete Process Writing Challenge
+*Write a complete 150-word report on the 7-stage Coffee Processing & Roasting Flowchart using the interactive Writing Arena below.*
+
+---
+
+## 🔑 6. Complete Answer Key & Step-by-Step Rationales
+
+### Exercise 1 Answer Key
+1. **Passive:** *"Ripe red coffee cherries **are handpicked** from plantation trees to ensure peak quality."*
+2. **Passive:** *"The outer fruit pulp **is mechanically stripped** from the internal seeds using specialized depulping equipment."*
+3. **Passive:** *"The soaked beans **are spread evenly across elevated drying beds** to dehydrate under natural sunlight."*
+4. **Passive:** *"The dried parchment husk **is milled and stripped via mechanical hulling**."*
+
+### Exercise 2 Answer Key
+1. **Combined:** *"**Having been immersed in water tanks to remove surface debris**, the cherries are subsequently transferred to mechanical depulpers."*
+2. **Combined:** *"**Once roasted at temperatures between 200°C and 220°C**, the aromatic beans undergo rapid air cooling to arrest further cooking."*
+
+---
+
+## 📚 7. Self-Study 3-Step Action Plan
+
+1. **Step 1 (Stage Audit - 2 mins):** Number the stages from 1 to N on the diagram. Write down the initial input and final output.
+2. **Step 2 (Verb Bank Selection - 3 mins):** Identify the passive participle form of every action verb in the diagram (*depulped, fermented, dehydrated, hulled, roasted, sealed*).
+3. **Step 3 (Timed Arena Execution - 15 mins):** Draft your full report in the interactive Writing Arena below, ensuring you maintain passive voice consistency throughout.

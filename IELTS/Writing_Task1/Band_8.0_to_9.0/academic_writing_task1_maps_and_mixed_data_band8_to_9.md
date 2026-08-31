@@ -174,15 +174,79 @@ original architectural character.
 =========================================================================================
 ```
 
+## 👨‍🏫 4. Comprehensive Teacher Lesson Plan & Classroom Guide
+
+### Pacing & Lesson Flow (60-Minute Model)
+
+| Stage | Timing | Pedagogical Action & Classroom Task | Interaction |
+| :--- | :---: | :--- | :---: |
+| **1. Hook & Map Superimposition** | 8 min | Project the 1995 vs 2020 SVG maps side by side. Ask students: *"What is the overarching urban character transformation (from X to Y)?"* | Plenary |
+| **2. Urban Transformation Lexicon** | 12 min | Teach the 6 categories of spatial change: Demolition, Erection, Conversion, Expansion, Integration, and Preservation. | Teacher-led |
+| **3. 3-Stage Skill Building** | 15 min | Pairs complete **Exercise 1 (Spatial Transformation Lexicon Gym)** and **Exercise 2 (Geographical Orientation Drill)**. | Pairs ➔ Plenary |
+| **4. Timed Map Writing Arena** | 20 min | 20-minute timed write in the interactive arena targeting 150+ words with Band 9.0 precision. | Individual |
+| **5. Compass & Grouping Audit** | 5 min | Check for compass orientation accuracy (*northeastern quadrant, westward expansion*) and logical paragraph division. | Pairs |
+
+### Concept Checking Questions (CCQs) for Teachers
+- *Q: "Can I describe the 1995 map in Paragraph 3 and the 2020 map in Paragraph 4?"*  
+  **A:** **Avoid this if possible.** Grouping by **geographic area** (Paragraph 3: Shoreline & Marina; Paragraph 4: Inland & Transit) produces much stronger comparative cohesion than describing entire maps separately.
+- *Q: "Should I mention what stayed the same?"*  
+  **A:** **Yes.** Unchanged features (*"remained virtually unaltered"*) are vital key features for Band 8.0+ Task Achievement.
+
 ---
 
-## 🔍 3. Band 9.0 Architectural Dissection
+## 🏋️ 5. 3 Distinct Exercises for Learners
 
-1. **Task Achievement (Band 9.0)**:
-   - Identifies the underlying macro-shift (from maritime/industrial to leisure/residential) in the overview without missing any major map sectors.
-2. **Coherence & Cohesion (Band 9.0)**:
-   - Logically grouped by geographic focus: Paragraph 3 covers the waterfront/coastline; Paragraph 4 covers inland redevelopments and transit infrastructure.
-3. **Lexical Resource (Band 9.0)**:
-   - Native-level academic precision: *salient alterations, pedestrianized, flanked by luxury restaurants, disused warehouse district, repurposed into, dual-carriageway bypass, railway terminus, communal parkland, virtually unaltered*.
-4. **Grammatical Range & Accuracy (Band 9.0)**:
-   - Rich syntactic variety utilizing past simple passive, participial clauses (*"offering oceanfront housing"*, *"preserving the town's original character"*), and relative positioning prepositions.
+### Exercise 1: Spatial Transformation Lexicon Gym
+*Rewrite each basic sentence using a sophisticated Band 8.5+ verb phrase from the reference table.*
+
+1. **Basic (Band 5):** *"They knocked down the old fish market."*  
+   ➔ **Band 8.5 Upgrade (Use: *was demolished to make way for...*):**  
+   ....................................................................................................................
+2. **Basic (Band 5):** *"They changed the warehouses into apartments."*  
+   ➔ **Band 8.5 Upgrade (Use: *were repurposed into...*):**  
+   ....................................................................................................................
+3. **Basic (Band 5):** *"The old houses did not change at all."*  
+   ➔ **Band 8.5 Upgrade (Use: *remained virtually unaltered throughout the period*):**  
+   ....................................................................................................................
+4. **Basic (Band 5):** *"They cut down trees in the northeast to build a golf course."*  
+   ➔ **Band 8.5 Upgrade (Use: *was cleared to accommodate...*):**  
+   ....................................................................................................................
+
+---
+
+### Exercise 2: Geographical Compass Orientation Drill
+*Fill in the blank with the correct directional compass preposition or phrase based on the maps.*
+
+1. The leisure marina was constructed along the .................................................... shoreline.
+2. The woodland in the .................................................... sector was replaced by a hotel resort.
+3. The shopping center expanded .................................................... over the former communal parkland.
+4. The high-speed railway terminus was built directly .................................................... to the shopping mall.
+
+---
+
+### Exercise 3: Complete Urban Map Writing Challenge
+*Write a complete 150-word report describing the 1995 and 2020 maps of Port Henderson using the interactive Writing Arena below.*
+
+---
+
+## 🔑 6. Complete Answer Key & Step-by-Step Rationales
+
+### Exercise 1 Answer Key
+1. **Band 8.5:** *"The traditional fish market **was entirely demolished to make way for a modern yacht marina and dining promenade**."*
+2. **Band 8.5:** *"The disused industrial warehouses **were repurposed into a luxury oceanfront apartment complex**."*
+3. **Band 8.5:** *"The historic residential quarter in the southeast **remained virtually unaltered throughout the 25-year period**."*
+4. **Band 8.5:** *"The natural woodland in the northeast **was substantially cleared to accommodate an 18-hole golf course and luxury hotel resort**."*
+
+### Exercise 2 Answer Key
+1. **western / coastal**
+2. **northeastern**
+3. **westward / across**
+4. **adjacent / alongside**
+
+---
+
+## 📚 7. Self-Study 3-Step Action Plan
+
+1. **Step 1 (Macro Transformation - 2 mins):** Identify the macro shift (e.g. industrial fishing village ➔ luxury residential resort). Write this as your overview thesis.
+2. **Step 2 (Divide by Geography - 3 mins):** Plan Body 1 for the Waterfront/Coastline and Body 2 for Inland/Transport.
+3. **Step 3 (Timed Arena Execution - 15 mins):** Draft your full report in the interactive Writing Arena below. Ensure you use at least 4 directional phrases (*northeastern, westward, flanked by, adjacent to*).
