@@ -1,6 +1,6 @@
 # 📚 Master Workspace Educational Content Catalog
 
-> *Auto-generated on 2026-08-31 18:41 via `scripts/build_workspace_index.py`*
+> *Auto-generated on 2026-08-31 18:53 via `scripts/build_workspace_index.py`*
 
 This catalog indexes all structured lesson plans, test prep modules, question banks, and interactive simulators across the workspace, along with independent domain portals.
 
@@ -23,7 +23,7 @@ This catalog indexes all structured lesson plans, test prep modules, question ba
 | Lesson Plan | Dream Jobs & Careers + School & Academic Pressures | `CEFR B1` | 📄 Markdown | [Dream Big, Stress Less: Careers & School Life (B1 Teen ESL)](ESL/B1/b1_dream_jobs_and_school_pressures.md) |
 | Lesson Plan | Worksheet | Drill | Past Simple vs Present Perfect & Past Simple vs Past Perfect (High School / 15yo Speaking Lab) | `CEFR B1` | 📄 Markdown | [B1 Past Tenses Speaking Lab (High School Edition): Teacher Guide & Student Handout](ESL/B1/b1_past_tenses_speaking_lab.md) |
 
-## 🌐 IELTS Modules & Resources (5 Total)
+## 🌐 IELTS Modules & Resources (24 Total)
 
 | Type | Title / Topic | Target Level | Format | Direct Link |
 | :--- | :--- | :--- | :--- | :--- |
@@ -31,7 +31,26 @@ This catalog indexes all structured lesson plans, test prep modules, question ba
 | Interactive Simulator | Ielts Academic Task1 Line Graph Training Pack | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1 — Line Graph Mastery Training Pack](IELTS/Writing_Task1/ielts_academic_task1_line_graph_training_pack.html) |
 | Lesson Plan & Practice Module | Academic Reading - Multiple-Choice Questions (MCQ) Masterclass | `Band 7.5 - 9.0` | 📄 Markdown | [IELTS Academic Reading: Multiple-Choice Questions (MCQs) Masterclass](IELTS/Reading/Band_7.0_to_8.0/academic_reading_mcq_masterclass.md) |
 | Lesson Plan | Analysis | Drill | Academic Writing Task 1: Complete Band 6+ Breakthrough Guide | `Band 5.0 to 6.5` | 📄 Markdown | [IELTS Academic Writing Task 1: Band 6+ Breakthrough Masterclass](IELTS/Writing_Task1/Band_5.0_to_6.0/ielts_academic_task1_band_5_to_6_breakthrough.md) |
+| Lesson Plan | Drill | Analysis | Listening Section 1: Form Completion, Numbers, Names & Distraction Traps | `Band 5.0 to 6.0` | 📄 Markdown | [IELTS Academic Listening: Section 1 Form Completion Masterclass](IELTS/Listening/Band_5.0_to_6.0/listening_section1_form_completion_band5_to_6.md) |
+| Lesson Plan | Drill | Analysis | Listening Section 2: Monologues, Map/Plan Labeling & Multiple Choice Strategies | `Band 6.0 to 7.0` | 📄 Markdown | [IELTS Academic Listening: Section 2 Map Labeling & MCQs Masterclass](IELTS/Listening/Band_6.0_to_7.0/listening_section2_multiple_choice_and_maps_band6_to_7.md) |
+| Lesson Plan | Drill | Analysis | Listening Section 3: Multi-Speaker Academic Tutorials, Nuanced Agreement & Flowcharts | `Band 7.0 to 8.0` | 📄 Markdown | [IELTS Academic Listening: Section 3 Multi-Speaker Discussion Masterclass](IELTS/Listening/Band_7.0_to_8.0/listening_section3_academic_discussion_band7_to_8.md) |
+| Lesson Plan | Drill | Analysis | Listening Section 4: University Lecture Note Completion & Complex Academic Signposting | `Band 8.0 to 9.0` | 📄 Markdown | [IELTS Academic Listening: Section 4 University Lecture Masterclass](IELTS/Listening/Band_8.0_to_9.0/listening_section4_academic_lecture_notes_band8_to_9.md) |
+| Lesson Plan | Drill | Analysis | Academic Reading: Matching Headings & Main Idea Identification | `Band 6.0 to 7.0` | 📄 Markdown | [IELTS Academic Reading: Matching Headings Masterclass](IELTS/Reading/Band_6.0_to_7.0/academic_reading_matching_headings_band6_to_7.md) |
+| Lesson Plan | Drill | Analysis | Academic Reading: Summary Completion with Synonyms & Deep Inferential Reasoning | `Band 8.0 to 9.0` | 📄 Markdown | [IELTS Academic Reading: Summary Completion & Complex Inference Masterclass](IELTS/Reading/Band_8.0_to_9.0/academic_reading_summary_completion_and_inference_band8_to_9.md) |
+| Lesson Plan | Drill | Analysis | Academic Reading: True / False / Not Given & Yes / No / Not Given Mastery | `Band 5.0 to 6.0` | 📄 Markdown | [IELTS Academic Reading: True / False / Not Given (T/F/NG) Masterclass](IELTS/Reading/Band_5.0_to_6.0/academic_reading_tfng_mastery_band5_to_6.md) |
+| Lesson Plan | Drill | Analysis | Academic Speaking: Native Idiomatic Nuance, Connected Speech & Intonation Mastery | `Band 8.0 to 9.0` | 📄 Markdown | [IELTS Academic Speaking: Idiomatic Fluency & Pronunciation (Band 9.0)](IELTS/Speaking/Band_8.0_to_9.0/academic_speaking_idiomatic_fluency_and_pronunciation_band8_to_9.md) |
+| Lesson Plan | Drill | Model Essay | Academic Speaking Part 2: 1-Minute Note-Taking Framework & 2-Minute Long Turn | `Band 6.0 to 7.0` | 📄 Markdown | [IELTS Academic Speaking Part 2: Long Turn Mastery (Band 6.0 ➔ 7.0)](IELTS/Speaking/Band_6.0_to_7.0/academic_speaking_part2_long_turn_strategy_band6_to_7.md) |
+| Lesson Plan | Drill | Model Essay | Academic Speaking Part 3: Abstract Discourse, Speculation & The AREA Framework | `Band 7.0 to 8.0` | 📄 Markdown | [IELTS Academic Speaking Part 3: Abstract Discussion Masterclass (Band 8.0)](IELTS/Speaking/Band_7.0_to_8.0/academic_speaking_part3_abstract_discussion_band7_to_8.md) |
+| Lesson Plan | Model Essay | Analysis | Academic Writing Task 1: Comparative Bar Charts & Pie Charts Mastery | `Band 6.0 to 7.0` | 📄 Markdown | [IELTS Academic Writing Task 1: Bar & Pie Charts (Band 6.0 ➔ 7.0)](IELTS/Writing_Task1/Band_6.0_to_7.0/academic_writing_task1_bar_and_pie_band6_to_7.md) |
+| Lesson Plan | Model Essay | Analysis | Academic Writing Task 1: Industrial Processes & Natural Life Cycles | `Band 7.0 to 8.0` | 📄 Markdown | [IELTS Academic Writing Task 1: Process & Flowchart Masterclass](IELTS/Writing_Task1/Band_7.0_to_8.0/academic_writing_task1_process_and_flowchart_band7_to_8.md) |
+| Lesson Plan | Model Essay | Analysis | Academic Writing Task 1: Comparative Urban Maps & Mixed Data Synthesis | `Band 8.0 to 9.0` | 📄 Markdown | [IELTS Academic Writing Task 1: Urban Maps & Mixed Graphics (Band 9.0)](IELTS/Writing_Task1/Band_8.0_to_9.0/academic_writing_task1_maps_and_mixed_data_band8_to_9.md) |
+| Lesson Plan | Model Essay | Analysis | Academic Writing Task 2: Discuss Both Views & Give Your Opinion | `Band 6.0 to 7.0` | 📄 Markdown | [IELTS Academic Writing Task 2: Discuss Both Views (Band 6.0 ➔ 7.0)](IELTS/Writing_Task2/Band_6.0_to_7.0/academic_writing_task2_discuss_both_views_band6_to_7.md) |
+| Lesson Plan | Model Essay | Analysis | Academic Writing Task 2: Opinion (Agree/Disagree) Essay Architecture | `Band 5.0 to 6.0` | 📄 Markdown | [IELTS Academic Writing Task 2: Opinion Essays (Band 5.0 ➔ 6.0)](IELTS/Writing_Task2/Band_5.0_to_6.0/academic_writing_task2_opinion_agree_disagree_band5_to_6.md) |
+| Lesson Plan | Model Essay | Analysis | Academic Writing Task 2: Problem-Solution & Cause-Effect Essay Architecture | `Band 7.0 to 8.0` | 📄 Markdown | [IELTS Academic Writing Task 2: Problem & Solution Masterclass](IELTS/Writing_Task2/Band_7.0_to_8.0/academic_writing_task2_problem_solution_cause_effect_band7_to_8.md) |
+| Lesson Plan | Model Essay | Analysis | Academic Writing Task 2: Two-Part (Direct Question) Essay Masterclass | `Band 8.0 to 9.0` | 📄 Markdown | [IELTS Academic Writing Task 2: Two-Part Direct Questions (Band 9.0)](IELTS/Writing_Task2/Band_8.0_to_9.0/academic_writing_task2_direct_question_double_prompt_band8_to_9.md) |
+| Mock Test | Model Essay | Answer Key | IELTS Academic Full Practice Examination: Diagnostic Test 01 | `Band 6.0 to 8.5` | 📄 Markdown | [IELTS Academic Full Diagnostic Practice Examination 01](IELTS/Mock_Tests/ielts_academic_full_practice_exam_01.md) |
 | Speaking Mock & Model Responses | Academic Speaking Full Mock Exam & Band 5.5 vs 6.5 Comparative Analysis | `Band 5.5 - 6.5` | 📄 Markdown | [IELTS Academic Speaking Mock Exam (Band 5.5 – 6.5 Focus)](IELTS/Speaking/Band_5.0_to_6.0/ielts_academic_speaking_band_5_5_to_6_5_mock.md) |
+| Vocabulary Bank | Worksheet | Analysis | Academic Vocabulary & High-Scoring Thematic Collocations Master Bank | `Band 7.0 to 9.0` | 📄 Markdown | [IELTS Academic: High-Scoring Collocations & Lexical Resource Bank](IELTS/Vocabulary_Collocations/ielts_academic_high_scoring_collocations_and_lexical_resource.md) |
 
 ## 🌐 SAT Modules & Resources (2 Total)
 

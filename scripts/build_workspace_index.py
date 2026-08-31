@@ -42,8 +42,7 @@ DOMAIN_CONFIGS = {
             "Speaking",
             "Listening",
             "Vocabulary_Collocations",
-            "Mock_Tests",
-            "General_Training"
+            "Mock_Tests"
         ],
         "band_levels": [
             "Band 5.0 to 6.0",

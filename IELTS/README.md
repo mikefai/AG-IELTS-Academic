@@ -37,7 +37,6 @@ IELTS/
 ├── Listening/                 # Section 1-4 scripts, question sheets, distraction analysis
 ├── Vocabulary_Collocations/   # High-scoring lexical resource lists (Band 7+ collocations, topic-specific)
 ├── Mock_Tests/                # Full practice test sets and scoring calculators
-├── General_Training/          # General Training reading & letter writing
 └── README.md                  # This document
 ```
 
