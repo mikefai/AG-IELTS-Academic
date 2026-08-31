@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B1 Past Tenses Speaking Lab | Past Simple, Present Perfect & Past Perfect</title>
+  <title>B1 Past Tenses Speaking Lab (High School Edition) | Past Simple, Present Perfect & Past Perfect</title>
   <style>
     /* =========================================================
        CSS VARIABLES & THEME DEFINITIONS
@@ -135,7 +135,7 @@
       background: var(--primary);
       color: #ffffff;
       font-weight: 800;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       padding: 0.35rem 0.65rem;
       border-radius: var(--radius-sm);
       letter-spacing: 0.5px;
@@ -611,24 +611,6 @@
       border-bottom: none;
     }
 
-    .highlight-rule {
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    .spoken-chip {
-      display: inline-block;
-      background: var(--accent-light);
-      color: var(--accent);
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-left: 4px;
-    }
-
-    /* Contrast Pairs Box */
     .contrast-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -907,7 +889,7 @@
 
     .flashcard {
       perspective: 1000px;
-      height: 180px;
+      height: 185px;
       cursor: pointer;
     }
 
@@ -1062,15 +1044,17 @@
       padding: 1.25rem;
       background: var(--surface);
       position: relative;
+      cursor: pointer;
     }
 
     .speaking-card.active-topic {
       border-color: var(--primary);
       box-shadow: var(--shadow);
+      background: var(--primary-light);
     }
 
     .scaffold-step {
-      background: var(--bg);
+      background: var(--surface);
       border-left: 3px solid var(--primary);
       padding: 0.5rem 0.75rem;
       margin: 0.5rem 0;
@@ -1343,10 +1327,10 @@
   <header>
     <div class="header-container">
       <div class="brand">
-        <span class="brand-badge">B1 LAB</span>
+        <span class="brand-badge">B1 TEEN LAB</span>
         <div class="brand-title">
-          <h1>Past Tenses Speaking Lab</h1>
-          <p>Past Simple • Present Perfect • Past Perfect</p>
+          <h1>Past Tenses Speaking Lab (High Schooler Edition)</h1>
+          <p>Past Simple • Present Perfect • Past Perfect • Real-Life Teen Speaking</p>
         </div>
       </div>
       <div class="header-controls">
@@ -1365,10 +1349,10 @@
       <button class="tab-btn active" onclick="switchTab('tab-overview')">📌 Overview</button>
       <button class="tab-btn" onclick="switchTab('tab-module-a')">📘 Module A: Finished vs Connected</button>
       <button class="tab-btn" onclick="switchTab('tab-module-b')">📙 Module B: Storytelling & Past Perfect</button>
-      <button class="tab-btn" onclick="switchTab('tab-speaking')">🗣️ Speaking Studio</button>
-      <button class="tab-btn" onclick="switchTab('tab-vocabulary')">🔤 Vocabulary & Flashcards</button>
-      <button class="tab-btn" onclick="switchTab('tab-drills')">⚡ Verbs & Sorter Gym</button>
-      <button class="tab-btn" onclick="switchTab('tab-quiz')">📝 Diagnostic Quiz</button>
+      <button class="tab-btn" onclick="switchTab('tab-speaking')">🗣️ Teen Speaking Studio</button>
+      <button class="tab-btn" onclick="switchTab('tab-vocabulary')">🔤 Vocabulary & Flashcards (24)</button>
+      <button class="tab-btn" onclick="switchTab('tab-drills')">⚡ Verbs (25) & Sorter Gym</button>
+      <button class="tab-btn" onclick="switchTab('tab-quiz')">📝 Diagnostic Quiz (30 Items)</button>
       <button class="tab-btn" onclick="switchTab('tab-notes')">📓 My Notes</button>
     </div>
   </nav>
@@ -1399,8 +1383,8 @@
       <section id="tab-overview" class="section-pane active">
         <div class="hero-banner">
           <div class="hero-content">
-            <h2>Welcome to the Speaking Lab!</h2>
-            <p>Master English past tenses naturally. Focus on speaking confidence, real-life communication, and high-frequency vocabulary.</p>
+            <h2>Welcome, High Schoolers! 🎒🎮</h2>
+            <p>Master English past tenses for real high school conversations: school trips, exam stories, gaming tournaments, embarrassing moments, and weekend adventures!</p>
           </div>
           <div class="stats-strip">
             <div class="stat-pill">
@@ -1408,11 +1392,11 @@
               <div class="stat-lbl">Quiz Score</div>
             </div>
             <div class="stat-pill">
-              <div class="stat-val" id="stat-verbs-done">0/15</div>
+              <div class="stat-val" id="stat-verbs-done">0/25</div>
               <div class="stat-lbl">Verbs Mastered</div>
             </div>
             <div class="stat-pill">
-              <div class="stat-val" id="stat-cards-done">0/16</div>
+              <div class="stat-val" id="stat-cards-done">0/24</div>
               <div class="stat-lbl">Vocab Cards</div>
             </div>
           </div>
@@ -1421,23 +1405,23 @@
         <!-- Quick Summary Card -->
         <div class="card">
           <div class="card-header">
-            <div class="card-title">🎯 The 3 Core Past Tense Rules (B1 Summary)</div>
-            <span class="badge badge-primary">Essential Guide</span>
+            <div class="card-title">🎯 The 3 Core Past Tense Rules (High School Summary)</div>
+            <span class="badge badge-primary">Essential Cheat Sheet</span>
           </div>
           <div class="contrast-grid">
             <div class="contrast-card past-simple">
-              <div class="contrast-sentence">1. Past Simple (Finished Time)</div>
+              <div class="contrast-sentence">1. Past Simple (Finished Time Box)</div>
               <div class="contrast-meaning">
-                Use for actions finished at a specific time in the past.<br>
-                <em>"I visited my grandmother yesterday."</em><br>
-                <strong>Signal words:</strong> yesterday, ago, last week, in 2021.
+                Use for completed events at a specific time in the past.<br>
+                <em>"I played Minecraft with my friends yesterday evening."</em><br>
+                <strong>Signal words:</strong> yesterday, 2 hours ago, last Friday, in 2022.
               </div>
             </div>
             <div class="contrast-card present-perfect">
               <div class="contrast-sentence">2. Present Perfect (Connected to Now)</div>
               <div class="contrast-meaning">
-                Use for life experiences, recent results, or unfinished states.<br>
-                <em>"I have lost my keys (I can't get in now)."</em><br>
+                Use for life experiences, recent results right now, or ongoing teen habits.<br>
+                <em>"I've lost my school ID card (I can't enter the school right now)."</em><br>
                 <strong>Signal words:</strong> ever, never, just, already, yet, since, for.
               </div>
             </div>
@@ -1445,7 +1429,7 @@
               <div class="contrast-sentence">3. Past Perfect (The Earlier Past)</div>
               <div class="contrast-meaning">
                 Use in storytelling when one past event happened BEFORE another past event.<br>
-                <em>"When I got to class, the lesson had started."</em><br>
+                <em>"When I entered the classroom, the teacher had already started the pop quiz."</em><br>
                 <strong>Signal frames:</strong> by the time, when, after, realised that.
               </div>
             </div>
@@ -1454,10 +1438,10 @@
 
         <!-- Teacher Notes Collapsible -->
         <details class="accordion">
-          <summary>👩‍🏫 Teacher's Guide: Lesson Plan Overview & Warm-up (5 mins)</summary>
+          <summary>👩‍🏫 Teacher's Guide: Lesson Plan for Teenagers (15yo High Schoolers)</summary>
           <div class="accordion-content">
-            <p><strong>Lesson Objectives:</strong> By the end of this 60–90 min session, B1 learners will confidently differentiate between finished past actions and present-connected results in spoken conversations, and use the Past Perfect naturally for storytelling.</p>
-            <p style="margin-top: 0.5rem;"><strong>Warmer Suggestion:</strong> Project the "Have you ever...?" prompts from the Speaking tab. Give students 60 seconds to find 1 person who has done something exciting. Then elicit Past Simple follow-ups (<em>"When did you do it? Who were you with?"</em>).</p>
+            <p><strong>Lesson Target:</strong> Engage 15-year-old intermediate (CEFR B1) learners in natural, spontaneous speaking using Past Simple, Present Perfect, and Past Perfect. Focus on relevant topics: school emergencies, hobbies, social media, gaming, and friendship.</p>
+            <p style="margin-top: 0.5rem;"><strong>Teacher Tip:</strong> Encourage students to use contracted spoken English (<em>"I've never played...", "She'd already left..."</em>) and enforce the shift from Present Perfect for the experience opening to Past Simple for storytelling details.</p>
           </div>
         </details>
       </section>
@@ -1469,7 +1453,7 @@
             <div class="card-title">📘 Module A: Past Simple vs Present Perfect</div>
             <span class="badge badge-primary">Meaning & Form</span>
           </div>
-          <p>The main question to ask yourself is: <strong>Is the time finished, or is the action connected to NOW?</strong></p>
+          <p>Ask yourself: <strong>Is the time box finished and closed (Past Simple), or is it connected to NOW (Present Perfect)?</strong></p>
 
           <!-- Interactive Timelines -->
           <div class="timeline-box">
@@ -1478,17 +1462,17 @@
               <div class="timeline-line"></div>
               <div class="timeline-point" style="left: 30%;">
                 <div class="timeline-node past"></div>
-                <div class="timeline-label">Yesterday / 2022</div>
-                <div class="timeline-subtext">Action finished in the past</div>
+                <div class="timeline-label">Yesterday / Last Period</div>
+                <div class="timeline-subtext">Event finished in the past</div>
               </div>
               <div class="timeline-point" style="left: 90%;">
                 <div class="timeline-node now"></div>
-                <div class="timeline-label">NOW (Today)</div>
+                <div class="timeline-label">NOW (Right Now)</div>
                 <div class="timeline-subtext">Time box is closed</div>
               </div>
             </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center;">
-              <em>"I bought a laptop last month." (The time 'last month' is completely finished).</em>
+              <em>"I finished my math homework yesterday." (Yesterday is finished and gone).</em>
             </p>
           </div>
 
@@ -1499,145 +1483,113 @@
               <div class="timeline-span" style="left: 25%; width: 65%;"></div>
               <div class="timeline-point" style="left: 25%;">
                 <div class="timeline-node past"></div>
-                <div class="timeline-label">Past Event</div>
+                <div class="timeline-label">Past Action</div>
                 <div class="timeline-subtext">Experience / Cause</div>
               </div>
               <div class="timeline-point" style="left: 90%;">
                 <div class="timeline-node now"></div>
                 <div class="timeline-label">NOW</div>
-                <div class="timeline-subtext">Result / Unfinished</div>
+                <div class="timeline-subtext">Present Result / State</div>
               </div>
             </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center;">
-              <em>"I've bought a new laptop!" (Result: I have it with me right now; look at it!).</em>
+              <em>"I've lost my locker key!" (Result: I can't open my locker right now; help me look!).</em>
             </p>
           </div>
 
           <!-- 3 Core Uses -->
-          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🌟 The 3 Core B1 Uses of Present Perfect</h3>
+          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🌟 The 3 Core High School Uses of Present Perfect</h3>
           <div class="contrast-grid">
             <div class="contrast-card present-perfect">
-              <div class="contrast-sentence">1. Life Experience</div>
+              <div class="contrast-sentence">1. Life Experience (Ever in your life)</div>
               <div class="contrast-meaning">
-                Any time in your life up to now. Exact time is not important.<br>
-                <em>"Have you ever seen a shooting star?"</em><br>
-                <em>"I've never been to Japan."</em>
+                Time is not specified. We are asking about your whole life up to now.<br>
+                <em>"Have you ever attended a live esports tournament?"</em><br>
+                <em>"I've never played basketball before."</em>
               </div>
             </div>
             <div class="contrast-card present-perfect">
               <div class="contrast-sentence">2. Recent Action with a Present Result</div>
               <div class="contrast-meaning">
                 Something happened recently and affects right now.<br>
-                <em>"I've lost my keys." (Result: I can't open the door now).</em><br>
-                <em>"She has just finished her exam!"</em>
+                <em>"My phone battery has just died (I can't message my mum now)."</em><br>
+                <em>"The bell has rung; let's go to class!"</em>
               </div>
             </div>
             <div class="contrast-card present-perfect">
-              <div class="contrast-sentence">3. Unfinished Time or State</div>
+              <div class="contrast-sentence">3. Unfinished State or Time Period</div>
               <div class="contrast-meaning">
                 Started in the past and continues right now.<br>
-                <em>"I've lived here for three years." (I still live here).</em><br>
-                <em>"I've had two coffees today." (Today is not over).</em>
+                <em>"I've studied at this high school for two years."</em><br>
+                <em>"I've had three exams this week (and the week is not over)."</em>
               </div>
             </div>
           </div>
 
-          <!-- Forms Table with Spoken Contractions -->
-          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🗣️ Spoken Forms & Contractions (Crucial for Speaking!)</h3>
+          <!-- Deep Dive 1: Been to vs Gone to -->
+          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">📍 Critical Contrast: "Been to" vs "Gone to"</h3>
+          <div class="contrast-grid">
+            <div class="contrast-card present-perfect">
+              <div class="contrast-sentence">"She has been to the library."</div>
+              <div class="contrast-meaning">
+                <strong>Visited and returned!</strong> She went there, finished studying, and is back with us right now.
+              </div>
+            </div>
+            <div class="contrast-card past-simple">
+              <div class="contrast-sentence">"She has gone to the library."</div>
+              <div class="contrast-meaning">
+                <strong>Still there right now!</strong> She left and has not come back yet. If you want her, go to the library!
+              </div>
+            </div>
+          </div>
+
+          <!-- Deep Dive 2: Since vs For -->
+          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">⏳ "Since" (Starting Point) vs "For" (Duration)</h3>
           <div class="table-responsive">
             <table class="grammar-table">
               <thead>
                 <tr>
-                  <th>Tense</th>
-                  <th>Positive (+)</th>
-                  <th>Negative (-)</th>
-                  <th>Question (?)</th>
+                  <th>SINCE + Starting Point in Time</th>
+                  <th>FOR + Length / Duration of Time</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Past Simple</strong></td>
-                  <td>I / You / We / They / He <strong>worked / went</strong></td>
-                  <td>I <strong>didn't work / didn't go</strong></td>
-                  <td><strong>Did</strong> you <strong>work / go</strong>?</td>
-                </tr>
-                <tr>
-                  <td><strong>Present Perfect</strong></td>
                   <td>
-                    I<strong>'ve</strong> / We<strong>'ve</strong> / They<strong>'ve seen</strong><br>
-                    He<strong>'s</strong> / She<strong>'s seen</strong>
+                    • <strong>since</strong> 8:30 AM<br>
+                    • <strong>since</strong> last September<br>
+                    • <strong>since</strong> I started 9th grade<br>
+                    • <strong>since</strong> 2021
                   </td>
                   <td>
-                    I <strong>haven't seen</strong><br>
-                    She <strong>hasn't seen</strong>
-                  </td>
-                  <td>
-                    <strong>Have</strong> you <strong>seen</strong>?<br>
-                    <strong>Has</strong> she <strong>seen</strong>?
+                    • <strong>for</strong> 45 minutes<br>
+                    • <strong>for</strong> two weeks<br>
+                    • <strong>for</strong> three periods<br>
+                    • <strong>for</strong> five years
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <!-- Minimal Contrast Pairs -->
-          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🔍 Minimal Contrast Pairs (Pictures in Words)</h3>
-          <div class="contrast-grid">
-            <div class="contrast-card past-simple">
-              <div class="contrast-sentence">"I lost my keys yesterday."</div>
-              <div class="contrast-meaning">Specific past time. Maybe I found them later or got a spare key.</div>
-            </div>
-            <div class="contrast-card present-perfect">
-              <div class="contrast-sentence">"I've lost my keys!"</div>
-              <div class="contrast-meaning">Happened recently. I still don't have them right now — please help me look!</div>
-            </div>
-            <div class="contrast-card past-simple">
-              <div class="contrast-sentence">"She lived in London for 2 years."</div>
-              <div class="contrast-meaning">Finished. She lives in Istanbul or Madrid now.</div>
-            </div>
-            <div class="contrast-card present-perfect">
-              <div class="contrast-sentence">"She's lived in London for 2 years."</div>
-              <div class="contrast-meaning">Unfinished. She still lives in London today.</div>
-            </div>
-          </div>
-
-          <!-- Signal Word Bank -->
-          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🏷️ Signal Word Bank</h3>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">Use these words as your quick clues:</p>
-          <div style="margin-top: 0.5rem;">
-            <strong>Past Simple clues:</strong>
-            <div class="signal-bank">
-              <span class="signal-chip">yesterday</span>
-              <span class="signal-chip">2 days ago</span>
-              <span class="signal-chip">last night / week / year</span>
-              <span class="signal-chip">in 2019</span>
-              <span class="signal-chip">when I was at school</span>
-            </div>
-          </div>
-          <div style="margin-top: 0.5rem;">
-            <strong>Present Perfect clues:</strong>
-            <div class="signal-bank">
-              <span class="signal-chip">ever</span>
-              <span class="signal-chip">never</span>
-              <span class="signal-chip">just</span>
-              <span class="signal-chip">already</span>
-              <span class="signal-chip">yet</span>
-              <span class="signal-chip">since 2020</span>
-              <span class="signal-chip">for 5 years</span>
-              <span class="signal-chip">this week / today</span>
-            </div>
+          <!-- Deep Dive 3: Just, Already, Yet Position Rules -->
+          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🎯 Just / Already / Yet: Position Rules</h3>
+          <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; margin: 0.5rem 0; font-size: 0.875rem;">
+            • <strong>JUST</strong> (very recently): Between *have* and verb 3 $\rightarrow$ <em>"I've <strong>just</strong> submitted my project on Google Classroom."</em><br>
+            • <strong>ALREADY</strong> (earlier than expected): Between *have* and verb 3 $\rightarrow$ <em>"I've <strong>already</strong> revised chapter 4."</em><br>
+            • <strong>YET</strong> (not completed up to now): At the END of negative sentences and questions $\rightarrow$ <em>"Have you done your biology homework <strong>yet</strong>?" / "I haven't packed my gym bag <strong>yet</strong>."</em>
           </div>
 
           <!-- Turkish L1 Interference Box (Collapsible) -->
           <details class="accordion" style="margin-top: 1.25rem;">
-            <summary>🇹🇷 Turkish Learner L1 Focus Note (Neden Karıştırıyoruz?)</summary>
+            <summary>🇹🇷 Turkish High Schooler L1 Guide (Neden Karıştırıyoruz?)</summary>
             <div class="accordion-content">
-              <p><strong>Neden zorlanırız?</strong> Türkçe'de "Present Perfect" zamanının birebir karşılığı yoktur. Hem <em>"Dün sinemaya gittim"</em> (Past Simple) hem de <em>"Daha önce hiç suşi yedim mi?"</em> (Present Perfect) cümlelerinde Türkçe'de <strong>-di'li geçmiş zaman</strong> kullanırız.</p>
+              <p><strong>Neden zorlanırız?</strong> Türkçe'de *"Dün maç yaptık"* ile *"Hayatımda hiç maça gitmedim"* cümlelerinde aynı <strong>-di'li geçmiş zaman</strong> ekini kullanırız.</p>
               <p style="margin-top: 0.5rem;"><strong>3 Altın Kural:</strong></p>
               <ul style="margin-left: 1.2rem; margin-top: 0.3rem;">
-                <li>Cümlede net bir geçmiş zaman zarfı (<em>yesterday, 2 days ago, in 2020, when I was...</em>) varsa <strong>kesinlikle Past Simple (V2)</strong> kullanılır.</li>
-                <li>Hayat tecrübesi soruyorsanız (<em>Have you ever...?</em>), zaman önemli değildir; <strong>Present Perfect</strong> kullanılır. Cevap verirken detay ve zaman verirseniz <strong>Past Simple'a geçiş yapın</strong> (<em>"Yes, I have. I went there last summer."</em>).</li>
-                <li><em>"-den beri"</em> (since / for) diyorsanız ve eylem hâlâ sürüyorsa Türkçe'de geniş zaman kullansak bile İngilizce'de <strong>Present Perfect</strong> şarttır: <em>"I live here for 2 years" ❌ -> "I have lived here for 2 years" ✅</em>.</li>
+                <li>Zaman belliyse (<em>yesterday, last night, 2 days ago, in 2022</em>) $\rightarrow$ <strong>Past Simple (V2)</strong>.</li>
+                <li>Zaman belli değilse, tecrübe anlatılıyorsa (<em>Have you ever...? / I've never...</em>) $\rightarrow$ <strong>Present Perfect (`have/has + V3`)</strong>.</li>
+                <li>*-den beri* derken Türkçe'de geniş zaman kullansak bile İngilizce'de <strong>Present Perfect</strong> şarttır: *"I know my desk partner since 9th grade" ❌ $\rightarrow$ "I have known my desk partner since 9th grade" ✅*.</li>
               </ul>
             </div>
           </details>
@@ -1647,10 +1599,10 @@
             <summary>❓ Concept Checking Questions (CCQs) for Teachers</summary>
             <div class="accordion-content">
               <ol style="margin-left: 1.2rem;">
-                <li><em>"I have lost my passport."</em> -> Do I have my passport in my hand now? (No.) Is the time finished or is the problem right now? (Right now.)</li>
-                <li><em>"Did you go to London in 2022?"</em> -> Are we in 2022 now? (No.) Is the time finished? (Yes.)</li>
-                <li><em>"He's lived here since May."</em> -> Did he start in May? (Yes.) Does he live here today? (Yes.)</li>
-                <li><em>"I saw that movie yesterday."</em> -> Do we know the exact day? (Yes, yesterday.) Can we use 'have seen'? (No, because yesterday is a finished time.)</li>
+                <li><em>"Ali has gone to the football pitch."</em> $\rightarrow$ Is Ali here in the room now? (No, he is at the pitch.)</li>
+                <li><em>"Can has been to the football pitch."</em> $\rightarrow$ Is Can back with us now? (Yes, he went and returned.)</li>
+                <li><em>"I bought this gaming headset on Friday."</em> $\rightarrow$ Is Friday finished? (Yes.) Can we say 'have bought'? (No, because Friday is a finished past time.)</li>
+                <li><em>"She has played volleyball for 3 years."</em> $\rightarrow$ Does she still play volleyball today? (Yes.)</li>
               </ol>
             </div>
           </details>
@@ -1662,9 +1614,9 @@
         <div class="card">
           <div class="card-header">
             <div class="card-title">📙 Module B: Past Simple vs Past Perfect</div>
-            <span class="badge badge-warning">Storytelling Tense</span>
+            <span class="badge badge-warning">Storytelling & Narrative</span>
           </div>
-          <p>We use the <strong>Past Perfect (had + past participle)</strong> for ONE main purpose at B1: <strong>Storytelling (The Earlier Past)</strong>.</p>
+          <p>We use the <strong>Past Perfect (had + V3)</strong> for ONE main purpose: <strong>The Earlier Past in a Story</strong>.</p>
 
           <!-- Storytelling Timeline -->
           <div class="timeline-box">
@@ -1673,73 +1625,91 @@
               <div class="timeline-line"></div>
               <div class="timeline-point" style="left: 20%;">
                 <div class="timeline-node earlier"></div>
-                <div class="timeline-label">Event 1 (First)</div>
+                <div class="timeline-label">Event 1 (First in Past)</div>
                 <div class="timeline-subtext">PAST PERFECT (had left)</div>
               </div>
               <div class="timeline-point" style="left: 55%;">
                 <div class="timeline-node past"></div>
-                <div class="timeline-label">Event 2 (Second)</div>
+                <div class="timeline-label">Event 2 (Second in Past)</div>
                 <div class="timeline-subtext">PAST SIMPLE (arrived)</div>
               </div>
               <div class="timeline-point" style="left: 90%;">
                 <div class="timeline-node now"></div>
                 <div class="timeline-label">NOW</div>
-                <div class="timeline-subtext">Present conversation</div>
+                <div class="timeline-subtext">Present time</div>
               </div>
             </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center;">
-              <em>"When we arrived at the station, the train <strong>had already left</strong>." (Event 1: Train left -> Event 2: We arrived -> Result: We missed the train!).</em>
+              <em>"When I arrived at the school gate, the school bus <strong>had already left</strong>." (Event 1: Bus left $\rightarrow$ Event 2: I arrived $\rightarrow$ Result: I had to walk to school!).</em>
             </p>
           </div>
 
           <!-- Spoken Form Focus -->
-          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🗣️ Spoken Form Focus: The Contraction "I'd" /aɪd/</h3>
-          <p style="font-size: 0.875rem;">In natural spoken English, native speakers almost always contract <em>had</em>:</p>
+          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🗣️ Spoken Form Focus: Contractions "I'd" /aɪd/ & "She'd" /ʃiːd/</h3>
+          <p style="font-size: 0.875rem;">In natural speech, native speakers almost always contract <em>had</em>:</p>
           <div style="background: var(--bg); padding: 0.75rem; border-radius: var(--radius-sm); margin: 0.5rem 0; font-size: 0.875rem;">
-            • <em>"I <strong>had</strong> forgotten my wallet."</em> -> <em>"I<strong>'d</strong> forgotten my wallet."</em> (/aɪd fərˈɡɒt.ən/)<br>
-            • <em>"She <strong>had</strong> already left."</em> -> <em>"She<strong>'d</strong> already left."</em> (/ʃiːd ɔːlˈred.i left/)
+            • <em>"I <strong>had</strong> forgotten my PE kit."</em> $\rightarrow$ <em>"I<strong>'d</strong> forgotten my PE kit."</em> (/aɪd fərˈɡɒt.ən/)<br>
+            • <em>"She <strong>had</strong> already finished the exam."</em> $\rightarrow$ <em>"She<strong>'d</strong> already finished the exam."</em> (/ʃiːd ɔːlˈred.i ˈfɪn.ɪʃt/)
           </div>
 
-          <!-- High-Frequency Story Frames -->
-          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🎬 5 High-Frequency Storytelling Frames</h3>
+          <!-- The 3-Tense Storytelling Formula -->
+          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🎬 The 3-Tense Master Narrative Formula</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">How fluent speakers combine 3 past tenses in a single story:</p>
+          <div class="contrast-grid">
+            <div class="contrast-card">
+              <div class="contrast-sentence">1. Background Atmosphere</div>
+              <div class="contrast-meaning"><strong>Past Continuous:</strong> <em>"I was walking home from school in the rain..."</em></div>
+            </div>
+            <div class="contrast-card">
+              <div class="contrast-sentence">2. Main Event / Action</div>
+              <div class="contrast-meaning"><strong>Past Simple:</strong> <em>"...when I suddenly reached into my bag..."</em></div>
+            </div>
+            <div class="contrast-card past-perfect">
+              <div class="contrast-sentence">3. Earlier Background Reason</div>
+              <div class="contrast-meaning"><strong>Past Perfect:</strong> <em>"...and realised I had left my keys in the science lab!"</em></div>
+            </div>
+          </div>
+
+          <!-- High-Frequency Frames -->
+          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🎬 5 High-Frequency Storytelling Frames for Teenagers</h3>
           <div class="contrast-grid">
             <div class="contrast-card past-perfect">
-              <div class="contrast-sentence">1. "By the time I arrived..."</div>
-              <div class="contrast-meaning"><em>"By the time I arrived at the party, everyone <strong>had gone</strong> home."</em></div>
+              <div class="contrast-sentence">1. "By the time the bell rang..."</div>
+              <div class="contrast-meaning"><em>"By the time the bell rang, I <strong>had finished</strong> all 20 math problems."</em></div>
             </div>
             <div class="contrast-card past-perfect">
               <div class="contrast-sentence">2. "I realised that I had..."</div>
-              <div class="contrast-meaning"><em>"When I got to the airport, I realised I <strong>had left</strong> my passport at home."</em></div>
+              <div class="contrast-meaning"><em>"When the teacher called my name, I realised I <strong>had forgotten</strong> my assignment."</em></div>
             </div>
             <div class="contrast-card past-perfect">
               <div class="contrast-sentence">3. "When + Past Simple, + Past Perfect"</div>
-              <div class="contrast-meaning"><em>"When the film started, we <strong>had already eaten</strong> all our popcorn."</em></div>
+              <div class="contrast-meaning"><em>"When the match ended, our team <strong>had scored</strong> five goals!"</em></div>
             </div>
             <div class="contrast-card past-perfect">
               <div class="contrast-sentence">4. "After + Past Perfect, + Past Simple"</div>
-              <div class="contrast-meaning"><em>"After he <strong>had finished</strong> his homework, he went out with his friends."</em></div>
+              <div class="contrast-meaning"><em>"After I <strong>had charged</strong> my phone, I called my friends on Discord."</em></div>
             </div>
           </div>
 
-          <!-- Important Note for Students -->
+          <!-- Student Simplification Rule -->
           <div style="background: var(--primary-light); border: 1px solid var(--primary-border); border-radius: var(--radius-sm); padding: 1rem; margin: 1.25rem 0;">
-            <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.3rem;">💡 B1 Golden Rule: Keep It Simple!</div>
+            <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.3rem;">💡 High School Pro Tip: Keep It Natural!</div>
             <div style="font-size: 0.85rem;">
-              You only need Past Perfect when the time order is confusing or when you want to highlight which action happened first. If you use <em>"before"</em> or <em>"after"</em>, the order is already clear, so Past Simple is also very natural in speaking:<br>
-              <em>"I had dinner before I went out."</em> (Perfect and natural!).
+              When words like <em>"before"</em> or <em>"after"</em> make the order obvious, Past Simple for both events is completely natural:<br>
+              <em>"I ate dinner after I finished my homework."</em> (100% natural and correct in everyday speaking!).
             </div>
           </div>
 
           <!-- Contrast Pairs -->
-          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🔍 Meaning Contrast: Did you catch the film?</h3>
+          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.05rem;">🔍 Meaning Contrast: Did you catch the concert?</h3>
           <div class="contrast-grid">
             <div class="contrast-card past-simple">
-              <div class="contrast-sentence">"When we arrived, the film started."</div>
-              <div class="contrast-meaning">First we arrived, and then immediately the film started. We watched the whole movie!</div>
+              <div class="contrast-sentence">"When we got to the arena, the band started playing."</div>
+              <div class="contrast-meaning">First we arrived, and then immediately the band started. We saw the entire concert!</div>
             </div>
             <div class="contrast-card past-perfect">
-              <div class="contrast-sentence">"When we arrived, the film had started."</div>
-              <div class="contrast-meaning">The film started BEFORE we arrived. We were late and missed the opening scene!</div>
+              <div class="contrast-sentence">"When we got to the arena, the band had started playing."</div>
+              <div class="contrast-meaning">The band started BEFORE we arrived. We were late and missed the opening tracks!</div>
             </div>
           </div>
 
@@ -1748,9 +1718,9 @@
             <summary>❓ Concept Checking Questions (CCQs) for Teachers</summary>
             <div class="accordion-content">
               <ol style="margin-left: 1.2rem;">
-                <li><em>"When Sarah called, John had left."</em> -> Who left first, John or Sarah? (John.) Did Sarah speak to John? (No, he was already gone.)</li>
-                <li><em>"By the time the bus came, I had waited for 40 minutes."</em> -> Which action was longer? (Waiting.) Did the waiting start before the bus arrived? (Yes.)</li>
-                <li><em>"I ate lunch after I did my homework."</em> -> Do we understand which happened first? (Yes, 'after' makes it clear.) Is Past Simple fine here? (Yes, completely natural!).</li>
+                <li><em>"When the teacher entered, the students had stopped talking."</em> $\rightarrow$ When did the talking stop? (Before the teacher entered.)</li>
+                <li><em>"By the time I found my gym shoes, the match had started."</em> $\rightarrow$ Which happened first: finding shoes or match starting? (Match starting.)</li>
+                <li><em>"I didn't have my phone because I had lost it yesterday."</em> $\rightarrow$ Why was I without a phone? (Losing it happened earlier.)</li>
               </ol>
             </div>
           </details>
@@ -1759,14 +1729,14 @@
 
       <!-- TAB 4: SPEAKING STUDIO -->
       <section id="tab-speaking" class="section-pane">
-        <!-- 1. Warm-Up Speaking (8 Questions) -->
+        <!-- 1. Warm-Up Speaking (12 Questions for High Schoolers) -->
         <div class="card">
           <div class="card-header">
-            <div class="card-title">💬 Warmer: "Have You Ever...?" & Follow-Up Questions</div>
-            <span class="badge badge-success">Pair Speaking</span>
+            <div class="card-title">💬 High School Warmer: "Have You Ever...?" & Story Details</div>
+            <span class="badge badge-success">Pair Fluency</span>
           </div>
           <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
-            Ask your partner. Start with <strong>Present Perfect</strong> for experience, then switch to <strong>Past Simple</strong> for the story details!
+            Ask your partner. Start with <strong>Present Perfect</strong> for life experience, then switch to <strong>Past Simple</strong> to tell the story!
           </p>
 
           <div class="contrast-grid" id="warmupQuestionsContainer">
@@ -1774,14 +1744,14 @@
           </div>
         </div>
 
-        <!-- 2. Pair Task: Find Someone Who... -->
+        <!-- 2. Pair Task: Find Someone Who... (High School Edition) -->
         <div class="card">
           <div class="card-header">
-            <div class="card-title">👥 Communicative Grid: "Find Someone Who..."</div>
-            <span class="badge badge-accent">Classroom Mingle</span>
+            <div class="card-title">👥 High School Mingle: "Find Someone Who..."</div>
+            <span class="badge badge-accent">10 Teen Prompts</span>
           </div>
           <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
-            Stand up and ask your classmates. Find someone who says "Yes, I have!" and write their name and details.
+            Mingle around the class. Ask questions in English. Write your classmates' names and story details!
           </p>
 
           <div class="table-responsive">
@@ -1801,10 +1771,10 @@
           </div>
         </div>
 
-        <!-- 3. Monologue Speaking Studio with Timers -->
+        <!-- 3. Monologue Speaking Studio with Timers (5 High School Topic Cards) -->
         <div class="card">
           <div class="card-header">
-            <div class="card-title">🎙️ 60-Second Monologue Challenge</div>
+            <div class="card-title">🎙️ 60-Second Monologue Challenge (5 High School Topics)</div>
             <span class="badge badge-primary">Timed Speaking</span>
           </div>
           <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
@@ -1833,15 +1803,15 @@
               </label>
               <label class="checklist-item">
                 <input type="checkbox" id="check-time">
-                <span>Did I speak continuously for the full 60 seconds?</span>
+                <span>Did I speak continuously for the full 60 seconds without long pauses?</span>
               </label>
               <label class="checklist-item">
                 <input type="checkbox" id="check-vocab">
-                <span>Did I include at least 2 new vocabulary words or collocations?</span>
+                <span>Did I include at least 2 new vocabulary items or collocations?</span>
               </label>
               <label class="checklist-item">
                 <input type="checkbox" id="check-contractions">
-                <span>Did I use natural contractions (<em>I've, I'd, didn't</em>)?</span>
+                <span>Did I use natural contractions (<em>I've, I'd, didn't, she'd</em>)?</span>
               </label>
             </div>
           </div>
@@ -1850,11 +1820,11 @@
         <!-- 4. Story-Building Task (Emoji Sequencer) -->
         <div class="card">
           <div class="card-header">
-            <div class="card-title">🧩 Story-Building Task: Arrange & Narrate</div>
+            <div class="card-title">🧩 Story-Building: The School Project Emergency</div>
             <span class="badge badge-warning">Narrative Challenge</span>
           </div>
           <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
-            Click the story tiles in the order you want to tell the story. Then tell your partner the story using <strong>Past Simple</strong> and at least <strong>ONE Past Perfect sentence</strong> (<em>"When I got there, I had already..."</em>).
+            Click the story tiles to arrange the story. Then tell your partner the story using <strong>Past Simple</strong> and at least <strong>ONE Past Perfect sentence</strong> (<em>"When we got to class, we realised our laptop had..."</em>).
           </p>
 
           <div class="story-tile-grid" id="storyTileGrid">
@@ -1867,36 +1837,36 @@
           </div>
         </div>
 
-        <!-- Useful Language Boxes -->
+        <!-- Useful Language Boxes for High Schoolers -->
         <div class="card">
           <div class="card-header">
-            <div class="card-title">🧰 Useful Language for Fluency & Self-Correction</div>
-            <span class="badge badge-primary">Phrase Bank</span>
+            <div class="card-title">🧰 Teen Spoken Phrases & Discourse Markers</div>
+            <span class="badge badge-primary">Spoken Toolkit</span>
           </div>
           <div class="contrast-grid">
             <div class="contrast-card">
-              <div class="contrast-sentence">🌟 Talking About Experience</div>
+              <div class="contrast-sentence">🌟 Opening an Experience</div>
               <div class="contrast-meaning">
-                • <em>"I've always wanted to try..."</em><br>
-                • <em>"I've never actually had the chance to..."</em><br>
-                • <em>"Have you ever been in a situation where...?"</em>
+                • <em>"To be honest, I've always wanted to..."</em><br>
+                • <em>"Believe it or not, I've never actually..."</em><br>
+                • <em>"Have you ever had one of those days where...?"</em>
               </div>
             </div>
             <div class="contrast-card">
-              <div class="contrast-sentence">➡️ Story Sequencing</div>
+              <div class="contrast-sentence">➡️ Story Flow & Climax</div>
               <div class="contrast-meaning">
-                • <em>"First of all, ..."</em><br>
-                • <em>"A few minutes later, ..."</em><br>
+                • <em>"Out of nowhere, ..."</em><br>
                 • <em>"By the time we got there, ..."</em><br>
-                • <em>"In the end, everything was fine."</em>
+                • <em>"I was like, 'Oh no, I've forgotten my keys!'..."</em><br>
+                • <em>"In the end, it turned out great."</em>
               </div>
             </div>
             <div class="contrast-card">
               <div class="contrast-sentence">🔄 Natural Self-Correction</div>
               <div class="contrast-meaning">
-                • <em>"I mean, I've already done that..."</em><br>
-                • <em>"Sorry, what I meant was, I went there last year..."</em><br>
-                • <em>"Or rather, I had never seen anything like it before."</em>
+                • <em>"I mean, I went there last year..."</em><br>
+                • <em>"Sorry, what I meant was, I hadn't done it yet..."</em><br>
+                • <em>"Actually, I've just remembered..."</em>
               </div>
             </div>
           </div>
@@ -1907,8 +1877,8 @@
       <section id="tab-vocabulary" class="section-pane">
         <div class="card">
           <div class="card-header">
-            <div class="card-title">🔤 16 Everyday Theme Vocabulary Items</div>
-            <span class="badge badge-accent">Theme Words</span>
+            <div class="card-title">🔤 24 High School & Teen Theme Vocabulary Flashcards</div>
+            <span class="badge badge-accent">24 Cards</span>
           </div>
           <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
             Click on any flashcard to flip and reveal the definition, target-tense example, and high-yield collocation!
@@ -1933,10 +1903,10 @@
 
       <!-- TAB 6: DRILLS & GYM -->
       <section id="tab-drills" class="section-pane">
-        <!-- 1. Irregular Verb Trainer -->
+        <!-- 1. Irregular Verb Trainer (25 Verbs) -->
         <div class="card">
           <div class="card-header">
-            <div class="card-title">⚡ Irregular Verb Trainer (15 Target Verbs)</div>
+            <div class="card-title">⚡ Irregular Verb Trainer (25 Essential Verbs)</div>
             <span class="badge badge-primary">Form Drill</span>
           </div>
           <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
@@ -1963,10 +1933,10 @@
           </div>
         </div>
 
-        <!-- 2. Time-Marker Sorter -->
+        <!-- 2. Time-Marker Sorter (20 Markers) -->
         <div class="card">
           <div class="card-header">
-            <div class="card-title">🎯 Time-Marker Sorter</div>
+            <div class="card-title">🎯 Time-Marker Sorter (20 High-Yield Time Markers)</div>
             <span class="badge badge-warning">Interactive Sorting</span>
           </div>
           <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
@@ -2007,10 +1977,10 @@
           </div>
         </div>
 
-        <!-- 3. Error-Correction Gym (10 Sentences) -->
+        <!-- 3. Error-Correction Gym (15 Sentences) -->
         <div class="card">
           <div class="card-header">
-            <div class="card-title">🏋️ Error-Correction Gym (10 Typical B1 Flaws)</div>
+            <div class="card-title">🏋️ Error-Correction Gym (15 Teen & High School Sentences)</div>
             <span class="badge badge-danger">Fix the Error</span>
           </div>
           <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
@@ -2027,11 +1997,11 @@
       <section id="tab-quiz" class="section-pane">
         <div class="card">
           <div class="card-header">
-            <div class="card-title">📝 Diagnostic Quiz (20 Mixed Items)</div>
-            <span class="badge badge-primary">Assessment</span>
+            <div class="card-title">📝 Diagnostic Quiz (30 High School & Story Items)</div>
+            <span class="badge badge-primary">30 Questions</span>
           </div>
           <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.25rem;">
-            Test your knowledge of <strong>Past Simple vs Present Perfect</strong> and <strong>Past Simple vs Past Perfect</strong>. Instant feedback and simple one-line explanations provided for every question!
+            Test your mastery of <strong>Past Simple vs Present Perfect</strong>, <strong>Been to vs Gone to</strong>, <strong>Since vs For</strong>, and <strong>Storytelling Past Perfect</strong>.
           </p>
 
           <div id="quizContainer">
@@ -2040,7 +2010,7 @@
 
           <div class="quiz-report" id="quizReport" style="display: none;">
             <h3>Quiz Completed!</h3>
-            <div class="report-score" id="reportScoreDisplay">0/20 (0%)</div>
+            <div class="report-score" id="reportScoreDisplay">0/30 (0%)</div>
             <p class="report-msg" id="reportMsgDisplay"></p>
             <button class="btn-tool" style="margin-top: 1rem; padding: 0.6rem 1.25rem;" onclick="resetQuiz()">🔄 Retake Quiz</button>
           </div>
@@ -2051,14 +2021,14 @@
       <section id="tab-notes" class="section-pane">
         <div class="card">
           <div class="card-header">
-            <div class="card-title">📓 My Lesson Notes & Personal Cheat Sheet</div>
+            <div class="card-title">📓 My High School English Notes</div>
             <span class="badge badge-primary">Auto-Saved</span>
           </div>
           <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
             Write your personal grammar notes, new vocabulary, or speaking ideas here. Your notes are automatically saved in your browser!
           </p>
 
-          <textarea class="notes-textarea" id="myNotesBox" placeholder="Write your notes here... (e.g. My favorite story starter, verbs I want to remember, speaking self-reflection)" oninput="saveNotes()"></textarea>
+          <textarea class="notes-textarea" id="myNotesBox" placeholder="Write your notes here... (e.g. My favorite story starters, verbs I want to practice, speaking self-reflection)" oninput="saveNotes()"></textarea>
 
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
             <button class="btn-tool" onclick="copyNotes()">📋 Copy My Notes</button>
@@ -2070,15 +2040,15 @@
         <!-- 5 Self-Study Homework Tasks -->
         <div class="card">
           <div class="card-header">
-            <div class="card-title">🏠 5 Self-Study Homework Tasks (Using Built-in Tools)</div>
+            <div class="card-title">🏠 5 Self-Study Homework Tasks for High Schoolers</div>
             <span class="badge badge-success">Homework</span>
           </div>
           <ol style="margin-left: 1.25rem; line-height: 1.8; font-size: 0.9rem;">
-            <li><strong>Flashcard Mastery:</strong> Review all 16 vocabulary cards until 100% are marked "I know it".</li>
-            <li><strong>Verb Speed Challenge:</strong> Score 15/15 in the Irregular Verb Trainer in under 2 minutes.</li>
-            <li><strong>Audio Voice Recording:</strong> Pick Topic Card 2 in the Speaking Studio. Record yourself speaking for 60 seconds on your smartphone, then evaluate your past tense accuracy.</li>
-            <li><strong>Story Starter Writing:</strong> Choose 2 story starter chunks from the Vocabulary tab and write a 6-sentence story using at least 1 Past Perfect and 3 Past Simple verbs.</li>
-            <li><strong>Quiz Target:</strong> Retake the Diagnostic Quiz until you reach at least 18/20 (90%+).</li>
+            <li><strong>Flashcard Mastery:</strong> Review all 24 vocabulary cards until 100% are marked "I know it".</li>
+            <li><strong>Verb Speed Challenge:</strong> Score 25/25 in the Irregular Verb Trainer in under 3 minutes.</li>
+            <li><strong>Audio Voice Memo:</strong> Choose Topic Card 2 or 5 in the Speaking Studio. Record yourself speaking for 60 seconds on your phone, then check your contractions (<em>I've, I'd</em>).</li>
+            <li><strong>Story Starter Writing:</strong> Choose 2 story starters and write an 8-sentence story about an unexpected school adventure combining Past Continuous, Past Simple, and Past Perfect.</li>
+            <li><strong>Quiz Target:</strong> Score at least 27/30 (90%+) on the 30-item Diagnostic Quiz.</li>
           </ol>
         </div>
       </section>
@@ -2088,198 +2058,273 @@
 
   <!-- =======================================================
        JAVASCRIPT: LESSON DATA BLOCK & STUDENT TOOLS
-       ======================================================= */
-  -->
+       ======================================================= -->
   <script>
     /* =======================================================
-       CENTRAL LESSON DATA DEFINITION
+       CENTRAL LESSON DATA DEFINITION (HIGH SCHOOL EDITION)
        ======================================================= */
     const LESSON_DATA = {
       irregularVerbs: [
-        { base: "be", past: "was / were", pastAlt: "was", participle: "been", example: "I have been to London twice." },
-        { base: "go", past: "went", participle: "gone", participleAlt: "been", example: "She went to Spain last year." },
-        { base: "see", past: "saw", participle: "seen", example: "Have you seen that new movie?" },
-        { base: "buy", past: "bought", participle: "bought", example: "I bought a coffee ten minutes ago." },
-        { base: "lose", past: "lost", participle: "lost", example: "I've lost my keys; I can't get inside." },
-        { base: "find", past: "found", participle: "found", example: "Look! I have found your sunglasses." },
-        { base: "break", past: "broke", participle: "broken", example: "He broke his leg when he went skiing." },
-        { base: "eat", past: "ate", participle: "eaten", example: "I had already eaten lunch when they called." },
-        { base: "write", past: "wrote", participle: "written", example: "She has written three emails this morning." },
-        { base: "leave", past: "left", participle: "left", example: "By the time we got there, the bus had left." },
-        { base: "meet", past: "met", participle: "met", example: "I met my best friend five years ago." },
-        { base: "take", past: "took", participle: "taken", example: "Have you taken your medicine today?" },
-        { base: "forget", past: "forgot", participle: "forgotten", example: "I realised I had forgotten my phone at home." },
-        { base: "give", past: "gave", participle: "given", example: "My parents gave me a bike for my birthday." },
-        { base: "win", past: "won", participle: "won", example: "Our team has won three games this season!" }
+        { base: "be", past: "was / were", pastAlt: "was", participle: "been", example: "I have been to three different concerts." },
+        { base: "go", past: "went", participle: "gone", participleAlt: "been", example: "She went to Antalya last summer." },
+        { base: "see", past: "saw", participle: "seen", example: "Have you seen the new superhero film?" },
+        { base: "buy", past: "bought", participle: "bought", example: "I bought a new gaming mouse yesterday." },
+        { base: "lose", past: "lost", participle: "lost", example: "I've lost my school ID card; I can't enter." },
+        { base: "find", past: "found", participle: "found", example: "Look! I have found my lost earphones." },
+        { base: "break", past: "broke", participle: "broken", example: "He broke his phone screen during PE class." },
+        { base: "eat", past: "ate", participle: "eaten", example: "I had already eaten lunch when my friends invited me to the canteen." },
+        { base: "write", past: "wrote", participle: "written", example: "She has written three essays this week." },
+        { base: "leave", past: "left", participle: "left", example: "By the time I reached the bus stop, the bus had left." },
+        { base: "meet", past: "met", participle: "met", example: "I met my best friend on the first day of high school." },
+        { base: "take", past: "took", participle: "taken", example: "Have you taken notes during the chemistry lecture?" },
+        { base: "forget", past: "forgot", participle: "forgotten", example: "I realised I had forgotten my homework notebook." },
+        { base: "give", past: "gave", participle: "given", example: "Our teacher gave us two days to finish the project." },
+        { base: "win", past: "won", participle: "won", example: "Our high school robotics team has won first place!" },
+        { base: "choose", past: "chose", participle: "chosen", example: "I chose German as my second foreign language." },
+        { base: "speak", past: "spoke", participle: "spoken", example: "Have you ever spoken to a native English speaker?" },
+        { base: "drive", past: "drove", participle: "driven", example: "My older brother drove us to school yesterday." },
+        { base: "fall", past: "fell", participle: "fallen", example: "He had fallen asleep while studying for the history test." },
+        { base: "feel", past: "felt", participle: "felt", example: "I felt so proud when I received my exam report." },
+        { base: "hear", past: "heard", participle: "heard", example: "Have you heard the announcement about the school festival?" },
+        { base: "send", past: "sent", participle: "sent", example: "I have just sent the presentation slides to our group chat." },
+        { base: "sleep", past: "slept", participle: "slept", example: "I only slept four hours last night because of the project." },
+        { base: "tell", past: "told", participle: "told", example: "She told me that the math teacher had postponed the quiz." },
+        { base: "throw", past: "threw", participle: "thrown", example: "He threw the basketball from the half-court line and scored!" }
       ],
 
       timeMarkers: [
         { text: "yesterday", category: "Past Simple" },
-        { text: "3 days ago", category: "Past Simple" },
-        { text: "in 2021", category: "Past Simple" },
-        { text: "last summer", category: "Past Simple" },
+        { text: "2 days ago", category: "Past Simple" },
+        { text: "in 2022", category: "Past Simple" },
+        { text: "last Friday", category: "Past Simple" },
         { text: "when I was 10", category: "Past Simple" },
+        { text: "during 8th grade", category: "Past Simple" },
         { text: "ever", category: "Present Perfect" },
         { text: "never", category: "Present Perfect" },
         { text: "already", category: "Present Perfect" },
         { text: "just", category: "Present Perfect" },
         { text: "yet", category: "Present Perfect" },
-        { text: "since Monday", category: "Present Perfect" },
+        { text: "since September", category: "Present Perfect" },
+        { text: "so far today", category: "Present Perfect" },
         { text: "by the time", category: "Past Perfect" },
         { text: "earlier that day", category: "Past Perfect" },
         { text: "had already", category: "Past Perfect" },
+        { text: "before the bell rang", category: "Past Perfect" },
         { text: "for 3 years", category: "Both" },
-        { text: "this morning", category: "Both" }
+        { text: "this morning", category: "Both" },
+        { text: "all week", category: "Both" }
       ],
 
       vocabulary: [
-        { word: "Boarding pass", cat: "Travel", meaning: "A card/ticket showing you can enter the aeroplane.", example: "I've printed my boarding pass already.", colloc: "Show your boarding pass" },
-        { word: "Luggage", cat: "Travel", meaning: "Bags and suitcases for traveling.", example: "By the time we reached the gate, they had loaded our luggage.", colloc: "Lost luggage" },
-        { word: "Delay", cat: "Travel", meaning: "A period when you have to wait because something is late.", example: "Our flight was delayed for two hours yesterday.", colloc: "Flight delay" },
-        { word: "Destination", cat: "Travel", meaning: "The place where someone is going.", example: "Have you ever travelled to an exotic destination?", colloc: "Final destination" },
-        { word: "Assignment", cat: "School", meaning: "A piece of work or homework given to students.", example: "I've just handed in my English assignment.", colloc: "Submit an assignment" },
-        { word: "Deadline", cat: "School", meaning: "The final time by which something must be done.", example: "When I woke up, I realised the deadline had passed.", colloc: "Meet a deadline" },
-        { word: "Presentation", cat: "School", meaning: "A talk giving information about a topic.", example: "Did you give your presentation this morning?", colloc: "Give a presentation" },
-        { word: "Grade", cat: "School", meaning: "A score or mark given for school work.", example: "She has received top grades this semester.", colloc: "Get good grades" },
-        { word: "Equipment", cat: "Hobbies", meaning: "Tools or items needed for a sport or hobby.", example: "I bought all my camping equipment last month.", colloc: "Sports equipment" },
-        { word: "Tournament", cat: "Hobbies", meaning: "A sports competition with many games.", example: "Our club has won the regional tournament twice.", colloc: "Enter a tournament" },
-        { word: "Practice", cat: "Hobbies", meaning: "Doing an activity regularly to become better.", example: "I had practiced the guitar for an hour before dinner.", colloc: "Regular practice" },
-        { word: "Instrument", cat: "Hobbies", meaning: "An object used for making musical sounds.", example: "Have you ever played a musical instrument?", colloc: "Play an instrument" },
-        { word: "Routine", cat: "Daily Life", meaning: "Your regular way of doing things.", example: "I've changed my morning routine this week.", colloc: "Daily routine" },
-        { word: "Receipt", cat: "Daily Life", meaning: "A paper or message showing you paid for something.", example: "I lost the receipt, so I couldn't return the jacket.", colloc: "Keep the receipt" },
-        { word: "Appointment", cat: "Daily Life", meaning: "An arranged time to see a doctor or person.", example: "I've booked an appointment with the dentist for tomorrow.", colloc: "Make an appointment" },
-        { word: "Errand", cat: "Daily Life", meaning: "A short trip to do a necessary job (shopping, post office).", example: "By 2 PM, I had run four different errands.", colloc: "Run errands" }
+        { word: "Assignment", cat: "School", meaning: "A piece of homework or project given by a teacher.", example: "I've just uploaded my physics assignment.", colloc: "Submit an assignment" },
+        { word: "Deadline", cat: "School", meaning: "The final time by which your work must be finished.", example: "When I woke up, I realised the deadline had passed.", colloc: "Meet a deadline" },
+        { word: "Presentation", cat: "School", meaning: "A talk where you show and explain slides to your class.", example: "Did you deliver your history presentation yesterday?", colloc: "Give a presentation" },
+        { word: "Pop quiz", cat: "School", meaning: "A surprise short test without warning.", example: "Our teacher gave us an unannounced pop quiz this morning.", colloc: "Take a pop quiz" },
+        { word: "Canteen", cat: "School", meaning: "The dining hall or cafeteria in school.", example: "Have you ever tried the toast in our school canteen?", colloc: "School canteen" },
+        { word: "Locker", cat: "School", meaning: "A small metal cupboard to keep your school books.", example: "I had locked my books in the locker before class.", colloc: "School locker" },
+        { word: "Headphones", cat: "Tech & Media", meaning: "A pair of speakers worn over your ears to listen to audio.", example: "I've bought noise-cancelling headphones for studying.", colloc: "Wear headphones" },
+        { word: "Notification", cat: "Tech & Media", meaning: "An alert or message on your smartphone screen.", example: "I received fifty notifications while I was sleeping.", colloc: "Turn off notifications" },
+        { word: "Group chat", cat: "Tech & Media", meaning: "An online messaging room with your classmates.", example: "Someone has just shared the exam notes in our group chat.", colloc: "Class group chat" },
+        { word: "Battery life", cat: "Tech & Media", meaning: "The amount of time your device works on one charge.", example: "My phone battery had died before I could call a taxi.", colloc: "Low battery life" },
+        { word: "Streamer", cat: "Tech & Media", meaning: "A person who broadcasts video games or content live.", example: "Have you ever watched that gaming streamer on Twitch?", colloc: "Live streamer" },
+        { word: "Account", cat: "Tech & Media", meaning: "Your personal login on a website or social network.", example: "I've created a new account for our robotics club.", colloc: "Create an account" },
+        { word: "Tournament", cat: "Sports & Gaming", meaning: "A competition with several games until a champion wins.", example: "Our esports team has won two tournaments this year.", colloc: "Enter a tournament" },
+        { word: "Practice", cat: "Sports & Gaming", meaning: "Training and repeating skills to get better.", example: "I had practiced basketball for two hours before the rain started.", colloc: "Team practice" },
+        { word: "Teammate", cat: "Sports & Gaming", meaning: "A player on the same team as you.", example: "My teammate passed the ball and we scored the winning goal.", colloc: "Pass to a teammate" },
+        { word: "Equipment", cat: "Sports & Gaming", meaning: "Items or gear needed for an activity (racket, jersey, pads).", example: "I bought all my camping equipment last weekend.", colloc: "Sports equipment" },
+        { word: "Champion", cat: "Sports & Gaming", meaning: "The winner of a match or competition.", example: "Our high school became the city champion in volleyball.", colloc: "Defending champion" },
+        { word: "Level up", cat: "Sports & Gaming", meaning: "To advance to a higher rank or skill stage.", example: "I have levelled up to rank Diamond this season.", colloc: "Level up quickly" },
+        { word: "Routine", cat: "Daily Life", meaning: "Your regular daily habits and schedule.", example: "I've changed my morning study routine this term.", colloc: "Morning routine" },
+        { word: "Appointment", cat: "Daily Life", meaning: "An arranged time to visit a dentist, doctor, or advisor.", example: "I've made an appointment with the school counsellor for 2 PM.", colloc: "Book an appointment" },
+        { word: "Receipt", cat: "Daily Life", meaning: "A slip of paper showing proof of payment.", example: "I lost the receipt, so I couldn't return the hoodie.", colloc: "Keep the receipt" },
+        { word: "Festival", cat: "Daily Life", meaning: "A special event with music, games, and performances.", example: "Have you ever participated in the spring youth festival?", colloc: "Music festival" },
+        { word: "Errand", cat: "Daily Life", meaning: "A short trip to do a necessary chore.", example: "By 5 PM, I had run three errands for my parents.", colloc: "Run errands" },
+        { word: "Allowance", cat: "Daily Life", meaning: "Pocket money given by parents regularly.", example: "I've saved half of my monthly allowance so far.", colloc: "Monthly allowance" }
       ],
 
       storyStarters: [
-        { chunk: "I suddenly realised I'd forgotten...", example: "When I arrived at the hotel, I suddenly realised I'd forgotten my charger." },
-        { chunk: "By the time we got there...", example: "By the time we got there, the concert had already started." },
-        { chunk: "After we had finished...", example: "After we had finished our exams, we went to the beach to celebrate." },
-        { chunk: "I had never seen such a...", example: "Before I visited Cappadocia, I had never seen such a breathtaking view." },
-        { chunk: "When I opened my bag, I saw that...", example: "When I opened my bag, I saw that my water bottle had leaked everywhere." }
+        { chunk: "I suddenly realised I'd forgotten...", example: "When I walked into the science exam, I suddenly realised I'd forgotten my calculator." },
+        { chunk: "By the time the bell rang...", example: "By the time the bell rang, our team had completed the entire chemistry poster." },
+        { chunk: "After we had finished our exams...", example: "After we had finished our midterm exams, we went to the cinema to celebrate." },
+        { chunk: "I had never seen such a...", example: "Before our school camp in Bolu, I had never seen such a breathtaking mountain view." },
+        { chunk: "When I opened my backpack, I saw that...", example: "When I opened my backpack, I saw that my juice box had leaked all over my notebook." }
       ],
 
       speaking: {
         warmUp: [
-          { q1: "Have you ever lost something valuable while traveling?", q2: "When did it happen? What did you do?", model: "Yes, I have! I lost my wallet in Rome two years ago. I went to the police station." },
-          { q1: "Have you ever tried an extreme sport (e.g. rafting, skiing)?", q2: "Where were you? How did you feel?", model: "Yes, I've tried snowboarding. I went to Uludağ last winter. It was exciting but scary!" },
-          { q1: "Have you ever met a famous person?", q2: "Who was it? What did you say?", model: "No, I've never met a celebrity, but my brother saw a famous singer at the airport in 2023." },
-          { q1: "Have you ever missed a train, flight, or bus?", q2: "Why were you late? What happened next?", model: "Yes, I missed my bus last week because I had overslept. I had to take a taxi." }
+          { q1: "Have you ever forgotten your homework or school uniform?", q2: "When did it happen? What did your teacher say?", model: "Yes, I have! Last term I forgot my math project at home. My teacher let me submit it during the lunch break." },
+          { q1: "Have you ever played in a high-stakes gaming match or sports tournament?", q2: "What game or sport was it? Did your team win?", model: "Yes, I've played in a school basketball final last winter. It was super intense, and we won by two points!" },
+          { q1: "Have you ever had your phone battery die at the worst possible moment?", q2: "Where were you? How did you solve the problem?", model: "Yes! Last month my phone died while I was waiting for the bus after school. I had to ask my classmate to call my parents." },
+          { q1: "Have you ever met a famous YouTuber, athlete, or celebrity?", q2: "Who was it? What did you say to them?", model: "Yes, I saw a famous gaming streamer at a tech expo in Istanbul last year. I took a quick selfie with him!" },
+          { q1: "Have you ever overslept and arrived late for a school exam?", q2: "Why did you oversleep? What happened when you entered the class?", model: "Yes, once during 9th grade my alarm didn't ring. By the time I reached the classroom, the exam had already started!" },
+          { q1: "Have you ever performed on stage (singing, theater, presentation)?", q2: "How did you feel before going on stage? How did it go?", model: "Yes, I gave a presentation at the school science fair. I was really nervous at first, but everyone clapped in the end." }
         ],
 
         findSomeoneWho: [
-          { prompt: "has visited more than 3 countries", q: "Have you visited more than 3 countries?", follow: "Which country did you like most?" },
-          { prompt: "has lost their house keys recently", q: "Have you lost your keys recently?", follow: "Where did you find them?" },
-          { prompt: "has learned to play a musical instrument", q: "Have you ever learned an instrument?", follow: "When did you start practicing?" },
-          { prompt: "has cooked a special meal this week", q: "Have you cooked a special meal this week?", follow: "What did you make?" },
-          { prompt: "has broken a bone in the past", q: "Have you ever broken a bone?", follow: "How did it happen?" },
-          { prompt: "has bought something online today", q: "Have you bought anything online today?", follow: "What did you buy?" },
-          { prompt: "has overslept and missed an appointment", q: "Have you ever overslept and missed an appointment?", follow: "What did you do next?" },
-          { prompt: "has won a competition or prize", q: "Have you ever won a prize or competition?", follow: "What did you win?" }
+          { prompt: "has stayed up past midnight finishing an assignment", q: "Have you ever stayed up past midnight for homework?", follow: "Which subject was it? Did you get a good grade?" },
+          { prompt: "has lost their student bus card or ID recently", q: "Have you lost your student card recently?", follow: "Where did you finally find it?" },
+          { prompt: "has learned to code, edit videos, or make animations", q: "Have you ever learned coding or video editing?", follow: "What software did you use?" },
+          { prompt: "has participated in a school club (robotics, music, drama)", q: "Have you joined any school clubs this year?", follow: "What activities did you do last week?" },
+          { prompt: "has cooked a special meal or snack for friends", q: "Have you cooked anything delicious this week?", follow: "What did you make? Did your friends like it?" },
+          { prompt: "has won a medal, trophy, or gaming badge", q: "Have you ever won a competition or tournament?", follow: "When did you win it?" },
+          { prompt: "has watched an entire series season in one weekend", q: "Have you binged a TV show recently?", follow: "Which show was it? How many episodes did you watch?" },
+          { prompt: "has visited a different city on a school trip", q: "Have you ever been on a school excursion to another city?", follow: "Where did you go? What was the best part?" },
+          { prompt: "has bought something with their own saved allowance", q: "Have you bought something special recently?", follow: "How long did you save your money for it?" },
+          { prompt: "has locked their keys or phone inside a locker", q: "Have you ever locked your items inside your locker?", follow: "How did you open it?" }
         ],
 
         monologueCards: [
           {
             id: 1,
-            title: "Card 1: A Story with a Twist (Past Perfect Focus)",
-            prompt: "Talk about a time you went somewhere and something had already happened before you arrived.",
+            title: "Card 1: An Unforgettable School Trip / Camp (Present Perfect + Past Simple)",
+            prompt: "Talk about the most exciting school trip or youth camp you have ever experienced.",
             scaffold: [
-              "1. Start with: 'A memorable day was when I went to...'",
-              "2. Add a detail: 'When I arrived, I realised that [someone] had already...'",
-              "3. Say how you felt: 'I was surprised / relieved / shocked because...'"
+              "1. Start with: 'One of the best school trips I have ever been on was when...'",
+              "2. Give story details: 'We went to [Place] last [year/month]. During the day, we visited...'",
+              "3. Share a memorable moment: 'At night, we sat together and realised that we had...'"
             ]
           },
           {
             id: 2,
-            title: "Card 2: An Unforgettable Life Experience (Present Perfect + Past Simple)",
-            prompt: "Talk about an exciting experience you have had in your life.",
+            title: "Card 2: The Homework Emergency (Past Perfect Focus)",
+            prompt: "Talk about a stressful moment when something went wrong with your schoolwork or presentation.",
             scaffold: [
-              "1. Start with: 'One of the most exciting things I have ever done is...'",
-              "2. Give details: 'It happened two years ago when I visited...'",
-              "3. Say what you learned: 'Since that day, I have always loved...'"
+              "1. Start with: 'A really stressful school moment happened when I...'",
+              "2. Add the earlier past: 'When I opened my bag in the morning, I realised I had left my...'",
+              "3. Say what happened next: 'Luckily, my friend helped me and by the time class started, I had...'"
             ]
           },
           {
             id: 3,
-            title: "Card 3: My Week & Accomplishments (Unfinished Time Focus)",
-            prompt: "Talk about things you have done so far this week and what happened yesterday.",
+            title: "Card 3: A Gaming or Sports Milestone (Experience vs Specific Match)",
+            prompt: "Talk about a video game victory, tournament, or sports match you will never forget.",
             scaffold: [
-              "1. Start with: 'So far this week, I've been quite busy with...'",
-              "2. Specific past event: 'Yesterday, I finished / met / went to...'",
-              "3. Contrast: 'I haven't completed my project yet, but I've already...'"
+              "1. Start with: 'I've played [Game/Sport] for [time], but my best match was...'",
+              "2. Describe the action: 'It was 2-2 in the final minutes. My teammates were getting tired...'",
+              "3. The climax: 'Before the final whistle, we had scored the winning point!'"
+            ]
+          },
+          {
+            id: 4,
+            title: "Card 4: A New Skill I Have Learned Recently (Unfinished Time Focus)",
+            prompt: "Talk about a new hobby, sport, or digital skill you have picked up recently.",
+            scaffold: [
+              "1. Start with: 'Recently, I've started learning how to...'",
+              "2. Compare with past: 'Before this year, I had never tried it because...'",
+              "3. Current progress: 'So far this month, I've practiced four times and I've already improved...'"
+            ]
+          },
+          {
+            id: 5,
+            title: "Card 5: An Embarrassing Moment in Class (Story with a Twist)",
+            prompt: "Talk about a funny or slightly embarrassing situation that happened at school.",
+            scaffold: [
+              "1. Start with: 'I remember an embarrassing day when I arrived at school and...'",
+              "2. The surprise: 'Everyone looked at me because I had accidentally worn... / brought...'",
+              "3. How you felt: 'I was so embarrassed at first, but afterwards everyone laughed!'"
             ]
           }
         ],
 
         storyTiles: [
-          { id: 1, emoji: "⏰", label: "Overslept (Alarm failed)" },
-          { id: 2, emoji: "🏃‍♂️", label: "Ran to the bus stop" },
-          { id: 3, emoji: "🚌💨", label: "Bus had already left" },
-          { id: 4, emoji: "🌧️", label: "Started raining heavily" },
-          { id: 5, emoji: "☕", label: "Found a cozy coffee shop" }
+          { id: 1, emoji: "💻⚡", label: "Laptop battery died at 1%" },
+          { id: 2, emoji: "🏃‍♂️💨", label: "Ran to the computer lab" },
+          { id: 3, emoji: "🚪🔒", label: "Lab door was already locked" },
+          { id: 4, emoji: "🤝💡", label: "Friend shared their power bank" },
+          { id: 5, emoji: "📊✨", label: "Submitted presentation on time" }
         ]
       },
 
       errorGym: [
         {
           id: 1,
-          bad: "I have seen that movie yesterday evening.",
-          fix: "I saw that movie yesterday evening.",
-          rule: "Use Past Simple with specific finished time words like 'yesterday'."
+          bad: "I have played football with my classmates yesterday afternoon.",
+          fix: "I played football with my classmates yesterday afternoon.",
+          rule: "Use Past Simple with specific finished time expressions like 'yesterday afternoon'."
         },
         {
           id: 2,
-          bad: "Did you ever eat octopus in your life?",
-          fix: "Have you ever eaten octopus in your life?",
+          bad: "Did you ever watch an esports final live in your life?",
+          fix: "Have you ever watched an esports final live in your life?",
           rule: "Use Present Perfect for life experience questions ('Have you ever...?')."
         },
         {
           id: 3,
-          bad: "She lives in Ankara since 2018.",
-          fix: "She has lived in Ankara since 2018.",
-          rule: "Use Present Perfect with 'since' for actions that started in the past and continue now."
+          bad: "I know my best friend since we started 9th grade.",
+          fix: "I have known my best friend since we started 9th grade.",
+          rule: "Use Present Perfect with 'since' for ongoing friendships starting in the past."
         },
         {
           id: 4,
-          bad: "When I arrived at the cinema, the film already started 10 minutes before.",
-          fix: "When I arrived at the cinema, the film had already started.",
-          rule: "Use Past Perfect for the earlier event that happened before you arrived."
+          bad: "When I arrived at the bus stop, the school bus already left 5 minutes before.",
+          fix: "When I arrived at the bus stop, the school bus had already left.",
+          rule: "Use Past Perfect ('had left') for the earlier event that happened before you arrived."
         },
         {
           id: 5,
-          bad: "I didn't finished my homework yet.",
-          fix: "I haven't finished my homework yet.",
-          rule: "Use Present Perfect with 'yet' in negative sentences."
+          bad: "I didn't finished my biology assignment yet.",
+          fix: "I haven't finished my biology assignment yet.",
+          rule: "Use Present Perfect negative ('haven't finished') with 'yet'."
         },
         {
           id: 6,
-          bad: "I have bought a new car two weeks ago.",
-          fix: "I bought a new car two weeks ago.",
+          bad: "My brother has bought a new gaming headset two days ago.",
+          fix: "My brother bought a new gaming headset two days ago.",
           rule: "Use Past Simple with 'ago'."
         },
         {
           id: 7,
-          bad: "By the time we got home, the rain stopped.",
-          fix: "By the time we got home, the rain had stopped.",
-          rule: "Use Past Perfect with 'by the time' to show which action happened first."
+          bad: "By the time the teacher entered, the noise stopped.",
+          fix: "By the time the teacher entered, the noise had stopped.",
+          rule: "Use Past Perfect with 'by the time' to show which action occurred first."
         },
         {
           id: 8,
-          bad: "I've lost my phone yesterday at school.",
-          fix: "I lost my phone yesterday at school.",
-          rule: "'Yesterday' requires Past Simple, not Present Perfect."
+          bad: "Can is not here; he has been to the canteen.",
+          fix: "Can is not here; he has gone to the canteen.",
+          rule: "Use 'gone to' when the person is still at the destination right now."
         },
         {
           id: 9,
-          bad: "He has already left before I could speak to him.",
-          fix: "He had already left before I could speak to him.",
-          rule: "In a past narrative, use Past Perfect ('had left') for the earlier past."
+          bad: "I live in Istanbul since five years.",
+          fix: "I have lived in Istanbul for five years.",
+          rule: "Use 'for' with durations (five years) and Present Perfect for ongoing residency."
         },
         {
           id: 10,
-          bad: "I know Sarah for five years. We are best friends.",
-          fix: "I have known Sarah for five years. We are best friends.",
-          rule: "Use Present Perfect ('have known') with 'for' for an ongoing friendship."
+          bad: "I've lost my textbook yesterday during lunch.",
+          fix: "I lost my textbook yesterday during lunch.",
+          rule: "'Yesterday' denotes a finished past time and requires Past Simple."
+        },
+        {
+          id: 11,
+          bad: "He has already left the classroom before the teacher arrived.",
+          fix: "He had already left the classroom before the teacher arrived.",
+          rule: "In a past narrative, use Past Perfect ('had left') for the earlier past."
+        },
+        {
+          id: 12,
+          bad: "I didn't ate anything since breakfast this morning.",
+          fix: "I haven't eaten anything since breakfast this morning.",
+          rule: "Use Present Perfect ('haven't eaten') with 'since'."
+        },
+        {
+          id: 13,
+          bad: "When I reached the stadium, our team scored two goals already.",
+          fix: "When I reached the stadium, our team had already scored two goals.",
+          rule: "The goals were scored before arriving $\\rightarrow$ Past Perfect."
+        },
+        {
+          id: 14,
+          bad: "Have you ever went to Cappadocia with your family?",
+          fix: "Have you ever been to Cappadocia with your family?",
+          rule: "Use 'been to' (participial form) when asking about travel experiences where you went and returned."
+        },
+        {
+          id: 15,
+          bad: "She had dinner before she has started her homework.",
+          fix: "She had dinner before she started her homework.",
+          rule: "Keep past narratives in past tenses (Past Simple after 'before')."
         }
       ],
 
@@ -2289,153 +2334,223 @@
           q: "I _______ to London three times in my life.",
           opts: ["went", "have been", "had been", "was going"],
           ans: 1,
-          exp: "Use Present Perfect ('have been') for life experience up to now."
+          exp: "Use Present Perfect ('have been') for life experience without a specific date."
         },
         {
           id: 2,
-          q: "My brother _______ a new bicycle last Saturday.",
+          q: "My brother _______ a new gaming laptop last Saturday.",
           opts: ["bought", "has bought", "had bought", "buys"],
           ans: 0,
           exp: "Use Past Simple ('bought') because 'last Saturday' is a finished past time."
         },
         {
           id: 3,
-          q: "When we got to the airport, we realised we _______ our passports at home!",
+          q: "When we reached the exam room, we realised we _______ our student IDs at home!",
           opts: ["left", "have left", "had left", "were leaving"],
           ans: 2,
-          exp: "Use Past Perfect ('had left') because leaving the passports happened BEFORE arriving at the airport."
+          exp: "Use Past Perfect ('had left') because leaving the IDs happened BEFORE arriving at school."
         },
         {
           id: 4,
-          q: "_______ you ever _______ Mexican food?",
-          opts: ["Did / eat", "Have / eaten", "Had / eaten", "Do / eat"],
+          q: "_______ you ever _______ an esports final live in a stadium?",
+          opts: ["Did / watch", "Have / watched", "Had / watched", "Do / watch"],
           ans: 1,
-          exp: "We ask 'Have you ever eaten...?' for life experiences."
+          exp: "We ask 'Have you ever watched...?' for life experiences."
         },
         {
           id: 5,
-          q: "She _______ her keys, so she can't enter the house right now.",
-          opts: ["lost", "has lost", "had lost", "was losing"],
+          q: "Defne is not in the classroom right now; she _______ to the school library to study.",
+          opts: ["has been", "has gone", "had gone", "went"],
           ans: 1,
-          exp: "Present Perfect ('has lost') shows a recent action with a result NOW."
+          exp: "Use 'has gone' because Defne is still at the library right now."
         },
         {
           id: 6,
-          q: "By the time the teacher entered the classroom, the students _______ their books.",
+          q: "By the time the teacher entered the classroom, the students _______ their textbooks.",
           opts: ["opened", "have opened", "had opened", "were opening"],
           ans: 2,
           exp: "'By the time' signals that the students opened their books first (Past Perfect)."
         },
         {
           id: 7,
-          q: "I _______ in this company since January 2022.",
-          opts: ["worked", "have worked", "work", "had worked"],
+          q: "I _______ my desk partner since our first day in 9th grade.",
+          opts: ["knew", "have known", "know", "had known"],
           ans: 1,
-          exp: "Use Present Perfect ('have worked') with 'since' for a state continuing now."
+          exp: "Use Present Perfect ('have known') with 'since' for an ongoing friendship."
         },
         {
           id: 8,
-          q: "Tom _______ to school yesterday because he was ill.",
+          q: "Tom _______ to football practice yesterday because he had a fever.",
           opts: ["didn't go", "hasn't gone", "hadn't gone", "doesn't go"],
           ans: 0,
           exp: "Use Past Simple negative ('didn't go') for a specific finished day (yesterday)."
         },
         {
           id: 9,
-          q: "I was hungry because I _______ anything since breakfast.",
+          q: "I was super hungry during 5th period because I _______ anything since 7 AM.",
           opts: ["didn't eat", "haven't eaten", "hadn't eaten", "wasn't eating"],
           ans: 2,
-          exp: "Past Perfect negative ('hadn't eaten') explains the reason in a past story."
+          exp: "Past Perfect negative ('hadn't eaten') explains the reason for being hungry in a past story."
         },
         {
           id: 10,
-          q: "Look! Someone _______ this beautiful painting on the wall.",
-          opts: ["hung", "has hung", "had hung", "hangs"],
+          q: "Look! Someone _______ a funny sticker on the teacher's whiteboard.",
+          opts: ["stuck", "has stuck", "had stuck", "sticks"],
           ans: 1,
           exp: "'Look!' draws attention to a visible present result, so use Present Perfect."
         },
         {
           id: 11,
-          q: "When did you _______ your driving test?",
-          opts: ["pass", "passed", "have passed", "had passed"],
+          q: "When did you _______ your coding project?",
+          opts: ["finish", "finished", "have finished", "had finished"],
           ans: 0,
-          exp: "After 'did', always use the base form of the verb ('pass')."
+          exp: "After auxiliary 'did', always use the base form 'V1' ('finish')."
         },
         {
           id: 12,
-          q: "The train _______ when we reached the platform, so we had to wait for the next one.",
+          q: "The school bus _______ when we arrived at the stop, so we had to call a taxi.",
           opts: ["already left", "has already left", "had already left", "was leaving"],
           ans: 2,
-          exp: "The train left before we reached the platform, so use Past Perfect."
+          exp: "The bus left before we reached the stop $\\rightarrow$ Past Perfect ('had already left')."
         },
         {
           id: 13,
-          q: "I _______ three cups of coffee so far today.",
+          q: "I _______ three glasses of water so far today.",
           opts: ["drank", "have drunk", "had drunk", "drink"],
           ans: 1,
           exp: "'Today' is still unfinished, so use Present Perfect ('have drunk')."
         },
         {
           id: 14,
-          q: "Shakespeare _______ many famous plays and sonnets.",
-          opts: ["wrote", "has written", "had written", "is writing"],
+          q: "Atatürk _______ the Republic of Türkiye in 1923.",
+          opts: ["founded", "has founded", "had founded", "found"],
           ans: 0,
-          exp: "Shakespeare is deceased (finished life period), so we use Past Simple ('wrote')."
+          exp: "Historical events with a specific past year ('in 1923') require Past Simple ('founded')."
         },
         {
           id: 15,
-          q: "She felt confident during the interview because she _______ thoroughly.",
-          opts: ["prepared", "has prepared", "had prepared", "prepares"],
+          q: "She felt confident before the English presentation because she _______ for three days.",
+          opts: ["rehearsed", "has rehearsed", "had rehearsed", "rehearses"],
           ans: 2,
-          exp: "She prepared before the interview took place (earlier past)."
+          exp: "Rehearsing took place before the presentation $\\rightarrow$ Past Perfect."
         },
         {
           id: 16,
-          q: "We _______ each other for over ten years now.",
-          opts: ["knew", "have known", "had known", "know"],
+          q: "We have lived in this neighbourhood _______ five years now.",
+          opts: ["since", "for", "during", "ago"],
           ans: 1,
-          exp: "Use Present Perfect ('have known') for ongoing knowledge/friendship up to now."
+          exp: "Use 'for' with duration / length of time ('five years')."
         },
         {
           id: 17,
-          q: "I _______ to bed early last night because I was exhausted.",
+          q: "I _______ to bed early last night because I had a big math exam today.",
           opts: ["went", "have gone", "had gone", "go"],
           ans: 0,
-          exp: "'Last night' is a finished past time -> Past Simple ('went')."
+          exp: "'Last night' is a finished past time $\\rightarrow$ Past Simple ('went')."
         },
         {
           id: 18,
-          q: "Have you finished reading the book _______?",
+          q: "Have you submitted your history assignment _______?",
           opts: ["already", "just", "yet", "since"],
           ans: 2,
-          exp: "Use 'yet' at the end of questions to ask if an expected action is complete."
+          exp: "Use 'yet' at the end of questions to ask if an expected action is finished."
         },
         {
           id: 19,
-          q: "After he _______ dinner, he washed the dishes.",
+          q: "After he _______ dinner, he washed his gym kit.",
           opts: ["ate", "has eaten", "had eaten", "was eating"],
           ans: 2,
-          exp: "Eating dinner happened before washing the dishes -> Past Perfect ('had eaten')."
+          exp: "Eating dinner happened before washing the kit $\\rightarrow$ Past Perfect ('had eaten')."
         },
         {
           id: 20,
-          q: "I _______ him two minutes ago.",
-          opts: ["called", "have called", "had called", "call"],
+          q: "I _______ my best friend two minutes ago.",
+          opts: ["messaged", "have messaged", "had messaged", "message"],
           ans: 0,
-          exp: "Time expressions with 'ago' strictly require Past Simple ('called')."
+          exp: "Time expressions with 'ago' strictly require Past Simple ('messaged')."
+        },
+        {
+          id: 21,
+          q: "Ali: 'Where is your sister?' — Zeynep: 'She _______ to the supermarket; she'll be back in 10 minutes.'",
+          opts: ["has been", "has gone", "had been", "went"],
+          ans: 1,
+          exp: "'Has gone' means she is currently at the supermarket and not home yet."
+        },
+        {
+          id: 22,
+          q: "We _______ this online multiplayer game since last October.",
+          opts: ["played", "have played", "had played", "play"],
+          ans: 1,
+          exp: "Use Present Perfect ('have played') with 'since' for an ongoing hobby."
+        },
+        {
+          id: 23,
+          q: "I _______ the guitar when I was in middle school, but I play drums now.",
+          opts: ["played", "have played", "had played", "play"],
+          ans: 0,
+          exp: "'When I was in middle school' is a completed past period $\\rightarrow$ Past Simple ('played')."
+        },
+        {
+          id: 24,
+          q: "I was shocked when I opened my locker because someone _______ my notebook.",
+          opts: ["took", "has taken", "had taken", "takes"],
+          ans: 2,
+          exp: "Taking the notebook happened earlier than opening the locker $\\rightarrow$ Past Perfect."
+        },
+        {
+          id: 25,
+          q: "Have you ever _______ to Cappadocia on a school trip?",
+          opts: ["gone", "been", "went", "be"],
+          ans: 1,
+          exp: "Use 'been' for life travel experiences where you visited and returned."
+        },
+        {
+          id: 26,
+          q: "The volleyball referee blew the whistle because the ball _______ out of bounds.",
+          opts: ["fell", "has fallen", "had fallen", "falls"],
+          ans: 2,
+          exp: "The ball fell out before the referee blew the whistle $\\rightarrow$ Past Perfect."
+        },
+        {
+          id: 27,
+          q: "I _______ three chapters of this book so far this week.",
+          opts: ["read", "have read", "had read", "am reading"],
+          ans: 1,
+          exp: "'This week' is still happening $\\rightarrow$ Present Perfect ('have read')."
+        },
+        {
+          id: 28,
+          q: "While I was studying in my room, the power _______ out suddenly.",
+          opts: ["went", "has gone", "had gone", "goes"],
+          ans: 0,
+          exp: "The sudden interrupting past action takes Past Simple ('went')."
+        },
+        {
+          id: 29,
+          q: "She _______ her homework yet, so she can't join our Discord call right now.",
+          opts: ["didn't finish", "hasn't finished", "hadn't finished", "doesn't finish"],
+          ans: 1,
+          exp: "Negative sentence with 'yet' and present result $\\rightarrow$ Present Perfect ('hasn't finished')."
+        },
+        {
+          id: 30,
+          q: "Before I started 9th grade, I _______ any foreign language classes.",
+          opts: ["didn't take", "haven't taken", "hadn't taken", "wasn't taking"],
+          ans: 2,
+          exp: "Before starting 9th grade in the past $\\rightarrow$ Earlier past requires Past Perfect ('hadn't taken')."
         }
       ],
 
       lessonFlow: [
-        { step: 1, name: "Warmer: Schemata Activation", time: 5, opt: false, desc: "Personal 'Have you ever' question elicitation & fluency hook.", tab: "tab-speaking" },
-        { step: 2, name: "Module A: Presentation (PPP)", time: 12, opt: false, desc: "Finished time vs Connected to now, timelines & contractions.", tab: "tab-module-a" },
-        { step: 3, name: "Controlled Practice A (Drills)", time: 10, opt: false, desc: "Time marker sorter & irregular verb trainer.", tab: "tab-drills" },
-        { step: 4, name: "Speaking: 'Find Someone Who'", time: 10, opt: false, desc: "Communicative mingling grid (experience + follow-up).", tab: "tab-speaking" },
-        { step: 5, name: "Module B: Storytelling & Past Perfect", time: 12, opt: false, desc: "The earlier past timeline & spoken contraction 'I'd'.", tab: "tab-module-b" },
-        { step: 6, name: "Error-Correction Gym", time: 8, opt: true, desc: "Interactive typing fix for 10 common intermediate errors.", tab: "tab-drills" },
-        { step: 7, name: "Speaking Studio: Monologue", time: 12, opt: false, desc: "30s prep + 60s timed monologue challenge with rubric.", tab: "tab-speaking" },
-        { step: 8, name: "Story-Building Task", time: 10, opt: true, desc: "Arrange 5 emoji tiles and tell narrative in pairs.", tab: "tab-speaking" },
-        { step: 9, name: "Reflection & Diagnostic Quiz", time: 10, opt: false, desc: "20-item diagnostic quiz & homework assignment.", tab: "tab-quiz" }
+        { step: 1, name: "Warmer: Teen Schemata & Fluency", time: 5, opt: false, desc: "Personal 'Have you ever' question elicitation & high-school fluency hook.", tab: "tab-speaking" },
+        { step: 2, name: "Module A: Finished vs Connected", time: 12, opt: false, desc: "Visual timelines, been/gone, since/for, and spoken contractions.", tab: "tab-module-a" },
+        { step: 3, name: "Controlled Practice A (Drills)", time: 10, opt: false, desc: "20 time-marker sorter & 25 irregular verb trainer.", tab: "tab-drills" },
+        { step: 4, name: "Speaking: High School Mingle", time: 10, opt: false, desc: "10-prompt communicative grid (experience + follow-up details).", tab: "tab-speaking" },
+        { step: 5, name: "Module B: Storytelling & Past Perfect", time: 12, opt: false, desc: "The earlier past, 3-tense narrative formula & spoken contraction 'I'd'.", tab: "tab-module-b" },
+        { step: 6, name: "Error-Correction Gym", time: 8, opt: true, desc: "Interactive typing fix for 15 typical high school errors.", tab: "tab-drills" },
+        { step: 7, name: "Speaking Studio: 60s Monologue", time: 12, opt: false, desc: "30s prep + 60s timed speaking challenge across 5 teen topic cards.", tab: "tab-speaking" },
+        { step: 8, name: "Story-Building Task", time: 10, opt: true, desc: "Arrange 5 emoji tiles (Project Emergency) and narrate in pairs.", tab: "tab-speaking" },
+        { step: 9, name: "Reflection & Diagnostic Quiz", time: 11, opt: false, desc: "30-item diagnostic quiz, score report, and homework assignment.", tab: "tab-quiz" }
       ]
     };
 
@@ -2451,7 +2566,7 @@
       timer: {
         interval: null,
         secondsLeft: 30,
-        phase: 'prep', // 'prep' (30s) or 'speak' (60s)
+        phase: 'prep',
         isRunning: false
       },
       selectedMarkerId: null,
@@ -2462,14 +2577,12 @@
        LOCAL STORAGE INITIALIZATION (ptlab_*)
        ======================================================= */
     function initStorage() {
-      // Notes
       const savedNotes = localStorage.getItem('ptlab_notes');
       if (savedNotes) {
         const notesBox = document.getElementById('myNotesBox');
         if (notesBox) notesBox.value = savedNotes;
       }
 
-      // Flashcards
       const savedCards = localStorage.getItem('ptlab_known_cards');
       if (savedCards) {
         try {
@@ -2477,7 +2590,6 @@
         } catch (e) { console.error(e); }
       }
 
-      // Quiz best score
       const savedQuizScore = localStorage.getItem('ptlab_quiz_best');
       if (savedQuizScore) {
         document.getElementById('stat-quiz-best').innerText = savedQuizScore;
@@ -2487,13 +2599,8 @@
     }
 
     function updateDashboardStats() {
-      // Vocab Cards stat
-      document.getElementById('stat-cards-done').innerText = `${state.flashcardsKnown.size}/16`;
-
-      // Verbs stat
-      document.getElementById('stat-verbs-done').innerText = `${state.verbsMastered}/15`;
-
-      // Save known cards
+      document.getElementById('stat-cards-done').innerText = `${state.flashcardsKnown.size}/${LESSON_DATA.vocabulary.length}`;
+      document.getElementById('stat-verbs-done').innerText = `${state.verbsMastered}/${LESSON_DATA.irregularVerbs.length}`;
       localStorage.setItem('ptlab_known_cards', JSON.stringify(Array.from(state.flashcardsKnown)));
     }
 
@@ -2654,7 +2761,7 @@
       const text = document.getElementById('storyOrderText');
       if (text) {
         if (state.selectedStoryTiles.length === 0) {
-          text.innerText = "Click tiles to create your story sequence.";
+          text.innerText = "Click tiles in sequence to create your story flow.";
         } else {
           text.innerText = `Current Sequence: ${state.selectedStoryTiles.map(id => {
             const t = LESSON_DATA.speaking.storyTiles.find(x => x.id === id);
@@ -2691,15 +2798,15 @@
         gain.connect(audioCtx.destination);
 
         if (type === 'start') {
-          osc.frequency.setValueAtTime(440, audioCtx.currentTime); // A4
-          osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.2); // A5
+          osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.2);
           gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
           gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
           osc.start();
           osc.stop(audioCtx.currentTime + 0.3);
         } else if (type === 'speak') {
-          osc.frequency.setValueAtTime(587.33, audioCtx.currentTime); // D5
-          osc.frequency.exponentialRampToValueAtTime(1174.66, audioCtx.currentTime + 0.3); // D6
+          osc.frequency.setValueAtTime(587.33, audioCtx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(1174.66, audioCtx.currentTime + 0.3);
           gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
           gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
           osc.start();
@@ -2712,9 +2819,7 @@
           osc.start();
           osc.stop(audioCtx.currentTime + 0.5);
         }
-      } catch (e) {
-        // AudioContext not allowed or not supported; silent fallback
-      }
+      } catch (e) {}
     }
 
     function startSpeakingWorkflow() {
@@ -2737,14 +2842,12 @@
 
         if (state.timer.secondsLeft <= 0) {
           if (state.timer.phase === 'prep') {
-            // Transition to Speaking Phase
             state.timer.phase = 'speak';
             state.timer.secondsLeft = 60;
-            document.getElementById('timerPhaseLabel').innerText = '🎙️ Speaking Time (60s) - START SPEAKING!';
+            document.getElementById('timerPhaseLabel').innerText = '🎙️ Speaking Time (60s) - SPEAK NOW!';
             document.getElementById('timerDisplay').style.color = 'var(--success)';
             playChime('speak');
           } else {
-            // Finished Speaking
             clearInterval(state.timer.interval);
             state.timer.isRunning = false;
             document.getElementById('timerPhaseLabel').innerText = '🎉 Time Up! Complete Self-Checklist Below';
@@ -2770,7 +2873,6 @@
           state.timer.secondsLeft--;
           updateTimerUI();
           if (state.timer.secondsLeft <= 0) {
-            // handle transition
             startSpeakingWorkflow();
           }
         }, 1000);
@@ -2790,7 +2892,6 @@
       document.getElementById('btnTimerStart').innerText = '▶️ Start Prep (30s)';
       document.getElementById('btnTimerPause').style.display = 'none';
 
-      // Uncheck checkboxes
       document.querySelectorAll('.checklist-item input').forEach(c => c.checked = false);
     }
 
@@ -2850,7 +2951,7 @@
     }
 
     /* =======================================================
-       IRREGULAR VERB TRAINER
+       IRREGULAR VERB TRAINER (25 VERBS)
        ======================================================= */
     function renderVerbTrainer() {
       const container = document.getElementById('verbTrainerContainer');
@@ -2906,7 +3007,7 @@
     }
 
     /* =======================================================
-       TIME MARKER SORTER (DRAG & DROP + CLICK FALLBACK)
+       TIME MARKER SORTER (20 ITEMS)
        ======================================================= */
     function renderTimeMarkerSorter() {
       const pool = document.getElementById('markerPool');
@@ -2918,7 +3019,6 @@
         </div>
       `).join('');
 
-      // Clear buckets
       document.getElementById('bucket-items-past-simple').innerHTML = '';
       document.getElementById('bucket-items-present-perfect').innerHTML = '';
       document.getElementById('bucket-items-past-perfect').innerHTML = '';
@@ -2988,7 +3088,7 @@
 
       if (sortedCorrect.length === allMarkers.length) {
         feedback.style.color = 'var(--success)';
-        feedback.innerText = '🎉 Fantastic! All 16 time markers are sorted correctly!';
+        feedback.innerText = `🎉 Fantastic! All ${allMarkers.length} time markers are sorted correctly!`;
       } else {
         feedback.style.color = 'var(--text-muted)';
         feedback.innerText = `${sortedCorrect.length}/${allMarkers.length} correctly placed.`;
@@ -3001,7 +3101,7 @@
     }
 
     /* =======================================================
-       ERROR-CORRECTION GYM
+       ERROR-CORRECTION GYM (15 SENTENCES)
        ======================================================= */
     function renderErrorGym() {
       const container = document.getElementById('errorGymContainer');
@@ -3025,10 +3125,9 @@
       const feedbackEl = document.getElementById(`gym-feedback-${id}`);
       if (!item || !inputEl || !feedbackEl) return;
 
-      const userVal = inputEl.value.trim().toLowerCase().replace(/[.,!]/g, '');
-      const correctVal = item.fix.toLowerCase().replace(/[.,!]/g, '');
+      const userVal = inputEl.value.trim().toLowerCase().replace(/[.,!?'"`]/g, '');
+      const correctVal = item.fix.toLowerCase().replace(/[.,!?'"`]/g, '');
 
-      // Simple fuzzy comparison
       const isMatch = (userVal === correctVal);
 
       feedbackEl.style.display = 'block';
@@ -3049,7 +3148,7 @@
     }
 
     /* =======================================================
-       DIAGNOSTIC QUIZ (20 ITEMS)
+       DIAGNOSTIC QUIZ (30 ITEMS)
        ======================================================= */
     function renderQuiz() {
       const container = document.getElementById('quizContainer');
@@ -3078,7 +3177,6 @@
 
       state.quizAnswers[qId] = selectedIdx;
 
-      // Disable buttons for this question
       for (let i = 0; i < q.opts.length; i++) {
         const btn = document.getElementById(`opt-${qId}-${i}`);
         if (btn) btn.disabled = true;
@@ -3100,7 +3198,6 @@
       }
       expEl.style.display = 'block';
 
-      // Check if all answered
       if (Object.keys(state.quizAnswers).length === LESSON_DATA.quiz.length) {
         showQuizReport();
       }
@@ -3113,21 +3210,20 @@
       });
 
       const pct = Math.round((score / LESSON_DATA.quiz.length) * 100);
-      document.getElementById('reportScoreDisplay').innerText = `${score}/20 (${pct}%)`;
+      document.getElementById('reportScoreDisplay').innerText = `${score}/${LESSON_DATA.quiz.length} (${pct}%)`;
 
       let msg = "";
       if (pct >= 85) {
-        msg = "🌟 Outstanding! You have full mastery over B1 past tenses and earlier past narratives!";
+        msg = "🌟 Outstanding! You have full mastery over B1 past tenses, been/gone differences, and storytelling!";
       } else if (pct >= 65) {
-        msg = "👍 Great job! You understand the main rules. Review signal words like 'since/for' and Past Perfect frames.";
+        msg = "👍 Great job! You understand the main rules. Review 'since/for', 'been/gone', and Past Perfect storytelling frames.";
       } else {
-        msg = "💪 Good practice! Revisit Module A timelines and practice with the Irregular Verb Trainer.";
+        msg = "💪 Good practice! Revisit Module A timelines and practice with the 25 Irregular Verb Trainer.";
       }
 
       document.getElementById('reportMsgDisplay').innerText = msg;
       document.getElementById('quizReport').style.display = 'block';
 
-      // Persist in localStorage
       localStorage.setItem('ptlab_quiz_best', `${pct}%`);
       document.getElementById('stat-quiz-best').innerText = `${pct}%`;
     }
@@ -3175,8 +3271,8 @@
         state.quizAnswers = {};
         state.verbsMastered = 0;
         document.getElementById('stat-quiz-best').innerText = '0%';
-        document.getElementById('stat-verbs-done').innerText = '0/15';
-        document.getElementById('stat-cards-done').innerText = '0/16';
+        document.getElementById('stat-verbs-done').innerText = `0/${LESSON_DATA.irregularVerbs.length}`;
+        document.getElementById('stat-cards-done').innerText = `0/${LESSON_DATA.vocabulary.length}`;
         if (document.getElementById('myNotesBox')) document.getElementById('myNotesBox').value = '';
         renderFlashcards();
         renderVerbTrainer();

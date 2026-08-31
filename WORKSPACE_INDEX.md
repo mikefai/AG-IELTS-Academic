@@ -1,6 +1,6 @@
 # 📚 Master Workspace Educational Content Catalog
 
-> *Auto-generated on 2026-08-31 15:53 via `scripts/build_workspace_index.py`*
+> *Auto-generated on 2026-08-31 16:04 via `scripts/build_workspace_index.py`*
 
 This catalog indexes all structured lesson plans, test prep modules, question banks, and interactive simulators across the workspace.
 
@@ -10,8 +10,8 @@ This catalog indexes all structured lesson plans, test prep modules, question ba
 
 | Type | Title / Topic | Target Level | Format | Direct Link |
 | :--- | :--- | :--- | :--- | :--- |
-| Interactive Simulator | Past-Tenses-B1-Speaking-Lab | `Interactive Webapp` | 🚀 **Interactive App** | [B1 Past Tenses Speaking Lab | Past Simple, Present Perfect & Past Perfect](ESL/B1/past-tenses-b1-speaking-lab.html) |
-| Lesson Plan | Worksheet | Drill | Past Simple vs Present Perfect & Past Simple vs Past Perfect (Speaking-First Lab) | `CEFR B1` | 📄 Markdown | [B1 Past Tenses Speaking Lab: Teacher Guide & Student Handout](ESL/B1/b1_past_tenses_speaking_lab.md) |
+| Interactive Simulator | Past-Tenses-B1-Speaking-Lab | `Interactive Webapp` | 🚀 **Interactive App** | [B1 Past Tenses Speaking Lab (High School Edition) | Past Simple, Present Perfect & Past Perfect](ESL/B1/past-tenses-b1-speaking-lab.html) |
+| Lesson Plan | Worksheet | Drill | Past Simple vs Present Perfect & Past Simple vs Past Perfect (High School / 15yo Speaking Lab) | `CEFR B1` | 📄 Markdown | [B1 Past Tenses Speaking Lab (High School Edition): Teacher Guide & Student Handout](ESL/B1/b1_past_tenses_speaking_lab.md) |
 
 ## 🌐 IELTS Modules & Resources (4 Total)
 
