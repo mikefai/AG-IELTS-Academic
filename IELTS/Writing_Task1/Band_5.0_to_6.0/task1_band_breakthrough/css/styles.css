@@ -1,0 +1,1393 @@
+/**
+ * IELTS Academic Task 1 Mastery Portal Stylesheet
+ * 100% Offline-capable, zero external fonts/CDNs, mobile-first responsive.
+ */
+
+/* ==========================================================================
+   1. Design Tokens (CSS Variables)
+   ========================================================================== */
+:root {
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --border-color: #cbd5e1;
+  --border-subtle: #e2e8f0;
+
+  --primary: #ef4444;
+  --primary-hover: #dc2626;
+  --primary-light: #fee2e2;
+  --primary-dark: #991b1b;
+
+  --secondary: #3b82f6;
+  --secondary-light: #eff6ff;
+
+  --correct: #10b981;
+  --correct-bg: #ecfdf5;
+  --correct-border: #6ee7b7;
+
+  --wrong: #ef4444;
+  --wrong-bg: #fef2f2;
+  --wrong-border: #fca5a5;
+
+  --warning: #f59e0b;
+  --warning-bg: #fef3c7;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0b0f19;
+  --bg-surface: #131b2e;
+  --bg-subtle: #1e293b;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --border-subtle: #1e293b;
+
+  --primary: #f87171;
+  --primary-hover: #ef4444;
+  --primary-light: #2d1619;
+  --primary-dark: #fca5a5;
+
+  --secondary: #60a5fa;
+  --secondary-light: #172554;
+
+  --correct: #34d399;
+  --correct-bg: #064e3b;
+  --correct-border: #059669;
+
+  --wrong: #f87171;
+  --wrong-bg: #450a0a;
+  --wrong-border: #991b1b;
+
+  --warning: #fbbf24;
+  --warning-bg: #451a03;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================================================================
+   2. Reset & Global Layout
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   3. Header & Navigation Bar
+   ========================================================================== */
+header {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  background: var(--primary);
+  color: white;
+  font-weight: 800;
+  font-size: 1.3rem;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+
+.brand-titles h1 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+.brand-titles p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-header {
+  background: var(--bg-subtle);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.btn-header:hover {
+  background: var(--border-subtle);
+}
+
+.btn-header.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* ==========================================================================
+   4. Main Container & Hero Section
+   ========================================================================== */
+main {
+  max-width: 1240px;
+  margin: 1.5rem auto 4rem auto;
+  padding: 0 1.25rem;
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(59, 130, 246, 0.05));
+  border: 1px solid var(--border-color);
+  border-left: 6px solid var(--primary);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-banner h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.hero-banner p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 800px;
+  margin-bottom: 1.25rem;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-tag {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Section Header Typography */
+.content-section {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.section-head {
+  border-bottom: 2px solid var(--border-subtle);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.section-head h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-head .section-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge-primary { background: var(--primary-light); color: var(--primary); }
+.badge-secondary { background: var(--secondary-light); color: var(--secondary); }
+.badge-warning { background: var(--warning-bg); color: var(--warning); }
+.badge-success { background: var(--correct-bg); color: var(--correct); }
+
+/* ==========================================================================
+   5. Section 1: Know the Battlefield (Criteria & Critical Rule)
+   ========================================================================== */
+.critical-rule-callout {
+  background: var(--wrong-bg);
+  border: 2px solid var(--wrong);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.critical-rule-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.critical-rule-content h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--wrong);
+  margin-bottom: 0.35rem;
+}
+
+.critical-rule-content p {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.criteria-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.criterion-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.criterion-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.75rem;
+}
+
+.criterion-icon {
+  font-size: 1.8rem;
+}
+
+.criterion-summary {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.band-comparison-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+
+.band-col {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
+.band-col p {
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.band-6-col {
+  background: var(--bg-surface);
+  border-left: 3px solid var(--warning);
+}
+
+.band-7-col {
+  background: var(--bg-surface);
+  border-left: 3px solid var(--correct);
+}
+
+.band-col-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.tag-band6 { color: var(--warning); }
+.tag-band7 { color: var(--correct); }
+.tag-band8 { color: var(--secondary); }
+
+.killer-tip-box {
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-color);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   6. Section 2: The 6 Question Types (Tabs)
+   ========================================================================== */
+.tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 2px solid var(--border-subtle);
+  padding-bottom: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.15s ease;
+}
+
+.tab-btn:hover {
+  border-color: var(--primary);
+}
+
+.tab-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.qtype-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.qtype-icon-lg {
+  font-size: 2.2rem;
+  background: var(--bg-subtle);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+}
+
+.qtype-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.qtype-box {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.qtype-box h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.qtype-box ul {
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.qtype-box li {
+  margin-bottom: 0.5rem;
+}
+
+.look-box { border-left: 4px solid var(--secondary); }
+.trap-box { border-left: 4px solid var(--wrong); }
+
+.qtype-vocab-box {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.qtype-vocab-box h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.vocab-chips-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.vocab-chip {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.15s ease;
+}
+
+.vocab-chip:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.vocab-chip .chip-type {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.vocab-chip .chip-def {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   7. Section 3: The 4-Paragraph Skeleton
+   ========================================================================== */
+.skeleton-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skeleton-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.skeleton-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skeleton-card-head h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.skeleton-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.comparison-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.compare-block {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.compare-bad {
+  background: var(--wrong-bg);
+  border-left: 4px solid var(--wrong);
+}
+
+.compare-good {
+  background: var(--correct-bg);
+  border-left: 4px solid var(--correct);
+}
+
+/* ==========================================================================
+   8. Section 4: Filterable Vocabulary Bank
+   ========================================================================== */
+.vocab-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-btn {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.vocab-section-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.vocab-sec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.vocab-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.vocab-table th, .vocab-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.vocab-table th {
+  background: var(--bg-subtle);
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.clickable-row:hover {
+  background: var(--primary-light);
+}
+
+.vocab-phrase-text {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* ==========================================================================
+   9. Section 5: The 7 Deadly Sins (Accordion)
+   ========================================================================== */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion-item {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--bg-surface);
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  transition: background 0.15s;
+}
+
+.accordion-header:hover {
+  background: var(--bg-subtle);
+}
+
+.sin-number {
+  background: var(--wrong-bg);
+  color: var(--wrong);
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.sin-title {
+  flex: 1;
+}
+
+.accordion-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.accordion-item.open .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  display: none;
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-primary);
+}
+
+.accordion-item.open .accordion-body {
+  display: block;
+}
+
+.sin-mistake {
+  background: var(--wrong-bg);
+  border-left: 4px solid var(--wrong);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.sin-fix {
+  background: var(--correct-bg);
+  border-left: 4px solid var(--correct);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   10. Section 6: Band 6 vs Band 8 Comparison
+   ========================================================================== */
+.sample-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.5rem;
+}
+
+.sample-essay-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  background: var(--bg-primary);
+}
+
+.essay-band6 { border-top: 5px solid var(--warning); }
+.essay-band8 { border-top: 5px solid var(--correct); }
+
+.sample-card-header {
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.sample-card-header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.essay-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.para-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.para-label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.examiner-note-tag {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  margin-top: 8px;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.note-band6 { background: var(--warning-bg); color: var(--text-main); }
+.note-band8 { background: var(--correct-bg); color: var(--text-main); }
+
+/* ==========================================================================
+   11. Interactive Tools (Arena, Rubric, Overview, Paraphrase, Quiz)
+   ========================================================================== */
+.tools-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.tool-container {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+/* Tool A: Writing Arena */
+.arena-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: var(--bg-subtle);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+}
+
+.timer-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.word-count-badge {
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.count-pass { background: var(--correct-bg); color: var(--correct); border: 1px solid var(--correct); }
+.count-fail { background: var(--wrong-bg); color: var(--wrong); border: 1px solid var(--wrong); }
+
+.arena-textarea {
+  width: 100%;
+  height: 260px;
+  padding: 16px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+.arena-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+}
+
+.chk-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.arena-actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.btn-main {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.btn-main:hover {
+  background: var(--primary-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background: var(--bg-subtle);
+}
+
+.btn-danger {
+  background: var(--wrong);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.drafts-box {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.draft-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.draft-item:last-child {
+  border-bottom: none;
+}
+
+/* Tool B: Rubric Assessment */
+.rubric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.slider-group {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.slider-header strong {
+  font-size: 0.95rem;
+}
+
+.slider-val {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.rubric-slider {
+  width: 100%;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.rubric-score-display-card {
+  background: linear-gradient(135deg, var(--bg-subtle), var(--bg-primary));
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.overall-band-score {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin: 0.5rem 0;
+}
+
+.action-plan-card {
+  background: var(--warning-bg);
+  border: 1px solid var(--warning);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.action-plan-tip {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.progress-svg {
+  width: 100%;
+  height: 180px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+/* Tool C: Overview Trainer */
+.overview-trainer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mini-chart-box {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mini-chart-svg {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+.overview-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.overview-textarea {
+  width: 100%;
+  height: 110px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.overview-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
+.check-pass { background: var(--correct-bg); border-left: 3px solid var(--correct); }
+.check-fail { background: var(--bg-primary); border-left: 3px solid var(--border-color); color: var(--text-muted); }
+
+.model-overview-card {
+  background: var(--correct-bg);
+  border: 1px solid var(--correct-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Tool D: Paraphrase Lab */
+.paraphrase-box {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prompt-stimulus {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: var(--bg-surface);
+  padding: 12px 16px;
+  border-left: 4px solid var(--secondary);
+  border-radius: var(--radius-sm);
+}
+
+.chunk-upgrade-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.85rem;
+}
+
+.chunk-original { color: var(--wrong); }
+.chunk-upgraded { color: var(--correct); }
+
+/* Tool E: Vocabulary Quiz */
+.quiz-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.quiz-q-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.quiz-q-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quiz-option-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.15s;
+}
+
+.quiz-option-label:hover {
+  background: var(--bg-subtle);
+}
+
+.option-correct {
+  background: var(--correct-bg) !important;
+  border-color: var(--correct) !important;
+  font-weight: 700;
+}
+
+.option-wrong {
+  background: var(--wrong-bg) !important;
+  border-color: var(--wrong) !important;
+}
+
+.quiz-rationale {
+  background: var(--bg-surface);
+  border-left: 4px solid var(--secondary);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.quiz-results-card {
+  background: var(--bg-surface);
+  border: 2px solid var(--correct);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* ==========================================================================
+   12. Tool F: Teacher Mode Sidebar
+   ========================================================================== */
+.teacher-sidebar {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 400px;
+  height: 100vh;
+  background: var(--bg-surface);
+  border-left: 2px solid var(--primary);
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.teacher-sidebar.open {
+  right: 0;
+}
+
+.teacher-sidebar-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.teacher-section {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.teacher-section h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.teacher-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.timeline-step {
+  padding-left: 12px;
+  border-left: 2px solid var(--primary);
+}
+
+.step-time {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: block;
+}
+
+.timeline-step strong {
+  font-size: 0.85rem;
+}
+
+.timeline-step p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.teacher-questions-list {
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+}
+
+.teacher-questions-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Toast Notifications */
+.toast-msg {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #1e293b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-lg);
+  z-index: 2000;
+  display: none;
+  animation: fadeIn 0.2s;
+}
+
+/* ==========================================================================
+   13. Accessibility & Motion Preferences
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Print Stylesheet */
+@media print {
+  header, .header-controls, .arena-actions-row, .teacher-sidebar, .toast-msg, .filter-bar, .search-input {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+  .content-section {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}

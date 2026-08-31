@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Big, Stress Less: Careers & School Life | B1 Teen ESL</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="brand-wrapper">
+          <span class="brand-icon">🚀</span>
+          <div>
+            <h1 class="brand-title">Dream Big, Stress Less</h1>
+            <p class="brand-subtitle">Interactive B1 Teen ESL Lesson · Careers & School Life</p>
+          </div>
+        </div>
+
+        <div class="header-controls">
+          <span class="stats-badge" id="quickStatsBadge">⭐ 0 completed | 0% accuracy</span>
+          <button class="btn-ctrl" id="printLessonBtn" title="Print Lesson / PDF">🖨️ Print</button>
+          <button class="btn-ctrl" id="themeToggleBtn" title="Toggle Light / Dark Mode">
+            <span id="themeIcon">🌙</span> Mode
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter Sub-bar & Tabs Navigation -->
+  <nav class="nav-subbar">
+    <div class="container">
+      <div class="nav-subbar-inner">
+        <div class="filter-group">
+          <span class="filter-label">Level:</span>
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="A2">A2</button>
+          <button class="filter-btn" data-filter="B1">B1</button>
+          <button class="filter-btn" data-filter="B2">B2</button>
+        </div>
+
+        <div class="tabs-nav" role="tablist">
+          <button class="nav-tab-btn active" data-tab="tab-warmup" role="tab">💬 Warm-Up Questions</button>
+          <button class="nav-tab-btn" data-tab="tab-speaking" role="tab">🗣️ Speaking Lab</button>
+          <button class="nav-tab-btn" data-tab="tab-vocabulary" role="tab">🏋️ Vocabulary Gym</button>
+          <button class="nav-tab-btn" data-tab="tab-grammar" role="tab">📐 Grammar Notes</button>
+          <button class="nav-tab-btn" data-tab="tab-reading" role="tab">📖 Reading Zone</button>
+          <button class="nav-tab-btn" data-tab="tab-progress" role="tab">📊 My Progress</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="main-content container">
+
+    <!-- TAB 1: WARM-UP QUESTIONS -->
+    <section class="tab-pane active" id="tab-warmup" role="tabpanel">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">💬 Warm-Up Discussion Hub</h2>
+          <p class="section-subtitle">Choose a question, talk for 60 seconds with a partner, and click the follow-up hint if you need help.</p>
+        </div>
+        <button class="btn-primary-action" onclick="App.spinRandomQuestion()">🎲 Spin Random Question</button>
+      </div>
+
+      <div class="cards-grid" id="warmup-container">
+        <!-- Dynamic Warmup Question Cards -->
+      </div>
+    </section>
+
+    <!-- TAB 2: SPEAKING LAB -->
+    <section class="tab-pane" id="tab-speaking" role="tabpanel">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">🗣️ Interactive Speaking Lab</h2>
+          <p class="section-subtitle">Tiered communicative tasks: Role-play cards, Would You Rather dilemmas, Taboo challenges, and Debate duels.</p>
+        </div>
+      </div>
+
+      <div class="single-col-list" id="speaking-container">
+        <!-- Dynamic Speaking Lab Exercises -->
+      </div>
+    </section>
+
+    <!-- TAB 3: VOCABULARY GYM -->
+    <section class="tab-pane" id="tab-vocabulary" role="tabpanel">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">🏋️ Vocabulary Gym</h2>
+          <p class="section-subtitle">Tiered vocabulary drills with instant checking, explanations, and spoken output challenges.</p>
+        </div>
+      </div>
+
+      <div class="single-col-list" id="vocabulary-container">
+        <!-- Dynamic Vocabulary Exercises -->
+      </div>
+    </section>
+
+    <!-- TAB 4: GRAMMAR NOTES -->
+    <section class="tab-pane" id="tab-grammar" role="tabpanel">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">📐 Compact Grammar Notes</h2>
+          <p class="section-subtitle">5 essential grammar patterns drawn directly from lesson topics, with teen mistake alerts and instant mini-checks.</p>
+        </div>
+      </div>
+
+      <div class="single-col-list" id="grammar-container">
+        <!-- Dynamic 5 Grammar Cards -->
+      </div>
+    </section>
+
+    <!-- TAB 5: READING ZONE -->
+    <section class="tab-pane" id="tab-reading" role="tabpanel">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">📖 Reading Zone</h2>
+          <p class="section-subtitle">3 engaging leveled texts covering teen careers, homework debates, and exam pressure advice with interactive quizzes.</p>
+        </div>
+      </div>
+
+      <div class="single-col-list" id="reading-container">
+        <!-- Dynamic 3 Reading Texts & Tasks -->
+      </div>
+    </section>
+
+    <!-- TAB 6: MY PROGRESS -->
+    <section class="tab-pane" id="tab-progress" role="tabpanel">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">📊 Learning Dashboard & Can-Do Assessment</h2>
+          <p class="section-subtitle">Track your accuracy, completed exercises, and evaluate your English confidence.</p>
+        </div>
+        <button class="btn-danger-reset" onclick="App.resetProgressConfirm()">🔄 Reset All Progress</button>
+      </div>
+
+      <div class="progress-summary-grid">
+        <div class="stat-card">
+          <div class="stat-desc">Total Completed Activities</div>
+          <div class="stat-val" id="prog-total-activities">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-desc">Overall Quiz Accuracy</div>
+          <div class="stat-val" id="prog-accuracy">0%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-desc">Discussion Topics Checked</div>
+          <div class="stat-val" id="prog-warmups">0 / 30</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-desc">Interactive Quizzes Taken</div>
+          <div class="stat-val" id="prog-quizzes">0</div>
+        </div>
+      </div>
+
+      <div class="can-do-section">
+        <h3 style="margin-bottom: 0.5rem;">🌟 Self-Assessment: "Can-Do" Sliders</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">
+          Rate your confidence from 1 (Need Practice) to 5 (Mastered!). Your ratings save automatically.
+        </p>
+        <div id="can-do-list">
+          <!-- Dynamic Can-Do Sliders -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Random Question Spinner Modal -->
+  <div class="modal-overlay" id="randomQuestionModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 style="font-size: 1.2rem; font-weight: 800;">🎲 Random Discussion Spinner</h3>
+        <button class="btn-close-modal" id="closeRandomModalBtn" title="Close Modal">✕</button>
+      </div>
+      <div id="randomQuestionContent">
+        <!-- Injected Random Question -->
+      </div>
+      <div class="timer-box">
+        <div class="timer-digits" id="timerDisplay">01:00</div>
+        <div class="timer-controls">
+          <button class="btn-ctrl" id="timerStartBtn" onclick="App.pauseTimer()">▶️ Start</button>
+          <button class="btn-ctrl" onclick="App.resetTimer(60)">↺ Reset 60s</button>
+          <button class="btn-ctrl" onclick="App.spinRandomQuestion()">🎲 Next Random</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>🎓 <strong>Dream Big, Stress Less</strong> · B1 Teen ESL Lesson Webpage · 100% Offline-First (No external CDNs or trackers)</p>
+      <p style="font-size: 0.75rem; margin-top: 0.25rem;">Built with semantic HTML5, CSS3, & Vanilla JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Application Scripts (Offline, Ordered) -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital SAT EBRW Practice Module: Craft & Structure | Interactive Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f6f9;
+      --surface: #ffffff;
+      --card-bg: #ffffff;
+      --text: #111827;
+      --text-muted: #4b5563;
+      --sat-blue: #0077c8;
+      --sat-blue-dark: #005a9c;
+      --sat-blue-light: #e6f4fb;
+      --border: #d1d5db;
+      --correct: #10b981;
+      --correct-bg: #ecfdf5;
+      --wrong: #ef4444;
+      --wrong-bg: #fef2f2;
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius: 8px;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08);
+    }
+
+    [data-theme="dark"] {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --card-bg: #21262d;
+      --text: #f0f6fc;
+      --text-muted: #8b949e;
+      --sat-blue: #58a6ff;
+      --sat-blue-dark: #1f6feb;
+      --sat-blue-light: #1f2937;
+      --border: #30363d;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* College Board / Bluebook styled Topbar */
+    header {
+      background: #002b49;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .top-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.3px;
+    }
+
+    .top-middle {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 4px 14px;
+      border-radius: 20px;
+    }
+
+    .timer-btn {
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 0.8rem;
+      text-decoration: underline;
+    }
+
+    .top-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-top {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .btn-top:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Subbar with Directions & Annotate */
+    .subbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .directions-text {
+      font-weight: 500;
+    }
+
+    /* Split Container */
+    .test-container {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .left-pane, .right-pane {
+      flex: 1;
+      padding: 2.5rem;
+      overflow-y: auto;
+    }
+
+    .left-pane {
+      border-right: 2px solid var(--border);
+      background: var(--surface);
+    }
+
+    .right-pane {
+      background: var(--bg);
+    }
+
+    .stimulus-box {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    .question-prompt {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    /* Option Items */
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .option-btn {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 18px;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card-bg);
+      color: var(--text);
+      cursor: pointer;
+      text-align: left;
+      font-size: 1rem;
+      transition: all 0.15s ease;
+      font-family: inherit;
+    }
+
+    .option-btn:hover {
+      border-color: var(--sat-blue);
+      background: var(--sat-blue-light);
+    }
+
+    .option-btn.selected {
+      border-color: var(--sat-blue);
+      background: var(--sat-blue-light);
+      font-weight: 600;
+    }
+
+    .option-btn.correct-choice {
+      border-color: var(--correct);
+      background: var(--correct-bg);
+    }
+
+    .option-btn.wrong-choice {
+      border-color: var(--wrong);
+      background: var(--wrong-bg);
+    }
+
+    .opt-letter {
+      font-weight: 800;
+      font-size: 0.95rem;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: var(--surface);
+    }
+
+    .option-btn.selected .opt-letter {
+      background: var(--sat-blue);
+      color: white;
+      border-color: var(--sat-blue);
+    }
+
+    /* Rationale Box */
+    .rationale-card {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      display: none;
+    }
+
+    .rationale-card.active {
+      display: block;
+      animation: fadeIn 0.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .distractor-list {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .distractor-item {
+      padding: 8px 12px;
+      background: var(--bg);
+      border-left: 3px solid var(--wrong);
+      border-radius: 4px;
+    }
+
+    .distractor-item.correct-desc {
+      border-left-color: var(--correct);
+    }
+
+    /* Bottom Navigation Bar */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .nav-pills {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .nav-pill {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+
+    .nav-pill:hover {
+      border-color: var(--sat-blue);
+    }
+
+    .nav-pill.active {
+      background: var(--sat-blue);
+      color: white;
+      border-color: var(--sat-blue);
+    }
+
+    .nav-pill.answered {
+      border-bottom: 3px solid var(--sat-blue);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn-nav-action {
+      background: var(--sat-blue);
+      color: white;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background 0.15s;
+    }
+
+    .btn-nav-action:hover {
+      background: var(--sat-blue-dark);
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="top-left">
+      <span class="section-title">Section 1: Reading and Writing</span>
+      <span style="font-size: 0.8rem; opacity: 0.8;">| Module 1: Craft and Structure</span>
+    </div>
+    <div class="top-middle">
+      <span id="timerDisplay">06:15</span>
+      <button class="timer-btn" onclick="toggleTimer()">Hide</button>
+    </div>
+    <div class="top-right">
+      <a href="../index.html" class="btn-top">🏛️ SAT Portal</a>
+      <button class="btn-top" onclick="toggleTheme()">🌓 Theme</button>
+    </div>
+  </header>
+
+  <div class="subbar">
+    <div class="directions-text">
+      <strong>Directions:</strong> The questions in this section address a number of important reading and writing skills. Each question includes one or more passages, which may include a table or a graph. Read each passage and question carefully, and then choose the best answer to the question based on the passage(s).
+    </div>
+    <div>
+      <button class="btn-top" style="color: var(--text-muted); background: transparent; border-color: var(--border);" onclick="toggleInstantFeedback()">
+        💡 Instant Feedback: <span id="feedbackModeText" style="color: var(--correct); font-weight: 700;">ON</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="test-container">
+    <div class="left-pane">
+      <div style="font-size: 0.85rem; font-weight: 700; color: var(--sat-blue); text-transform: uppercase; margin-bottom: 1rem;" id="qNumberDisplay">
+        Question 1 of 5
+      </div>
+      <div class="stimulus-box" id="stimulusContainer">
+        <!-- Stimulus injected by JS -->
+      </div>
+    </div>
+
+    <div class="right-pane">
+      <div class="question-prompt" id="promptContainer">
+        Which choice completes the text with the most logical and precise word or phrase?
+      </div>
+
+      <div class="options-list" id="optionsContainer">
+        <!-- Options injected by JS -->
+      </div>
+
+      <div class="rationale-card" id="rationaleContainer">
+        <h4 style="color: var(--sat-blue); margin-bottom: 0.5rem;" id="rationaleHeading">🔑 Detailed Rationale</h4>
+        <p id="rationaleBody" style="font-size: 0.95rem; line-height: 1.6;"></p>
+        <div class="distractor-list" id="distractorContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="nav-pills" id="navPillsContainer">
+      <!-- Nav pills injected by JS -->
+    </div>
+    <div class="nav-actions">
+      <button class="btn-nav-action btn-secondary" id="btnPrev" onclick="prevQuestion()">Previous</button>
+      <button class="btn-nav-action" id="btnNext" onclick="nextQuestion()">Next</button>
+    </div>
+  </footer>
+
+  <script>
+    const questions = [
+      {
+        id: 1,
+        skill: "Words in Context",
+        stimulus: "Archaeologist Dr. Elena Vance observed that while traditional field excavations produce tangible artifacts, modern satellite remote sensing data provide a far more _______ view of ancient settlement patterns, allowing researchers to observe macroeconomic networks spanning hundreds of miles without disturbing topsoil.",
+        prompt: "Which choice completes the text with the most logical and precise word or phrase?",
+        options: [
+          { letter: "A", text: "tentative" },
+          { letter: "B", text: "panoramic" },
+          { letter: "C", superficial: false, text: "superficial" },
+          { letter: "D", text: "contentious" }
+        ],
+        correct: "B",
+        proof: "The text sets up a contrast between traditional excavations that yield isolated 'tangible artifacts' versus satellite data that reveal networks 'spanning hundreds of miles.' 'Panoramic' precisely captures this broad, comprehensive, wide-angle perspective.",
+        distractors: [
+          { letter: "A", text: "tentative — Incorrect. Means provisional or uncertain; the text emphasizes the expansive scope of satellite data, not its uncertainty." },
+          { letter: "B", text: "panoramic — Correct! Captures the wide-ranging, comprehensive multi-mile vantage point." },
+          { letter: "C", text: "superficial — Incorrect. Means shallow or surface-level in a negative sense; satellite imaging is praised for showing macroeconomic networks, not condemned as inadequate." },
+          { letter: "D", text: "contentious — Incorrect. Means causing heated argument or controversy; there is no indication of academic dispute in the stimulus." }
+        ]
+      },
+      {
+        id: 2,
+        skill: "Words in Context",
+        stimulus: "In 19th-century physics, the hypothetical luminiferous ether was considered indispensable to explain wave propagation in light. However, when the 1887 Michelson-Morley experiment produced null results, physicists were forced to _______ long-held assumptions regarding absolute spatial frames of reference.",
+        prompt: "Which choice completes the text with the most logical and precise word or phrase?",
+        options: [
+          { letter: "A", text: "corroborate" },
+          { letter: "B", text: "relinquish" },
+          { letter: "C", text: "fabricate" },
+          { letter: "D", text: "disseminate" }
+        ],
+        correct: "B",
+        proof: "The stimulus describes how a foundational theory faced 'null results' (failing to detect the ether). Therefore, scientists were compelled to surrender or give up ('relinquish') their previous assumptions.",
+        distractors: [
+          { letter: "A", text: "corroborate — Incorrect. Means to confirm or support; null results would disprove the assumptions, not corroborate them." },
+          { letter: "B", text: "relinquish — Correct! Accurately denotes abandoning or giving up entrenched theoretical assumptions." },
+          { letter: "C", text: "fabricate — Incorrect. Means to invent falsely or construct; physicists were abandoning existing beliefs, not inventing false ones." },
+          { letter: "D", text: "disseminate — Incorrect. Means to spread or broadcast widely; the context requires abandoning assumptions, not merely circulating them." }
+        ]
+      },
+      {
+        id: 3,
+        skill: "Words in Context",
+        stimulus: "The author’s latest historical biography avoids the uncritical hagiography common in the genre; rather than presenting the statesman as an infallible visionary, the text provides a nuanced appraisal that does not _______ from exposing his strategic miscalculations during wartime diplomacy.",
+        prompt: "Which choice completes the text with the most logical and precise word or phrase?",
+        options: [
+          { letter: "A", text: "shrink" },
+          { letter: "B", text: "deduce" },
+          { letter: "C", text: "deviate" },
+          { letter: "D", text: "prosper" }
+        ],
+        correct: "A",
+        proof: "The text states the biography avoids 'uncritical hagiography' (blind praise) and offers a 'nuanced appraisal.' The idiom 'to shrink from [doing something]' means to hesitate, recoil, or avoid doing something difficult. Here, the author does not avoid exposing errors.",
+        distractors: [
+          { letter: "A", text: "shrink — Correct! 'Shrink from exposing' is the precise idiom meaning to avoid or shy away from difficult disclosures." },
+          { letter: "B", text: "deduce — Incorrect. To deduce from means to infer logically; syntax and idiom fail here." },
+          { letter: "C", text: "deviate — Incorrect. To deviate from means to stray from a path; the sentence intends to say the author is fearless in revealing flaws, not that the author avoids straying." },
+          { letter: "D", text: "prosper — Incorrect. Means to thrive or succeed financially/materially; completely out of semantic register." }
+        ]
+      },
+      {
+        id: 4,
+        skill: "Words in Context",
+        stimulus: "Although the economist acknowledged that the proposed carbon taxation scheme would create short-term transitional friction for heavy manufacturers, she maintained that the overall macroeconomic effects over a twenty-year horizon would remain distinctly _______, spurring capital reallocation toward high-efficiency renewable technologies.",
+        prompt: "Which choice completes the text with the most logical and precise word or phrase?",
+        options: [
+          { letter: "A", text: "deleterious" },
+          { letter: "B", text: "salutary" },
+          { letter: "C", text: "prohibitive" },
+          { letter: "D", text: "precarious" }
+        ],
+        correct: "B",
+        proof: "The sentence hinges on the contrast word 'Although' between 'short-term transitional friction' (negative) and the long-term horizon effects. The clause 'spurring capital reallocation toward high-efficiency renewable technologies' is positive. 'Salutary' means beneficial, wholesome, or producing good effects.",
+        distractors: [
+          { letter: "A", text: "deleterious — Incorrect. Means harmful or destructive; this aligns with the negative concession rather than the positive long-term claim." },
+          { letter: "B", text: "salutary — Correct! Denotes a highly beneficial, positive long-term effect." },
+          { letter: "C", text: "prohibitive — Incorrect. Means excessively high or preventative; illogical with constructive green transitions." },
+          { letter: "D", text: "precarious — Incorrect. Means dangerously unstable or uncertain; conflicts with the positive outlook described." }
+        ]
+      },
+      {
+        id: 5,
+        skill: "Words in Context",
+        stimulus: "Contemporary literary theorist Gayatri Spivak cautions against assuming that postcolonial translations are completely transparent mirrors of their original source texts; rather, the process of translation inevitably introduces culturally specific inflections that both preserve and _______ the author's nuanced thematic intentions.",
+        prompt: "Which choice completes the text with the most logical and precise word or phrase?",
+        options: [
+          { letter: "A", text: "elucidate" },
+          { letter: "B", text: "transmute" },
+          { letter: "C", text: "replicate" },
+          { letter: "D", text: "nullify" }
+        ],
+        correct: "B",
+        proof: "The sentence contrasts translations as 'transparent mirrors' with the reality that they introduce 'culturally specific inflections' that 'both preserve and _______' intentions. 'Transmute' means to change in form, nature, or substance, capturing how translation alters the original while still carrying it over.",
+        distractors: [
+          { letter: "A", text: "elucidate — Incorrect. Means to clarify or explain; doesn't pair with the idea of introducing culturally specific altering inflections." },
+          { letter: "B", text: "transmute — Correct! Accurately conveys altering or transforming substance while carrying over underlying themes." },
+          { letter: "C", text: "replicate — Incorrect. Redundant with 'preserve' and contradicts the idea that translation is not a transparent mirror." },
+          { letter: "D", text: "nullify — Incorrect. Means to completely cancel or invalidate; too extreme because the sentence says translations still 'preserve' the intention." }
+        ]
+      }
+    ];
+
+    let currentIndex = 0;
+    const userAnswers = {};
+    let instantFeedback = true;
+    let secondsRemaining = 375; // 6 mins 15 secs
+    let timerInterval = null;
+    let timerVisible = true;
+
+    function init() {
+      renderNavPills();
+      loadQuestion(0);
+      startTimer();
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+    }
+
+    function toggleInstantFeedback() {
+      instantFeedback = !instantFeedback;
+      document.getElementById('feedbackModeText').innerText = instantFeedback ? 'ON' : 'OFF';
+      document.getElementById('feedbackModeText').style.color = instantFeedback ? 'var(--correct)' : 'var(--wrong)';
+      loadQuestion(currentIndex);
+    }
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        if (secondsRemaining > 0) {
+          secondsRemaining--;
+          updateTimerDisplay();
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const mins = Math.floor(secondsRemaining / 60);
+      const secs = secondsRemaining % 60;
+      const display = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      document.getElementById('timerDisplay').innerText = display;
+    }
+
+    function toggleTimer() {
+      const disp = document.getElementById('timerDisplay');
+      timerVisible = !timerVisible;
+      disp.style.display = timerVisible ? 'inline' : 'none';
+    }
+
+    function renderNavPills() {
+      const container = document.getElementById('navPillsContainer');
+      container.innerHTML = questions.map((q, idx) => `
+        <button class="nav-pill ${idx === currentIndex ? 'active' : ''} ${userAnswers[idx] ? 'answered' : ''}" onclick="loadQuestion(${idx})">
+          ${q.id}
+        </button>
+      `).join('');
+    }
+
+    function loadQuestion(index) {
+      currentIndex = index;
+      const q = questions[currentIndex];
+
+      document.getElementById('qNumberDisplay').innerText = `Question ${q.id} of ${questions.length} • ${q.skill}`;
+      document.getElementById('stimulusContainer').innerText = q.stimulus;
+      document.getElementById('promptContainer').innerText = q.prompt;
+
+      const optsContainer = document.getElementById('optionsContainer');
+      const selected = userAnswers[currentIndex];
+
+      optsContainer.innerHTML = q.options.map(opt => {
+        let extraClasses = '';
+        if (selected) {
+          if (opt.letter === selected) extraClasses += ' selected';
+          if (instantFeedback) {
+            if (opt.letter === q.correct) extraClasses += ' correct-choice';
+            else if (opt.letter === selected) extraClasses += ' wrong-choice';
+          }
+        }
+        return `
+          <button class="option-btn ${extraClasses}" onclick="selectOption('${opt.letter}')">
+            <span class="opt-letter">${opt.letter}</span>
+            <span>${opt.text}</span>
+          </button>
+        `;
+      }).join('');
+
+      // Rationale Display
+      const rationaleCard = document.getElementById('rationaleContainer');
+      if (selected && instantFeedback) {
+        rationaleCard.classList.add('active');
+        document.getElementById('rationaleBody').innerHTML = `<strong>Textual Proof:</strong> ${q.proof}`;
+        document.getElementById('distractorContainer').innerHTML = q.distractors.map(d => `
+          <div class="distractor-item ${d.letter === q.correct ? 'correct-desc' : ''}">
+            <strong>Option ${d.letter}:</strong> ${d.text}
+          </div>
+        `).join('');
+      } else {
+        rationaleCard.classList.remove('active');
+      }
+
+      // Prev/Next buttons
+      document.getElementById('btnPrev').disabled = currentIndex === 0;
+      document.getElementById('btnNext').innerText = currentIndex === questions.length - 1 ? 'Finish Module' : 'Next';
+
+      renderNavPills();
+    }
+
+    function selectOption(letter) {
+      userAnswers[currentIndex] = letter;
+      loadQuestion(currentIndex);
+    }
+
+    function prevQuestion() {
+      if (currentIndex > 0) {
+        loadQuestion(currentIndex - 1);
+      }
+    }
+
+    function nextQuestion() {
+      if (currentIndex < questions.length - 1) {
+        loadQuestion(currentIndex + 1);
+      } else {
+        showResults();
+      }
+    }
+
+    function showResults() {
+      let score = 0;
+      questions.forEach((q, idx) => {
+        if (userAnswers[idx] === q.correct) score++;
+      });
+      alert(`Module Completed!\n\nScore: ${score} / ${questions.length} Correct\nScaled EBRW Equivalent: ${score === 5 ? '780 - 800' : score === 4 ? '730 - 750' : '650 - 700'}`);
+    }
+
+    init();
+  </script>
+</body>
+</html>

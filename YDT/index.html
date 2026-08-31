@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YDT İngilizce Hazırlık Portalı | AG Workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --primary: #f59e0b;
+      --primary-hover: #1e293b;
+      --primary-light: rgba(59, 130, 246, 0.08);
+      --border: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --radius: 12px;
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0b0f19;
+      --surface: #131b2e;
+      --card-bg: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary-light: rgba(255, 255, 255, 0.05);
+      --border: #334155;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow);
+    }
+
+    .header-content {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-icon {
+      background: #f59e0b;
+      color: white;
+      font-size: 1.4rem;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-weight: 800;
+    }
+
+    .brand h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .brand p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-nav {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-nav:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+    }
+
+    .btn-github {
+      background: #24292f;
+      color: #ffffff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+
+    .btn-github:hover {
+      background: #000000;
+    }
+
+    main {
+      max-width: 1240px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, #f59e0b15, rgba(59, 130, 246, 0.05));
+      border: 1px solid var(--border);
+      border-left: 6px solid #f59e0b;
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .hero-text h2 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-text p {
+      color: var(--text-muted);
+      max-width: 700px;
+      font-size: 0.95rem;
+    }
+
+    .stats-container {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .stat-pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-val {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #f59e0b;
+    }
+
+    .stat-lbl {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .filter-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .filter-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-right: 6px;
+      min-width: 90px;
+    }
+
+    .filter-btn {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 14px;
+      border-radius: 16px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: #f59e0b;
+    }
+
+    .filter-btn.active {
+      background: #f59e0b;
+      color: white;
+      border-color: #f59e0b;
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .content-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      border-color: #f59e0b88;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .cat-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: #f59e0b18;
+      color: #f59e0b;
+      text-transform: uppercase;
+    }
+
+    .level-tag {
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      background: var(--bg);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-launch {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      background: #f59e0b;
+      color: white;
+      transition: opacity 0.2s;
+    }
+
+    .btn-launch:hover {
+      opacity: 0.9;
+    }
+
+    .btn-interactive {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .helper-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-top: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .helper-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .helper-header h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .helper-header .badge {
+      font-size: 0.75rem;
+      background: #f59e0b22;
+      color: #f59e0b;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+
+    .helper-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .helper-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 1.2rem;
+      border-radius: 10px;
+    }
+
+    .helper-item strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+      color: #f59e0b;
+    }
+
+    .helper-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <a href="../index.html" class="brand">
+        <div class="brand-icon">📚</div>
+        <div>
+          <h1>YDT İngilizce Hazırlık Portalı</h1>
+          <p>Konu Anlatımı • Soru Bankası • Özgün Denemeler • Akademik Kelime Çalışmaları</p>
+        </div>
+      </a>
+      <div class="header-actions">
+        <a href="../index.html" class="btn-nav">🏠 Master Hub</a>
+        
+        <button class="btn-nav" id="themeToggle" onclick="toggleTheme()">🌓 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero-banner">
+      <div class="hero-text">
+        <h2>YDT İngilizce Hazırlık Portalı</h2>
+        <p>ÖSYM Standartlarında Konu Anlatımı, Soru Bankası ve Özgün Denemeler</p>
+      </div>
+      <div class="stats-container">
+        <div class="stat-pill">
+          <div class="stat-val" id="totalCount">7</div>
+          <div class="stat-lbl">Creations</div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-val" id="interactiveCount" style="color: #10b981;">3</div>
+          <div class="stat-lbl">Interactive Apps</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-row">
+        <span class="filter-label">Skill / Area:</span>
+        <button class="filter-btn active" onclick="filterCategory('ALL')">All Categories</button>
+        <button class="filter-btn" onclick="filterCategory('Konu_Anlatimi')">Konu Anlatimi</button> <button class="filter-btn" onclick="filterCategory('Soru_Bankasi')">Soru Bankasi</button> <button class="filter-btn" onclick="filterCategory('Reading_Passages')">Reading Passages</button> <button class="filter-btn" onclick="filterCategory('Grammar_Cloze')">Grammar Cloze</button> <button class="filter-btn" onclick="filterCategory('Sentence_Completion')">Sentence Completion</button> <button class="filter-btn" onclick="filterCategory('Translation')">Translation</button> <button class="filter-btn" onclick="filterCategory('Dialogue_Restatement')">Dialogue Restatement</button> <button class="filter-btn" onclick="filterCategory('Situation')">Situation</button> <button class="filter-btn" onclick="filterCategory('Paragraph_Completion_Irrelevant')">Paragraph Completion Irrelevant</button> <button class="filter-btn" onclick="filterCategory('Denemeler')">Denemeler</button> <button class="filter-btn" onclick="filterCategory('Vocabulary')">Vocabulary</button>
+        <button class="filter-btn" onclick="filterInteractive()">🚀 Interactive Simulators</button>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Target Level:</span>
+        <button class="filter-btn active" onclick="filterLevel('ALL')">All Levels</button>
+        <button class="filter-btn" onclick="filterLevel('YDT 60+ Net')">YDT 60+ Net</button> <button class="filter-btn" onclick="filterLevel('YDT 70+ Net')">YDT 70+ Net</button> <button class="filter-btn" onclick="filterLevel('YDT 75+ Net')">YDT 75+ Net</button> <button class="filter-btn" onclick="filterLevel('YDT 80/80 Hedef')">YDT 80/80 Hedef</button>
+      </div>
+      <input type="text" class="search-box" id="searchBox" placeholder="🔍 Search YDT modules, questions, topics..." oninput="handleSearch()">
+    </div>
+
+    <div class="card-grid" id="contentGrid">
+      <!-- Dynamically injected -->
+    </div>
+
+    
+
+    <footer>
+      <p>AG Educational Content Engine • YDT İngilizce Hazırlık Portalı • Auto-synchronized with workspace files</p>
+    </footer>
+  </main>
+
+  <script>
+    const items = [
+  {
+    "title": "YDT İngilizce — 40 Soruluk Tanılama Deneme Sınavı",
+    "domain": "YDT",
+    "target_level": "YDT 55-65 Net | CEFR B1-B2",
+    "topic": "Diagnostic YDT Mock Exam (40 Questions)",
+    "date_created": "2026-08-28",
+    "content_type": "Mock Test",
+    "path_root": "YDT/Denemeler/ydt_mock_exam_40q.md",
+    "path_domain": "Denemeler/ydt_mock_exam_40q.md",
+    "category": "Denemeler",
+    "sub_category": "",
+    "is_interactive": false,
+    "file_type": "Markdown",
+    "filename": "ydt_mock_exam_40q.md"
+  },
+  {
+    "title": "YDT İngilizce: 12 Tense Master Konu Anlatımı, Kullanım Rehberi ve ÖSYM Soru Bankası",
+    "domain": "YDT",
+    "target_level": "YDT 75+ Net | ÖSYM Standard",
+    "topic": "İngilizce 12 Tense Master Konu Anlatımı, Tüm Kullanım Alanları (5 Örnekli), 60 ÖSYM Çıkmış/Özgün Soru Bankası, İleri Düzey Tuzaklar ve Şık Eleme Stratejileri",
+    "date_created": "2026-08-28",
+    "content_type": "Konu Anlatımı & Master Web Simulator",
+    "path_root": "YDT/Konu_Anlatimi/ydt_tenses_konu_anlatimi.md",
+    "path_domain": "Konu_Anlatimi/ydt_tenses_konu_anlatimi.md",
+    "category": "Konu_Anlatimi",
+    "sub_category": "",
+    "is_interactive": false,
+    "file_type": "Markdown",
+    "filename": "ydt_tenses_konu_anlatimi.md"
+  },
+  {
+    "title": "YDT İngilizce: Yüksek Frekanslı Akademik Kelime Rehberi & Özgün Kelime Testi",
+    "domain": "YDT",
+    "target_level": "YDT 70+ Net | CEFR B1 - B2",
+    "topic": "YDT İngilizce Yüksek Frekanslı Akademik Kelimeler, Phrasal Verbs & Çözümlü Test",
+    "date_created": "2026-08-26",
+    "content_type": "Vocabulary Bank & Drills",
+    "path_root": "YDT/Vocabulary/ydt_essential_academic_vocabulary_set_01.md",
+    "path_domain": "Vocabulary/ydt_essential_academic_vocabulary_set_01.md",
+    "category": "Vocabulary",
+    "sub_category": "",
+    "is_interactive": false,
+    "file_type": "Markdown",
+    "filename": "ydt_essential_academic_vocabulary_set_01.md"
+  },
+  {
+    "title": "YDT İngilizce — Okuma Parçaları (Reading Passages) Çalışma Modülü",
+    "domain": "YDT",
+    "target_level": "YDT 70+ Net | CEFR B2-C1",
+    "topic": "YDT Paragraf Soruları & Okuma Becerileri Kapsamlı Çalışma Modülü",
+    "date_created": "2026-08-26",
+    "content_type": "Worksheet | Drill | Analysis",
+    "path_root": "YDT/Soru_Bankasi/Reading_Passages/ydt_okuma_parcalari_calisma_modulu_01.md",
+    "path_domain": "Soru_Bankasi/Reading_Passages/ydt_okuma_parcalari_calisma_modulu_01.md",
+    "category": "Soru_Bankasi",
+    "sub_category": "Reading_Passages",
+    "is_interactive": false,
+    "file_type": "Markdown",
+    "filename": "ydt_okuma_parcalari_calisma_modulu_01.md"
+  },
+  {
+    "title": "YDT Diagnostic Mock Exam | 40 Soruluk Tanılama Sınavı",
+    "domain": "YDT",
+    "target_level": "Interactive Webapp",
+    "topic": "Ydt Mock Exam 40Q",
+    "date_created": "2026",
+    "content_type": "Interactive Simulator",
+    "path_root": "YDT/Denemeler/ydt_mock_exam_40q.html",
+    "path_domain": "Denemeler/ydt_mock_exam_40q.html",
+    "category": "Denemeler",
+    "sub_category": "",
+    "is_interactive": true,
+    "file_type": "HTML Simulator",
+    "filename": "ydt_mock_exam_40q.html"
+  },
+  {
+    "title": "YDT İngilizce: 12 Tense Master Portal & 60 Soru Bankası",
+    "domain": "YDT",
+    "target_level": "Interactive Webapp",
+    "topic": "Ydt Tenses Konu Anlatimi",
+    "date_created": "2026",
+    "content_type": "Interactive Simulator",
+    "path_root": "YDT/Konu_Anlatimi/ydt_tenses_konu_anlatimi.html",
+    "path_domain": "Konu_Anlatimi/ydt_tenses_konu_anlatimi.html",
+    "category": "Konu_Anlatimi",
+    "sub_category": "",
+    "is_interactive": true,
+    "file_type": "HTML Simulator",
+    "filename": "ydt_tenses_konu_anlatimi.html"
+  },
+  {
+    "title": "YDT İngilizce: Yüksek Frekanslı Akademik Kelime Rehberi & Özgün Kelime Testi | Interactive Exam Simulator",
+    "domain": "YDT",
+    "target_level": "Interactive Webapp",
+    "topic": "Ydt Vocabulary Quiz App",
+    "date_created": "2026",
+    "content_type": "Interactive Simulator",
+    "path_root": "YDT/Vocabulary/ydt_vocabulary_quiz_app.html",
+    "path_domain": "Vocabulary/ydt_vocabulary_quiz_app.html",
+    "category": "Vocabulary",
+    "sub_category": "",
+    "is_interactive": true,
+    "file_type": "HTML Simulator",
+    "filename": "ydt_vocabulary_quiz_app.html"
+  }
+];
+
+    let activeCategory = 'ALL';
+    let activeLevel = 'ALL';
+    let onlyInteractive = false;
+    let searchQuery = '';
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('ag_theme', next);
+    }
+
+    const savedTheme = localStorage.getItem('ag_theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    function renderGrid() {
+      const grid = document.getElementById('contentGrid');
+      const filtered = items.filter(item => {
+        if (onlyInteractive && !item.is_interactive) return false;
+        if (activeCategory !== 'ALL') {
+          const catMatch = item.category.toLowerCase().includes(activeCategory.toLowerCase()) || 
+                           item.path_domain.toLowerCase().includes(activeCategory.toLowerCase());
+          if (!catMatch) return false;
+        }
+        if (activeLevel !== 'ALL') {
+          const lvlMatch = item.target_level.toLowerCase().includes(activeLevel.toLowerCase()) ||
+                           item.path_domain.toLowerCase().includes(activeLevel.toLowerCase().replace(/ /g, '_'));
+          if (!lvlMatch) return false;
+        }
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase();
+          const matchTitle = item.title.toLowerCase().includes(q);
+          const matchTopic = item.topic.toLowerCase().includes(q);
+          const matchLevel = item.target_level.toLowerCase().includes(q);
+          const matchCat = item.category.toLowerCase().includes(q);
+          if (!matchTitle && !matchTopic && !matchLevel && !matchCat) return false;
+        }
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-muted); background: var(--surface); border-radius: var(--radius); border: 1px dashed var(--border);">No matching resources found. Try adjusting your filters or search terms.</div>';
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => `
+        <div class="content-card">
+          <div>
+            <div class="card-top">
+              <span class="cat-badge">${item.category.replace(/_/g, ' ')}</span>
+              <span class="level-tag">${item.target_level}</span>
+            </div>
+            <h3 class="card-title">${item.title}</h3>
+            <p class="card-desc">
+              <strong>Type:</strong> ${item.content_type}<br>
+              <strong>Topic:</strong> ${item.topic}
+            </p>
+          </div>
+          <div class="card-actions">
+            <a href="${item.path_domain}" class="btn-launch ${item.is_interactive ? 'btn-interactive' : ''}">
+              ${item.is_interactive ? '🚀 Launch Interactive App' : '📄 View Study Material'}
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterCategory(cat) {
+      activeCategory = cat;
+      onlyInteractive = false;
+      renderGrid();
+    }
+
+    function filterLevel(lvl) {
+      activeLevel = lvl;
+      renderGrid();
+    }
+
+    function filterInteractive() {
+      onlyInteractive = !onlyInteractive;
+      renderGrid();
+    }
+
+    function handleSearch() {
+      searchQuery = document.getElementById('searchBox').value.trim();
+      renderGrid();
+    }
+
+    renderGrid();
+  </script>
+</body>
+</html>

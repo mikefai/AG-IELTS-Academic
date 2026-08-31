@@ -1,6 +1,10 @@
 # 🏛️ SAT (Digital SAT) Workspace
 
-Welcome to the **Digital SAT** dedicated workspace. All test preparation materials, question items, passage sets, and diagnostic drills aligned with College Board Digital SAT specifications are organized here.
+Welcome to the **Digital SAT** dedicated workspace and standalone web platform.
+
+- 🌐 **Independent Web Portal**: [`index.html`](index.html) *(Open locally or publish via GitHub Pages)*
+- 🔗 **GitHub Repository**: [`https://github.com/mikefai/AG-SAT`](https://github.com/mikefai/AG-SAT)
+- 🏠 **Master Workspace Hub**: [`../index.html`](../index.html)
 
 ---
 
@@ -8,6 +12,7 @@ Welcome to the **Digital SAT** dedicated workspace. All test preparation materia
 
 ```
 SAT/
+├── index.html                           # Standalone Digital SAT web portal connecting all creations
 ├── Reading_Writing/
 │   ├── Craft_and_Structure/             # Words in context, Text structure and purpose, Cross-text connections
 │   ├── Information_and_Ideas/           # Central ideas, Command of evidence (textual & quantitative), Inferences
@@ -16,8 +21,8 @@ SAT/
 ├── Math/
 │   ├── Algebra/                         # Linear equations, systems, inequalities
 │   ├── Advanced_Math/                   # Quadratics, polynomials, exponential functions
-│   ├── Problem_Solving_Data_Analysis/   # Ratios, percentages, probability, statistics
-│   └── Geometry_Trigonometry/           # Angles, triangles, circles, trigonometric ratios
+│   ├── Problem_Solving_and_Data_Analysis/ # Ratios, percentages, probability, statistics
+│   └── Geometry_and_Trigonometry/       # Angles, triangles, circles, trigonometric ratios
 ├── Question_Banks/                      # High-yield discrete drills by difficulty (Easy, Medium, Hard)
 ├── Practice_Modules/                    # 27-question Reading/Writing & 22-question Math adaptive modules
 └── README.md                            # This document
@@ -44,3 +49,4 @@ When generating SAT content:
 3. **Comprehensive Rationales**:
    - Explicitly detail why the correct answer is logically/grammatically sound.
    - Provide precise error breakdown for each of the 3 distractors.
+4. **Synchronization**: After creating new items, execute `python scripts/build_workspace_index.py` to update the connected portal.

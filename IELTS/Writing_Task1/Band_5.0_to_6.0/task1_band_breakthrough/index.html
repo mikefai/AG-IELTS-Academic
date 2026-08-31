@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Academic Writing Task 1: Band 6+ Breakthrough Portal</title>
+  <meta name="description" content="Offline-capable interactive training portal for IELTS Academic Writing Task 1. Designed specifically to take students from Band 5 to Band 6 and above.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       HEADER & NAVIGATION BAR
+       ====================================================================== -->
+  <header>
+    <div class="header-inner">
+      <div class="brand-group">
+        <div class="brand-icon">T1</div>
+        <div class="brand-titles">
+          <h1>IELTS Writing Task 1: Band 6+ Breakthrough</h1>
+          <p>Academic Training Engine • From Mechanical Listing to Strategic Analysis</p>
+        </div>
+      </div>
+      <div class="header-controls">
+        <a href="../../index.html" class="btn-header">🎯 IELTS Hub</a>
+        <button class="btn-header" id="btnTeacherModeToggle">👨‍🏫 Teacher Mode</button>
+        <button class="btn-header" id="btnThemeToggle">🌓 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MAIN CONTENT CONTAINER
+       ====================================================================== -->
+  <main>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <h2>Break Free from Band 5 in IELTS Academic Task 1</h2>
+      <p>
+        Are you writing down every single number like a spreadsheet? Skipping the overview? Repeating <em>"shows"</em> and <em>"increased"</em> ten times? 
+        This interactive workbook directly eliminates the habits that keep students trapped below Band 6 and trains the exact patterns examiners reward.
+      </p>
+      <div class="hero-meta-row">
+        <span class="hero-tag">⏱️ 20 Minutes Recommended</span>
+        <span class="hero-tag">📝 150 Words Minimum</span>
+        <span class="hero-tag">⚖️ 33.3% of Total Writing Score</span>
+        <span class="hero-tag">🎯 Target Level: Band 6.0 ➔ 7.5+</span>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 1: KNOW THE BATTLEFIELD
+         ================================================================== -->
+    <section class="content-section" id="sectionBattlefield">
+      <div class="section-head">
+        <h2><span>🎯</span> 1. Know the Battlefield — Exam Facts & Official Rubrics</h2>
+        <span class="section-sub">Understand exactly what examiners look for (and penalize)</span>
+      </div>
+
+      <!-- Critical Overview Warning (Visually Impossible to Miss) -->
+      <div class="critical-rule-callout">
+        <div class="critical-rule-icon">🚨</div>
+        <div class="critical-rule-content">
+          <h3>THE #1 CRITICAL RULE: NO OVERVIEW = HARD BAND 5 LIMIT</h3>
+          <p>
+            According to the official IELTS Assessment Criteria, if your essay <strong>does not contain a clear overview</strong> (or puts specific numbers into the overview), your Task Achievement score is <strong>hard-capped at Band 5</strong>. No matter how perfect your grammar or vocabulary is, you cannot score Band 6 or higher without an overview!
+          </p>
+        </div>
+      </div>
+
+      <!-- The 4 Official Assessment Criteria Cards -->
+      <div class="criteria-cards-grid" id="criteriaCardsContainer">
+        <!-- Injected dynamically via js/app.js from IELTS_DATA -->
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 2: THE 6 QUESTION TYPES
+         ================================================================== -->
+    <section class="content-section" id="sectionQuestionTypes">
+      <div class="section-head">
+        <h2><span>📊</span> 2. The 6 Question Types — Strategy, Traps & Vocabulary</h2>
+        <span class="section-sub">Master the unique requirements for every graphic format</span>
+      </div>
+
+      <div class="tabs-nav" id="qTypesNav">
+        <!-- Tab buttons injected dynamically -->
+      </div>
+
+      <div id="qTypesContent">
+        <!-- Tab panels injected dynamically -->
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 3: THE 4-PARAGRAPH SKELETON
+         ================================================================== -->
+    <section class="content-section" id="sectionSkeleton">
+      <div class="section-head">
+        <h2><span>🏗️</span> 3. The 4-Paragraph Skeleton — Universal Essay Blueprint</h2>
+        <span class="section-sub">Follow this strict formula for every Task 1 report</span>
+      </div>
+
+      <div class="skeleton-cards-grid">
+        <!-- Paragraph 1 -->
+        <div class="skeleton-card" style="border-left: 5px solid var(--secondary);">
+          <div class="skeleton-card-head">
+            <h3>Paragraph 1: The Introduction</h3>
+            <span class="badge badge-secondary">1–2 Sentences • ~30 Words</span>
+          </div>
+          <p><strong>Purpose:</strong> Paraphrase the question prompt stimulus. Never copy more than 3 words verbatim from the prompt, as copied words are deducted from your total word count.</p>
+          <div class="comparison-box">
+            <div class="compare-block compare-bad">
+              <strong>❌ Band 5 Copied Prompt:</strong><br>
+              <em>"The graph below shows the amount of electricity produced in three countries between 2000 and 2020."</em>
+            </div>
+            <div class="compare-block compare-good">
+              <strong>✅ Band 7+ Paraphrase:</strong><br>
+              <em>"The line graph illustrates power generation across three nations over a two-decade period from 2000 to 2020."</em>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paragraph 2 -->
+        <div class="skeleton-card" style="border-left: 5px solid var(--primary); background: rgba(239, 68, 68, 0.03);">
+          <div class="skeleton-card-head">
+            <h3 style="color: var(--primary);">Paragraph 2: The Overview ⭐ (The Paragraph That Decides Your Band)</h3>
+            <span class="badge badge-primary">2–3 Sentences • ~40 Words</span>
+          </div>
+          <p><strong>Purpose:</strong> Summarize the 2–3 most striking macro trends or main features. Always start with <em>"Overall, ..."</em>. <strong>NEVER include specific figures, numbers, or percentages here!</strong> Save all numbers for paragraphs 3 and 4.</p>
+          <div class="compare-block compare-good" style="margin-top: 10px;">
+            <strong>✅ Band 7+ Overview Template:</strong><br>
+            <em>"Overall, power generation increased significantly in all three countries over the period. In addition, Country A consistently generated the largest quantity of electricity, whereas Country C remained the lowest producer throughout."</em>
+          </div>
+        </div>
+
+        <!-- Paragraph 3 -->
+        <div class="skeleton-card" style="border-left: 5px solid var(--warning);">
+          <div class="skeleton-card-head">
+            <h3>Paragraph 3: Detail Paragraph 1 (First Logical Group)</h3>
+            <span class="badge badge-warning">3–4 Sentences • ~50 Words</span>
+          </div>
+          <p><strong>Purpose:</strong> Describe the first logical group of data (e.g. all increasing trends, or the top 2 highest categories). Support all statements with accurate figures, starting points, and peak numbers.</p>
+          <div class="compare-block compare-good">
+            <strong>✅ Example Strategy:</strong> Group Country A and Country B together because both experienced steady upward trajectories, highlighting specific dates and kilowatt figures.
+          </div>
+        </div>
+
+        <!-- Paragraph 4 -->
+        <div class="skeleton-card" style="border-left: 5px solid var(--correct);">
+          <div class="skeleton-card-head">
+            <h3>Paragraph 4: Detail Paragraph 2 (Second Logical Group & Comparisons)</h3>
+            <span class="badge badge-success">3–4 Sentences • ~50 Words</span>
+          </div>
+          <p><strong>Purpose:</strong> Describe the remaining data (e.g. declining categories, anomalies, or minor sectors). Use strong comparative transition markers (<em>"In stark contrast", "Conversely", "Meanwhile"</em>). <strong>No conclusion paragraph is required!</strong></p>
+          <div class="compare-block compare-good">
+            <strong>✅ Example Strategy:</strong> Focus on Country C and make direct comparative contrasts with Countries A and B using figures to validate the gap.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 4: VOCABULARY BANK
+         ================================================================== -->
+    <section class="content-section" id="sectionVocabBank">
+      <div class="section-head">
+        <h2><span>📖</span> 4. Interactive Vocabulary Bank — Click to Copy</h2>
+        <span class="section-sub">Filterable, examiner-approved academic collocations and upgrades</span>
+      </div>
+
+      <div class="vocab-controls">
+        <div class="filter-bar" id="vocabFilterBar">
+          <button class="filter-btn active" data-cat="all" onclick="App.filterVocabCategory('all')">All Categories</button>
+          <button class="filter-btn" data-cat="trend-verbs" onclick="App.filterVocabCategory('trend-verbs')">Trend Verbs & Adverbs</button>
+          <button class="filter-btn" data-cat="noun-forms" onclick="App.filterVocabCategory('noun-forms')">Noun Forms</button>
+          <button class="filter-btn" data-cat="comparison" onclick="App.filterVocabCategory('comparison')">Comparisons</button>
+          <button class="filter-btn" data-cat="approximation" onclick="App.filterVocabCategory('approximation')">Approximation</button>
+          <button class="filter-btn" data-cat="process" onclick="App.filterVocabCategory('process')">Process Passive</button>
+          <button class="filter-btn" data-cat="upgrades" onclick="App.filterVocabCategory('upgrades')">Band 5➔7 Upgrades</button>
+        </div>
+        <input type="text" class="search-input" id="vocabSearchInput" placeholder="🔍 Search vocabulary phrases, examples, or notes...">
+      </div>
+
+      <div id="vocabBankContainer">
+        <!-- Vocab tables injected dynamically -->
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 5: THE 7 DEADLY SINS
+         ================================================================== -->
+    <section class="content-section" id="sectionDeadlySins">
+      <div class="section-head">
+        <h2><span>💀</span> 5. The 7 Deadly Sins of Task 1 — Stop Doing These Today</h2>
+        <span class="section-sub">The 7 fatal habits keeping you below Band 6 and their exact fixes</span>
+      </div>
+
+      <div class="accordion" id="deadlySinsAccordion">
+        <!-- Accordion items injected dynamically -->
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 6: BAND 6 VS BAND 8 COMPARISON
+         ================================================================== -->
+    <section class="content-section" id="sectionComparison">
+      <div class="section-head">
+        <h2><span>⚖️</span> 6. Band 6 vs Band 8 — Spot the Difference</h2>
+        <span class="section-sub">The exact same prompt answered twice. Notice what elevates the score.</span>
+      </div>
+
+      <div style="background: var(--bg-primary); padding: 1rem 1.25rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem; border-left: 4px solid var(--secondary);">
+        <strong>📌 Prompt Stimulus:</strong> <span id="samplePromptText"></span>
+      </div>
+
+      <div class="sample-grid" id="sampleComparisonContainer">
+        <!-- Injected dynamically -->
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         INTERACTIVE TOOLS SUITE
+         ================================================================== -->
+    <div class="tools-grid">
+
+      <!-- TOOL A: WRITING ARENA -->
+      <section class="tool-container" id="toolArena">
+        <div class="section-head">
+          <h2><span>✍️</span> Tool A: The Writing Arena (Live Timed Simulator)</h2>
+          <span class="section-sub">Practice under real exam conditions with automated length & structure guards</span>
+        </div>
+
+        <div class="arena-topbar">
+          <div class="timer-box">
+            <span>⏱️ Timer:</span>
+            <span id="arenaTimerDisplay">20:00</span>
+            <button class="btn-sm btn-outline" id="btnTimerToggle">▶ Start Timer</button>
+            <button class="btn-sm btn-outline" id="btnTimerReset">↺ Reset</button>
+          </div>
+          <div>
+            <span>Word Count:</span>
+            <span id="arenaWordCount" class="word-count-badge count-fail">0</span>
+          </div>
+        </div>
+
+        <div id="arenaTimerBanner" style="display: none; background: var(--warning-bg); border: 1px solid var(--warning); padding: 10px; border-radius: var(--radius-sm); margin-bottom: 1rem; font-weight: 700; text-align: center;"></div>
+
+        <div style="margin-bottom: 1rem;">
+          <label style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 4px;">Choose a Practice Task:</label>
+          <select id="arenaPromptSelect" class="search-input" style="padding: 8px 12px;">
+            <option>Task 1: Global Electricity Generation (Line Graph 2000–2020)</option>
+            <option>Task 2: Weekly Working Hours in Europe (Bar Chart)</option>
+            <option>Task 3: Household Budget Expenditures (Pie Chart)</option>
+            <option>Task 4: Cement and Concrete Manufacturing Process (Diagram)</option>
+            <option>Task 5: Urban Redevelopment of Templeton Coast (Map 1990–2010)</option>
+          </select>
+        </div>
+
+        <textarea id="arenaTextarea" class="arena-textarea" placeholder="Type your 4-paragraph response here... Remember: P1 Intro (paraphrase), P2 Overview (no numbers!), P3 Detail 1, P4 Detail 2."></textarea>
+
+        <div id="arenaWordStatus" style="font-size: 0.9rem; margin-bottom: 1rem;"></div>
+
+        <div class="checklist-grid">
+          <label class="chk-label"><input type="checkbox" id="chkP1"> <span>P1: Paraphrased prompt (no copied strings)</span></label>
+          <label class="chk-label"><input type="checkbox" id="chkP2"> <span>P2: Overview starts with 'Overall' & 0 numbers</span></label>
+          <label class="chk-label"><input type="checkbox" id="chkP3"> <span>P3: Grouped details with accurate starting/peak figures</span></label>
+          <label class="chk-label"><input type="checkbox" id="chkP4"> <span>P4: Used comparative contrast words (whereas, in contrast)</span></label>
+        </div>
+
+        <div class="arena-actions-row">
+          <div style="display: flex; gap: 10px;">
+            <button class="btn-main" id="btnSaveDraft">💾 Save Draft to Storage</button>
+            <button class="btn-outline" id="btnClearArena">🗑️ Clear Text</button>
+          </div>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Drafts saved locally in your browser</span>
+        </div>
+
+        <div class="drafts-box">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem;">📂 Saved Drafts History</h4>
+          <div id="arenaDraftsContainer"></div>
+        </div>
+      </section>
+
+      <!-- TOOL B: SELF-ASSESSMENT RUBRIC -->
+      <section class="tool-container" id="toolRubric">
+        <div class="section-head">
+          <h2><span>🎚️</span> Tool B: Examiner Self-Assessment & Diagnostic Calculator</h2>
+          <span class="section-sub">Slide to calculate official rounded band score and receive targeted action tips</span>
+        </div>
+
+        <div class="rubric-grid">
+          <!-- Slider 1: TA -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <strong>🎯 Task Achievement</strong>
+              <span class="slider-val" id="valTA">6.0</span>
+            </div>
+            <input type="range" min="4" max="9" step="0.5" value="6" class="rubric-slider" id="sliderTA">
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 6px;">Clear overview + key data selection.</p>
+          </div>
+
+          <!-- Slider 2: CC -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <strong>🔗 Coherence & Cohesion</strong>
+              <span class="slider-val" id="valCC">6.0</span>
+            </div>
+            <input type="range" min="4" max="9" step="0.5" value="6" class="rubric-slider" id="sliderCC">
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 6px;">4 paragraphs + smooth transitions.</p>
+          </div>
+
+          <!-- Slider 3: LR -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <strong>📖 Lexical Resource</strong>
+              <span class="slider-val" id="valLR">6.0</span>
+            </div>
+            <input type="range" min="4" max="9" step="0.5" value="6" class="rubric-slider" id="sliderLR">
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 6px;">Collocations + approximations.</p>
+          </div>
+
+          <!-- Slider 4: GRA -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <strong>📐 Grammatical Range</strong>
+              <span class="slider-val" id="valGRA">6.0</span>
+            </div>
+            <input type="range" min="4" max="9" step="0.5" value="6" class="rubric-slider" id="sliderGRA">
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 6px;">Complex structures + error-free sentences.</p>
+          </div>
+        </div>
+
+        <div class="rubric-score-display-card">
+          <div style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Calculated Overall Task 1 Band</div>
+          <div class="overall-band-score" id="rubricOverallScore">6.0</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);" id="rubricRawAverage">(Raw Average: 6.00)</div>
+        </div>
+
+        <div id="rubricActionPlan">
+          <!-- Injected dynamically -->
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <button class="btn-main" id="btnSaveRubricScore">📈 Save Assessment Score</button>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">History tracked locally</span>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem;">📊 Band Progress Chart</h4>
+          <div id="rubricProgressChart"></div>
+        </div>
+      </section>
+
+      <!-- TOOL C: OVERVIEW TRAINER -->
+      <section class="tool-container" id="toolOverview">
+        <div class="section-head">
+          <h2><span>👁️</span> Tool C: Overview Trainer (Live Rule Checker)</h2>
+          <span class="section-sub">Practice writing the 2 most decisive sentences with instant rule validation</span>
+        </div>
+
+        <div class="tabs-nav" id="overviewChartNav">
+          <!-- Chart selector buttons injected dynamically -->
+        </div>
+
+        <div class="overview-trainer-grid">
+          <div class="mini-chart-box">
+            <h4 id="overviewChartTitle" style="font-size: 0.95rem; margin-bottom: 0.75rem;">Mini-Chart</h4>
+            <div id="overviewChartSvg"></div>
+          </div>
+
+          <div class="overview-input-box">
+            <p id="overviewPrompt" style="font-size: 0.95rem; font-weight: 600;"></p>
+            <textarea id="overviewInput" class="overview-textarea" placeholder="Start typing: 'Overall, it is clear that...'"></textarea>
+            
+            <div class="overview-checklist" id="overviewChecklist">
+              <!-- Live checklist items injected dynamically -->
+            </div>
+
+            <div>
+              <button class="btn-outline" id="btnRevealModelOverview">Reveal Model Overview</button>
+            </div>
+
+            <div class="model-overview-card" id="overviewModelCard" style="display: none;">
+              <h4 style="color: var(--correct); font-size: 0.95rem; margin-bottom: 0.35rem;">✅ Examiner Model Overview:</h4>
+              <p id="overviewModelText" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.75rem;"></p>
+              <strong>Key Features Highlighted:</strong>
+              <ul id="overviewKeyFeatures" style="padding-left: 1.25rem; font-size: 0.85rem; margin-top: 4px;"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOOL D: PARAPHRASE LAB -->
+      <section class="tool-container" id="toolParaphrase">
+        <div class="section-head">
+          <h2><span>🧪</span> Tool D: Paraphrase Lab (Chunk Upgrader)</h2>
+          <span class="section-sub">Transform real IELTS prompts into high-scoring introductions</span>
+        </div>
+
+        <div class="tabs-nav" id="paraphrasePromptNav">
+          <!-- Prompt navigation buttons injected dynamically -->
+        </div>
+
+        <div class="paraphrase-box">
+          <div style="font-size: 0.8rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;">Original IELTS Prompt Stimulus:</div>
+          <div class="prompt-stimulus" id="paraphraseOriginalPrompt"></div>
+
+          <div style="margin-bottom: 1rem;">
+            <label style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 6px;">Your Paraphrased Introduction (Paragraph 1):</label>
+            <textarea id="paraphraseUserInput" class="overview-textarea" placeholder="Rewrite the prompt using synonyms and grammatical alterations..."></textarea>
+          </div>
+
+          <button class="btn-main" id="btnCheckParaphrase">🔍 Check Paraphrase & Reveal Model</button>
+
+          <div id="paraphraseModelContainer" style="display: none; margin-top: 1.5rem;">
+            <div class="model-overview-card">
+              <h4 style="color: var(--correct); font-size: 0.95rem; margin-bottom: 0.35rem;">✅ Band 7+ Model Paraphrase:</h4>
+              <p id="paraphraseModelText" style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem;"></p>
+              <h5 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">Chunk-by-Chunk Transformation Breakdown:</h5>
+              <div id="paraphraseBreakdownList"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOOL E: VOCABULARY QUIZ -->
+      <section class="tool-container" id="toolQuiz">
+        <div class="section-head">
+          <h2><span>🏆</span> Tool E: Vocabulary & Strategy Quiz (15 Questions)</h2>
+          <span class="section-sub" id="quizBestScoreDisplay">Best Score: None yet</span>
+        </div>
+
+        <div id="quizQuestionsContainer">
+          <!-- 15 questions injected dynamically via js/quiz.js -->
+        </div>
+
+        <div style="display: flex; gap: 12px; margin-top: 1.5rem;">
+          <button class="btn-main" id="btnSubmitQuiz">Submit Quiz & Grade Answers</button>
+          <button class="btn-outline" id="btnRetakeQuiz" style="display: none;">↺ Retake with New Questions</button>
+        </div>
+
+        <div id="quizResultsSummary" class="quiz-results-card" style="display: none;"></div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- ======================================================================
+       TOOL F: TEACHER MODE COLLAPSIBLE SIDEBAR
+       ====================================================================== -->
+  <aside class="teacher-sidebar" id="teacherSidebar" aria-label="Teacher Lesson Planning Sidebar">
+    <div class="teacher-sidebar-head">
+      <h3>👨‍🏫 Teacher Mode Panel</h3>
+      <button class="btn-sm btn-outline" id="btnCloseTeacherSidebar">✕ Close</button>
+    </div>
+    <div id="teacherSidebarContent">
+      <!-- Pacing, questions, projector notes injected by js/teacher.js -->
+    </div>
+  </aside>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="copyToast">📋 Copied to clipboard!</div>
+
+  <!-- ======================================================================
+       MODULAR JAVASCRIPT FILES (Zero CDNs, 100% Offline Compatible)
+       ====================================================================== -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/arena.js"></script>
+  <script src="js/rubric.js"></script>
+  <script src="js/overview.js"></script>
+  <script src="js/paraphrase.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/teacher.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
