@@ -1,6 +1,6 @@
 # 📚 Master Workspace Educational Content Catalog
 
-> *Auto-generated on 2026-08-31 18:30 via `scripts/build_workspace_index.py`*
+> *Auto-generated on 2026-08-31 18:41 via `scripts/build_workspace_index.py`*
 
 This catalog indexes all structured lesson plans, test prep modules, question banks, and interactive simulators across the workspace, along with independent domain portals.
 

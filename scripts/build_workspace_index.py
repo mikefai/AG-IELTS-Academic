@@ -734,7 +734,7 @@ def generate_domain_portal_html(domain: str, items: list):
 
   <header>
     <div class="header-content">
-      <a href="../index.html" class="brand">
+      <a href="index.html" class="brand">
         <div class="brand-icon">{config['icon']}</div>
         <div>
           <h1>{config['title']}</h1>
@@ -742,7 +742,7 @@ def generate_domain_portal_html(domain: str, items: list):
         </div>
       </a>
       <div class="header-actions">
-        <a href="../index.html" class="btn-nav">🏠 Master Hub</a>
+        <a href="index.html" class="btn-nav">🏠 Portal Home</a>
         {repo_button_html}
         <button class="btn-nav" id="themeToggle" onclick="toggleTheme()">🌓 Theme</button>
       </div>
