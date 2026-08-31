@@ -109,6 +109,57 @@ stone reflects advanced executive function, working memory, and long-term hierar
 > *Summarize the information by selecting and reporting the main features, and make comparisons where relevant.*  
 > *(Write at least 150 words. Recommended time: 20 minutes).*
 
+<div class="visual-container" style="background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 15px; margin: 20px 0; box-shadow: var(--shadow); max-width: 550px; margin-left: auto; margin-right: auto;">
+  <h4 style="text-align: center; margin-bottom: 12px; font-size: 0.95rem;">📊 STEM Graduates by Gender (2022)</h4>
+  <svg viewBox="0 0 450 240" style="width: 100%; height: auto;" role="img" aria-label="Grouped bar chart showing STEM graduates by gender in Germany, UK, Sweden, Poland">
+    <!-- Gridlines -->
+    <line x1="50" y1="20" x2="50" y2="185" stroke="var(--border)" stroke-width="1.5" />
+    <line x1="50" y1="185" x2="420" y2="185" stroke="var(--border)" stroke-width="1.5" />
+    
+    <text x="40" y="188" font-size="10" text-anchor="end" fill="var(--text-muted)">0%</text>
+    <line x1="50" y1="145" x2="420" y2="145" stroke="var(--border)" stroke-dasharray="2,2" />
+    <text x="40" y="148" font-size="10" text-anchor="end" fill="var(--text-muted)">25%</text>
+    <line x1="50" y1="105" x2="420" y2="105" stroke="var(--border)" stroke-dasharray="2,2" />
+    <text x="40" y="108" font-size="10" text-anchor="end" fill="var(--text-muted)">50%</text>
+    <line x1="50" y1="65" x2="420" y2="65" stroke="var(--border)" stroke-dasharray="2,2" />
+    <text x="40" y="68" font-size="10" text-anchor="end" fill="var(--text-muted)">75%</text>
+
+    <!-- Germany (Male 72%, Female 28%) -->
+    <rect x="75" y="70" width="28" height="115" rx="3" fill="#3b82f6" />
+    <text x="89" y="64" font-size="10" font-weight="bold" fill="#3b82f6" text-anchor="middle">72%</text>
+    <rect x="105" y="140" width="28" height="45" rx="3" fill="#ec4899" />
+    <text x="119" y="134" font-size="10" font-weight="bold" fill="#ec4899" text-anchor="middle">28%</text>
+    <text x="104" y="202" font-size="11" fill="var(--text)" text-anchor="middle">Germany</text>
+
+    <!-- UK (Male 68%, Female 32%) -->
+    <rect x="165" y="76" width="28" height="109" rx="3" fill="#3b82f6" />
+    <text x="179" y="70" font-size="10" font-weight="bold" fill="#3b82f6" text-anchor="middle">68%</text>
+    <rect x="195" y="134" width="28" height="51" rx="3" fill="#ec4899" />
+    <text x="209" y="128" font-size="10" font-weight="bold" fill="#ec4899" text-anchor="middle">32%</text>
+    <text x="194" y="202" font-size="11" fill="var(--text)" text-anchor="middle">UK</text>
+
+    <!-- Sweden (Male 55%, Female 45%) -->
+    <rect x="255" y="97" width="28" height="88" rx="3" fill="#3b82f6" />
+    <text x="269" y="91" font-size="10" font-weight="bold" fill="#3b82f6" text-anchor="middle">55%</text>
+    <rect x="285" y="113" width="28" height="72" rx="3" fill="#ec4899" />
+    <text x="299" y="107" font-size="10" font-weight="bold" fill="#ec4899" text-anchor="middle">45%</text>
+    <text x="284" y="202" font-size="11" fill="var(--text)" text-anchor="middle">Sweden</text>
+
+    <!-- Poland (Male 59%, Female 41%) -->
+    <rect x="345" y="91" width="28" height="94" rx="3" fill="#3b82f6" />
+    <text x="359" y="85" font-size="10" font-weight="bold" fill="#3b82f6" text-anchor="middle">59%</text>
+    <rect x="375" y="119" width="28" height="66" rx="3" fill="#ec4899" />
+    <text x="389" y="113" font-size="10" font-weight="bold" fill="#ec4899" text-anchor="middle">41%</text>
+    <text x="374" y="202" font-size="11" fill="var(--text)" text-anchor="middle">Poland</text>
+
+    <!-- Legend -->
+    <rect x="150" y="222" width="12" height="12" rx="3" fill="#3b82f6" />
+    <text x="168" y="232" font-size="11" fill="var(--text)">Male</text>
+    <rect x="235" y="222" width="12" height="12" rx="3" fill="#ec4899" />
+    <text x="253" y="232" font-size="11" fill="var(--text)">Female</text>
+  </svg>
+</div>
+
 ---
 
 ### Writing Task 2

@@ -12,6 +12,7 @@ content_type: "Lesson Plan | Model Essay | Analysis"
 - **Skill Focus**: Academic Writing Task 1 (Process Diagrams, Industrial Manufacturing, Natural Cycles)
 - **Target Transition**: Band 7.0 ➔ 8.0
 - **Key Challenges**: Present Simple Passive voice consistency, chronological sequencing without repeating *"then/next"*, summarizing stage counts in the overview.
+- **Recommended Time**: 20 Minutes | **Length**: 150+ Words | **Weight**: 33.3% of Writing Score.
 
 ---
 
@@ -35,11 +36,106 @@ content_type: "Lesson Plan | Model Essay | Analysis"
 
 ---
 
-## 🏭 2. Process Diagram Prompt & Model Response
+## 🏭 2. Process Diagram Visual & Prompt
 
 ### Prompt
 > **The diagram illustrates the stages involved in the commercial production of roasted Arabica coffee beans for retail sale.**  
 > *Summarize the information by selecting and reporting the main features, and make comparisons where relevant.*
+
+```
+=========================================================================================
+                                     PROCESS FLOWCHART
+=========================================================================================
+```
+
+<div class="visual-container" style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: var(--shadow);">
+  <h4 style="text-align: center; margin-bottom: 15px; font-size: 1rem;">☕ Industrial Manufacturing Process: Arabica Coffee Beans (7 Stages)</h4>
+  <svg viewBox="0 0 800 320" style="width: 100%; height: auto;" role="img" aria-label="Flowchart illustrating the 7 stages of coffee processing and roasting">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1 L 10 5 L 0 9 z" fill="#3b82f6"/>
+      </marker>
+    </defs>
+
+    <!-- Stage 1 -->
+    <rect x="20" y="30" width="165" height="90" rx="8" fill="var(--surface)" stroke="#3b82f6" stroke-width="2" />
+    <circle cx="40" cy="50" r="12" fill="#3b82f6" />
+    <text x="40" y="54" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+    <text x="60" y="53" font-size="12" font-weight="bold" fill="var(--text)">Harvesting</text>
+    <text x="30" y="80" font-size="10" fill="var(--text-muted)">Ripe red coffee cherries</text>
+    <text x="30" y="98" font-size="10" fill="var(--text-muted)">handpicked from trees</text>
+
+    <!-- Arrow 1->2 -->
+    <line x1="185" y1="75" x2="215" y2="75" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- Stage 2 -->
+    <rect x="225" y="30" width="165" height="90" rx="8" fill="var(--surface)" stroke="#3b82f6" stroke-width="2" />
+    <circle cx="245" cy="50" r="12" fill="#3b82f6" />
+    <text x="245" y="54" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+    <text x="265" y="53" font-size="12" font-weight="bold" fill="var(--text)">Wet Depulping</text>
+    <text x="235" y="80" font-size="10" fill="var(--text-muted)">Cherries sorted in water;</text>
+    <text x="235" y="98" font-size="10" fill="var(--text-muted)">pulp mechanically stripped</text>
+
+    <!-- Arrow 2->3 -->
+    <line x1="390" y1="75" x2="420" y2="75" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- Stage 3 -->
+    <rect x="430" y="30" width="165" height="90" rx="8" fill="var(--surface)" stroke="#3b82f6" stroke-width="2" />
+    <circle cx="450" cy="50" r="12" fill="#3b82f6" />
+    <text x="450" y="54" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+    <text x="470" y="53" font-size="12" font-weight="bold" fill="var(--text)">Fermentation</text>
+    <text x="440" y="80" font-size="10" fill="var(--text-muted)">Beans soaked 24–48h in</text>
+    <text x="440" y="98" font-size="10" fill="var(--text-muted)">vats to remove mucilage</text>
+
+    <!-- Arrow 3->4 -->
+    <line x1="595" y1="75" x2="625" y2="75" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- Stage 4 -->
+    <rect x="635" y="30" width="150" height="90" rx="8" fill="var(--surface)" stroke="#3b82f6" stroke-width="2" />
+    <circle cx="655" cy="50" r="12" fill="#3b82f6" />
+    <text x="655" y="54" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+    <text x="675" y="53" font-size="12" font-weight="bold" fill="var(--text)">Sun Drying</text>
+    <text x="645" y="80" font-size="10" fill="var(--text-muted)">Spread on drying beds;</text>
+    <text x="645" y="98" font-size="10" fill="var(--text-muted)">moisture dropped to &lt;12%</text>
+
+    <!-- Arrow 4->5 (Down & Left) -->
+    <path d="M 710 120 L 710 160 L 590 160 L 590 190" fill="none" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- Stage 5 -->
+    <rect x="500" y="195" width="180" height="90" rx="8" fill="var(--surface)" stroke="#10b981" stroke-width="2" />
+    <circle cx="520" cy="215" r="12" fill="#10b981" />
+    <text x="520" y="219" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">5</text>
+    <text x="540" y="218" font-size="12" font-weight="bold" fill="var(--text)">Mechanical Hulling</text>
+    <text x="510" y="245" font-size="10" fill="var(--text-muted)">Parchment husk milled</text>
+    <text x="510" y="263" font-size="10" fill="var(--text-muted)">➔ Raw green coffee beans</text>
+
+    <!-- Arrow 5->6 (Left) -->
+    <line x1="500" y1="240" x2="445" y2="240" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- Stage 6 -->
+    <rect x="255" y="195" width="180" height="90" rx="8" fill="var(--surface)" stroke="#f59e0b" stroke-width="2" />
+    <circle cx="275" cy="215" r="12" fill="#f59e0b" />
+    <text x="275" y="219" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">6</text>
+    <text x="295" y="218" font-size="12" font-weight="bold" fill="var(--text)">Drum Roasting</text>
+    <text x="265" y="245" font-size="10" fill="var(--text-muted)">Roasted at 200°C–220°C;</text>
+    <text x="265" y="263" font-size="10" fill="var(--text-muted)">cooled with rapid cold air</text>
+
+    <!-- Arrow 6->7 (Left) -->
+    <line x1="255" y1="240" x2="200" y2="240" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- Stage 7 -->
+    <rect x="20" y="195" width="170" height="90" rx="8" fill="var(--surface)" stroke="#8b5cf6" stroke-width="2" />
+    <circle cx="40" cy="215" r="12" fill="#8b5cf6" />
+    <text x="40" y="219" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">7</text>
+    <text x="60" y="218" font-size="12" font-weight="bold" fill="var(--text)">Packaging</text>
+    <text x="30" y="245" font-size="10" fill="var(--text-muted)">Sealed in vacuum bags with</text>
+    <text x="30" y="263" font-size="10" fill="var(--text-muted)">one-way degassing valves</text>
+  </svg>
+</div>
+
+---
+
+### ✅ Band 8.0 Model Essay
 
 ```
 =========================================================================================

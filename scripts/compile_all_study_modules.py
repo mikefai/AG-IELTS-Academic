@@ -242,8 +242,13 @@ def markdown_to_html_rich(md: str) -> str:
             i += 1
             continue
 
-        # Empty Line
-        if not line.strip():
+        # Raw HTML / SVG / Container handling
+        trimmed = line.strip()
+        if trimmed.startswith(("<div", "</div", "<svg", "</svg", "<table", "</table", "<tr", "</tr", "<td", "</td", "<th", "</th", "<thead", "</thead>", "<tbody", "</tbody>", "<defs", "</defs", "<marker", "</marker", "<rect", "<circle", "<line", "<path", "<text", "</text>", "<!--", "<details", "</details>", "<summary", "</summary>")):
+            if in_list:
+                in_list = False
+                out.append("</ul>")
+            out.append(line)
             i += 1
             continue
 

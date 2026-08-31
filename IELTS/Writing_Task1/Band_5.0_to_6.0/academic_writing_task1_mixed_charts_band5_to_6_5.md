@@ -32,14 +32,6 @@ content_type: "Lesson Plan | Model Essay | Drill | Analysis"
 | **4. Timed Exam Practice** | 20 min | Students write a complete response to the practice task under timed conditions using the interactive Writing Arena. | Individual |
 | **5. Peer Review & Feedback** | 6 min | Peer audit using the 4-point Rubric Checklist (Did they include both overviews? Are there numbers in paragraph 2?). | Pairs |
 
-### Concept Checking Questions (CCQs) for Teachers
-- *Q: "Can I write one overview for Chart 1 in paragraph 2, and another overview for Chart 2 in paragraph 4?"*  
-  **A:** **No.** All overview statements must be together in Paragraph 2 (or immediately after the introduction) to maintain clear structural coherence.
-- *Q: "What happens if I write 'Paris had 21.5m visitors' in my overview?"*  
-  **A:** **Penalized.** Overviews are for macro-trends and qualitative comparisons only; raw data belongs exclusively in Body 1 and Body 2.
-- *Q: "How should I divide the body paragraphs?"*  
-  **A:** **Divide and conquer:** Body 1 covers Visual 1 (the table); Body 2 covers Visual 2 (the pie chart).
-
 ---
 
 ## 🎯 2. The "Divide & Conquer" 4-Paragraph Blueprint
@@ -69,24 +61,100 @@ content_type: "Lesson Plan | Model Essay | Drill | Analysis"
 
 ---
 
-## 📝 3. Authentic Practice Task & Comparative Analysis
+## 📝 3. Authentic Practice Task & Visual Prompt
 
 ### Prompt
 > **The table below shows the number of international visitors to five European cities in 2018 and 2023, while the pie chart illustrates the primary reasons for travel reported by these visitors in 2023.**  
 > *Summarize the information by selecting and reporting the main features, and make comparisons where relevant.*
 
-#### Visual Data Summary
-- **Table (Visitor Numbers in Millions)**:
-  - *Paris*: 2018 = 19.1m | 2023 = 21.5m (+2.4m)
-  - *Rome*: 2018 = 15.2m | 2023 = 14.8m (-0.4m)
-  - *London*: 2018 = 20.4m | 2023 = 20.2m (-0.2m)
-  - *Barcelona*: 2018 = 12.0m | 2023 = 15.6m (+3.6m)
-  - *Amsterdam*: 2018 = 8.5m | 2023 = 9.1m (+0.6m)
-- **Pie Chart (Visitor Motivations in 2023)**:
-  - *Leisure & Sightseeing*: 52%
-  - *Business & Conferences*: 26%
-  - *Visiting Friends & Relatives (VFR)*: 14%
-  - *Educational & Cultural Exchange*: 8%
+```
+=========================================================================================
+                                     VISUAL DATA GRAPHICS
+=========================================================================================
+```
+
+<div class="visual-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 25px 0;">
+  <!-- Graphic 1: Table -->
+  <div style="flex: 1 1 340px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 15px; box-shadow: var(--shadow);">
+    <h4 style="text-align: center; margin-bottom: 12px; font-size: 0.95rem;">📊 Table 1: International Visitors (Millions)</h4>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: center;">
+      <thead>
+        <tr style="background: var(--primary-light); border-bottom: 2px solid var(--border);">
+          <th style="padding: 8px; text-align: left;">City</th>
+          <th style="padding: 8px;">2018</th>
+          <th style="padding: 8px;">2023</th>
+          <th style="padding: 8px;">Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 8px; text-align: left; font-weight: 700;">Paris</td>
+          <td style="padding: 8px;">19.1m</td>
+          <td style="padding: 8px; color: #10b981; font-weight: 700;">21.5m</td>
+          <td style="padding: 8px; color: #10b981;">+2.4m</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 8px; text-align: left; font-weight: 700;">London</td>
+          <td style="padding: 8px;">20.4m</td>
+          <td style="padding: 8px; color: #ef4444; font-weight: 700;">20.2m</td>
+          <td style="padding: 8px; color: #ef4444;">-0.2m</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 8px; text-align: left; font-weight: 700;">Barcelona</td>
+          <td style="padding: 8px;">12.0m</td>
+          <td style="padding: 8px; color: #10b981; font-weight: 700;">15.6m</td>
+          <td style="padding: 8px; color: #10b981;">+3.6m</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 8px; text-align: left; font-weight: 700;">Rome</td>
+          <td style="padding: 8px;">15.2m</td>
+          <td style="padding: 8px; color: #ef4444; font-weight: 700;">14.8m</td>
+          <td style="padding: 8px; color: #ef4444;">-0.4m</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; text-align: left; font-weight: 700;">Amsterdam</td>
+          <td style="padding: 8px;">8.5m</td>
+          <td style="padding: 8px; color: #10b981; font-weight: 700;">9.1m</td>
+          <td style="padding: 8px; color: #10b981;">+0.6m</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Graphic 2: SVG Pie Chart -->
+  <div style="flex: 1 1 340px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 15px; text-align: center; box-shadow: var(--shadow);">
+    <h4 style="margin-bottom: 10px; font-size: 0.95rem;">🥧 Chart 2: Visitor Motivations in 2023</h4>
+    <svg viewBox="0 0 320 220" style="width: 100%; max-height: 200px;" role="img" aria-label="Pie chart showing visitor motivations in 2023">
+      <!-- Slices -->
+      <!-- Leisure 52% (approx 187.2 deg) -->
+      <circle r="70" cx="110" cy="110" fill="transparent" stroke="#3b82f6" stroke-width="45" stroke-dasharray="228 440" stroke-dashoffset="0" />
+      <!-- Business 26% (approx 93.6 deg) -->
+      <circle r="70" cx="110" cy="110" fill="transparent" stroke="#10b981" stroke-width="45" stroke-dasharray="114 440" stroke-dashoffset="-228" />
+      <!-- VFR 14% (approx 50.4 deg) -->
+      <circle r="70" cx="110" cy="110" fill="transparent" stroke="#f59e0b" stroke-width="45" stroke-dasharray="61 440" stroke-dashoffset="-342" />
+      <!-- Education 8% (approx 28.8 deg) -->
+      <circle r="70" cx="110" cy="110" fill="transparent" stroke="#8b5cf6" stroke-width="45" stroke-dasharray="35 440" stroke-dashoffset="-403" />
+      
+      <!-- Inner Cutout -->
+      <circle r="45" cx="110" cy="110" fill="var(--bg)" />
+      <text x="110" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="var(--text)">2023</text>
+      <text x="110" y="122" text-anchor="middle" font-size="10" fill="var(--text-muted)">Reasons</text>
+
+      <!-- Legend -->
+      <rect x="200" y="40" width="12" height="12" rx="3" fill="#3b82f6" />
+      <text x="218" y="50" font-size="11" fill="var(--text)" text-anchor="start">Leisure (52%)</text>
+      
+      <rect x="200" y="75" width="12" height="12" rx="3" fill="#10b981" />
+      <text x="218" y="85" font-size="11" fill="var(--text)" text-anchor="start">Business (26%)</text>
+
+      <rect x="200" y="110" width="12" height="12" rx="3" fill="#f59e0b" />
+      <text x="218" y="120" font-size="11" fill="var(--text)" text-anchor="start">VFR (14%)</text>
+
+      <rect x="200" y="145" width="12" height="12" rx="3" fill="#8b5cf6" />
+      <text x="218" y="155" font-size="11" fill="var(--text)" text-anchor="start">Education (8%)</text>
+    </svg>
+  </div>
+</div>
 
 ---
 
@@ -106,12 +174,6 @@ lowest at 8.5 million and 9.1 million.
 In the pie chart, leisure was 52%. Business was 26%. Visiting friends was 14% and education 
 was 8%.
 ```
-
-#### Detailed Diagnostic Audit:
-1. **Task Achievement (Band 5.0)**: Overview cites specific numbers (`21.5 million`, `52%`) and fails to present general trends; body paragraphs list data city-by-city without synthesizing into upward vs downward groups.
-2. **Coherence & Cohesion (Band 5.0)**: Repetitive sentence starters (`In the table... In the pie chart...`); lacks logical transitions between points.
-3. **Lexical Resource (Band 5.0)**: Repetitive verbs (`went up`, `went down`, `was`); repeats `million` 8 times without synonyms.
-4. **Grammatical Range & Accuracy (Band 5.0)**: Relies entirely on basic simple clauses (`Subject + was + number`).
 
 ---
 

@@ -16,23 +16,17 @@ content_type: "Lesson Plan | Model Essay | Drill | Analysis"
 
 ---
 
-## 👨‍🏫 1. Comprehensive Teacher Lesson Plan & Classroom Guide
+## 👨🏫 1. Comprehensive Teacher Lesson Plan & Classroom Guide
 
 ### Pacing & Lesson Flow (60-Minute Model)
 
 | Stage | Timing | Pedagogical Action & Classroom Task | Interaction |
 | :--- | :---: | :--- | :---: |
-| **1. Hook & Data Grouping** | 8 min | Display a multi-category bar chart. Ask students: *"Should we write about every bar in order?"* Demonstrate how grouping into 2 logical clusters (e.g. Major vs Minor sources) creates Band 7+ cohesion. | Plenary |
+| **1. Hook & Data Grouping** | 8 min | Display the Australia Energy graphics. Ask students: *"Should we write about every bar in order?"* Demonstrate how grouping into 2 logical clusters (Major vs Minor sources) creates Band 7+ cohesion. | Plenary |
 | **2. Proportion Lexicon Drill** | 12 min | Review the Proportion & Fraction Conversion Table. Introduce phrasal upgrades (*"accounted for the lion's share", "comprised nearly a third"*). | Teacher-led |
 | **3. Controlled Exercises** | 15 min | Pairs complete **Exercise 1 (Proportion Transformation)** and **Exercise 2 (Comparative Sentence Building)**. Check answers. | Pairs ➔ Plenary |
 | **4. Timed Writing Arena** | 20 min | Individual 20-minute timed write using the embedded writing arena. | Individual |
 | **5. Criterion Audit** | 5 min | Students check their draft against the Band 7.0 Rubric Checklist. | Self / Peer |
-
-### Concept Checking Questions (CCQs) for Teachers
-- *Q: "Can I use 'percent' and 'percentage' interchangeably?"*  
-  **A:** **No.** *Percent* is used with a number (*45 percent*); *percentage* is used without a number (*a high percentage of students*).
-- *Q: "What is the difference between 'proportion' and 'number'?"*  
-  **A:** **Proportion/Percentage** refers to a share of a whole (0–100%); **Number** refers to count or quantity (*25 million tons*). Mixing them up is a serious Lexical Resource penalty.
 
 ---
 
@@ -64,11 +58,101 @@ content_type: "Lesson Plan | Model Essay | Drill | Analysis"
 
 ---
 
-## 📝 4. Practice Prompt & Full Band 7.5 Model Response
+## 📝 4. Practice Prompt & Visual Graphics
 
 ### Prompt
 > **The bar chart and pie chart show the main sources of energy used in Australia in 2010 and the projected distribution of energy consumption by sector for 2030.**  
 > *Summarize the information by selecting and reporting the main features, and make comparisons where relevant.*
+
+```
+=========================================================================================
+                                     VISUAL DATA GRAPHICS
+=========================================================================================
+```
+
+<div class="visual-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 25px 0;">
+  <!-- Graphic 1: Bar Chart (Energy Sources 2010) -->
+  <div style="flex: 1 1 340px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 15px; box-shadow: var(--shadow);">
+    <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.95rem;">📊 Australia: Energy Production by Source (2010)</h4>
+    <svg viewBox="0 0 340 220" style="width: 100%; max-height: 210px;" role="img" aria-label="Bar chart showing Australia energy sources in 2010">
+      <!-- Axis lines -->
+      <line x1="45" y1="20" x2="45" y2="175" stroke="var(--border)" stroke-width="1.5" />
+      <line x1="45" y1="175" x2="325" y2="175" stroke="var(--border)" stroke-width="1.5" />
+      
+      <!-- Gridlines & Y-axis labels -->
+      <text x="35" y="178" font-size="10" text-anchor="end" fill="var(--text-muted)">0%</text>
+      <line x1="45" y1="140" x2="325" y2="140" stroke="var(--border)" stroke-dasharray="2,2" />
+      <text x="35" y="143" font-size="10" text-anchor="end" fill="var(--text-muted)">20%</text>
+      <line x1="45" y1="105" x2="325" y2="105" stroke="var(--border)" stroke-dasharray="2,2" />
+      <text x="35" y="108" font-size="10" text-anchor="end" fill="var(--text-muted)">40%</text>
+      <line x1="45" y1="70" x2="325" y2="70" stroke="var(--border)" stroke-dasharray="2,2" />
+      <text x="35" y="73" font-size="10" text-anchor="end" fill="var(--text-muted)">60%</text>
+
+      <!-- Bars -->
+      <!-- Coal 48% (h = 84px) -->
+      <rect x="65" y="91" width="38" height="84" rx="3" fill="#ef4444" />
+      <text x="84" y="85" font-size="11" font-weight="bold" fill="#ef4444" text-anchor="middle">48%</text>
+      <text x="84" y="193" font-size="10" fill="var(--text)" text-anchor="middle">Coal</text>
+
+      <!-- Natural Gas 24% (h = 42px) -->
+      <rect x="118" y="133" width="38" height="42" rx="3" fill="#f59e0b" />
+      <text x="137" y="127" font-size="11" font-weight="bold" fill="#f59e0b" text-anchor="middle">24%</text>
+      <text x="137" y="193" font-size="10" fill="var(--text)" text-anchor="middle">Gas</text>
+
+      <!-- Crude Oil 20% (h = 35px) -->
+      <rect x="171" y="140" width="38" height="35" rx="3" fill="#3b82f6" />
+      <text x="190" y="134" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">20%</text>
+      <text x="190" y="193" font-size="10" fill="var(--text)" text-anchor="middle">Oil</text>
+
+      <!-- Hydro 5% (h = 9px) -->
+      <rect x="224" y="166" width="38" height="9" rx="2" fill="#10b981" />
+      <text x="243" y="160" font-size="10" font-weight="bold" fill="#10b981" text-anchor="middle">5%</text>
+      <text x="243" y="193" font-size="10" fill="var(--text)" text-anchor="middle">Hydro</text>
+
+      <!-- Solar/Wind 3% (h = 5px) -->
+      <rect x="277" y="170" width="38" height="5" rx="2" fill="#8b5cf6" />
+      <text x="296" y="164" font-size="10" font-weight="bold" fill="#8b5cf6" text-anchor="middle">3%</text>
+      <text x="296" y="193" font-size="9" fill="var(--text)" text-anchor="middle">Solar/Wind</text>
+    </svg>
+  </div>
+
+  <!-- Graphic 2: Pie Chart (Sector Projections 2030) -->
+  <div style="flex: 1 1 340px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 15px; text-align: center; box-shadow: var(--shadow);">
+    <h4 style="margin-bottom: 10px; font-size: 0.95rem;">🥧 Australia: Projected Consumption by Sector (2030)</h4>
+    <svg viewBox="0 0 320 220" style="width: 100%; max-height: 210px;" role="img" aria-label="Pie chart showing Australia energy consumption in 2030">
+      <!-- Industry 42% -->
+      <circle r="70" cx="110" cy="110" fill="transparent" stroke="#ef4444" stroke-width="45" stroke-dasharray="184 440" stroke-dashoffset="0" />
+      <!-- Transport 31% -->
+      <circle r="70" cx="110" cy="110" fill="transparent" stroke="#3b82f6" stroke-width="45" stroke-dasharray="136 440" stroke-dashoffset="-184" />
+      <!-- Residential 16% -->
+      <circle r="70" cx="110" cy="110" fill="transparent" stroke="#10b981" stroke-width="45" stroke-dasharray="70 440" stroke-dashoffset="-320" />
+      <!-- Agriculture 11% -->
+      <circle r="70" cx="110" cy="110" fill="transparent" stroke="#f59e0b" stroke-width="45" stroke-dasharray="48 440" stroke-dashoffset="-390" />
+      
+      <!-- Center Cutout -->
+      <circle r="45" cx="110" cy="110" fill="var(--bg)" />
+      <text x="110" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="var(--text)">2030</text>
+      <text x="110" y="122" text-anchor="middle" font-size="10" fill="var(--text-muted)">Forecast</text>
+
+      <!-- Legend -->
+      <rect x="200" y="40" width="12" height="12" rx="3" fill="#ef4444" />
+      <text x="218" y="50" font-size="11" fill="var(--text)" text-anchor="start">Industry (42%)</text>
+      
+      <rect x="200" y="75" width="12" height="12" rx="3" fill="#3b82f6" />
+      <text x="218" y="85" font-size="11" fill="var(--text)" text-anchor="start">Transport (31%)</text>
+
+      <rect x="200" y="110" width="12" height="12" rx="3" fill="#10b981" />
+      <text x="218" y="120" font-size="11" fill="var(--text)" text-anchor="start">Residential (16%)</text>
+
+      <rect x="200" y="145" width="12" height="12" rx="3" fill="#f59e0b" />
+      <text x="218" y="155" font-size="11" fill="var(--text)" text-anchor="start">Agriculture (11%)</text>
+    </svg>
+  </div>
+</div>
+
+---
+
+### ✅ Band 7.5 Model Response
 
 ```
 =========================================================================================
