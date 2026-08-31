@@ -1,6 +1,6 @@
 # 📚 Master Workspace Educational Content Catalog
 
-> *Auto-generated on 2026-08-28 08:35 via `scripts/build_workspace_index.py`*
+> *Auto-generated on 2026-08-31 14:38 via `scripts/build_workspace_index.py`*
 
 This catalog indexes all structured lesson plans, test prep modules, question banks, and interactive simulators across the workspace.
 
@@ -10,11 +10,12 @@ This catalog indexes all structured lesson plans, test prep modules, question ba
 
 *No content files currently created in `ESL/`.*
 
-## 🌐 IELTS Modules & Resources (3 Total)
+## 🌐 IELTS Modules & Resources (4 Total)
 
 | Type | Title / Topic | Target Level | Format | Direct Link |
 | :--- | :--- | :--- | :--- | :--- |
 | Interactive Simulator | Ielts Reading Mcq App | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Reading: MCQ Masterclass & Interactive Simulator](IELTS/Reading/Band_7.0_to_8.0/ielts_reading_mcq_app.html) |
+| Interactive Simulator | Ielts Academic Task1 Line Graph Training Pack | `Interactive Webapp` | 🚀 **Interactive App** | [IELTS Academic Writing Task 1 — Line Graph Mastery Training Pack](IELTS/Writing_Task1/ielts_academic_task1_line_graph_training_pack.html) |
 | Lesson Plan & Practice Module | Academic Reading - Multiple-Choice Questions (MCQ) Masterclass | `Band 7.5 - 9.0` | 📄 Markdown | [IELTS Academic Reading: Multiple-Choice Questions (MCQs) Masterclass](IELTS/Reading/Band_7.0_to_8.0/academic_reading_mcq_masterclass.md) |
 | Speaking Mock & Model Responses | Academic Speaking Full Mock Exam & Band 5.5 vs 6.5 Comparative Analysis | `Band 5.5 - 6.5` | 📄 Markdown | [IELTS Academic Speaking Mock Exam (Band 5.5 – 6.5 Focus)](IELTS/Speaking/Band_5.0_to_6.0/ielts_academic_speaking_band_5_5_to_6_5_mock.md) |
 

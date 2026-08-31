@@ -1,0 +1,3169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Academic Writing Task 1 — Line Graph Mastery Training Pack</title>
+  <style>
+    :root {
+      --bg-primary: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --bg-elevated: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #64748b;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-light: #eff6ff;
+      --primary-border: #bfdbfe;
+      --accent: #0284c7;
+      --success: #16a34a;
+      --success-bg: #f0fdf4;
+      --success-border: #bbf7d0;
+      --warning: #d97706;
+      --warning-bg: #fffbeb;
+      --warning-border: #fde68a;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --danger-border: #fecaca;
+      --border-color: #e2e8f0;
+      --border-dark: #cbd5e1;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 0 0 60px 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Navigation Bar */
+    header.app-header {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 1.25rem 2rem;
+      border-bottom: 3px solid var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-md);
+    }
+
+    .header-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .header-title h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .header-badge {
+      background: rgba(37, 99, 235, 0.3);
+      border: 1px solid #3b82f6;
+      color: #93c5fd;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-action {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #f8fafc;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.825rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Tab Navigation */
+    .tab-bar-wrapper {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 65px;
+      z-index: 90;
+    }
+
+    .tab-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0.5rem;
+      padding: 0 1.5rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tab-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      border-bottom: 3px solid transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: var(--primary);
+      background-color: var(--bg-subtle);
+    }
+
+    .tab-btn:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: -2px;
+    }
+
+    .tab-btn[aria-selected="true"] {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+      background-color: transparent;
+    }
+
+    .tab-badge {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      background: var(--bg-subtle);
+      color: var(--text-subtle);
+      font-weight: 700;
+    }
+
+    .tab-btn[aria-selected="true"] .tab-badge {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    /* Main Container */
+    main.main-content {
+      max-width: 1240px;
+      margin: 1.75rem auto 0;
+      padding: 0 1.5rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.25s ease-in-out;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Deliverable Blocks Structure */
+    .deliverable-block {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      margin-bottom: 2rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .block-header {
+      padding: 1.25rem 1.75rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .block-header.student {
+      background: linear-gradient(135deg, #1e293b, #334155);
+      color: #ffffff;
+      border-bottom: none;
+    }
+
+    .block-header.answers {
+      background: #f0fdf4;
+      border-bottom-color: var(--success-border);
+      color: #14532d;
+    }
+
+    .block-header.teacher {
+      background: #eff6ff;
+      border-bottom-color: var(--primary-border);
+      color: #1e3a8a;
+    }
+
+    .block-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .block-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+    }
+
+    .block-header.student .block-tag {
+      background: #3b82f6;
+      color: #ffffff;
+    }
+
+    .block-header.answers .block-tag {
+      background: var(--success);
+      color: #ffffff;
+    }
+
+    .block-header.teacher .block-tag {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .block-content {
+      padding: 1.75rem;
+    }
+
+    /* Collapsible Controls */
+    .collapsible-toggle-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-dark);
+      color: var(--text-main);
+      padding: 0.45rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .collapsible-toggle-btn:hover {
+      background: var(--bg-subtle);
+      border-color: var(--text-subtle);
+    }
+
+    .collapsible-body {
+      display: none;
+      padding: 1.75rem;
+      border-top: 1px solid var(--border-color);
+      background: #ffffff;
+    }
+
+    .collapsible-body.open {
+      display: block;
+    }
+
+    /* Section Cards (1 to 10) */
+    .section-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.2s ease;
+    }
+
+    .section-card:hover {
+      border-color: var(--border-dark);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--bg-subtle);
+    }
+
+    .section-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-left: auto;
+      font-weight: 500;
+    }
+
+    /* Typography & Core Elements */
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 1.25rem 0 0.6rem;
+    }
+
+    h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin: 1rem 0 0.4rem;
+    }
+
+    p, ul, ol {
+      margin-bottom: 0.85rem;
+      font-size: 0.925rem;
+      color: var(--text-main);
+    }
+
+    ul, ol {
+      padding-left: 1.4rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    /* Tables */
+    .table-responsive {
+      overflow-x: auto;
+      margin: 1rem 0 1.5rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+    }
+
+    table.data-table, table.rubric-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      text-align: left;
+    }
+
+    table.data-table th, table.rubric-table th {
+      background: var(--bg-subtle);
+      color: var(--text-main);
+      font-weight: 700;
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+    }
+
+    table.data-table td, table.rubric-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      vertical-align: top;
+    }
+
+    table th:last-child, table td:last-child {
+      border-right: none;
+    }
+
+    table tr:last-child td {
+      border-bottom: none;
+    }
+
+    table.rubric-table tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+
+    /* Callout & Alert Boxes */
+    .callout {
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-md);
+      margin: 1rem 0;
+      border-left: 4px solid;
+      font-size: 0.9rem;
+    }
+
+    .callout.info {
+      background: var(--primary-light);
+      border-left-color: var(--primary);
+      color: #1e3a8a;
+    }
+
+    .callout.success {
+      background: var(--success-bg);
+      border-left-color: var(--success);
+      color: #14532d;
+    }
+
+    .callout.warning {
+      background: var(--warning-bg);
+      border-left-color: var(--warning);
+      color: #78350f;
+    }
+
+    .callout.danger {
+      background: var(--danger-bg);
+      border-left-color: var(--danger);
+      color: #7f1d1d;
+    }
+
+    /* SVG Graph Container */
+    .graph-wrapper {
+      background: #ffffff;
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin: 1.25rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .graph-header {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .graph-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .graph-prompt {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    svg.chart-svg {
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Interactive Inputs & Exercises */
+    .practice-item {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.15rem;
+      margin-bottom: 1rem;
+    }
+
+    .practice-item-header {
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .text-input-field {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-sm);
+      margin-top: 0.4rem;
+      background: #ffffff;
+      transition: border-color 0.2s;
+    }
+
+    .text-input-field:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    textarea.essay-area {
+      min-height: 180px;
+      resize: vertical;
+      line-height: 1.6;
+    }
+
+    .interactive-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .word-counter-badge {
+      font-size: 0.825rem;
+      font-weight: 700;
+      padding: 0.3rem 0.7rem;
+      border-radius: 9999px;
+      background: #e2e8f0;
+      color: #475569;
+    }
+
+    .word-counter-badge.valid {
+      background: var(--success-bg);
+      color: var(--success);
+      border: 1px solid var(--success-border);
+    }
+
+    .word-counter-badge.invalid {
+      background: var(--danger-bg);
+      color: var(--danger);
+      border: 1px solid var(--danger-border);
+    }
+
+    /* Timer Widget */
+    .timer-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-family: monospace;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .timer-btn {
+      background: #334155;
+      color: #ffffff;
+      border: none;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .timer-btn:hover {
+      background: #475569;
+    }
+
+    /* Worked Example Box */
+    .worked-example-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin: 1rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .worked-example-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .worked-card {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.15rem;
+      background: #ffffff;
+    }
+
+    .worked-card.good {
+      border-top: 4px solid var(--success);
+    }
+
+    .worked-card.bad {
+      border-top: 4px solid var(--danger);
+    }
+
+    /* Tab 3: Comparative Grid */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    @media (max-width: 992px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .band-essay-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .band-essay-card.band-4 {
+      border-top: 5px solid #ef4444;
+    }
+
+    .band-essay-card.band-5 {
+      border-top: 5px solid #f59e0b;
+    }
+
+    .band-essay-card.band-6 {
+      border-top: 5px solid #10b981;
+    }
+
+    .band-card-header {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      background: var(--bg-subtle);
+    }
+
+    .band-card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .band-score-pill {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+    }
+
+    .band-4 .band-score-pill { background: #fee2e2; color: #b91c1c; }
+    .band-5 .band-score-pill { background: #fef3c7; color: #b45309; }
+    .band-6 .band-score-pill { background: #d1fae5; color: #047857; }
+
+    .band-essay-body {
+      padding: 1.25rem;
+      font-size: 0.885rem;
+      line-height: 1.65;
+      flex-grow: 1;
+    }
+
+    .band-essay-body p {
+      margin-bottom: 0.85rem;
+    }
+
+    /* Upgrade Highlighting Classes */
+    .highlight-mode .upgrade-b4-b5 {
+      background-color: #fef3c7;
+      color: #92400e;
+      border-bottom: 2px solid #f59e0b;
+      padding: 1px 3px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    .highlight-mode .upgrade-b5-b6 {
+      background-color: #dcfce7;
+      color: #166534;
+      border-bottom: 2px solid #22c55e;
+      padding: 1px 3px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    .highlight-mode .flaw-highlight {
+      background-color: #fee2e2;
+      color: #991b1b;
+      text-decoration: line-through;
+      padding: 1px 3px;
+      border-radius: 3px;
+    }
+
+    .annotation-box {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--border-dark);
+      font-size: 0.825rem;
+    }
+
+    .annotation-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      margin-right: 0.3rem;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+    }
+
+    .tag-ta { background: #e0e7ff; color: #3730a3; }
+    .tag-cc { background: #fce7f3; color: #9d174d; }
+    .tag-lr { background: #fef3c7; color: #92400e; }
+    .tag-gra { background: #dcfce7; color: #166534; }
+
+    /* Spot-the-Gap Item Styling */
+    .spot-gap-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .spot-options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .spot-options-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .spot-option {
+      border: 2px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: var(--bg-subtle);
+    }
+
+    .spot-option:hover {
+      border-color: var(--primary-border);
+      background: #ffffff;
+    }
+
+    .spot-option.selected {
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .spot-option.correct {
+      border-color: var(--success);
+      background: var(--success-bg);
+    }
+
+    .spot-option.incorrect {
+      border-color: var(--danger);
+      background: var(--danger-bg);
+    }
+
+    /* Self Assessment Checklist */
+    .checklist-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0.9rem;
+      background: var(--bg-subtle);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .checklist-item:hover {
+      background: #f1f5f9;
+    }
+
+    .checklist-checkbox {
+      width: 18px;
+      height: 18px;
+      margin-top: 0.2rem;
+      cursor: pointer;
+      accent-color: var(--primary);
+    }
+
+    .checklist-label {
+      font-size: 0.885rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .checklist-score-meter {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-top: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .meter-bar {
+      height: 12px;
+      background: #e2e8f0;
+      border-radius: 9999px;
+      overflow: hidden;
+      margin: 0.75rem 0;
+    }
+
+    .meter-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      body {
+        background: #ffffff;
+        color: #000000;
+        padding: 0;
+      }
+
+      header.app-header,
+      .tab-bar-wrapper,
+      .header-actions,
+      .timer-box,
+      .btn-action,
+      .collapsible-toggle-btn,
+      .highlight-toggle-wrapper {
+        display: none !important;
+      }
+
+      .tab-panel {
+        display: none !important;
+      }
+
+      .tab-panel.active {
+        display: block !important;
+      }
+
+      .collapsible-body {
+        display: block !important;
+        padding: 1rem 0 !important;
+        border: none !important;
+      }
+
+      .deliverable-block {
+        box-shadow: none !important;
+        border: 1px solid #94a3b8 !important;
+        page-break-inside: avoid;
+        margin-bottom: 2rem;
+      }
+
+      .section-card {
+        box-shadow: none !important;
+        border: 1px solid #cbd5e1 !important;
+        page-break-inside: avoid;
+      }
+
+      .comparison-grid {
+        display: block !important;
+      }
+
+      .band-essay-card {
+        margin-bottom: 1.5rem !important;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top App Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="header-title">
+        <h1>📊 IELTS Academic Task 1: Line Graph Mastery</h1>
+        <span class="header-badge">Assessment-Literate Training Webservice</span>
+      </div>
+      <div class="header-actions">
+        <button class="btn-action" id="print-btn" title="Print currently active tab or save as PDF">
+          🖨️ Print / Save PDF
+        </button>
+        <button class="btn-action" id="reset-storage-btn" title="Reset all saved responses">
+          🔄 Reset Stored Data
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Persistent Tab Navigation Bar -->
+  <nav class="tab-bar-wrapper" aria-label="Course Tracks">
+    <div class="tab-container" role="tablist">
+      <button class="tab-btn active" role="tab" id="tab-btn-1" aria-selected="true" aria-controls="panel-1" tabindex="0">
+        📌 Track 1: Band 4 → 5.5
+        <span class="tab-badge">Foundation & Structure</span>
+      </button>
+      <button class="tab-btn" role="tab" id="tab-btn-2" aria-selected="false" aria-controls="panel-2" tabindex="-1">
+        🚀 Track 2: Band 5 → 6.0
+        <span class="tab-badge">Cohesion & Synthesis</span>
+      </button>
+      <button class="tab-btn" role="tab" id="tab-btn-3" aria-selected="false" aria-controls="panel-3" tabindex="-1">
+        🔍 Tab 3: See the Difference
+        <span class="tab-badge">Comparative Studio</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+
+    <!-- ========================================================================= -->
+    <!-- TAB 1: BAND 4 → 5.5 (Academic Task 1 Line Graph)                           -->
+    <!-- ========================================================================= -->
+    <div id="panel-1" class="tab-panel active" role="tabpanel" aria-labelledby="tab-btn-1">
+
+      <!-- BLOCK 1: STUDENT MATERIAL -->
+      <div class="deliverable-block">
+        <div class="block-header student">
+          <div class="block-title">
+            <span>📖 Deliverable Block 1: Student Learning Material</span>
+          </div>
+          <span class="block-tag">Core Training</span>
+        </div>
+        <div class="block-content">
+
+          <!-- Section 1: TARGET -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">1</div>
+              <div class="section-title">Target Outcomes & 5-Minute Diagnostic</div>
+              <div class="section-subtitle">Band 4.0 → 5.5 Progression</div>
+            </div>
+            
+            <h3>🎯 Three Measurable Learning Outcomes</h3>
+            <ul>
+              <li><strong>Outcome 1 (Overview Mastery):</strong> Identify the overall trajectory across the full timeframe and compose a dedicated 2-sentence Overview that states key trends without listing isolated raw figures.</li>
+              <li><strong>Outcome 2 (Logical 2-Group Categorization):</strong> Group four continuous data lines into two cohesive body paragraphs based on shared direction (e.g., overall rising vs. falling/stable) instead of listing each year chronologically.</li>
+              <li><strong>Outcome 3 (Basic Trend & Preposition Control):</strong> Produce standard trend verbs and prepositions (<code>rose from X to Y</code>, <code>fell by Z</code>, <code>remained stable at W</code>) with fewer than two mechanical preposition errors per response.</li>
+            </ul>
+
+            <div class="callout warning">
+              <strong>⏱️ 5-Minute Diagnostic: Identify the Band 4 Bottleneck</strong><br>
+              Read the excerpt below written by a Band 4 candidate for a line graph on water usage (2005–2020). Spot the 3 fatal flaws holding this response at Band 4.
+            </div>
+
+            <div style="background:#fff; border:1px solid var(--border-dark); padding:1rem; border-radius:var(--radius-sm); font-style:italic; margin-bottom:1rem;">
+              "In 2005 Perth water was 300 thousand litres and in 2006 it was 310 and in 2010 it was 350 and 2015 was 380 and 2020 was 420. Sydney was 400 in 2005 then 380 in 2010 and 340 in 2015 and 310 in 2020. Melbourne was same 250 all time."
+            </div>
+
+            <div class="practice-item">
+              <div class="practice-item-header">
+                <span>Diagnostic Check: What are the three primary failure points?</span>
+              </div>
+              <textarea class="text-input-field" id="diag-tab1-input" rows="3" placeholder="Write your 3 diagnostic observations here (e.g., lack of overview, mechanical chronological listing, missing units/prepositions)..."></textarea>
+            </div>
+          </div>
+
+          <!-- Section 2: BAND GAP -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">2</div>
+              <div class="section-title">Band Gap Matrix (Public IELTS Criteria)</div>
+              <div class="section-subtitle">Observable Transitions</div>
+            </div>
+            
+            <p>The table below translates public IELTS assessment criteria into observable operational behaviors from Band 4 to Band 5.5:</p>
+
+            <div class="table-responsive">
+              <table class="rubric-table">
+                <thead>
+                  <tr>
+                    <th style="width: 18%;">Criterion</th>
+                    <th style="width: 27%;">Current Band 4 Pattern</th>
+                    <th style="width: 27%;">Target Band 5.5 Behaviour</th>
+                    <th style="width: 28%;">Concrete Evidence in Writing</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Task Achievement (TA)</strong></td>
+                    <td>Mentions random data points; omits an overview entirely or gives a one-word generic statement; reports every single year mechanically.</td>
+                    <td>Presents a clear 2-sentence Overview identifying general direction; selects main start/end points and highest/lowest milestones.</td>
+                    <td>Includes a distinct paragraph starting with <em>"Overall,..."</em> noting upward vs downward trends without raw figures.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Coherence & Cohesion (CC)</strong></td>
+                    <td>Lists information year-by-year without paragraphing; relies on repetitive <em>"and then"</em> or <em>"in [year]"</em> at the start of every sentence.</td>
+                    <td>Organizes response into 4 clean paragraphs (Intro, Overview, Body 1: Rising, Body 2: Falling/Stable); uses basic linkers (<em>In contrast, Meanwhile</em>).</td>
+                    <td>Clear visual paragraph breaks; logical grouping of similar lines rather than four isolated mini-stories.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lexical Resource (LR)</strong></td>
+                    <td>Extremely limited vocabulary; repeats <em>"went up"</em>, <em>"went down"</em>, or copies words directly from the prompt without variation.</td>
+                    <td>Uses a reliable core vocabulary of trend verbs and nouns (<em>increase, decrease, rise, drop, fluctuation, stable</em>) with correct word forms.</td>
+                    <td>Accurate use of <code>verb + adverb</code> (<em>rose steadily</em>) or <code>noun phrase</code> (<em>a significant drop</em>).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Grammatical Range & Accuracy (GRA)</strong></td>
+                    <td>Frequent sentence fragments, missing subjects/verbs, and severe preposition confusion (<em>"rose until 20%", "fell on 10"</em>).</td>
+                    <td>Produces accurate simple and compound sentences with past tense consistency and dependable prepositions (<em>from... to, by, at</em>).</td>
+                    <td>At least 60% error-free simple clauses; accurate past tense verb forms (<em>rose, fell, grew, remained</em>).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Stimulus Graph 1 (Perth, Sydney, Melbourne, Brisbane Water Usage) -->
+          <div class="graph-wrapper">
+            <div class="graph-header">
+              <div class="graph-title">Average Annual Household Water Consumption in Four Australian Cities (2005–2020)</div>
+              <div class="graph-prompt">The line graph below shows the average annual water usage per household in thousands of litres for Perth, Sydney, Melbourne, and Brisbane between 2005 and 2020.</div>
+            </div>
+            
+            <svg class="chart-svg" viewBox="0 0 760 360" aria-label="Line graph showing water consumption in four Australian cities from 2005 to 2020" role="img">
+              <!-- Background Grid -->
+              <rect x="70" y="30" width="650" height="260" fill="#f8fafc" stroke="#e2e8f0" />
+              <line x1="70" y1="290" x2="720" y2="290" stroke="#94a3b8" stroke-width="1.5" />
+              <line x1="70" y1="225" x2="720" y2="225" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+              <line x1="70" y1="160" x2="720" y2="160" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+              <line x1="70" y1="95" x2="720" y2="95" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+              <line x1="70" y1="30" x2="720" y2="30" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+
+              <!-- Y-Axis Labels (0 to 500 thousand litres) -->
+              <text x="60" y="295" font-size="12" fill="#64748b" text-anchor="end">100</text>
+              <text x="60" y="230" font-size="12" fill="#64748b" text-anchor="end">200</text>
+              <text x="60" y="165" font-size="12" fill="#64748b" text-anchor="end">300</text>
+              <text x="60" y="100" font-size="12" fill="#64748b" text-anchor="end">400</text>
+              <text x="60" y="35" font-size="12" fill="#64748b" text-anchor="end">500</text>
+              <text x="20" y="160" font-size="12" fill="#334155" font-weight="700" transform="rotate(-90 20 160)" text-anchor="middle">Thousand Litres ('000 L)</text>
+
+              <!-- X-Axis Labels (2005, 2010, 2015, 2020) -->
+              <text x="110" y="315" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2005</text>
+              <text x="300" y="315" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2010</text>
+              <text x="490" y="315" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2015</text>
+              <text x="680" y="315" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2020</text>
+
+              <!-- Grid Vertical lines -->
+              <line x1="110" y1="30" x2="110" y2="290" stroke="#f1f5f9" stroke-width="1" />
+              <line x1="300" y1="30" x2="300" y2="290" stroke="#f1f5f9" stroke-width="1" />
+              <line x1="490" y1="30" x2="490" y2="290" stroke="#f1f5f9" stroke-width="1" />
+              <line x1="680" y1="30" x2="680" y2="290" stroke="#f1f5f9" stroke-width="1" />
+
+              <!-- Line 1: Perth (Blue) - Rising -->
+              <polyline fill="none" stroke="#2563eb" stroke-width="3.5" points="110,160 300,127.5 490,101.5 680,69" />
+              <circle cx="110" cy="160" r="5" fill="#2563eb" />
+              <circle cx="300" cy="127.5" r="5" fill="#2563eb" />
+              <circle cx="490" cy="101.5" r="5" fill="#2563eb" />
+              <circle cx="680" cy="69" r="5" fill="#2563eb" />
+
+              <!-- Line 2: Brisbane (Green) - Rising -->
+              <polyline fill="none" stroke="#16a34a" stroke-width="3.5" points="110,212 300,186 490,153.5 680,121" />
+              <polygon points="110,207 115,217 105,217" fill="#16a34a" />
+              <polygon points="300,181 305,191 295,191" fill="#16a34a" />
+              <polygon points="490,148 495,158 485,158" fill="#16a34a" />
+              <polygon points="680,116 685,126 675,126" fill="#16a34a" />
+
+              <!-- Line 3: Sydney (Red) - Falling -->
+              <polyline fill="none" stroke="#dc2626" stroke-width="3.5" stroke-dasharray="6,3" points="110,82 300,114.5 490,147 680,179.5" />
+              <rect x="106" y="78" width="8" height="8" fill="#dc2626" />
+              <rect x="296" y="110.5" width="8" height="8" fill="#dc2626" />
+              <rect x="486" y="143" width="8" height="8" fill="#dc2626" />
+              <rect x="676" y="175.5" width="8" height="8" fill="#dc2626" />
+
+              <!-- Line 4: Melbourne (Purple) - Stable -->
+              <polyline fill="none" stroke="#9333ea" stroke-width="3" stroke-dasharray="2,2" points="110,192.5 300,199 490,186 680,192.5" />
+              <circle cx="110" cy="192.5" r="4" fill="#9333ea" />
+              <circle cx="300" cy="199" r="4" fill="#9333ea" />
+              <circle cx="490" cy="186" r="4" fill="#9333ea" />
+              <circle cx="680" cy="192.5" r="4" fill="#9333ea" />
+
+              <!-- Chart Legend -->
+              <g transform="translate(140, 338)">
+                <line x1="0" y1="10" x2="25" y2="10" stroke="#2563eb" stroke-width="3" />
+                <circle cx="12.5" cy="10" r="4" fill="#2563eb" />
+                <text x="32" y="14" font-size="12" fill="#1e293b">Perth</text>
+
+                <line x1="120" y1="10" x2="145" y2="10" stroke="#16a34a" stroke-width="3" />
+                <polygon points="132.5,6 137.5,14 127.5,14" fill="#16a34a" />
+                <text x="152" y="14" font-size="12" fill="#1e293b">Brisbane</text>
+
+                <line x1="250" y1="10" x2="275" y2="10" stroke="#dc2626" stroke-width="3" stroke-dasharray="4,2" />
+                <rect x="258.5" y="6" width="8" height="8" fill="#dc2626" />
+                <text x="282" y="14" font-size="12" fill="#1e293b">Sydney</text>
+
+                <line x1="370" y1="10" x2="395" y2="10" stroke="#9333ea" stroke-width="3" stroke-dasharray="2,2" />
+                <circle cx="382.5" cy="10" r="4" fill="#9333ea" />
+                <text x="402" y="14" font-size="12" fill="#1e293b">Melbourne</text>
+              </g>
+            </svg>
+
+            <!-- Accurate Data Table Reference -->
+            <div class="table-responsive" style="margin-top:1rem;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>City / Metric ('000 L)</th>
+                    <th>2005</th>
+                    <th>2010</th>
+                    <th>2015</th>
+                    <th>2020</th>
+                    <th>Overall Trend Summary</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Perth (Blue)</strong></td>
+                    <td>300</td>
+                    <td>350</td>
+                    <td>390</td>
+                    <td>440</td>
+                    <td>Steady upward growth (+140k L; became highest)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Brisbane (Green)</strong></td>
+                    <td>220</td>
+                    <td>260</td>
+                    <td>310</td>
+                    <td>360</td>
+                    <td>Consistent rise (+140k L)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sydney (Red)</strong></td>
+                    <td>420</td>
+                    <td>370</td>
+                    <td>320</td>
+                    <td>270</td>
+                    <td>Continuous downward decline (-150k L; started highest)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Melbourne (Purple)</strong></td>
+                    <td>250</td>
+                    <td>240</td>
+                    <td>260</td>
+                    <td>250</td>
+                    <td>Minor fluctuations; net unchanged</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 3: TEACH -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">3</div>
+              <div class="section-title">Core Strategy: The "Split & Summarize" Method</div>
+              <div class="section-subtitle">Tactical Pedagogy</div>
+            </div>
+
+            <h3>💡 The Strategy Explained</h3>
+            <p>At Band 4, students try to describe each line separately across every single year, producing disjointed lists. The <strong>Split & Summarize Method</strong> organizes data into two macro groups and enforces an overview rule:</p>
+            
+            <ol>
+              <li><strong>Step 1 (Overview Formulation):</strong> Write <em>"Overall,..."</em> followed by two contrasting clauses. Group lines by general direction (Up vs. Down/Flat). <u>Never write specific numbers in the overview</u>.</li>
+              <li><strong>Step 2 (Body Paragraph 1 - The Upward Group):</strong> Group Perth and Brisbane together. Contrast start values (2005) with finish values (2020).</li>
+              <li><strong>Step 3 (Body Paragraph 2 - The Downward/Flat Group):</strong> Group Sydney and Melbourne. Report start, final figures, and key contrasts.</li>
+            </ol>
+
+            <div class="callout info">
+              <strong>When this works:</strong> Whenever a line graph has 3–5 lines with opposing or contrasting directions.<br>
+              <strong>When it does NOT work:</strong> If all lines follow identical fluctuations (in that case, group by absolute magnitude: highest lines vs lowest lines).
+            </div>
+
+            <h3>🔍 Two Worked Examples</h3>
+            <div class="worked-example-grid">
+              <div class="worked-card bad">
+                <h4 style="color:var(--danger)">❌ Band 4 Attempt (Mechanical Laundry List)</h4>
+                <p>"The graph shows water. In 2005 Perth was 300. In 2010 Perth was 350. In 2015 Perth was 390. In 2020 Perth was 440. Brisbane was 220 in 2005 and 360 in 2020. Sydney was 420 then 270. Melbourne was 250."</p>
+                <div class="callout danger" style="margin-top:0.5rem; font-size:0.8rem;">
+                  <strong>Why it fails:</strong> No overview paragraph. No grouping. Repetitive robotic sentences. Reader gets no sense of the overall trends.
+                </div>
+              </div>
+
+              <div class="worked-card good">
+                <h4 style="color:var(--success)">✅ Band 5.5 Target (Structured Grouping & Overview)</h4>
+                <p><strong>Overview:</strong> "Overall, household water usage in Perth and Brisbane experienced a steady upward trend over the 15-year period. In contrast, figures for Sydney declined significantly, while Melbourne remained relatively stable."<br><br>
+                <strong>Group 1:</strong> "Looking first at the cities with increasing figures, Perth started at 300 thousand litres in 2005 and rose steadily to reach 440 thousand litres in 2020. Similarly, Brisbane saw a consistent rise from 220 thousand litres to finish at 360 thousand litres."</p>
+                <div class="callout success" style="margin-top:0.5rem; font-size:0.8rem;">
+                  <strong>Why it succeeds:</strong> Clear overview without raw data; logical grouping of rising cities using cohesive connectors (<em>Looking first at, Similarly, to reach</em>).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: GUIDED PRACTICE -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">4</div>
+              <div class="section-title">Guided Practice (10 Scaffolding Drills)</div>
+              <div class="section-subtitle">Gradual Release of Scaffolding</div>
+            </div>
+
+            <p>Complete the exercises below. Your answers are saved locally in your browser.</p>
+
+            <!-- Drill 1 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 1: Introduction Paraphrase (Gap-Fill)</span></div>
+              <p>Fill in the missing words to complete an accurate paraphrased introduction for the water usage graph:</p>
+              <p><em>"The line graph (1) <input type="text" class="text-input-field" style="width:130px; display:inline-block;" id="p1-d1-1" placeholder="[verb: shows/illustrates]"> the amount of water (2) <input type="text" class="text-input-field" style="width:140px; display:inline-block;" id="p1-d1-2" placeholder="[verb-ed: consumed/used]"> per household in four Australian cities (3) <input type="text" class="text-input-field" style="width:160px; display:inline-block;" id="p1-d1-3" placeholder="[prepositional phrase]"> 2005 and 2020."</em></p>
+            </div>
+
+            <!-- Drill 2 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 2: Trend Prepositions Mastery</span></div>
+              <p>Select the correct preposition (<strong>at / by / from / to</strong>) for each sentence:</p>
+              <ul style="list-style:none; padding-left:0;">
+                <li style="margin-bottom:0.5rem;">a) Perth water consumption rose <strong>(from / to)</strong> 300 <strong>(from / to)</strong> 440 thousand litres: <input type="text" class="text-input-field" style="width:120px; display:inline-block;" id="p1-d2-a" placeholder="from ... to"></li>
+                <li style="margin-bottom:0.5rem;">b) Sydney's water usage dropped <strong>(by / at)</strong> 150 thousand litres overall: <input type="text" class="text-input-field" style="width:120px; display:inline-block;" id="p1-d2-b" placeholder="preposition"></li>
+                <li>c) Melbourne's consumption began <strong>(at / by)</strong> 250 thousand litres in 2005: <input type="text" class="text-input-field" style="width:120px; display:inline-block;" id="p1-d2-c" placeholder="preposition"></li>
+              </ul>
+            </div>
+
+            <!-- Drill 3 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 3: Core Trend Verbs Selection</span></div>
+              <p>Write an appropriate past-tense trend verb (e.g., <em>rose, increased, fell, dropped, remained</em>):</p>
+              <p>1. Brisbane's consumption <input type="text" class="text-input-field" style="width:130px; display:inline-block;" id="p1-d3-1"> steadily over the 15-year period.<br>
+              2. Water usage in Sydney <input type="text" class="text-input-field" style="width:130px; display:inline-block;" id="p1-d3-2"> continuously from 420k L to 270k L.<br>
+              3. Water consumption in Melbourne <input type="text" class="text-input-field" style="width:130px; display:inline-block;" id="p1-d3-3"> stable at roughly 250k L.</p>
+            </div>
+
+            <!-- Drill 4 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 4: Combining Sentences with "While" and "Whereas"</span></div>
+              <p>Combine these two facts into one compound sentence: <em>[Fact A: Perth rose to 440 thousand litres. Fact B: Sydney fell to 270 thousand litres.]</em></p>
+              <textarea class="text-input-field" id="p1-d4-input" rows="2" placeholder="Write combined sentence using 'while' or 'whereas'..."></textarea>
+            </div>
+
+            <!-- Drill 5 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 5: Eliminating Mechanical Data Listing</span></div>
+              <p>Rewrite this wordy sentence to report only the start and finish milestone cleanly:<br>
+              <em>"Perth was 300 in 2005 and then it went to 350 in 2010 and then 390 in 2015 and lastly 440 in 2020."</em></p>
+              <textarea class="text-input-field" id="p1-d5-input" rows="2" placeholder="Rewrite concisely reporting overall growth..."></textarea>
+            </div>
+
+            <!-- Drill 6 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 6: Paragraph Grouping Decision</span></div>
+              <p>Explain why grouping Perth and Brisbane together in Body Paragraph 1 is more effective than writing about Perth and Sydney together:</p>
+              <textarea class="text-input-field" id="p1-d6-input" rows="2" placeholder="Explain your grouping logic..."></textarea>
+            </div>
+
+            <!-- Drill 7 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 7: Drafting the Overview Paragraph</span></div>
+              <p>Write a complete 2-sentence Overview for the Australian water consumption graph. (Remember: No raw data!)</p>
+              <textarea class="text-input-field" id="p1-d7-input" rows="3" placeholder="Overall, it is clear that... In contrast,..."></textarea>
+            </div>
+
+            <!-- Drill 8 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 8: Time Markers & Sequencing</span></div>
+              <p>Complete the sentence using a suitable time linker (<em>Over the 15-year period / Between 2005 and 2020 / Throughout the timeframe</em>):<br>
+              <input type="text" class="text-input-field" style="width:240px; display:inline-block;" id="p1-d8-input" placeholder="[Time phrase]">, Perth became the largest consumer of household water.</p>
+            </div>
+
+            <!-- Drill 9 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 9: Spot and Fix the Preposition Error</span></div>
+              <p>Identify and correct the error in this clause: <em>"Sydney consumption decreased with 150 thousand litres until 270 in 2020."</em></p>
+              <textarea class="text-input-field" id="p1-d9-input" rows="2" placeholder="Provide the corrected version..."></textarea>
+            </div>
+
+            <!-- Drill 10 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 10: Mini-Body Paragraph Assembly</span></div>
+              <p>Write a 3-sentence Body Paragraph 2 describing Sydney and Melbourne using the data from the table above.</p>
+              <textarea class="text-input-field" id="p1-d10-input" rows="4" placeholder="Regarding the remaining cities, Sydney... Melbourne, on the other hand,..."></textarea>
+            </div>
+          </div>
+
+          <!-- Section 5: TIMED TRANSFER -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">5</div>
+              <div class="section-title">Timed Transfer Task (Authentic Cognitive Difficulty)</div>
+              <div class="section-subtitle">20-Minute Real Exam Simulation</div>
+            </div>
+
+            <p>You should spend about 20 minutes on this task. Write at least 150 words.</p>
+
+            <div class="graph-wrapper">
+              <div class="graph-header">
+                <div class="graph-title">Average Daily Commuting Time by Mode of Transport in Metro City (2010–2022)</div>
+                <div class="graph-prompt">The line graph shows the average daily commuting time (in minutes) for Bus, Train, Private Car, and Bicycle between 2010 and 2022.</div>
+              </div>
+
+              <!-- SVG Stimulus for Timed Transfer 1 -->
+              <svg class="chart-svg" viewBox="0 0 760 340" aria-label="Line graph showing commuting times from 2010 to 2022" role="img">
+                <rect x="70" y="25" width="650" height="240" fill="#f8fafc" stroke="#e2e8f0" />
+                <line x1="70" y1="265" x2="720" y2="265" stroke="#94a3b8" stroke-width="1.5" />
+                <line x1="70" y1="205" x2="720" y2="205" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+                <line x1="70" y1="145" x2="720" y2="145" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+                <line x1="70" y1="85" x2="720" y2="85" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+                <line x1="70" y1="25" x2="720" y2="25" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+
+                <!-- Y Axis Labels -->
+                <text x="60" y="269" font-size="12" fill="#64748b" text-anchor="end">10</text>
+                <text x="60" y="209" font-size="12" fill="#64748b" text-anchor="end">25</text>
+                <text x="60" y="149" font-size="12" fill="#64748b" text-anchor="end">40</text>
+                <text x="60" y="89" font-size="12" fill="#64748b" text-anchor="end">55</text>
+                <text x="60" y="29" font-size="12" fill="#64748b" text-anchor="end">70</text>
+                <text x="20" y="145" font-size="12" fill="#334155" font-weight="700" transform="rotate(-90 20 145)" text-anchor="middle">Minutes per Day</text>
+
+                <!-- X Axis Labels (2010, 2014, 2018, 2022) -->
+                <text x="110" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2010</text>
+                <text x="300" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2014</text>
+                <text x="490" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2018</text>
+                <text x="680" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2022</text>
+
+                <!-- Car (Red) - Rising -->
+                <polyline fill="none" stroke="#dc2626" stroke-width="3.5" points="110,145 300,113 490,73 680,45" />
+                <circle cx="110" cy="145" r="5" fill="#dc2626" />
+                <circle cx="300" cy="113" r="5" fill="#dc2626" />
+                <circle cx="490" cy="73" r="5" fill="#dc2626" />
+                <circle cx="680" cy="45" r="5" fill="#dc2626" />
+
+                <!-- Bus (Blue) - Rising -->
+                <polyline fill="none" stroke="#2563eb" stroke-width="3" points="110,185 300,165 490,137 680,105" />
+                <polygon points="110,180 115,190 105,190" fill="#2563eb" />
+                <polygon points="300,160 305,170 295,170" fill="#2563eb" />
+                <polygon points="490,132 495,142 485,142" fill="#2563eb" />
+                <polygon points="680,100 685,110 675,110" fill="#2563eb" />
+
+                <!-- Train (Green) - Falling -->
+                <polyline fill="none" stroke="#16a34a" stroke-width="3.5" stroke-dasharray="6,3" points="110,85 300,125 490,165 680,205" />
+                <rect x="106" y="81" width="8" height="8" fill="#16a34a" />
+                <rect x="296" y="121" width="8" height="8" fill="#16a34a" />
+                <rect x="486" y="161" width="8" height="8" fill="#16a34a" />
+                <rect x="676" y="201" width="8" height="8" fill="#16a34a" />
+
+                <!-- Bicycle (Purple) - Stable -->
+                <polyline fill="none" stroke="#9333ea" stroke-width="3" stroke-dasharray="3,3" points="110,225 300,217 490,229 680,225" />
+                <circle cx="110" cy="225" r="4" fill="#9333ea" />
+                <circle cx="300" cy="217" r="4" fill="#9333ea" />
+                <circle cx="490" cy="229" r="4" fill="#9333ea" />
+                <circle cx="680" cy="225" r="4" fill="#9333ea" />
+
+                <!-- Legend -->
+                <g transform="translate(130, 315)">
+                  <line x1="0" y1="10" x2="25" y2="10" stroke="#dc2626" stroke-width="3" />
+                  <circle cx="12.5" cy="10" r="4" fill="#dc2626" />
+                  <text x="32" y="14" font-size="12" fill="#1e293b">Private Car</text>
+
+                  <line x1="130" y1="10" x2="155" y2="10" stroke="#2563eb" stroke-width="3" />
+                  <polygon points="142.5,6 147.5,14 137.5,14" fill="#2563eb" />
+                  <text x="162" y="14" font-size="12" fill="#1e293b">Bus</text>
+
+                  <line x1="220" y1="10" x2="245" y2="10" stroke="#16a34a" stroke-width="3" stroke-dasharray="4,2" />
+                  <rect x="228.5" y="6" width="8" height="8" fill="#16a34a" />
+                  <text x="252" y="14" font-size="12" fill="#1e293b">Train</text>
+
+                  <line x1="320" y1="10" x2="345" y2="10" stroke="#9333ea" stroke-width="3" stroke-dasharray="2,2" />
+                  <circle cx="332.5" cy="10" r="4" fill="#9333ea" />
+                  <text x="352" y="14" font-size="12" fill="#1e293b">Bicycle</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Timed Writing Workspace -->
+            <div style="margin-top:1.25rem;">
+              <div class="interactive-controls">
+                <div class="timer-box">
+                  <span>⏱️ Time Remaining: </span>
+                  <span id="timer-display-1">20:00</span>
+                  <button class="timer-btn" id="start-timer-1">Start</button>
+                  <button class="timer-btn" id="reset-timer-1">Reset</button>
+                </div>
+                <div id="word-count-badge-1" class="word-counter-badge invalid">0 words (Target: 150+)</div>
+              </div>
+
+              <textarea id="essay-input-1" class="text-input-field essay-area" style="margin-top:0.75rem;" placeholder="Write your full 4-paragraph response here (Introduction, Overview, Body 1: Road modes [Car/Bus], Body 2: Train/Bicycle)..."></textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BLOCK 2: ANSWERS / MODELS (COLLAPSIBLE) -->
+      <div class="deliverable-block">
+        <div class="block-header answers">
+          <div class="block-title">
+            <span>✅ Deliverable Block 2: Answer Keys & Model Responses</span>
+          </div>
+          <button class="collapsible-toggle-btn" id="toggle-answers-1" aria-expanded="false" data-target="answers-body-1">
+            <span>Show Answers & Model</span> ▼
+          </button>
+        </div>
+        <div id="answers-body-1" class="collapsible-body">
+          
+          <!-- Section 6: REVIEW -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">6</div>
+              <div class="section-title">Review, Model Response & 6 Error Fixes</div>
+              <div class="section-subtitle">Band 5.5 Exemplar</div>
+            </div>
+
+            <h3>📝 Answer Key for Guided Practice (Drills 1–10)</h3>
+            <ul style="line-height:1.7;">
+              <li><strong>Drill 1:</strong> (1) illustrates / shows, (2) consumed / used, (3) between ... and (or from ... to).</li>
+              <li><strong>Drill 2:</strong> a) from 300 to 440, b) by 150 thousand litres, c) at 250 thousand litres.</li>
+              <li><strong>Drill 3:</strong> 1. increased / rose / grew, 2. dropped / fell / declined, 3. remained / stayed.</li>
+              <li><strong>Drill 4:</strong> <em>"Perth water consumption rose significantly to 440 thousand litres, whereas Sydney figures fell to 270 thousand litres by 2020."</em></li>
+              <li><strong>Drill 5:</strong> <em>"Perth water usage climbed steadily from 300 thousand litres in 2005 to 440 thousand litres in 2020."</em></li>
+              <li><strong>Drill 6:</strong> Both Perth and Brisbane showed clear upward trends over the period, making them logical partners for a single paragraph.</li>
+              <li><strong>Drill 7:</strong> <em>"Overall, water consumption in Perth and Brisbane increased steadily over the period shown. In contrast, Sydney experienced a downward trend, while Melbourne's figures remained relatively stable."</em></li>
+              <li><strong>Drill 8:</strong> <em>Over the 15-year period</em> / <em>Between 2005 and 2020</em>.</li>
+              <li><strong>Drill 9:</strong> Correction: <em>"Sydney consumption decreased <u>by</u> 150 thousand litres <u>to</u> 270 <u>thousand litres</u> in 2020."</em></li>
+              <li><strong>Drill 10:</strong> Check model response Body 2 below for structure.</li>
+            </ul>
+
+            <h3 style="margin-top:1.5rem;">🌟 Complete Band 5.5 Model Response (Timed Transfer: Commuting Times)</h3>
+            <div style="background:var(--bg-subtle); border-left:4px solid var(--success); padding:1.25rem; border-radius:var(--radius-sm); font-size:0.925rem; line-height:1.7;">
+              <p><strong>[Introduction]</strong> The line graph illustrates the average daily time spent commuting by four different modes of transport in Metro City between 2010 and 2022.</p>
+              
+              <p><strong>[Overview]</strong> Overall, commuting times for private cars and buses increased steadily over the 12-year period. In contrast, travel time by train experienced a significant decline, while the duration of bicycle trips remained almost unchanged.</p>
+              
+              <p><strong>[Body 1: Upward Trends]</strong> Looking first at road vehicles, private cars started at 40 minutes per day in 2010 and climbed steadily to reach 65 minutes in 2022, becoming the slowest mode of travel. Similarly, daily bus travel time rose from 30 minutes at the beginning of the period to 50 minutes by 2022, representing an increase of 20 minutes.</p>
+              
+              <p><strong>[Body 2: Downward & Stable Trends]</strong> Turning to the other modes, trains had the longest journey time in 2010 at 55 minutes. However, this figure dropped continuously to 25 minutes by the end of the timeframe. Meanwhile, cycling commuting times fluctuated slightly around 20 minutes throughout the entire period.</p>
+              <small style="color:var(--text-muted); font-weight:600;">(Word count: 164 words | Clean 4-paragraph layout | Zero raw numbers in overview)</small>
+            </div>
+
+            <h3 style="margin-top:1.5rem;">⚠️ 6 Common Band 4/5 Error Patterns & Exact Corrections</h3>
+            <div class="table-responsive">
+              <table class="rubric-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Observed Weak Pattern</th>
+                    <th>Why it Fails (Examiner Perspective)</th>
+                    <th>Target Correction (Band 5.5)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><em>"The graph shows Perth 300, 350, 390 and 440."</em></td>
+                    <td>Omits units ('000 L) and turns the description into a raw list of digits without grammatical verbs.</td>
+                    <td><em>"Perth's water usage rose steadily from 300 to 440 thousand litres."</em></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><em>"Overall, Perth was 300 in 2005 and 440 in 2020."</em></td>
+                    <td>Putting specific data into the overview destroys its function as a high-level summary.</td>
+                    <td><em>"Overall, water consumption in Perth grew significantly over the period."</em></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><em>"Sydney decreased on 150 thousand litres."</em></td>
+                    <td>Incorrect preposition 'on' instead of 'by' to indicate the margin of difference.</td>
+                    <td><em>"Sydney's usage decreased <u>by</u> 150 thousand litres."</em></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td><em>"In 2010 it was... in 2014 it was... in 2018 it was..."</em></td>
+                    <td>Sentence starter monotony and mechanical year-by-year reporting.</td>
+                    <td><em>"Over the following eight years, the figure climbed to 58 minutes before reaching 65 minutes."</em></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td><em>"Melbourne remained constant at 250 in all years."</em></td>
+                    <td>Inaccurate claim: Melbourne had minor dips and rises (240 and 260) before ending at 250.</td>
+                    <td><em>"Melbourne's consumption remained relatively stable, fluctuating around 250 thousand litres."</em></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td><em>"Cars increased because traffic got worse in city."</em></td>
+                    <td>Inventing external causes not shown in the visual prompt (Task Achievement violation).</td>
+                    <td>Stick strictly to describing the data shown on the axes.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BLOCK 3: TEACHER NOTES (COLLAPSIBLE) -->
+      <div class="deliverable-block">
+        <div class="block-header teacher">
+          <div class="block-title">
+            <span>🧑‍🏫 Deliverable Block 3: Teacher Coaching Notes</span>
+          </div>
+          <button class="collapsible-toggle-btn" id="toggle-teacher-1" aria-expanded="false" data-target="teacher-body-1">
+            <span>Show Teacher Coaching Notes</span> ▼
+          </button>
+        </div>
+        <div id="teacher-body-1" class="collapsible-body">
+
+          <!-- Section 7: DIFFERENTIATE -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">7</div>
+              <div class="section-title">Differentiation Pathways (Rescue & Stretch)</div>
+              <div class="section-subtitle">Targeted Adaptation</div>
+            </div>
+
+            <div class="worked-example-grid">
+              <div class="worked-card bad">
+                <h4 style="color:#b91c1c;">🛟 Rescue Route (If learner writes below Band 4)</h4>
+                <p><strong>Bottleneck:</strong> Student cannot produce compound sentences or confuses past tense verbs completely.</p>
+                <p><strong>Intervention:</strong> Use rigid 3-sentence fill-in templates:</p>
+                <ul style="font-size:0.85rem;">
+                  <li><code>[Subject] started at [Number] in [Year] and [rose/fell] to [Number] in [Year].</code></li>
+                  <li><code>Similarly, [Subject 2] [increased/decreased] from [Number] to [Number].</code></li>
+                  <li><code>In contrast, [Subject 3] remained stable at [Number].</code></li>
+                </ul>
+              </div>
+
+              <div class="worked-card good">
+                <h4 style="color:#047857;">🚀 Stretch Route (If learner is nearing Band 6)</h4>
+                <p><strong>Readiness:</strong> Student writes a clean overview and error-free simple sentences consistently.</p>
+                <p><strong>Intervention:</strong> Introduce nominalization and milestone markers:</p>
+                <ul style="font-size:0.85rem;">
+                  <li>Upgrade <code>"rose steadily"</code> to <code>"experienced a steady rise of..."</code>.</li>
+                  <li>Add intersection milestones: <code>"overtaking Sydney in 2015 to become the highest consumer"</code>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 8: FEEDBACK -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">8</div>
+              <div class="section-title">High-Leverage Teacher Coaching Focus</div>
+              <div class="section-subtitle">Prioritized Interventions</div>
+            </div>
+
+            <div class="callout info">
+              <strong>Coaching Rule:</strong> Do not correct every minor spelling or punctuation error at this stage. Focus exclusively on the three highest-leverage levers:
+            </div>
+
+            <ol style="line-height:1.7;">
+              <li><strong>Lever 1: The Zero-Data Overview Rule:</strong> Instantly reject any draft where numbers appear in the overview. Require an explicit two-part contrast (<em>Overall, X rose while Y fell...</em>).</li>
+              <li><strong>Lever 2: Preposition Lockdown (<code>from... to</code> vs <code>by</code> vs <code>at</code>):</strong> Drill the difference between <em>fell to 20</em> (endpoint) and <em>fell by 20</em> (margin).</li>
+              <li><strong>Lever 3: Elimination of Single-Year Listing:</strong> Enforce the 2-group paragraph rule. If the student writes a sentence for 2005, then 2010, then 2015, make them delete it and rewrite using start-to-finish milestones.</li>
+            </ol>
+          </div>
+
+          <!-- Section 9: RETRIEVAL -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">9</div>
+              <div class="section-title">Retrieval & Spaced Practice Protocol</div>
+              <div class="section-subtitle">Retention Engineering</div>
+            </div>
+
+            <h3>🏠 20-Minute Spaced Homework Assignment</h3>
+            <p>Give the learner a simple 3-line graph (e.g., Book borrowing by age: Children, Adults, Seniors). Student must complete only two items:</p>
+            <ol>
+              <li>Write a 2-sentence Overview without any numbers.</li>
+              <li>Write one body paragraph comparing the two rising categories using <code>rose from... to...</code> and <code>similarly</code>.</li>
+            </ol>
+
+            <h3 style="margin-top:1.25rem;">⏱️ Next-Lesson 5-Minute Retrieval Check</h3>
+            <p>At the start of the next class, display a line graph on screen for 60 seconds. Learner has 4 minutes to write ONLY the Overview on a blank card. Grade purely on: (1) presence of overall trends, (2) zero raw data, (3) correct past tense.</p>
+          </div>
+
+          <!-- Section 10: MASTERY -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">10</div>
+              <div class="section-title">Mastery Decision Rules</div>
+              <div class="section-subtitle">Progression Thresholds</div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="rubric-table">
+                <thead>
+                  <tr>
+                    <th>Decision</th>
+                    <th>Observable Threshold in Timed Task</th>
+                    <th>Required Next Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color:var(--danger)">REPEAT DRILLS</strong></td>
+                    <td>Word count &lt; 140 words, overview missing or full of raw numbers, &gt; 4 preposition errors.</td>
+                    <td>Repeat Guided Practice Drills 1, 2, and 7. Rewrite the Timed Transfer task.</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:var(--success)">ADVANCE TO BAND 5→6</strong></td>
+                    <td>150+ words, clear 4 paragraphs, distinct overview with no data, logical 2-group division, &lt; 2 preposition errors.</td>
+                    <td>Promote learner to <strong>Track 2 (Band 5 → 6.0)</strong>.</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:var(--warning)">SEEK COACH REVIEW</strong></td>
+                    <td>Overview present but misidentifies the general direction (e.g., claims Sydney rose when it fell).</td>
+                    <td>1-on-1 graph reading diagnostic to verify data comprehension before writing.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ========================================================================= -->
+    <!-- TAB 2: BAND 5 → 6.0 (Academic Task 1 Line Graph)                           -->
+    <!-- ========================================================================= -->
+    <div id="panel-2" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-2">
+
+      <!-- BLOCK 1: STUDENT MATERIAL -->
+      <div class="deliverable-block">
+        <div class="block-header student">
+          <div class="block-title">
+            <span>📖 Deliverable Block 1: Student Learning Material</span>
+          </div>
+          <span class="block-tag">Advanced Training</span>
+        </div>
+        <div class="block-content">
+
+          <!-- Section 1: TARGET -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">1</div>
+              <div class="section-title">Target Outcomes & 5-Minute Diagnostic</div>
+              <div class="section-subtitle">Band 5.0 → 6.0 Progression</div>
+            </div>
+            
+            <h3>🎯 Three Measurable Learning Outcomes</h3>
+            <ul>
+              <li><strong>Outcome 1 (Synthesized Macro Overview):</strong> Craft an advanced, multi-clause Overview that synthesizes macro trends, major structural shifts (e.g. energy transition), and notable intersection/overtaking points without getting bogged down in individual numbers.</li>
+              <li><strong>Outcome 2 (Dynamic Thematic Grouping):</strong> Structure body paragraphs thematically around trend dynamics (e.g. *Fossil fuel decline vs. Renewable expansion*) rather than describing line by line.</li>
+              <li><strong>Outcome 3 (Nominalization & Complex Clause Variety):</strong> Accurately deploy nominalized trend structures (<em>"experienced a dramatic decline of..."</em>) and subordinating participle clauses (<em>"overtaking coal in 2015 to reach..."</em>) with controlled grammatical accuracy.</li>
+            </ul>
+
+            <div class="callout warning">
+              <strong>⏱️ 5-Minute Diagnostic: Identify the Band 5 Ceiling</strong><br>
+              Examine this Band 5 paragraph. Notice how the grammar is generally understandable, but mechanical cohesion, repetitive syntax, and lack of synthesis keep it capped at Band 5.
+            </div>
+
+            <div style="background:#fff; border:1px solid var(--border-dark); padding:1rem; border-radius:var(--radius-sm); font-style:italic; margin-bottom:1rem;">
+              "Firstly, natural gas was 20% in 1990. Then it increased to 40% in 2005. After that it went down to 35% in 2020. Secondly, coal was 60% in 1990. Then it had a big decrease to 10% in 2020. Thirdly, wind was 0% in 1990 and then it increased to 25% in 2020."
+            </div>
+
+            <div class="practice-item">
+              <div class="practice-item-header">
+                <span>Diagnostic Check: What 3 stylistic and structural flaws hold this at Band 5?</span>
+              </div>
+              <textarea class="text-input-field" id="diag-tab2-input" rows="3" placeholder="Identify mechanical linkers (Firstly/Secondly), repetitive Subject+Verb structure, and lack of comparative synthesis..."></textarea>
+            </div>
+          </div>
+
+          <!-- Section 2: BAND GAP -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">2</div>
+              <div class="section-title">Band Gap Matrix (Public IELTS Criteria)</div>
+              <div class="section-subtitle">Observable Transitions</div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="rubric-table">
+                <thead>
+                  <tr>
+                    <th style="width: 18%;">Criterion</th>
+                    <th style="width: 27%;">Current Band 5 Pattern</th>
+                    <th style="width: 27%;">Target Band 6.0 Behaviour</th>
+                    <th style="width: 28%;">Concrete Observable Evidence</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Task Achievement (TA)</strong></td>
+                    <td>Includes an overview but it is mechanical or overly simplistic; tends to dump data without highlighting key intersections or peaks.</td>
+                    <td>Presents a well-developed overview highlighting main trends and major structural shifts; selects key milestones, peaks, and intersections with data support.</td>
+                    <td>Highlights the exact year two lines cross (<em>"overtaking coal in 2012"</em>); provides relevant start, peak, and finish data points.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Coherence & Cohesion (CC)</strong></td>
+                    <td>Overuses mechanical sentence linkers (<em>Firstly, Secondly, In addition, Furthermore</em>); paragraphs are isolated line descriptions.</td>
+                    <td>Uses natural referencing, lexical chaining, and embedded subordinators (<em>while, whereas, despite a temporary drop</em>); seamless paragraph transitions.</td>
+                    <td>Paragraphs flow logically by comparative theme (e.g. Traditional vs Renewable sources) rather than four isolated mini-reports.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lexical Resource (LR)</strong></td>
+                    <td>Relies almost exclusively on simple <code>verb + adverb</code> structures (<em>increased slowly, decreased quickly</em>) with occasional awkward collocations.</td>
+                    <td>Flexible use of nominalization (<em>a dramatic surge, a sharp contraction</em>), varied verbs (<em>surpassed, fluctuated, plateaued</em>), and accurate collocations.</td>
+                    <td>Balanced mix of noun phrases (<em>saw a two-fold increase</em>) and verbal phrases without unnatural or forced vocabulary.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Grammatical Range & Accuracy (GRA)</strong></td>
+                    <td>Repeats simple <code>Subject + Verb + Object</code> sentences; attempts complex sentences but frequently produces comma splices or faulty clauses.</td>
+                    <td>Produces a mix of simple, compound, and complex sentences with participle clauses, relative clauses, and passive forms; errors do not impede communication.</td>
+                    <td>Accurate usage of <code>participle clauses</code> (<em>"...falling by 50%, having peaked in..."</em>) and correct tense consistency throughout.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Stimulus Graph 2 (UK Electricity Generation 1990–2020) -->
+          <div class="graph-wrapper">
+            <div class="graph-header">
+              <div class="graph-title">Electricity Generation by Fuel Source in the United Kingdom (1990–2020)</div>
+              <div class="graph-prompt">The line graph illustrates the percentage of total electricity generated by four sources (Natural Gas, Coal, Wind, and Nuclear) in the UK between 1990 and 2020.</div>
+            </div>
+
+            <svg class="chart-svg" viewBox="0 0 760 360" aria-label="Line graph showing UK electricity generation from 1990 to 2020" role="img">
+              <rect x="70" y="30" width="650" height="260" fill="#f8fafc" stroke="#e2e8f0" />
+              <line x1="70" y1="290" x2="720" y2="290" stroke="#94a3b8" stroke-width="1.5" />
+              <line x1="70" y1="225" x2="720" y2="225" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+              <line x1="70" y1="160" x2="720" y2="160" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+              <line x1="70" y1="95" x2="720" y2="95" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+              <line x1="70" y1="30" x2="720" y2="30" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+
+              <!-- Y Axis (0 to 70%) -->
+              <text x="60" y="295" font-size="12" fill="#64748b" text-anchor="end">0%</text>
+              <text x="60" y="230" font-size="12" fill="#64748b" text-anchor="end">17.5%</text>
+              <text x="60" y="165" font-size="12" fill="#64748b" text-anchor="end">35%</text>
+              <text x="60" y="100" font-size="12" fill="#64748b" text-anchor="end">52.5%</text>
+              <text x="60" y="35" font-size="12" fill="#64748b" text-anchor="end">70%</text>
+              <text x="20" y="160" font-size="12" fill="#334155" font-weight="700" transform="rotate(-90 20 160)" text-anchor="middle">% of Total Electricity</text>
+
+              <!-- X Axis (1990, 2000, 2010, 2020) -->
+              <text x="110" y="315" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">1990</text>
+              <text x="300" y="315" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2000</text>
+              <text x="490" y="315" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2010</text>
+              <text x="680" y="315" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2020</text>
+
+              <!-- Line 1: Coal (Red) - Plummeted -->
+              <polyline fill="none" stroke="#dc2626" stroke-width="3.5" points="110,48.5 300,160 490,186 680,279" />
+              <rect x="106" y="44.5" width="8" height="8" fill="#dc2626" />
+              <rect x="296" y="156" width="8" height="8" fill="#dc2626" />
+              <rect x="486" y="182" width="8" height="8" fill="#dc2626" />
+              <rect x="676" y="275" width="8" height="8" fill="#dc2626" />
+
+              <!-- Line 2: Natural Gas (Blue) - Surge & Dip -->
+              <polyline fill="none" stroke="#2563eb" stroke-width="3.5" points="110,271 300,149 490,123 680,156" />
+              <circle cx="110" cy="271" r="5" fill="#2563eb" />
+              <circle cx="300" cy="149" r="5" fill="#2563eb" />
+              <circle cx="490" cy="123" r="5" fill="#2563eb" />
+              <circle cx="680" cy="156" r="5" fill="#2563eb" />
+
+              <!-- Line 3: Wind (Green) - Exponential Rise -->
+              <polyline fill="none" stroke="#16a34a" stroke-width="3.5" stroke-dasharray="6,3" points="110,290 300,282 490,260 680,193.5" />
+              <polygon points="110,285 115,295 105,295" fill="#16a34a" />
+              <polygon points="300,277 305,287 295,287" fill="#16a34a" />
+              <polygon points="490,255 495,265 485,265" fill="#16a34a" />
+              <polygon points="680,188.5 685,198.5 675,198.5" fill="#16a34a" />
+
+              <!-- Line 4: Nuclear (Purple) - Plateau/Fluctuation -->
+              <polyline fill="none" stroke="#9333ea" stroke-width="3" stroke-dasharray="2,2" points="110,216 300,197 490,223 680,234" />
+              <circle cx="110" cy="216" r="4" fill="#9333ea" />
+              <circle cx="300" cy="197" r="4" fill="#9333ea" />
+              <circle cx="490" cy="223" r="4" fill="#9333ea" />
+              <circle cx="680" cy="234" r="4" fill="#9333ea" />
+
+              <!-- Legend -->
+              <g transform="translate(110, 338)">
+                <line x1="0" y1="10" x2="25" y2="10" stroke="#dc2626" stroke-width="3" />
+                <rect x="8.5" y="6" width="8" height="8" fill="#dc2626" />
+                <text x="32" y="14" font-size="12" fill="#1e293b">Coal</text>
+
+                <line x1="110" y1="10" x2="135" y2="10" stroke="#2563eb" stroke-width="3" />
+                <circle cx="122.5" cy="10" r="4" fill="#2563eb" />
+                <text x="142" y="14" font-size="12" fill="#1e293b">Natural Gas</text>
+
+                <line x1="250" y1="10" x2="275" y2="10" stroke="#16a34a" stroke-width="3" stroke-dasharray="4,2" />
+                <polygon points="262.5,6 267.5,14 257.5,14" fill="#16a34a" />
+                <text x="282" y="14" font-size="12" fill="#1e293b">Wind (Renewable)</text>
+
+                <line x1="420" y1="10" x2="445" y2="10" stroke="#9333ea" stroke-width="3" stroke-dasharray="2,2" />
+                <circle cx="432.5" cy="10" r="4" fill="#9333ea" />
+                <text x="452" y="14" font-size="12" fill="#1e293b">Nuclear</text>
+              </g>
+            </svg>
+
+            <!-- Accurate Data Table Reference -->
+            <div class="table-responsive" style="margin-top:1rem;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Fuel Source</th>
+                    <th>1990</th>
+                    <th>2000</th>
+                    <th>2010</th>
+                    <th>2020</th>
+                    <th>Key Milestone & Dynamic Shift</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Coal (Red)</strong></td>
+                    <td>65%</td>
+                    <td>35%</td>
+                    <td>28%</td>
+                    <td>3%</td>
+                    <td>Dominant source in 1990; collapsed to near zero by 2020.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Natural Gas (Blue)</strong></td>
+                    <td>5%</td>
+                    <td>38%</td>
+                    <td>45%</td>
+                    <td>36%</td>
+                    <td>Rapid ascent; overtook coal around 1999; peaked in 2010 at 45%.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Wind (Green)</strong></td>
+                    <td>0%</td>
+                    <td>2%</td>
+                    <td>8%</td>
+                    <td>26%</td>
+                    <td>Negligible until 2005; surged to become the 2nd largest source by 2020.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Nuclear (Purple)</strong></td>
+                    <td>20%</td>
+                    <td>25%</td>
+                    <td>18%</td>
+                    <td>15%</td>
+                    <td>Peaked in 2000; exhibited a mild downward drift thereafter.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 3: TEACH -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">3</div>
+              <div class="section-title">Core Strategy: Dynamic Trend Architecture & Synthesis</div>
+              <div class="section-subtitle">Tactical Pedagogy</div>
+            </div>
+
+            <h3>💡 The Strategy Explained</h3>
+            <p>Moving from Band 5 to Band 6 requires breaking out of simple <code>"Subject + Verb + Number"</code> templates. You must master three high-level language moves:</p>
+
+            <ol>
+              <li><strong>Move 1 (Synthesizing the Macro Story):</strong> Instead of listing 4 separate trends in the overview, synthesize the fundamental transformation (e.g. <em>"a massive shift away from fossil fuels—primarily coal—towards natural gas and renewable wind energy"</em>).</li>
+              <li><strong>Move 2 (Intersection & Overtaking Reporting):</strong> Identify the precise crossing point where a rising line overtook a falling line (e.g. <em>"Natural gas surpassed coal just before 2000"</em>).</li>
+              <li><strong>Move 3 (Nominalization & Participle Clauses):</strong> Convert repetitive verbs into rich noun phrases and subordinate participle clauses:
+                <ul>
+                  <li><em>Verb:</em> "Coal decreased rapidly." → <em>Noun:</em> <code>"Coal witnessed a precipitous drop from 65% to..."</code></li>
+                  <li><em>Participle:</em> <code>"Wind energy surged to 26%, surpassing both nuclear and coal..."</code></li>
+                </ul>
+              </li>
+            </ol>
+
+            <div class="callout info">
+              <strong>When this works:</strong> On complex line graphs with intersecting paths, sharp transitions, or multi-phase shifts.<br>
+              <strong>When it does NOT work:</strong> Do NOT invent reasons for why the shifts occurred (e.g., do not say <em>"because of government green policies"</em>). Keep interpretations strictly confined to descriptive data synthesis.
+            </div>
+
+            <h3>🔍 Two Worked Examples</h3>
+            <div class="worked-example-grid">
+              <div class="worked-card bad">
+                <h4 style="color:var(--danger)">❌ Band 5 Attempt (Fragmented & Repetitive)</h4>
+                <p>"Natural gas was 5% in 1990 and it grew to 45% in 2010. But then it went down to 36% in 2020. Coal was the biggest at 65% in 1990 but it dropped very quickly to 35% in 2000 and 3% in 2020. Wind went up from 0% to 26%."</p>
+                <div class="callout danger" style="margin-top:0.5rem; font-size:0.8rem;">
+                  <strong>Why it stays at Band 5:</strong> Every sentence follows identical syntax. Zero nominalization. No comparative synthesis of the intersection between coal and gas.
+                </div>
+              </div>
+
+              <div class="worked-card good">
+                <h4 style="color:var(--success)">✅ Band 6.0 Target (Synthesized & Varied Grammar)</h4>
+                <p>"Commencing as the overwhelmingly dominant power source at 65% in 1990, coal generation experienced a steep and continuous contraction, plummeting to a negligible 3% by 2020. In stark contrast, natural gas saw a dramatic surge from a mere 5% to overtake coal around 1999, before peaking at 45% in 2010 and settling at 36%."</p>
+                <div class="callout success" style="margin-top:0.5rem; font-size:0.8rem;">
+                  <strong>Why it achieves Band 6:</strong> Participle starter (<em>Commencing as...</em>); nominalization (<em>a steep and continuous contraction</em>); milestone and intersection reporting (<em>overtake coal around 1999</em>).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: GUIDED PRACTICE -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">4</div>
+              <div class="section-title">Guided Practice (10 Advanced Drills)</div>
+              <div class="section-subtitle">Paragraph-Level Cohesion & Precision</div>
+            </div>
+
+            <!-- Drill 1 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 1: Synthesizing the Macro Overview</span></div>
+              <p>Draft an advanced 2-sentence Overview that captures: (1) the transition from coal to gas/wind, and (2) the relative minor role of nuclear.</p>
+              <textarea class="text-input-field" id="p2-d1-input" rows="3" placeholder="Overall, the 30-year period was characterized by a dramatic transition from... Meanwhile,..."></textarea>
+            </div>
+
+            <!-- Drill 2 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 2: Nominalization Transformation Drill</span></div>
+              <p>Convert these verb phrases into advanced noun-phrase structures:</p>
+              <ul style="list-style:none; padding-left:0;">
+                <li style="margin-bottom:0.5rem;">a) <em>"Coal decreased drastically from 65% to 3%."</em> → <code>"Coal experienced a <input type="text" class="text-input-field" style="width:160px; display:inline-block;" id="p2-d2-a" placeholder="[adjective + noun]"> from 65% to 3%."</code></li>
+                <li style="margin-bottom:0.5rem;">b) <em>"Wind energy rose significantly in the final decade."</em> → <code>"The final decade saw a <input type="text" class="text-input-field" style="width:160px; display:inline-block;" id="p2-d2-b" placeholder="[adjective + noun]"> in wind generation."</code></li>
+                <li>c) <em>"Nuclear energy fluctuated mildly between 15% and 25%."</em> → <code>"Nuclear power exhibited <input type="text" class="text-input-field" style="width:160px; display:inline-block;" id="p2-d2-c" placeholder="[adjective + noun]"> between 15% and 25%."</code></li>
+              </ul>
+            </div>
+
+            <!-- Drill 3 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 3: Milestone & Intersection Reporting</span></div>
+              <p>Write a sentence describing the moment natural gas surpassed coal around 1999 using words like <em>overtook / eclipsed / surpassed</em>:</p>
+              <textarea class="text-input-field" id="p2-d3-input" rows="2" placeholder="Just prior to 2000, natural gas..."></textarea>
+            </div>
+
+            <!-- Drill 4 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 4: Subordinating with Participle Clauses</span></div>
+              <p>Combine these sentences using a present participle (<code>-ing</code>):<br>
+              <em>"Wind generation grew from 8% to 26% between 2010 and 2020. It surpassed both nuclear and coal to become the second-largest electricity source."</em></p>
+              <textarea class="text-input-field" id="p2-d4-input" rows="2" placeholder="Surging from 8% to 26%, wind power..."></textarea>
+            </div>
+
+            <!-- Drill 5 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 5: Strategic Data Filtering</span></div>
+              <p>Which intermediate data points should be highlighted vs. omitted for Natural Gas? Why is it better to mention the 2010 peak (45%) rather than reporting every single year?</p>
+              <textarea class="text-input-field" id="p2-d5-input" rows="2" placeholder="Explain the value of highlighting the peak (45%) and final drop (36%)..."></textarea>
+            </div>
+
+            <!-- Drill 6 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 6: Cohesive Lexical Chaining</span></div>
+              <p>List 3 synonyms or alternative noun phrases for <em>"electricity generation"</em> to avoid repetitive wording:</p>
+              <input type="text" class="text-input-field" id="p2-d6-input" placeholder="e.g., power production, energy output, electricity supply...">
+            </div>
+
+            <!-- Drill 7 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 7: Contrasting Connectors Without 'Firstly/Secondly'</span></div>
+              <p>Rewrite this robotic transition: <em>"Firstly, gas went up. Secondly, coal went down."</em> using natural contrast connectors (<em>In stark contrast / By comparison / Conversely</em>).</p>
+              <textarea class="text-input-field" id="p2-d7-input" rows="2" placeholder="Write your natural comparative transition..."></textarea>
+            </div>
+
+            <!-- Drill 8 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 8: Describing Fluctuation and Plateaus</span></div>
+              <p>Write an accurate sentence describing Nuclear power (started at 20%, rose to 25% in 2000, drifted down to 15% in 2020) without using the word <em>"stable"</em>.</p>
+              <textarea class="text-input-field" id="p2-d8-input" rows="2" placeholder="Nuclear energy hovered between..."></textarea>
+            </div>
+
+            <!-- Drill 9 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 9: Spot & Fix the Band 5 Grammatical Slip</span></div>
+              <p>Correct the grammatical error in this sentence:<br>
+              <em>"Despite of falling in 2010, the generation of gas was still higher than coal."</em></p>
+              <input type="text" class="text-input-field" id="p2-d9-input" placeholder="Corrected version...">
+            </div>
+
+            <!-- Drill 10 -->
+            <div class="practice-item">
+              <div class="practice-item-header"><span>Drill 10: 15-Minute Partial Essay Drafting</span></div>
+              <p>Write Body Paragraph 1 grouping the two fossil fuels (Coal vs. Natural Gas), highlighting the start, overtaking point, peak, and finish.</p>
+              <textarea class="text-input-field" id="p2-d10-input" rows="4" placeholder="Regarding fossil fuels, coal initially accounted for... However, natural gas..."></textarea>
+            </div>
+          </div>
+
+          <!-- Section 5: TIMED TRANSFER -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">5</div>
+              <div class="section-title">Timed Transfer Task (Authentic Cognitive Difficulty)</div>
+              <div class="section-subtitle">20-Minute Real Exam Simulation</div>
+            </div>
+
+            <p>You should spend about 20 minutes on this task. Write at least 150 words.</p>
+
+            <div class="graph-wrapper">
+              <div class="graph-header">
+                <div class="graph-title">Methods of Municipal Waste Management in Four European Nations (1995–2020)</div>
+                <div class="graph-prompt">The line graph shows the percentage of municipal waste recycled across four countries (Germany, Sweden, France, and Spain) between 1995 and 2020.</div>
+              </div>
+
+              <!-- SVG Stimulus for Timed Transfer 2 -->
+              <svg class="chart-svg" viewBox="0 0 760 340" aria-label="Line graph showing recycling rates in four nations from 1995 to 2020" role="img">
+                <rect x="70" y="25" width="650" height="240" fill="#f8fafc" stroke="#e2e8f0" />
+                <line x1="70" y1="265" x2="720" y2="265" stroke="#94a3b8" stroke-width="1.5" />
+                <line x1="70" y1="205" x2="720" y2="205" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+                <line x1="70" y1="145" x2="720" y2="145" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+                <line x1="70" y1="85" x2="720" y2="85" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+                <line x1="70" y1="25" x2="720" y2="25" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+
+                <!-- Y Axis Labels (0 to 80%) -->
+                <text x="60" y="269" font-size="12" fill="#64748b" text-anchor="end">0%</text>
+                <text x="60" y="209" font-size="12" fill="#64748b" text-anchor="end">20%</text>
+                <text x="60" y="149" font-size="12" fill="#64748b" text-anchor="end">40%</text>
+                <text x="60" y="89" font-size="12" fill="#64748b" text-anchor="end">60%</text>
+                <text x="60" y="29" font-size="12" fill="#64748b" text-anchor="end">80%</text>
+                <text x="20" y="145" font-size="12" fill="#334155" font-weight="700" transform="rotate(-90 20 145)" text-anchor="middle">% of Waste Recycled</text>
+
+                <!-- X Axis Labels (1995, 2000, 2010, 2020) -->
+                <text x="110" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">1995</text>
+                <text x="300" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2000</text>
+                <text x="490" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2010</text>
+                <text x="680" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2020</text>
+
+                <!-- Germany (Blue) -->
+                <polyline fill="none" stroke="#2563eb" stroke-width="3.5" points="110,205 300,160 490,100 680,61" />
+                <circle cx="110" cy="205" r="5" fill="#2563eb" />
+                <circle cx="300" cy="160" r="5" fill="#2563eb" />
+                <circle cx="490" cy="100" r="5" fill="#2563eb" />
+                <circle cx="680" cy="61" r="5" fill="#2563eb" />
+
+                <!-- Sweden (Green) -->
+                <polyline fill="none" stroke="#16a34a" stroke-width="3.5" points="110,175 300,145 490,121 680,109" />
+                <polygon points="110,170 115,180 105,180" fill="#16a34a" />
+                <polygon points="300,140 305,150 295,150" fill="#16a34a" />
+                <polygon points="490,116 495,126 485,126" fill="#16a34a" />
+                <polygon points="680,104 685,114 675,114" fill="#16a34a" />
+
+                <!-- France (Purple) -->
+                <polyline fill="none" stroke="#9333ea" stroke-width="3" stroke-dasharray="6,3" points="110,235 300,211 490,181 680,139" />
+                <rect x="106" y="231" width="8" height="8" fill="#9333ea" />
+                <rect x="296" y="207" width="8" height="8" fill="#9333ea" />
+                <rect x="486" y="177" width="8" height="8" fill="#9333ea" />
+                <rect x="676" y="135" width="8" height="8" fill="#9333ea" />
+
+                <!-- Spain (Red) -->
+                <polyline fill="none" stroke="#dc2626" stroke-width="3" stroke-dasharray="3,3" points="110,229 300,220 490,211 680,205" />
+                <circle cx="110" cy="229" r="4" fill="#dc2626" />
+                <circle cx="300" cy="220" r="4" fill="#dc2626" />
+                <circle cx="490" cy="211" r="4" fill="#dc2626" />
+                <circle cx="680" cy="205" r="4" fill="#dc2626" />
+
+                <!-- Legend -->
+                <g transform="translate(130, 315)">
+                  <line x1="0" y1="10" x2="25" y2="10" stroke="#2563eb" stroke-width="3" />
+                  <circle cx="12.5" cy="10" r="4" fill="#2563eb" />
+                  <text x="32" y="14" font-size="12" fill="#1e293b">Germany</text>
+
+                  <line x1="120" y1="10" x2="145" y2="10" stroke="#16a34a" stroke-width="3" />
+                  <polygon points="132.5,6 137.5,14 127.5,14" fill="#16a34a" />
+                  <text x="152" y="14" font-size="12" fill="#1e293b">Sweden</text>
+
+                  <line x1="240" y1="10" x2="265" y2="10" stroke="#9333ea" stroke-width="3" stroke-dasharray="4,2" />
+                  <rect x="248.5" y="6" width="8" height="8" fill="#9333ea" />
+                  <text x="272" y="14" font-size="12" fill="#1e293b">France</text>
+
+                  <line x1="350" y1="10" x2="375" y2="10" stroke="#dc2626" stroke-width="3" stroke-dasharray="2,2" />
+                  <circle cx="362.5" cy="10" r="4" fill="#dc2626" />
+                  <text x="382" y="14" font-size="12" fill="#1e293b">Spain</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Timed Writing Workspace -->
+            <div style="margin-top:1.25rem;">
+              <div class="interactive-controls">
+                <div class="timer-box">
+                  <span>⏱️ Time Remaining: </span>
+                  <span id="timer-display-2">20:00</span>
+                  <button class="timer-btn" id="start-timer-2">Start</button>
+                  <button class="timer-btn" id="reset-timer-2">Reset</button>
+                </div>
+                <div id="word-count-badge-2" class="word-counter-badge invalid">0 words (Target: 150+)</div>
+              </div>
+
+              <textarea id="essay-input-2" class="text-input-field essay-area" style="margin-top:0.75rem;" placeholder="Write your full Band 6 response here (Synthesized Overview, Thematic Body Paragraphs, Nominalization, Intersection Reporting)..."></textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BLOCK 2: ANSWERS / MODELS (COLLAPSIBLE) -->
+      <div class="deliverable-block">
+        <div class="block-header answers">
+          <div class="block-title">
+            <span>✅ Deliverable Block 2: Answer Keys & Model Responses</span>
+          </div>
+          <button class="collapsible-toggle-btn" id="toggle-answers-2" aria-expanded="false" data-target="answers-body-2">
+            <span>Show Answers & Model</span> ▼
+          </button>
+        </div>
+        <div id="answers-body-2" class="collapsible-body">
+
+          <!-- Section 6: REVIEW -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">6</div>
+              <div class="section-title">Review, Model Response & 6 Error Fixes</div>
+              <div class="section-subtitle">Band 6.0 Exemplar</div>
+            </div>
+
+            <h3>📝 Answer Key for Guided Practice (Drills 1–10)</h3>
+            <ul style="line-height:1.7;">
+              <li><strong>Drill 1:</strong> <em>"Overall, the 30-year period saw a profound transition from coal dependency to natural gas and renewable wind energy. Furthermore, while natural gas established itself as the primary power source after 2000, nuclear generation experienced a gradual decline."</em></li>
+              <li><strong>Drill 2:</strong> a) <em>drastic reduction / dramatic drop</em>, b) <em>significant rise / substantial surge</em>, c) <em>mild fluctuations / slight variation</em>.</li>
+              <li><strong>Drill 3:</strong> <em>"Just before the turn of the century in 1999, electricity generated from natural gas surpassed coal for the first time, reaching approximately 38%."</em></li>
+              <li><strong>Drill 4:</strong> <em>"Surging from 8% in 2010 to 26% in 2020, wind generation surpassed both nuclear and coal to become the nation's second-largest power supplier."</em></li>
+              <li><strong>Drill 5:</strong> Highlighting the 2010 peak (45%) captures the macro turning point before the slight retraction to 36% in 2020, avoiding redundant intermediate yearly numbers.</li>
+              <li><strong>Drill 6:</strong> <em>power production, electricity output, energy supply, electrical generation</em>.</li>
+              <li><strong>Drill 7:</strong> <em>"While natural gas output surged dramatically, coal generation suffered a steep and sustained contraction."</em></li>
+              <li><strong>Drill 8:</strong> <em>"Nuclear output hovered between 15% and 25% across the three decades, peaking modestly in 2000 before drifting downward."</em></li>
+              <li><strong>Drill 9:</strong> Correction: <em>"<u>Despite falling</u> (or <u>Despite a fall</u>) in 2010, the generation of gas remained higher than that of coal."</em> (Remove 'of' after despite).</li>
+              <li><strong>Drill 10:</strong> Check model response Body 1 below for paragraph flow.</li>
+            </ul>
+
+            <h3 style="margin-top:1.5rem;">🌟 Complete Band 6.0 Model Response (Timed Transfer: Waste Recycling)</h3>
+            <div style="background:var(--bg-subtle); border-left:4px solid var(--success); padding:1.25rem; border-radius:var(--radius-sm); font-size:0.925rem; line-height:1.7;">
+              <p><strong>[Introduction]</strong> The line graph illustrates changes in the proportion of municipal waste that was recycled in Germany, Sweden, France, and Spain over a 25-year period between 1995 and 2020.</p>
+              
+              <p><strong>[Overview]</strong> Overall, recycling rates rose across all four European nations, though the pace of expansion varied significantly. Germany experienced the most dramatic growth, overtaking Sweden to record the highest recycling rate by 2020, whereas Spain consistently registered the lowest figures throughout the period.</p>
+              
+              <p><strong>[Body 1: Leaders & Overtaking Dynamics]</strong> Looking first at the leading recycling nations, Sweden initially held the top position in 1995 at 30%, rising steadily to reach 52% in 2020. However, Germany demonstrated a much steeper trajectory; commencing at 20%, German recycling rates climbed rapidly, surpassing Sweden around 2005 before culminating at a peak of 68% at the end of the timeframe.</p>
+              
+              <p><strong>[Body 2: Moderate & Lower Performers]</strong> In terms of the remaining countries, France saw a four-fold increase in recycling activity, progressing from 10% in 1995 to 42% in 2020, with particularly accelerated growth in the final decade. Conversely, Spain exhibited only modest improvement, starting at 12% and plateauing at 20% by 2020, lagging substantially behind the other three nations.</p>
+              <small style="color:var(--text-muted); font-weight:600;">(Word count: 178 words | Sophisticated 4-paragraph structure | Accurate milestone integration)</small>
+            </div>
+
+            <h3 style="margin-top:1.5rem;">⚠️ 6 Common Band 5→6 Error Patterns & Exact Corrections</h3>
+            <div class="table-responsive">
+              <table class="rubric-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Observed Weak Pattern</th>
+                    <th>Why it Fails (Band 5 Ceiling)</th>
+                    <th>Target Correction (Band 6.0)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><em>"Firstly Germany was 20%, Secondly Sweden was 30%..."</em></td>
+                    <td>Mechanical numerical enumeration instead of comparative thematic grouping.</td>
+                    <td><em>"Looking first at the leading recycling nations, Sweden started at 30%, while Germany..."</em></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><em>"Germany increased because people followed green recycling laws."</em></td>
+                    <td>Unwarranted causal speculation outside the visual data.</td>
+                    <td>Stick strictly to describing visual trajectories and milestones.</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><em>"Despite of rising to 42%, France was lower than Germany."</em></td>
+                    <td>Grammatical error: <em>"Despite of"</em> is ungrammatical in English (confusing <em>in spite of</em> and <em>despite</em>).</td>
+                    <td><em>"<u>Despite rising</u> to 42%, France remained below Germany."</em></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td><em>"Germany overtook Sweden in 2005, it reached 68% in 2020."</em></td>
+                    <td>Comma splice error: joining two independent clauses with only a comma.</td>
+                    <td><em>"Germany overtook Sweden around 2005, <u>subsequently reaching</u> 68% in 2020."</em></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td><em>"Spain increased from 12% to 15% in 2000, then 18% in 2010, then 20% in 2020."</em></td>
+                    <td>Data dump: reporting every intermediate 2% step rather than noting a plateau.</td>
+                    <td><em>"Spain exhibited modest gains, rising gradually from 12% to plateau at 20%."</em></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td><em>"The graph shows a big jump."</em> (Vague colloquial phrasing)</td>
+                    <td>Informal and imprecise lexical resource.</td>
+                    <td><em>"The graph demonstrates a dramatic expansion in recycling capacity."</em></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BLOCK 3: TEACHER NOTES (COLLAPSIBLE) -->
+      <div class="deliverable-block">
+        <div class="block-header teacher">
+          <div class="block-title">
+            <span>🧑‍🏫 Deliverable Block 3: Teacher Coaching Notes</span>
+          </div>
+          <button class="collapsible-toggle-btn" id="toggle-teacher-2" aria-expanded="false" data-target="teacher-body-2">
+            <span>Show Teacher Coaching Notes</span> ▼
+          </button>
+        </div>
+        <div id="teacher-body-2" class="collapsible-body">
+
+          <!-- Section 7: DIFFERENTIATE -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">7</div>
+              <div class="section-title">Differentiation Pathways (Rescue & Stretch)</div>
+              <div class="section-subtitle">Targeted Adaptation</div>
+            </div>
+
+            <div class="worked-example-grid">
+              <div class="worked-card bad">
+                <h4 style="color:#b91c1c;">🛟 Rescue Route (If learner remains stuck at Band 5)</h4>
+                <p><strong>Bottleneck:</strong> Student cannot break away from mechanical <em>Firstly/Secondly</em> or continues writing comma splices.</p>
+                <p><strong>Intervention:</strong> Introduce the <strong>"Theme-Lead Sentence Formula"</strong>:</p>
+                <ul style="font-size:0.85rem;">
+                  <li>Sentence 1 (Theme): <code>Regarding the high performers, [Country A] and [Country B] both grew substantially.</code></li>
+                  <li>Sentence 2 (Milestone & Contrast): <code>While [A] began higher at [X]%, [B] experienced faster growth, overtaking [A] in [Year] to peak at [Y]%.</code></li>
+                </ul>
+              </div>
+
+              <div class="worked-card good">
+                <h4 style="color:#047857;">🚀 Stretch Route (If learner is approaching Band 7.0)</h4>
+                <p><strong>Readiness:</strong> Clean complex sentences, accurate milestones, and zero mechanical linking words.</p>
+                <p><strong>Intervention:</strong> Refine lexical precision and proportionality descriptors:</p>
+                <ul style="font-size:0.85rem;">
+                  <li>Incorporate fractional and ratio expressions: <code>"accounting for over two-thirds of total output"</code>, <code>"witnessing a threefold surge"</code>.</li>
+                  <li>Refine concession clauses: <code>"Notwithstanding a slight deceleration between 2010 and 2015..."</code>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 8: FEEDBACK -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">8</div>
+              <div class="section-title">High-Leverage Teacher Coaching Focus</div>
+              <div class="section-subtitle">Prioritized Interventions</div>
+            </div>
+
+            <ol style="line-height:1.7;">
+              <li><strong>Lever 1: Eradicate Mechanical Cohesion:</strong> Ban words like <em>Firstly, Secondly, Furthermore, In a nutshell</em> from Task 1 writing. Replace them with comparative references (<em>In terms of, Looking next at, In stark contrast</em>).</li>
+              <li><strong>Lever 2: Intersection Accuracy:</strong> Insist that whenever two graph lines cross, the learner must explicitly state who overtook whom and in approximately what year.</li>
+              <li><strong>Lever 3: Comma Splice Elimination:</strong> Train learners to check that every compound sentence joined with a comma contains a proper coordinating conjunction (<em>and, but, while, whereas</em>) or uses a participle (<em>-ing</em>).</li>
+            </ol>
+          </div>
+
+          <!-- Section 9: RETRIEVAL -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">9</div>
+              <div class="section-title">Retrieval & Spaced Practice Protocol</div>
+              <div class="section-subtitle">Retention Engineering</div>
+            </div>
+
+            <h3>🏠 25-Minute Spaced Homework Assignment</h3>
+            <p>Assign a multi-line graph on Global Smartphone Operating System Market Share (Android, iOS, Windows, BlackBerry 2008–2020). Learner must write:</p>
+            <ol>
+              <li>A synthesized overview naming the total market consolidation between Android and iOS.</li>
+              <li>One paragraph describing Android surpassing all competitors using nominalization and a participle clause.</li>
+            </ol>
+
+            <h3 style="margin-top:1.25rem;">⏱️ Next-Lesson 5-Minute Cold-Start Diagnostic</h3>
+            <p>Show two crossing graph lines on screen. Give students exactly 3 minutes to produce two sentences: one nominalized sentence describing the drop of Line A, and one participle sentence describing Line B overtaking Line A.</p>
+          </div>
+
+          <!-- Section 10: MASTERY -->
+          <div class="section-card">
+            <div class="section-head">
+              <div class="section-num">10</div>
+              <div class="section-title">Mastery Decision Rules</div>
+              <div class="section-subtitle">Progression Thresholds</div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="rubric-table">
+                <thead>
+                  <tr>
+                    <th>Decision</th>
+                    <th>Observable Threshold in Timed Task</th>
+                    <th>Required Next Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color:var(--danger)">REPEAT TRACK 2</strong></td>
+                    <td>Overuses mechanical linkers (Firstly/Secondly), overview lacks synthesis, misses key intersection points, &gt; 2 comma splices.</td>
+                    <td>Review Drills 2, 4, and 7. Rewrite the Waste Recycling transfer task.</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:var(--success)">ADVANCE TO BAND 6.5+</strong></td>
+                    <td>160+ words, synthesized overview, clear comparative grouping, accurate nominalization & overtaking description, zero comma splices.</td>
+                    <td>Learner is ready for advanced mixed-chart tasks (Bar + Line / Table + Pie).</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:var(--warning)">SEEK COACH REVIEW</strong></td>
+                    <td>Vocabulary is advanced but contains awkward, unnatural forced idioms (e.g. <em>"soaring like a falcon"</em>).</td>
+                    <td>Coaching session on academic register and natural collocation boundaries.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ========================================================================= -->
+    <!-- TAB 3: SEE THE DIFFERENCE (Comparative Learning Layer)                    -->
+    <!-- ========================================================================= -->
+    <div id="panel-3" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-3">
+
+      <!-- C1. SAME GRAPH, THREE ATTEMPTS -->
+      <div class="deliverable-block">
+        <div class="block-header student">
+          <div class="block-title">
+            <span>🔬 C1. Same Graph, Three Attempts (Band ~4 vs Band ~5 vs Band ~6)</span>
+          </div>
+          <div class="highlight-toggle-wrapper">
+            <button class="btn-action" id="toggle-highlights-btn" style="background:#2563eb; color:#fff;">
+              ✨ Toggle "Highlight the Upgrades"
+            </button>
+          </div>
+        </div>
+        <div class="block-content">
+
+          <p>Comparing responses on the exact same stimulus is the fastest way to internalize what "better" means in IELTS Academic Task 1. Examine the line graph below and compare the three complete essays side-by-side.</p>
+
+          <!-- Core Stimulus Graph 3: Physical Activity in Canada (2000-2020) -->
+          <div class="graph-wrapper">
+            <div class="graph-header">
+              <div class="graph-title">Proportion of Adults Participating in Regular Physical Activity by Age Group in Canada (2000–2020)</div>
+              <div class="graph-prompt">The line graph below shows the percentage of Canadian adults in four age groups (18–29, 30–49, 50–64, and 65+) who engaged in regular physical activity between 2000 and 2020.</div>
+            </div>
+
+            <svg class="chart-svg" viewBox="0 0 760 340" aria-label="Line graph showing physical activity in Canada from 2000 to 2020" role="img">
+              <rect x="70" y="25" width="650" height="240" fill="#f8fafc" stroke="#e2e8f0" />
+              <line x1="70" y1="265" x2="720" y2="265" stroke="#94a3b8" stroke-width="1.5" />
+              <line x1="70" y1="205" x2="720" y2="205" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+              <line x1="70" y1="145" x2="720" y2="145" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+              <line x1="70" y1="85" x2="720" y2="85" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+              <line x1="70" y1="25" x2="720" y2="25" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+
+              <!-- Y Axis (0 to 80%) -->
+              <text x="60" y="269" font-size="12" fill="#64748b" text-anchor="end">0%</text>
+              <text x="60" y="209" font-size="12" fill="#64748b" text-anchor="end">20%</text>
+              <text x="60" y="149" font-size="12" fill="#64748b" text-anchor="end">40%</text>
+              <text x="60" y="89" font-size="12" fill="#64748b" text-anchor="end">60%</text>
+              <text x="60" y="29" font-size="12" fill="#64748b" text-anchor="end">80%</text>
+              <text x="20" y="145" font-size="12" fill="#334155" font-weight="700" transform="rotate(-90 20 145)" text-anchor="middle">% Participating Regularly</text>
+
+              <!-- X Axis (2000, 2005, 2010, 2015, 2020) -->
+              <text x="110" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2000</text>
+              <text x="252" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2005</text>
+              <text x="395" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2010</text>
+              <text x="538" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2015</text>
+              <text x="680" y="290" font-size="12" fill="#475569" font-weight="600" text-anchor="middle">2020</text>
+
+              <!-- Line 1: 18-29 (Blue) -->
+              <polyline fill="none" stroke="#2563eb" stroke-width="3.5" points="110,79 252.5,91 395,109 537.5,121 680,130" />
+              <circle cx="110" cy="79" r="5" fill="#2563eb" />
+              <circle cx="252.5" cy="91" r="5" fill="#2563eb" />
+              <circle cx="395" cy="109" r="5" fill="#2563eb" />
+              <circle cx="537.5" cy="121" r="5" fill="#2563eb" />
+              <circle cx="680" cy="130" r="5" fill="#2563eb" />
+
+              <!-- Line 2: 30-49 (Green) -->
+              <polyline fill="none" stroke="#16a34a" stroke-width="3.5" points="110,145 252.5,133 395,121 537.5,103 680,91" />
+              <polygon points="110,140 115,150 105,150" fill="#16a34a" />
+              <polygon points="252.5,128 257.5,138 247.5,138" fill="#16a34a" />
+              <polygon points="395,116 400,126 390,126" fill="#16a34a" />
+              <polygon points="537.5,98 542.5,108 532.5,108" fill="#16a34a" />
+              <polygon points="680,86 685,96 675,96" fill="#16a34a" />
+
+              <!-- Line 3: 50-64 (Purple) -->
+              <polyline fill="none" stroke="#9333ea" stroke-width="3" stroke-dasharray="6,3" points="110,190 252.5,175 395,151 537.5,127 680,109" />
+              <rect x="106" y="186" width="8" height="8" fill="#9333ea" />
+              <rect x="248.5" y="171" width="8" height="8" fill="#9333ea" />
+              <rect x="391" y="147" width="8" height="8" fill="#9333ea" />
+              <rect x="533.5" y="123" width="8" height="8" fill="#9333ea" />
+              <rect x="676" y="105" width="8" height="8" fill="#9333ea" />
+
+              <!-- Line 4: 65+ (Red) -->
+              <polyline fill="none" stroke="#dc2626" stroke-width="3" stroke-dasharray="2,2" points="110,220 252.5,217 395,211 537.5,205 680,193" />
+              <circle cx="110" cy="220" r="4" fill="#dc2626" />
+              <circle cx="252.5" cy="217" r="4" fill="#dc2626" />
+              <circle cx="395" cy="211" r="4" fill="#dc2626" />
+              <circle cx="537.5" cy="205" r="4" fill="#dc2626" />
+              <circle cx="680" cy="193" r="4" fill="#dc2626" />
+
+              <!-- Legend -->
+              <g transform="translate(130, 315)">
+                <line x1="0" y1="10" x2="25" y2="10" stroke="#2563eb" stroke-width="3" />
+                <circle cx="12.5" cy="10" r="4" fill="#2563eb" />
+                <text x="32" y="14" font-size="12" fill="#1e293b">18–29 years</text>
+
+                <line x1="130" y1="10" x2="155" y2="10" stroke="#16a34a" stroke-width="3" />
+                <polygon points="142.5,6 147.5,14 137.5,14" fill="#16a34a" />
+                <text x="162" y="14" font-size="12" fill="#1e293b">30–49 years</text>
+
+                <line x1="260" y1="10" x2="285" y2="10" stroke="#9333ea" stroke-width="3" stroke-dasharray="4,2" />
+                <rect x="268.5" y="6" width="8" height="8" fill="#9333ea" />
+                <text x="292" y="14" font-size="12" fill="#1e293b">50–64 years</text>
+
+                <line x1="390" y1="10" x2="415" y2="10" stroke="#dc2626" stroke-width="3" stroke-dasharray="2,2" />
+                <circle cx="402.5" cy="10" r="4" fill="#dc2626" />
+                <text x="422" y="14" font-size="12" fill="#1e293b">65+ years</text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- 3-Column Comparative Grid -->
+          <div class="comparison-grid" id="comparative-essays-container">
+
+            <!-- Band 4 Attempt -->
+            <div class="band-essay-card band-4">
+              <div class="band-card-header">
+                <div class="band-card-title">
+                  <span>Band ~4.0 Attempt</span>
+                  <span class="band-score-pill">Limited / Fragmented</span>
+                </div>
+              </div>
+              <div class="band-essay-body">
+                <p>The graph shows sports in Canada from 2000 to 2020 for four age.</p>
+                
+                <p><span class="flaw-highlight">In 2000 age 18-29 was 62%. In 2005 it was 58% and 2010 it was 52% and 2020 it was 45%.</span> It went down.</p>
+                
+                <p><span class="flaw-highlight">Age 30-49 was 40% in 2000 then it went up 44% in 2005 and 48% in 2010 and 58% in 2020. Age 50-64 was 25% and increased to 52% very fast.</span></p>
+                
+                <p><span class="flaw-highlight">Age 65+ was lowest. It was 15% and then 24% in 2020. Old people do less sport because they are tired.</span></p>
+
+                <div class="annotation-box">
+                  <div><span class="annotation-tag tag-ta">TA</span> <strong>Fatal:</strong> No overview paragraph. Mechanical listing of every year. Adds speculative reason about why old people are tired.</div>
+                  <div><span class="annotation-tag tag-cc">CC</span> <strong>Poor:</strong> No paragraph logic. Repetitive robotic structure <code>"In [year] it was..."</code>.</div>
+                  <div><span class="annotation-tag tag-lr">LR</span> <strong>Basic:</strong> Repeats <em>"sports"</em>, <em>"went down"</em>, <em>"went up"</em>.</div>
+                  <div><span class="annotation-tag tag-gra">GRA</span> <strong>Faulty:</strong> Incomplete noun phrases (<em>"four age"</em>), missing prepositions (<em>"went up 44%"</em>).</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Band 5 Attempt -->
+            <div class="band-essay-card band-5">
+              <div class="band-card-header">
+                <div class="band-card-title">
+                  <span>Band ~5.0 Attempt</span>
+                  <span class="band-score-pill">Partial / Mechanical</span>
+                </div>
+              </div>
+              <div class="band-essay-body">
+                <p>The line graph gives information about the percentage of Canadian people in four different age groups who did regular physical activity between 2000 and 2020.</p>
+                
+                <p><span class="upgrade-b4-b5">Overall, the percentage of people doing activity increased in three age groups, while only the 18-29 group went down from 62% to 45%.</span></p>
+                
+                <p><span class="upgrade-b4-b5">Firstly, the 18-29 group started at the highest point of 62% in 2000. After that, it decreased steadily to 45% in 2020. In contrast, the 30-49 group began at 40% and grew to 58%, which became the highest group at the end.</span></p>
+                
+                <p><span class="upgrade-b4-b5">Secondly, people aged 50-64 rose significantly from 25% to 52%. Finally, the 65+ category was the lowest group throughout the period, starting at 15% and finishing at 24%.</span></p>
+
+                <div class="annotation-box">
+                  <div><span class="annotation-tag tag-ta">TA</span> <strong>Better:</strong> Has an overview, but includes raw numbers (62% and 45%). Reports start and finish data.</div>
+                  <div><span class="annotation-tag tag-cc">CC</span> <strong>Mechanical:</strong> Uses robotic transition words (<em>Firstly, Secondly, Finally</em>) and splits lines into isolated sentences.</div>
+                  <div><span class="annotation-tag tag-lr">LR</span> <strong>Adequate:</strong> Uses <em>"decreased steadily"</em>, <em>"grew"</em>, <em>"rose significantly"</em>.</div>
+                  <div><span class="annotation-tag tag-gra">GRA</span> <strong>Controlled:</strong> Basic compound sentences are generally error-free, but sentence variety is limited.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Band 6 Attempt -->
+            <div class="band-essay-card band-6">
+              <div class="band-card-header">
+                <div class="band-card-title">
+                  <span>Band ~6.0 Target</span>
+                  <span class="band-score-pill">Synthesized / Cohesive</span>
+                </div>
+              </div>
+              <div class="band-essay-body">
+                <p>The line graph illustrates the proportion of Canadian adults participating in regular exercise across four age categories over a 20-year period from 2000 to 2020.</p>
+                
+                <p><span class="upgrade-b5-b6">Overall, physical activity levels rose among all adult groups aged 30 and above, with the 50–64 demographic demonstrating the most pronounced growth. In stark contrast, the youngest age bracket (18–29) experienced a continuous decline, relinquishing its position as the most active cohort.</span></p>
+                
+                <p><span class="upgrade-b5-b6">Looking first at the younger cohorts, adults aged 18–29 initially had the highest participation rate at 62% in 2000, but this figure dropped steadily to 45% by 2020. Conversely, the 30–49 age group saw steady expansion from 40%, overtaking the youngest demographic around 2012 to finish as the most active group at 58%.</span></p>
+                
+                <p><span class="upgrade-b5-b6">Turning to older Canadians, participation among those aged 50–64 more than doubled, climbing sharply from 25% in 2000 to 52% in 2020. Meanwhile, despite starting at a modest 15% and growing gradually to 24%, the 65 and over group remained the least active category throughout the timeframe.</span></p>
+
+                <div class="annotation-box">
+                  <div><span class="annotation-tag tag-ta">TA</span> <strong>Complete:</strong> Synthesized overview with zero raw figures; highlights overtaking milestone (2012) and relative positions.</div>
+                  <div><span class="annotation-tag tag-cc">CC</span> <strong>Natural:</strong> Grouped logically by younger vs older demographics; seamless connectors (<em>Looking first at, Conversely, Turning to</em>).</div>
+                  <div><span class="annotation-tag tag-lr">LR</span> <strong>Precise:</strong> Uses nominalization (<em>"most pronounced growth"</em>), ratios (<em>"more than doubled"</em>), and accurate collocations (<em>"active cohort"</em>).</div>
+                  <div><span class="annotation-tag tag-gra">GRA</span> <strong>Varied:</strong> Accurate participle clauses (<em>"relinquishing its position"</em>, <em>"overtaking the youngest demographic"</em>) and concession structures (<em>"despite starting at..."</em>).</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- C2. PLAIN-LANGUAGE DESCRIPTOR TABLE -->
+      <div class="deliverable-block">
+        <div class="block-header student">
+          <div class="block-title">
+            <span>📋 C2. Plain-Language Descriptor Table (Observable Realities)</span>
+          </div>
+          <span class="block-tag">Public Rubric Decoded</span>
+        </div>
+        <div class="block-content">
+
+          <p>Official IELTS band descriptors translated into plain, concrete learner behaviors for Line Graph tasks (≤ 2 short sentences per cell):</p>
+
+          <div class="table-responsive">
+            <table class="rubric-table">
+              <thead>
+                <tr>
+                  <th style="width: 18%;">Assessment Criteria</th>
+                  <th style="width: 27%; background:#fee2e2;">Band 4 looks like…</th>
+                  <th style="width: 27%; background:#fef3c7;">Band 5 looks like…</th>
+                  <th style="width: 28%; background:#d1fae5;">Band 6 looks like…</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Task Achievement (TA)</strong></td>
+                  <td>The learner lists random numbers year-by-year without an overview. Key trends are misunderstood or external opinions are added.</td>
+                  <td>The learner provides an overview, but it is mechanical or contains specific numbers. Key peaks or intersections are often missed.</td>
+                  <td>The learner writes a clear, data-free overview highlighting the main story. Key milestones, peaks, and overtaking points are supported with accurate data.</td>
+                </tr>
+                <tr>
+                  <td><strong>Coherence & Cohesion (CC)</strong></td>
+                  <td>Sentences are disconnected and lack paragraphing. The only connectors used are <em>"and"</em> or <em>"then"</em>.</td>
+                  <td>The essay is divided into paragraphs, but uses rigid linkers (<em>Firstly, Secondly</em>). Information is reported line-by-line rather than compared.</td>
+                  <td>Information is organized into logical thematic groups (e.g. rising vs falling). Connectors (<em>whereas, conversely, while</em>) link ideas smoothly without drawing attention.</td>
+                </tr>
+                <tr>
+                  <td><strong>Lexical Resource (LR)</strong></td>
+                  <td>The learner repeats <em>"went up"</em> and <em>"went down"</em> constantly. Direct words from the prompt are copied with frequent spelling errors.</td>
+                  <td>Basic trend vocabulary (<em>increase, decrease, rise, drop</em>) is used correctly. Word choice is repetitive and attempts at advanced words often sound unnatural.</td>
+                  <td>A varied range of verbs, adverbs, and nominal phrases (<em>a steady expansion, experienced a decline</em>) is used. Occasional minor word choice slips do not obscure meaning.</td>
+                </tr>
+                <tr>
+                  <td><strong>Grammatical Range & Accuracy (GRA)</strong></td>
+                  <td>Frequent broken sentences and incorrect prepositions (<em>"rose in 20%"</em>). Grammar errors make it hard to understand what happened.</td>
+                  <td>Simple sentences are generally accurate, but complex sentences contain mistakes. Punctuation errors and tense slips occur regularly.</td>
+                  <td>A good mix of simple, compound, and complex sentences with participle clauses. Frequent error-free sentences; minor slips do not impede communication.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- C3. SPOT-THE-GAP ITEMS -->
+      <div class="deliverable-block">
+        <div class="block-header student">
+          <div class="block-title">
+            <span>🎯 C3. Spot-the-Gap Items (Interactive Discrimination Drills)</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span id="spot-score-display" class="word-counter-badge valid" style="font-size:0.85rem;">Score: 0 / 5 Correct</span>
+          </div>
+        </div>
+        <div class="block-content">
+
+          <p>Read the two competing extracts for each move below. Select which version is stronger and discover the pedagogical rationale:</p>
+
+          <!-- Item 1: Overview Move -->
+          <div class="spot-gap-card" id="spot-card-1">
+            <div class="practice-item-header">
+              <span>Item 1: Overview Formulation (Macro Synthesis vs. Data Dump)</span>
+            </div>
+            <div class="spot-options-grid">
+              <div class="spot-option" data-item="1" data-opt="A">
+                <strong>Extract A:</strong><br>
+                <em>"Overall, in 2000 the 18–29 group was the highest at 62%, but in 2020 the 30–49 group was 58% and 65+ was 24%."</em>
+              </div>
+              <div class="spot-option" data-item="1" data-opt="B">
+                <strong>Extract B:</strong><br>
+                <em>"Overall, regular physical activity increased across all age groups over 30, whereas the youngest bracket experienced a steady downward trend."</em>
+              </div>
+            </div>
+            <button class="collapsible-toggle-btn" id="check-spot-1" style="display:none; margin-top:0.5rem;">Check Answer & Reveal Rationale</button>
+            <div id="rationale-spot-1" class="callout success" style="display:none; margin-top:0.75rem;">
+              <strong>Correct Answer: Extract B (Band 6.0 standard).</strong><br>
+              <strong>Rationale:</strong> An Overview should synthesize macro trends and major contrasts without quoting specific numbers. Extract A is a Band 4/5 mistake that treats the overview as a raw data repository.
+            </div>
+          </div>
+
+          <!-- Item 2: Milestone & Intersection Move -->
+          <div class="spot-gap-card" id="spot-card-2">
+            <div class="practice-item-header">
+              <span>Item 2: Data Selection & Milestone Reporting</span>
+            </div>
+            <div class="spot-options-grid">
+              <div class="spot-option" data-item="2" data-opt="A">
+                <strong>Extract A:</strong><br>
+                <em>"The 30–49 cohort grew from 40% in 2000 to 44% in 2005, then 48% in 2010, 54% in 2015, and finally 58% in 2020."</em>
+              </div>
+              <div class="spot-option" data-item="2" data-opt="B">
+                <strong>Extract B:</strong><br>
+                <em>"Starting at 40% in 2000, the 30–49 age group grew steadily, overtaking the youngest cohort around 2012 to peak at 58% in 2020."</em>
+              </div>
+            </div>
+            <button class="collapsible-toggle-btn" id="check-spot-2" style="display:none; margin-top:0.5rem;">Check Answer & Reveal Rationale</button>
+            <div id="rationale-spot-2" class="callout success" style="display:none; margin-top:0.75rem;">
+              <strong>Correct Answer: Extract B (Band 6.0 standard).</strong><br>
+              <strong>Rationale:</strong> Extract A mechanically recites every intermediate year (Band 4/5). Extract B highlights the start, the significant overtaking point (2012), and the endpoint (Band 6+).
+            </div>
+          </div>
+
+          <!-- Item 3: Trend Verb & Preposition Precision -->
+          <div class="spot-gap-card" id="spot-card-3">
+            <div class="practice-item-header">
+              <span>Item 3: Trend & Preposition Precision</span>
+            </div>
+            <div class="spot-options-grid">
+              <div class="spot-option" data-item="3" data-opt="A">
+                <strong>Extract A:</strong><br>
+                <em>"Participation among those aged 50–64 more than doubled, climbing sharply from 25% in 2000 to 52% in 2020."</em>
+              </div>
+              <div class="spot-option" data-item="3" data-opt="B">
+                <strong>Extract B:</strong><br>
+                <em>"Participation among 50–64 aged doubled with 25% until 52% in the 2000 to 2020."</em>
+              </div>
+            </div>
+            <button class="collapsible-toggle-btn" id="check-spot-3" style="display:none; margin-top:0.5rem;">Check Answer & Reveal Rationale</button>
+            <div id="rationale-spot-3" class="callout success" style="display:none; margin-top:0.75rem;">
+              <strong>Correct Answer: Extract A (Band 6.0 standard).</strong><br>
+              <strong>Rationale:</strong> Extract A uses accurate proportional language (<em>"more than doubled"</em>) and precise prepositions (<em>"from... to"</em>). Extract B contains broken prepositions (<em>"with 25% until 52%"</em>) and awkward phrasing.
+            </div>
+          </div>
+
+          <!-- Item 4: Paraphrasing & Lexical Variety -->
+          <div class="spot-gap-card" id="spot-card-4">
+            <div class="practice-item-header">
+              <span>Item 4: Lexical Variety vs. Repetition</span>
+            </div>
+            <div class="spot-options-grid">
+              <div class="spot-option" data-item="4" data-opt="A">
+                <strong>Extract A:</strong><br>
+                <em>"18-29 went down and 30-49 went up and 50-64 went up and 65+ went up slowly."</em>
+              </div>
+              <div class="spot-option" data-item="4" data-opt="B">
+                <strong>Extract B:</strong><br>
+                <em>"While the youngest demographic experienced a steady contraction, older age brackets witnessed substantial gains."</em>
+              </div>
+            </div>
+            <button class="collapsible-toggle-btn" id="check-spot-4" style="display:none; margin-top:0.5rem;">Check Answer & Reveal Rationale</button>
+            <div id="rationale-spot-4" class="callout success" style="display:none; margin-top:0.75rem;">
+              <strong>Correct Answer: Extract B (Band 6.0 standard).</strong><br>
+              <strong>Rationale:</strong> Extract B deploys nominalization (<em>"steady contraction"</em>, <em>"substantial gains"</em>) and academic phrasing instead of repeating <em>"went up/down"</em>.
+            </div>
+          </div>
+
+          <!-- Item 5: Cohesive Subordination -->
+          <div class="spot-gap-card" id="spot-card-5">
+            <div class="practice-item-header">
+              <span>Item 5: Cohesive Flow vs. Mechanical Enumeration</span>
+            </div>
+            <div class="spot-options-grid">
+              <div class="spot-option" data-item="5" data-opt="A">
+                <strong>Extract A:</strong><br>
+                <em>"Firstly, the 18-29 group dropped. Secondly, the 30-49 group rose. Thirdly, the 50-64 group rose."</em>
+              </div>
+              <div class="spot-option" data-item="5" data-opt="B">
+                <strong>Extract B:</strong><br>
+                <em>"Looking first at the younger cohorts, the 18–29 group dropped steadily, whereas the 30–49 demographic expanded continuously."</em>
+              </div>
+            </div>
+            <button class="collapsible-toggle-btn" id="check-spot-5" style="display:none; margin-top:0.5rem;">Check Answer & Reveal Rationale</button>
+            <div id="rationale-spot-5" class="callout success" style="display:none; margin-top:0.75rem;">
+              <strong>Correct Answer: Extract B (Band 6.0 standard).</strong><br>
+              <strong>Rationale:</strong> Extract B groups data into logical categories with organic contrast linkers (<em>whereas</em>). Extract A relies on childish robotic list markers (<em>Firstly, Secondly, Thirdly</em>).
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- C4. SELF-ASSESSMENT CHECKLIST -->
+      <div class="deliverable-block">
+        <div class="block-header student">
+          <div class="block-title">
+            <span>✅ C4. Diagnostic Self-Assessment Checklist (Can-Do Statements)</span>
+          </div>
+          <span class="block-tag">Formative Audit</span>
+        </div>
+        <div class="block-content">
+
+          <p>Audit your own Writing Task 1 habits against these 12 observable behaviors. Check every statement that you can <strong>consistently and independently execute</strong> under timed exam conditions:</p>
+
+          <!-- Task Achievement Group -->
+          <div class="checklist-group">
+            <h4>📌 Task Achievement (TA)</h4>
+            <div class="checklist-item">
+              <input type="checkbox" class="checklist-checkbox" id="chk-1" data-cat="ta">
+              <label for="chk-1" class="checklist-label">1. I always include a dedicated Overview paragraph that identifies overall trends without mentioning any specific numbers or percentages.</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" class="checklist-checkbox" id="chk-2" data-cat="ta">
+              <label for="chk-2" class="checklist-label">2. I highlight key starting points, final endpoints, highest peaks, and major intersection/overtaking milestones.</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" class="checklist-checkbox" id="chk-3" data-cat="ta">
+              <label for="chk-3" class="checklist-label">3. I never invent external causes, reasons, or opinions that are not displayed directly on the visual graph.</label>
+            </div>
+          </div>
+
+          <!-- Coherence & Cohesion Group -->
+          <div class="checklist-group">
+            <h4>🔗 Coherence & Cohesion (CC)</h4>
+            <div class="checklist-item">
+              <input type="checkbox" class="checklist-checkbox" id="chk-4" data-cat="cc">
+              <label for="chk-4" class="checklist-label">4. I organize my response into 4 distinct paragraphs: Introduction, Overview, Body 1 (Group A), and Body 2 (Group B).</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" class="checklist-checkbox" id="chk-5" data-cat="cc">
+              <label for="chk-5" class="checklist-label">5. I avoid robotic list words (<em>Firstly, Secondly, Thirdly</em>) and instead use comparative markers (<em>While, In contrast, Conversely</em>).</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" class="checklist-checkbox" id="chk-6" data-cat="cc">
+              <label for="chk-6" class="checklist-label">6. I group lines by shared behavior or theme rather than describing each line in isolation from 2000 to 2020.</label>
+            </div>
+          </div>
+
+          <!-- Lexical Resource Group -->
+          <div class="checklist-group">
+            <h4>📚 Lexical Resource (LR)</h4>
+            <div class="checklist-item">
+              <input type="checkbox" class="checklist-checkbox" id="chk-7" data-cat="lr">
+              <label for="chk-7" class="checklist-label">7. I use a variety of trend verbs (<em>climbed, plummeted, hovered, plateaued, surpassed</em>) without repeating "went up/down".</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" class="checklist-checkbox" id="chk-8" data-cat="lr">
+              <label for="chk-8" class="checklist-label">8. I use nominalization (e.g., <em>"saw a dramatic expansion"</em> instead of always using <em>"expanded dramatically"</em>).</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" class="checklist-checkbox" id="chk-9" data-cat="lr">
+              <label for="chk-9" class="checklist-label">9. I paraphrase key prompt terms (e.g. <em>"electricity generation" → "energy output"</em>; <em>"age groups" → "demographics/cohorts"</em>).</label>
+            </div>
+          </div>
+
+          <!-- Grammatical Range & Accuracy Group -->
+          <div class="checklist-group">
+            <h4>📐 Grammatical Range & Accuracy (GRA)</h4>
+            <div class="checklist-item">
+              <input type="checkbox" class="checklist-checkbox" id="chk-10" data-cat="gra">
+              <label for="chk-10" class="checklist-label">10. I accurately apply prepositions of change: <code>rose from X to Y</code> (endpoints) vs <code>rose by Z</code> (margin of change).</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" class="checklist-checkbox" id="chk-11" data-cat="gra">
+              <label for="chk-11" class="checklist-label">11. I write error-free compound and complex sentences without creating comma splices or fragments.</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" class="checklist-checkbox" id="chk-12" data-cat="gra">
+              <label for="chk-12" class="checklist-label">12. I maintain strict past tense verb consistency when describing historical timeframe data.</label>
+            </div>
+          </div>
+
+          <!-- Diagnostic Recommendation Engine -->
+          <div class="checklist-score-meter">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <strong>Checklist Completion:</strong>
+              <span id="checklist-count-text" style="font-weight:700; color:var(--primary);">0 of 12 Behaviors Mastered</span>
+            </div>
+            <div class="meter-bar">
+              <div class="meter-fill" id="checklist-meter-fill"></div>
+            </div>
+            
+            <div id="diagnostic-recommendation-box" class="callout info" style="margin-top:1rem;">
+              <strong>Recommended Training Focus:</strong> Check your mastered behaviors above to receive a personalized routing recommendation.
+            </div>
+
+            <div class="callout warning" style="font-size:0.8rem; margin-top:0.75rem;">
+              <strong>⚠️ Honest Assessment Disclaimer:</strong> This self-assessment checklist is designed for formative self-awareness and diagnostic study planning. It is not an official IELTS examiner rating and cannot guarantee an official band score on exam day.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Embedded Vanilla JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // -------------------------------------------------------------
+      // 1. Tab Switching & LocalStorage State
+      // -------------------------------------------------------------
+      const tabs = document.querySelectorAll('.tab-btn');
+      const panels = document.querySelectorAll('.tab-panel');
+
+      function activateTab(tabId) {
+        tabs.forEach(tab => {
+          const isSelected = tab.id === tabId;
+          tab.setAttribute('aria-selected', isSelected);
+          tab.classList.toggle('active', isSelected);
+          tab.tabIndex = isSelected ? 0 : -1;
+        });
+
+        panels.forEach(panel => {
+          const matching = panel.getAttribute('aria-labelledby') === tabId;
+          panel.classList.toggle('active', matching);
+        });
+
+        localStorage.setItem('ielts_active_tab', tabId);
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => activateTab(tab.id));
+        tab.addEventListener('keydown', (e) => {
+          let targetTab = null;
+          if (e.key === 'ArrowRight') {
+            targetTab = tab.nextElementSibling || tabs[0];
+          } else if (e.key === 'ArrowLeft') {
+            targetTab = tab.previousElementSibling || tabs[tabs.length - 1];
+          }
+          if (targetTab) {
+            targetTab.focus();
+            activateTab(targetTab.id);
+          }
+        });
+      });
+
+      // Restore saved tab or default to Tab 1
+      const savedTab = localStorage.getItem('ielts_active_tab');
+      if (savedTab && document.getElementById(savedTab)) {
+        activateTab(savedTab);
+      }
+
+      // -------------------------------------------------------------
+      // 2. Collapsible Accordions (Answers & Teacher Notes)
+      // -------------------------------------------------------------
+      const toggleButtons = document.querySelectorAll('.collapsible-toggle-btn[data-target]');
+      toggleButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const body = document.getElementById(targetId);
+          if (!body) return;
+
+          const isOpen = body.classList.contains('open');
+          body.classList.toggle('open', !isOpen);
+          btn.setAttribute('aria-expanded', !isOpen);
+          
+          const labelSpan = btn.querySelector('span') || btn;
+          if (!isOpen) {
+            labelSpan.textContent = labelSpan.textContent.replace('Show', 'Hide');
+            btn.innerHTML = btn.innerHTML.replace('▼', '▲');
+          } else {
+            labelSpan.textContent = labelSpan.textContent.replace('Hide', 'Show');
+            btn.innerHTML = btn.innerHTML.replace('▲', '▼');
+          }
+        });
+      });
+
+      // -------------------------------------------------------------
+      // 3. Word Count & LocalStorage for Inputs
+      // -------------------------------------------------------------
+      function setupWordCounter(textareaId, badgeId) {
+        const textarea = document.getElementById(textareaId);
+        const badge = document.getElementById(badgeId);
+        if (!textarea || !badge) return;
+
+        function updateCount() {
+          const text = textarea.value.trim();
+          const words = text ? text.split(/\s+/).filter(Boolean).length : 0;
+          badge.textContent = `${words} words (Target: 150+)`;
+          
+          if (words >= 150) {
+            badge.className = 'word-counter-badge valid';
+          } else {
+            badge.className = 'word-counter-badge invalid';
+          }
+          localStorage.setItem(`ielts_input_${textareaId}`, textarea.value);
+        }
+
+        textarea.addEventListener('input', updateCount);
+        // Restore saved text
+        const saved = localStorage.getItem(`ielts_input_${textareaId}`);
+        if (saved !== null) {
+          textarea.value = saved;
+          updateCount();
+        }
+      }
+
+      setupWordCounter('essay-input-1', 'word-count-badge-1');
+      setupWordCounter('essay-input-2', 'word-count-badge-2');
+
+      // Auto-save all generic input fields & textareas
+      const allInputs = document.querySelectorAll('input[type="text"], textarea:not(.essay-area)');
+      allInputs.forEach(input => {
+        if (!input.id) return;
+        const savedVal = localStorage.getItem(`ielts_input_${input.id}`);
+        if (savedVal !== null) {
+          input.value = savedVal;
+        }
+        input.addEventListener('input', () => {
+          localStorage.setItem(`ielts_input_${input.id}`, input.value);
+        });
+      });
+
+      // -------------------------------------------------------------
+      // 4. Interactive Timers
+      // -------------------------------------------------------------
+      function initTimer(displayId, startBtnId, resetBtnId, durationSeconds) {
+        let timerInterval = null;
+        let timeRemaining = durationSeconds;
+        const display = document.getElementById(displayId);
+        const startBtn = document.getElementById(startBtnId);
+        const resetBtn = document.getElementById(resetBtnId);
+
+        function updateDisplay() {
+          const mins = Math.floor(timeRemaining / 60);
+          const secs = timeRemaining % 60;
+          display.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+
+        if (startBtn && resetBtn && display) {
+          startBtn.addEventListener('click', () => {
+            if (timerInterval) {
+              clearInterval(timerInterval);
+              timerInterval = null;
+              startBtn.textContent = 'Start';
+            } else {
+              timerInterval = setInterval(() => {
+                if (timeRemaining > 0) {
+                  timeRemaining--;
+                  updateDisplay();
+                } else {
+                  clearInterval(timerInterval);
+                  timerInterval = null;
+                  startBtn.textContent = 'Start';
+                  alert('⏱️ Time is up! Review and edit your response.');
+                }
+              }, 1000);
+              startBtn.textContent = 'Pause';
+            }
+          });
+
+          resetBtn.addEventListener('click', () => {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            timeRemaining = durationSeconds;
+            startBtn.textContent = 'Start';
+            updateDisplay();
+          });
+        }
+      }
+
+      initTimer('timer-display-1', 'start-timer-1', 'reset-timer-1', 1200);
+      initTimer('timer-display-2', 'start-timer-2', 'reset-timer-2', 1200);
+
+      // -------------------------------------------------------------
+      // 5. Tab 3: Highlight the Upgrade Toggle
+      // -------------------------------------------------------------
+      const toggleHighlightBtn = document.getElementById('toggle-highlights-btn');
+      const essaysContainer = document.getElementById('comparative-essays-container');
+      let highlightActive = false;
+
+      if (toggleHighlightBtn && essaysContainer) {
+        toggleHighlightBtn.addEventListener('click', () => {
+          highlightActive = !highlightActive;
+          essaysContainer.classList.toggle('highlight-mode', highlightActive);
+          toggleHighlightBtn.textContent = highlightActive
+            ? '✨ Hide Upgrades Highlight'
+            : '✨ Toggle "Highlight the Upgrades"';
+          toggleHighlightBtn.style.background = highlightActive ? '#16a34a' : '#2563eb';
+        });
+      }
+
+      // -------------------------------------------------------------
+      // 6. Tab 3: Spot-the-Gap Interactive Quiz
+      // -------------------------------------------------------------
+      const correctAnswers = {
+        '1': 'B',
+        '2': 'B',
+        '3': 'A',
+        '4': 'B',
+        '5': 'B'
+      };
+
+      const spotOptions = document.querySelectorAll('.spot-option');
+      const spotScoreDisplay = document.getElementById('spot-score-display');
+
+      function updateSpotScore() {
+        let correctCount = 0;
+        for (let i = 1; i <= 5; i++) {
+          const userChoice = localStorage.getItem(`ielts_spot_choice_${i}`);
+          if (userChoice === correctAnswers[String(i)]) {
+            correctCount++;
+          }
+        }
+        if (spotScoreDisplay) {
+          spotScoreDisplay.textContent = `Score: ${correctCount} / 5 Correct`;
+        }
+      }
+
+      spotOptions.forEach(opt => {
+        const itemNum = opt.getAttribute('data-item');
+        const optLetter = opt.getAttribute('data-opt');
+        const checkBtn = document.getElementById(`check-spot-${itemNum}`);
+        const rationale = document.getElementById(`rationale-spot-${itemNum}`);
+
+        opt.addEventListener('click', () => {
+          // Deselect sibling options
+          const siblings = document.querySelectorAll(`.spot-option[data-item="${itemNum}"]`);
+          siblings.forEach(s => s.classList.remove('selected'));
+          opt.classList.add('selected');
+
+          localStorage.setItem(`ielts_spot_choice_${itemNum}`, optLetter);
+          if (checkBtn) {
+            checkBtn.style.display = 'inline-flex';
+          }
+        });
+
+        if (checkBtn) {
+          checkBtn.addEventListener('click', () => {
+            const siblings = document.querySelectorAll(`.spot-option[data-item="${itemNum}"]`);
+            siblings.forEach(s => {
+              const letter = s.getAttribute('data-opt');
+              if (letter === correctAnswers[itemNum]) {
+                s.classList.add('correct');
+              } else if (s.classList.contains('selected')) {
+                s.classList.add('incorrect');
+              }
+            });
+            if (rationale) rationale.style.display = 'block';
+            updateSpotScore();
+          });
+        }
+
+        // Restore saved spot state
+        const savedChoice = localStorage.getItem(`ielts_spot_choice_${itemNum}`);
+        if (savedChoice === optLetter) {
+          opt.classList.add('selected');
+          if (checkBtn) checkBtn.style.display = 'inline-flex';
+        }
+      });
+
+      updateSpotScore();
+
+      // -------------------------------------------------------------
+      // 7. Tab 3: Self-Assessment Checklist & Dynamic Recommendation
+      // -------------------------------------------------------------
+      const checkboxes = document.querySelectorAll('.checklist-checkbox');
+      const countText = document.getElementById('checklist-count-text');
+      const meterFill = document.getElementById('checklist-meter-fill');
+      const recBox = document.getElementById('diagnostic-recommendation-box');
+
+      function updateChecklist() {
+        let totalChecked = 0;
+        let catCounts = { ta: 0, cc: 0, lr: 0, gra: 0 };
+
+        checkboxes.forEach(chk => {
+          const cat = chk.getAttribute('data-cat');
+          if (chk.checked) {
+            totalChecked++;
+            if (catCounts[cat] !== undefined) catCounts[cat]++;
+            localStorage.setItem(`ielts_chk_${chk.id}`, '1');
+          } else {
+            localStorage.removeItem(`ielts_chk_${chk.id}`);
+          }
+        });
+
+        const percent = Math.round((totalChecked / checkboxes.length) * 100);
+        if (countText) countText.textContent = `${totalChecked} of 12 Behaviors Mastered (${percent}%)`;
+        if (meterFill) meterFill.style.width = `${percent}%`;
+
+        if (recBox) {
+          if (totalChecked <= 5) {
+            recBox.className = 'callout danger';
+            recBox.innerHTML = `<strong>Recommended Training Route: Focus heavily on TAB 1 (Band 4 → 5.5).</strong><br>
+            Your self-assessment indicates foundational bottlenecks in Overview construction, basic preposition accuracy, and 2-group paragraph structure. Master the "Split & Summarize" drills in Track 1 before attempting complex synthesis.`;
+          } else if (totalChecked <= 9) {
+            recBox.className = 'callout warning';
+            recBox.innerHTML = `<strong>Recommended Training Route: Prioritize TAB 2 (Band 5 → 6.0).</strong><br>
+            You have solid foundational control but are currently hitting the "Band 5 Ceiling" (mechanical linking, lack of nominalization, or missing milestone intersections). Focus on the "Dynamic Trend Architecture" drills in Track 2.`;
+          } else {
+            recBox.className = 'callout success';
+            recBox.innerHTML = `<strong>Recommended Training Route: Advanced Synthesis & Band 6.5+ Polish!</strong><br>
+            Excellent self-awareness! You consistently demonstrate high-level Task 1 control. Focus on fine-tuning lexical nuance, varied proportion expressions, and maintaining 20-minute exam pace.`;
+          }
+        }
+      }
+
+      checkboxes.forEach(chk => {
+        if (localStorage.getItem(`ielts_chk_${chk.id}`) === '1') {
+          chk.checked = true;
+        }
+        chk.addEventListener('change', updateChecklist);
+      });
+
+      updateChecklist();
+
+      // -------------------------------------------------------------
+      // 8. Header Actions (Print & Reset)
+      // -------------------------------------------------------------
+      const printBtn = document.getElementById('print-btn');
+      if (printBtn) {
+        printBtn.addEventListener('click', () => {
+          window.print();
+        });
+      }
+
+      const resetBtn = document.getElementById('reset-storage-btn');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          if (confirm('Are you sure you want to reset all stored practice notes, essays, and checklist answers?')) {
+            localStorage.clear();
+            location.reload();
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
