@@ -7,6 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <!-- KaTeX for Math Equation Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\(', right: '\)', display: false}, {left: '\[', right: '\]', display: true}]});"></script>
   <style>
     :root {
       --primary: #ef4444;
@@ -426,9 +430,30 @@
       border-left: 4px solid var(--primary);
       padding: 1rem 1.25rem;
       background: var(--bg);
-      border-radius: 0 10px 10px 0;
+      border-radius: 0 8px 8px 0;
       margin: 1.5rem 0;
       font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* KaTeX & Desmos Formula Styling */
+    .katex-display {
+      margin: 1.2rem 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 0.5rem 0;
+    }
+    .desmos-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: rgba(139, 92, 246, 0.12);
+      color: #7c3aed;
+      margin-bottom: 8px;
     }
     .study-divider { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 
